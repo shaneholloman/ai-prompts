@@ -1,0 +1,11 @@
+{
+  "name": "Metroid-Clone Phaser 3",
+  "description": "A complete Phaser 3 project replicating classic Metroid mechanics and best practices.",
+  "type": "project",
+  "slug": "metroid-clone-phaser3",
+  "author": {
+    "name": "kevin regenrek",
+    "url": "https://github.com/regenrek",
+    "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+  }
+}

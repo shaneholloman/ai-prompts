@@ -7,26 +7,39 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-const STARTERS_DIR = path.join(__dirname, "..", "src", "starters");
-const PROJECTS_DIR = path.join(__dirname, "..", "src", "projects");
-const RULES_DIR = path.join(__dirname, "..", "src", "rules");
+const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
+// const STARTERS_DIR = path.join(__dirname, "..", "src", "starters");
+// const PROJECTS_DIR = path.join(__dirname, "..", "src", "projects");
+// const RULES_DIR = path.join(__dirname, "..", "src", "rules");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "index.json");
 
 /**
- * We'll define a function that recursively traverse a directory
- * returning a list of file paths. This can handle nested subfolders if needed.
+ * Parse prompt files (.md, .mdc) in a directory
  */
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const files = fs.readdirSync(dirPath);
-  files.forEach((file) => {
-    const fullPath = path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
-    } else {
-      arrayOfFiles.push(fullPath);
-    }
-  });
-  return arrayOfFiles;
+function getPromptContent(dirPath) {
+  const promptFiles = fs
+    .readdirSync(dirPath)
+    .filter((file) =>
+      [".md", ".mdc"].includes(path.extname(file).toLowerCase())
+    )
+    .map((file) => {
+      const filePath = path.join(dirPath, file);
+      const raw = fs.readFileSync(filePath, "utf8");
+      const relative = path.relative(path.join(__dirname, ".."), filePath);
+      const fm = matter(raw);
+      const data = fm.data || {};
+      const content = fm.content || "";
+      const id = data.id || relative.replace(/\//g, "-");
+      return {
+        id,
+        description: data.description || "",
+        globs: data.globs || "",
+        content,
+        filePath: relative,
+      };
+    });
+
+  return promptFiles;
 }
 
 /**
@@ -38,49 +51,17 @@ function parseFile(filePath) {
   const raw = fs.readFileSync(filePath, "utf8");
   const relative = path.relative(path.join(__dirname, ".."), filePath);
 
-  // We'll figure out top-level folder from relative path for 'category': starters, projects, rules
-  let category;
-  if (relative.startsWith("starters")) category = "starter";
-  else if (relative.startsWith("projects")) category = "project";
-  else if (relative.startsWith("rules")) category = "single-rule";
-  else category = "unknown";
+  if (ext === ".json") {
+    const data = JSON.parse(raw);
+    // Get prompts content from the same directory as aiprompt.json
+    const dirPath = path.dirname(filePath);
+    const prompts = getPromptContent(dirPath);
 
-  if (ext === ".mdc" || ext === ".md") {
-    // parse front matter
-    const fm = matter(raw);
-    const data = fm.data || {};
-    const content = fm.content || "";
-
-    // Build a custom ID from path or metadata
-    const id = data.id || relative.replace(/\//g, "-"); // simple example
     return {
-      id,
-      category,
-      title: data.title || path.basename(filePath),
-      description: data.description || "",
-      tags: data.tags || [],
-      content,
+      ...data,
+      prompts,
       filePath: relative,
     };
-    // } else if (ext === ".json") {
-    //   // parse JSON
-    //   try {
-    //     const jsonObj = JSON.parse(raw);
-    //     // same or similar structure
-    //     const id = jsonObj.id || relative.replace(/\//g, "-");
-    //     return {
-    //       id,
-    //       category,
-    //       title: jsonObj.title || path.basename(filePath),
-    //       description: jsonObj.description || "",
-    //       tags: jsonObj.tags || [],
-    //       content: jsonObj.content || "",
-    //       filePath: relative,
-    //     };
-    //   } catch (err) {
-    //     console.error(`Error parsing JSON file: ${filePath}`, err);
-    //     return null;
-    //   }
   } else {
     // skip unknown file types
     return null;
@@ -93,25 +74,29 @@ function parseFile(filePath) {
 function main() {
   const index = [];
 
-  [STARTERS_DIR, PROJECTS_DIR, RULES_DIR].forEach((baseDir) => {
-    if (!fs.existsSync(baseDir)) return; // skip if dir doesn't exist
-    const files = getAllFiles(baseDir);
-    files.forEach((fp) => {
-      // parse each file if ext is .md, .mdc, or .json
-      const ext = path.extname(fp).toLowerCase();
-      if (![".md", ".mdc", ".json"].includes(ext)) return;
+  if (!fs.existsSync(PROMPTS_DIR)) {
+    console.log("Prompts directory not found");
+    return;
+  }
 
-      const parsed = parseFile(fp);
+  // Get all prompt category folders
+  const promptFolders = fs
+    .readdirSync(PROMPTS_DIR)
+    .map((folder) => path.join(PROMPTS_DIR, folder))
+    .filter((folderPath) => fs.statSync(folderPath).isDirectory());
+
+  // Process each prompt folder
+  promptFolders.forEach((folderPath) => {
+    const aiPromptPath = path.join(folderPath, "aiprompt.json");
+    if (fs.existsSync(aiPromptPath)) {
+      const parsed = parseFile(aiPromptPath);
       if (parsed) index.push(parsed);
-    });
+    }
   });
 
   // Optionally, we can add some sorting or unify certain fields
   // e.g., sort by category, then title
-  index.sort(
-    (a, b) =>
-      a.category.localeCompare(b.category) || a.title.localeCompare(b.title)
-  );
+  index.sort((a, b) => a.name.localeCompare(b.name));
 
   // Write the final array to index.json
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });

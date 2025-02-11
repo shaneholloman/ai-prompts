@@ -1,24 +1,30 @@
 # Contributing
 
-Thanks for your interest in contributing rules or prompts!
+Thanks for your interest in contributing prompts!
 
-## Adding a Starter
-- Create a folder under `projects/<your-starter-name>`.
+## Adding a Prompt
+- Create a folder under `prompts/<your-starter-name>`.
+- Add a aiprompt.json file.
+  ```json
+  {
+    "name": "<name> (required)",
+    "description": "<description> (required)",
+    "type": "project (required)",
+    "slug": "<slug> (required)",
+    "author": {
+      "name": "<name> (required)",
+      "url": "<url> (optional)",
+      "avatar": "<url> (optional)"
+    }
+  }
+  ```
 - Add one or more `.mdc` files with your rules.
-- For `.mdc` files, please include YAML front-matter:
+- For `.mdc` files, please include YAML front-matter. Here an example:
   ```yaml
   ---
-  title: "Descriptive Title"
   description: "Short summary"
-  tags: ["tag1", "tag2"]
+  globs: "*.ts,*.js,*.jsx,*.tsx"
   ---
-
-- add a metadata.json in that folder.
-
-## Adding a Single Rule
-
-- Put your single `.mdc` file under `rules/`.
-- Use front-matter (for .mdc) or define fields in JSON.
 
 ## Submit a Pull Request
 

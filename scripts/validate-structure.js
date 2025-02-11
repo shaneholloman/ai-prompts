@@ -1,71 +1,133 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-const STARTERS_DIR = path.join(__dirname, "..", "src", "starters");
-const PROJECTS_DIR = path.join(__dirname, "..", "src", "projects");
-const RULES_DIR = path.join(__dirname, "..", "src", "rules");
+const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 
-async function validateDirectory(dirPath, rules) {
+const TYPES = ["project", "starter"];
+
+// Add this at the top level of the file, after the TYPES constant
+const slugs = new Set();
+
+async function validateDirectory(dirPath) {
   const items = await fs.readdir(dirPath, { withFileTypes: true });
 
   for (const item of items) {
     const fullPath = path.join(dirPath, item.name);
 
-    if (rules.onlyFiles) {
-      // For rules directory - only files allowed
+    // Check for hidden files/directories (starting with .)
+    if (item.name.startsWith(".")) {
+      console.log(`Removing hidden item: ${fullPath}`);
       if (item.isDirectory()) {
-        throw new Error(`Directory not allowed in ${dirPath}: ${item.name}`);
+        await fs.rm(fullPath, { recursive: true });
+      } else {
+        await fs.unlink(fullPath);
+      }
+      continue;
+    }
+
+    // For starters and projects directories
+    if (item.isDirectory()) {
+      // Check contents of each subdirectory
+      const subItems = await fs.readdir(fullPath, { withFileTypes: true });
+
+      // Check for metadata.json
+      if (!subItems.some((f) => f.name === "aiprompt.json")) {
+        throw new Error(`Missing aiprompt.json in ${fullPath}`);
       }
 
-      // Check file extensions
-      if (!item.name.endsWith(".mdc")) {
-        throw new Error(
-          `Invalid file type in ${dirPath}: ${item.name}. Only .mdc files are allowed.`
-        );
+      // Validate aiprompt.json contents
+      const metadataPath = path.join(fullPath, "aiprompt.json");
+      try {
+        const content = await fs.readFile(metadataPath, "utf8");
+        const metadata = JSON.parse(content);
+        validateMetadata(metadata);
+      } catch (err) {
+        if (err instanceof SyntaxError) {
+          throw new Error(`Invalid JSON in ${metadataPath}: ${err.message}`);
+        }
+        throw new Error(`Error reading ${metadataPath}: ${err.message}`);
+      }
+
+      // Validate all files in subdirectory
+      for (const subItem of subItems) {
+        if (subItem.isDirectory()) {
+          throw new Error(
+            `Nested directories not allowed in ${fullPath}: ${subItem.name}`
+          );
+        }
+
+        if (
+          !subItem.name.endsWith(".mdc") &&
+          subItem.name !== "aiprompt.json"
+        ) {
+          throw new Error(
+            `Invalid file type in ${fullPath}: ${subItem.name}. Only .mdc and aiprompt.json files are allowed.`
+          );
+        }
       }
     } else {
-      // For starters and projects directories
-      if (item.isDirectory()) {
-        // Check contents of each subdirectory
-        const subItems = await fs.readdir(fullPath, { withFileTypes: true });
-
-        // Check for metadata.json
-        if (!subItems.some((f) => f.name === "metadata.json")) {
-          throw new Error(`Missing metadata.json in ${fullPath}`);
-        }
-
-        // Validate all files in subdirectory
-        for (const subItem of subItems) {
-          if (subItem.isDirectory()) {
-            throw new Error(
-              `Nested directories not allowed in ${fullPath}: ${subItem.name}`
-            );
-          }
-
-          if (
-            !subItem.name.endsWith(".mdc") &&
-            subItem.name !== "metadata.json"
-          ) {
-            throw new Error(
-              `Invalid file type in ${fullPath}: ${subItem.name}. Only .mdc and metadata.json files are allowed.`
-            );
-          }
-        }
-      }
+      throw new Error(`Only directories allowed in ${dirPath}`);
     }
   }
 }
 
+function stringHasText(str) {
+  return typeof str === "string" && str.trim().length > 0;
+}
+
+// Modify the validateMetadata function to check for duplicate slugs
+function validateMetadata(metadata) {
+  const requiredKeys = ["name", "description", "type", "slug", "author"];
+  for (const key of requiredKeys) {
+    if (!(key in metadata)) {
+      throw new Error(`Missing required key in aiprompt.json: ${key}`);
+    }
+  }
+
+  // Validate field types
+  if (!stringHasText(metadata.name)) {
+    throw new Error("name must be a string");
+  }
+  if (!stringHasText(metadata.description)) {
+    throw new Error("description must be a string");
+  }
+  if (!stringHasText(metadata.type)) {
+    throw new Error("type must be a string");
+  }
+  if (!TYPES.includes(metadata.type)) {
+    throw new Error(
+      `Invalid type: ${metadata.type}. Must be one of: ${TYPES.join(", ")}`
+    );
+  }
+  if (!stringHasText(metadata.slug)) {
+    throw new Error("slug must be a string");
+  }
+
+  // Check for duplicate slugs
+  if (slugs.has(metadata.slug)) {
+    throw new Error(
+      `Duplicate slug found: ${metadata.slug}. Slugs must be unique across all prompts.`
+    );
+  }
+  slugs.add(metadata.slug);
+
+  // Validate author object
+  const author = metadata.author;
+  if (typeof author !== "object" || author === null) {
+    throw new Error("author must be an object");
+  }
+  if (!stringHasText(author.name)) {
+    throw new Error("author.name must be a string");
+  }
+}
+
+// Modify the main function to clear the slugs Set before validation
 async function main() {
   try {
-    // Validate rules directory - only files, no directories
-    await validateDirectory(RULES_DIR, { onlyFiles: true });
+    // Clear the slugs Set before validation
+    slugs.clear();
 
-    // Validate projects directory - only directories with metadata.json and .mdc files
-    await validateDirectory(PROJECTS_DIR, { onlyFiles: false });
-
-    // Validate starters directory - only directories with metadata.json and .mdc files
-    await validateDirectory(STARTERS_DIR, { onlyFiles: false });
+    await validateDirectory(PROMPTS_DIR);
 
     console.log("Repository structure validation passed!");
     process.exit(0);
