@@ -1,6 +1,10 @@
 const fs = require("fs").promises;
 const path = require("path");
 
+const STARTERS_DIR = path.join(__dirname, "..", "src", "starters");
+const PROJECTS_DIR = path.join(__dirname, "..", "src", "projects");
+const RULES_DIR = path.join(__dirname, "..", "src", "rules");
+
 async function validateDirectory(dirPath, rules) {
   const items = await fs.readdir(dirPath, { withFileTypes: true });
 
@@ -55,13 +59,13 @@ async function validateDirectory(dirPath, rules) {
 async function main() {
   try {
     // Validate rules directory - only files, no directories
-    await validateDirectory("rules", { onlyFiles: true });
+    await validateDirectory(RULES_DIR, { onlyFiles: true });
 
     // Validate projects directory - only directories with metadata.json and .mdc files
-    await validateDirectory("projects", { onlyFiles: false });
+    await validateDirectory(PROJECTS_DIR, { onlyFiles: false });
 
     // Validate starters directory - only directories with metadata.json and .mdc files
-    await validateDirectory("starters", { onlyFiles: false });
+    await validateDirectory(STARTERS_DIR, { onlyFiles: false });
 
     console.log("Repository structure validation passed!");
     process.exit(0);
