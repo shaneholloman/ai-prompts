@@ -4,8 +4,9 @@
   "description": "Open source AI prompts & rules repository",
   "main": "scripts/build-index.js",
   "scripts": {
-    "build-index": "node scripts/build-index.js",
-    "test:structure": "node scripts/validate-structure.js"
+    "all-scripts": "npm run test:structure && npm run build-index",
+    "test:structure": "node scripts/validate-structure.js",
+    "build-index": "node scripts/build-index.js"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

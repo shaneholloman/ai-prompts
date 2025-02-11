@@ -62,25 +62,25 @@ function parseFile(filePath) {
       content,
       filePath: relative,
     };
-  } else if (ext === ".json") {
-    // parse JSON
-    try {
-      const jsonObj = JSON.parse(raw);
-      // same or similar structure
-      const id = jsonObj.id || relative.replace(/\//g, "-");
-      return {
-        id,
-        category,
-        title: jsonObj.title || path.basename(filePath),
-        description: jsonObj.description || "",
-        tags: jsonObj.tags || [],
-        content: jsonObj.content || "",
-        filePath: relative,
-      };
-    } catch (err) {
-      console.error(`Error parsing JSON file: ${filePath}`, err);
-      return null;
-    }
+    // } else if (ext === ".json") {
+    //   // parse JSON
+    //   try {
+    //     const jsonObj = JSON.parse(raw);
+    //     // same or similar structure
+    //     const id = jsonObj.id || relative.replace(/\//g, "-");
+    //     return {
+    //       id,
+    //       category,
+    //       title: jsonObj.title || path.basename(filePath),
+    //       description: jsonObj.description || "",
+    //       tags: jsonObj.tags || [],
+    //       content: jsonObj.content || "",
+    //       filePath: relative,
+    //     };
+    //   } catch (err) {
+    //     console.error(`Error parsing JSON file: ${filePath}`, err);
+    //     return null;
+    //   }
   } else {
     // skip unknown file types
     return null;

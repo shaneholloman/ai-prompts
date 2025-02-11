@@ -1,6 +1,6 @@
 ---
-description:  description: Coding rules for Supabase Edge Functions
-globs:  globs: "supabase/functions/**/*.ts"
+description: Coding rules for Supabase Edge Functions
+globs: supabase/functions/**/*.ts
 ---
 # Writing Supabase Edge Functions
 
