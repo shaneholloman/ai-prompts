@@ -1,0 +1,14 @@
+{
+  "name": "zunder-ai-ai-prompts",
+  "version": "1.0.0",
+  "description": "Open source AI prompts & rules repository",
+  "main": "scripts/build-index.js",
+  "scripts": {
+    "build-index": "node scripts/build-index.js",
+    "test:structure": "node scripts/validate-structure.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "gray-matter": "^4.0.3"
+  }
+}
