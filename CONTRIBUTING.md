@@ -3,19 +3,39 @@
 Thanks for your interest in contributing prompts!
 
 ## Adding a Prompt
+
+# Guidelines
+
+## **Naming Proposal**
+
+| Type | Prefix | Purpose |
+| --- | --- | --- |
+| **rules** | `rule-<name>.mdc` | Define coding standards, best practices, and naming conventions. |
+| **agent** | `setup-<task>.mdc` | Automate multi-step processes like setting up Dependencies, configuring ESLint, or deploying. |
+| **feature** | `add-<component>.mdc` | Add new components or modify existing parts of a project. |
+
+
+# Adding a prompt
+
 - Create a folder under `prompts/<your-starter-name>`.
 - Add a aiprompt.json file.
   ```json
   {
     "name": "<name> (required)",
     "description": "<description> (required)",
-    "type": "project (required)",
+    "type": "", // Allowed values: "rule", "agent", "feature"
     "slug": "<slug> (required)",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["backend", "frontend", "api", "documentation", "db"]
+    "tags": ["automation", "setup", "agentic"],
+    "techStack": ["next.js", "react", "shadcn", "lucide"],
     "author": {
       "name": "<name> (required)",
       "url": "<url> (optional)",
       "avatar": "<url> (optional)"
-    }
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0"
   }
   ```
 - Add one or more `.mdc` files with your rules.

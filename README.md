@@ -37,8 +37,8 @@ Need a Guide? Read the blog post: [How to use Cursor Rules](https://www.instruct
 | **Cursor**        | Add prompts as project rules inside the `.cursor/rules/` directory (e.g., `.cursor/rules/cursorrules.mdc`). Cursor will automatically detect and apply them. For detailed guidance, refer to the [official Cursor rule guide](https://docs.cursor.com/context/rules-for-ai#project-rules-recommended). |
 | **GitHub Copilot**| Create a `.github/copilot-instructions.md` file in your repository's root directory and add natural language instructions in Markdown format. These instructions will guide Copilot's behavior across your project. More information is available in the [GitHub Copilot documentation](https://docs.github.com/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot). |
 | **Zed**           | Store prompts in the `.zed/` directory within your project. You can configure project-specific settings by creating a `.zed/settings.json` file, allowing Zed to apply these configurations accordingly. Consult the [Zed documentation](https://zed.dev/docs/configuring-zed) for further details. |
-| **Windsurf**      | Utilize the Cascade feature to interact with AI-powered code assistance. While specific prompt inclusion methods aren't detailed, you can learn more about Cascade in the [Windsurf Getting Started Guide](https://docs.codeium.com/windsurf/getting-started). |
-| **Cline**         | Cline operates as an autonomous coding agent within your IDE, capable of creating and editing files, executing commands, and more. For comprehensive usage instructions, refer to the [Cline GitHub repository](https://github.com/cline/cline). |
+| **Windsurf**      | Add a .windsurfrules file into the project root. [Windsurf Getting Started Guide](https://docs.codeium.com/windsurf/getting-started). |
+| **Cline**         | 1. Click Cline extension settings 2. Find "Custom Instructions" field 3. Add your instructions  [Cline GitHub repository](https://cline.bot/faq). |
 
 By configuring these settings, you can ensure that your AI tools operate in alignment with your project's specific requirements and standards. 
 
