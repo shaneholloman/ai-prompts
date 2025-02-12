@@ -2,18 +2,15 @@
 
 Thanks for your interest in contributing prompts!
 
-## Adding a Prompt
-
-# Guidelines
+## Guidelines
 
 ## **Naming Proposal**
 
 | Type | Prefix | Purpose |
 | --- | --- | --- |
-| **rules** | `rule-<name>.mdc` | Define coding standards, best practices, and naming conventions. |
-| **agent** | `setup-<task>.mdc` | Automate multi-step processes like setting up Dependencies, configuring ESLint, or deploying. |
-| **feature** | `add-<component>.mdc` | Add new components or modify existing parts of a project. |
-
+| **rule** | `rule-<name>.mdc` | Define coding standards, best practices, and naming conventions. |
+| **agent** | `agent-<task>.mdc` | Automate multi-step processes like setting up Dependencies, configuring ESLint, or deploying. |
+| **feature** | `add-<feature>.mdc` | Add new components or modify existing parts of a project. |
 
 # Adding a prompt
 
@@ -23,10 +20,10 @@ Thanks for your interest in contributing prompts!
   {
     "name": "<name> (required)",
     "description": "<description> (required)",
-    "type": "", // Allowed values: "rule", "agent", "feature"
+    "type": "agent",
     "slug": "<slug> (required)",
     "development_process": ["plan", "design", "implement", "test", "deploy"],
-    "dev_categories": ["backend", "frontend", "api", "documentation", "db"]
+    "dev_categories": ["backend", "frontend", "api", "documentation", "db"],
     "tags": ["automation", "setup", "agentic"],
     "techStack": ["next.js", "react", "shadcn", "lucide"],
     "author": {
@@ -35,11 +32,31 @@ Thanks for your interest in contributing prompts!
       "avatar": "<url> (optional)"
     },
     "model": ["reasoning", "chat"],
-    "version": "1.0"
+    "version": "1.0",
+    "file": "myrule.md"
   }
   ```
+
+or define an array
+
+  ```json
+  [
+  {
+    "name": "<name> (required)",
+    "description": "<description> (required)",
+    ...
+  },
+  {
+    "name": "<name> (required)",
+    "description": "<description> (required)",
+    ...
+  },
+  ]
+```
+
+
 - Add one or more `.mdc` files with your rules.
-- For `.mdc` files, please include YAML front-matter. Here an example:
+- For `.mdc` files, please include YAML front-matter. Here is an example:
   ```yaml
   ---
   description: "Short summary"
