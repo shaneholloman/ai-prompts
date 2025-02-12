@@ -2,7 +2,7 @@
   {
     "name": "Metroid-Clone Phaser 3",
     "description": "A complete Phaser 3 project replicating classic Metroid mechanics and best practices.",
-    "type": "project",
+    "type": "agent",
     "slug": "metroid-clone-phaser3",
     "author": {
       "name": "kevin regenrek",
@@ -15,7 +15,7 @@
   {
     "name": "Next.js",
     "description": "A complete Next.js project with all the necessary files and folders.",
-    "type": "starter",
+    "type": "agent",
     "slug": "nextjs",
     "author": {
       "name": "kevin regenrek",
@@ -28,7 +28,7 @@
   {
     "name": "Next.js Bootstrap Supabase",
     "description": "Next.js project with Supabase integration, Bootstrap CSS, and TypeScript.",
-    "type": "project",
+    "type": "agent",
     "slug": "nextjs-bootstrap-supabase",
     "author": {
       "name": "kevin regenrek",
@@ -56,13 +56,31 @@
   {
     "name": "Next.js Shadcn Lucide",
     "description": "Installs shadcn and lucide icon library within a Next.js project",
-    "type": "starter",
     "slug": "nextjs-shadcn-lucide",
+    "type": "agent",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [],
+    "techStack": [
+      "next.js",
+      "react",
+      "shadcn",
+      "lucide"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
     "prompts": [
       {
         "id": "prompts-next-js-shadcn-lucide-next-js-shadcn-lucide.md",
