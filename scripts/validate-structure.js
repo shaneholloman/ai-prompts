@@ -58,10 +58,11 @@ async function validateDirectory(dirPath) {
 
         if (
           !subItem.name.endsWith(".mdc") &&
+          !subItem.name.endsWith(".md") &&
           subItem.name !== "aiprompt.json"
         ) {
           throw new Error(
-            `Invalid file type in ${fullPath}: ${subItem.name}. Only .mdc and aiprompt.json files are allowed.`
+            `Invalid file type in ${fullPath}: ${subItem.name}. Only .mdc, .md and aiprompt.json files are allowed.`
           );
         }
       }
