@@ -29,3 +29,4 @@ Thanks for your interest in contributing prompts!
 ## Submit a Pull Request
 
 - Fork the repo, create a branch, add your rule(s), and submit a PR.
+

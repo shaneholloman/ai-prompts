@@ -2,15 +2,11 @@
  * build-index.js
  * Node script to traverse starters/, projects/, rules/ and build a consolidated index.json
  */
-
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
-// const STARTERS_DIR = path.join(__dirname, "..", "src", "starters");
-// const PROJECTS_DIR = path.join(__dirname, "..", "src", "projects");
-// const RULES_DIR = path.join(__dirname, "..", "src", "rules");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "index.json");
 
 /**
@@ -68,9 +64,6 @@ function parseFile(filePath) {
   }
 }
 
-/**
- * Main
- */
 function main() {
   const index = [];
 
