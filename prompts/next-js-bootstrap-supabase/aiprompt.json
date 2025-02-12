@@ -1,7 +1,7 @@
 {
   "name": "Next.js Bootstrap Supabase",
   "description": "Next.js project with Supabase integration, Bootstrap CSS, and TypeScript.",
-  "type": "project",
+  "type": "agent",
   "slug": "nextjs-bootstrap-supabase",
   "author": {
     "name": "kevin regenrek",

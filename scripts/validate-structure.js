@@ -3,7 +3,7 @@ const path = require("path");
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 
-const TYPES = ["project", "starter"];
+const TYPES = ["rule", "agent", "feature"];
 
 // Add this at the top level of the file, after the TYPES constant
 const slugs = new Set();

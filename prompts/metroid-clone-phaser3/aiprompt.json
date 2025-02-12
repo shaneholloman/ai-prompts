@@ -1,7 +1,7 @@
 {
   "name": "Metroid-Clone Phaser 3",
   "description": "A complete Phaser 3 project replicating classic Metroid mechanics and best practices.",
-  "type": "project",
+  "type": "agent",
   "slug": "metroid-clone-phaser3",
   "author": {
     "name": "kevin regenrek",

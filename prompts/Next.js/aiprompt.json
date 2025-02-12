@@ -1,7 +1,7 @@
 {
   "name": "Next.js",
   "description": "A complete Next.js project with all the necessary files and folders.",
-  "type": "starter",
+  "type": "agent",
   "slug": "nextjs",
   "author": {
     "name": "kevin regenrek",
