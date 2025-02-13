@@ -1,5 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
+const z = require("zod").z;
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 
@@ -72,37 +73,31 @@ async function validateDirectory(dirPath) {
   }
 }
 
-function stringHasText(str) {
-  return typeof str === "string" && str.trim().length > 0;
-}
-
 // Modify the validateMetadata function to check for duplicate slugs
 function validateMetadata(metadata) {
-  const requiredKeys = ["name", "description", "type", "slug", "author"];
-  for (const key of requiredKeys) {
-    if (!(key in metadata)) {
-      throw new Error(`Missing required key in aiprompt.json: ${key}`);
-    }
-  }
-
-  // Validate field types
-  if (!stringHasText(metadata.name)) {
-    throw new Error("name must be a string");
-  }
-  if (!stringHasText(metadata.description)) {
-    throw new Error("description must be a string");
-  }
-  if (!stringHasText(metadata.type)) {
-    throw new Error("type must be a string");
-  }
-  if (!TYPES.includes(metadata.type)) {
-    throw new Error(
-      `Invalid type: ${metadata.type}. Must be one of: ${TYPES.join(", ")}`
-    );
-  }
-  if (!stringHasText(metadata.slug)) {
-    throw new Error("slug must be a string");
-  }
+  z.object({
+    name: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    type: z.enum(TYPES),
+    slug: z.string().trim().min(1),
+    author: z.object({ name: z.string().trim().min(1) }).passthrough(),
+    development_process: z.array(z.string().trim().min(1)),
+    dev_categories: z.array(z.string().trim().min(1)),
+    tags: z.array(z.string().trim().min(1)),
+    techStack: z.array(z.string().trim().min(1)),
+    model: z.array(z.string().trim().min(1)),
+    version: z.string().trim().min(1),
+  })
+    .partial({
+      development_process: true,
+      dev_categories: true,
+      tags: true,
+      techStack: true,
+      model: true,
+      version: true,
+    })
+    .passthrough()
+    .parse(metadata);
 
   // Check for duplicate slugs
   if (slugs.has(metadata.slug)) {
@@ -111,15 +106,6 @@ function validateMetadata(metadata) {
     );
   }
   slugs.add(metadata.slug);
-
-  // Validate author object
-  const author = metadata.author;
-  if (typeof author !== "object" || author === null) {
-    throw new Error("author must be an object");
-  }
-  if (!stringHasText(author.name)) {
-    throw new Error("author.name must be a string");
-  }
 }
 
 // Modify the main function to clear the slugs Set before validation
