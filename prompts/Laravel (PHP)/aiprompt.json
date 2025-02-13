@@ -1,82 +1,82 @@
 [
-    {
-      "name": "Laravel Rules",
-      "description": "Guidelines, best practices, dos and don’ts for Laravel 10+.",
-      "type": "rule",
-      "slug": "rule-laravel",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["backend"],
-      "tags": ["laravel", "best-practices"],
-      "techStack": ["laravel", "php"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "rule-laravel.mdc"
+  {
+    "name": "Laravel Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Laravel 10+.",
+    "type": "rule",
+    "slug": "rule-laravel",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["backend"],
+    "tags": ["laravel", "best-practices"],
+    "techStack": ["laravel", "php"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Laravel Controller",
-      "description": "Create a new controller in a Laravel 10+ project.",
-      "type": "feature",
-      "slug": "add-controller",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["backend", "controller"],
-      "tags": ["laravel", "mvc"],
-      "techStack": ["laravel", "php"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-controller.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "rule-laravel.mdc"
+  },
+  {
+    "name": "Add Laravel Controller",
+    "description": "Create a new controller in a Laravel 10+ project.",
+    "type": "feature",
+    "slug": "add-controller",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["backend", "controller"],
+    "tags": ["laravel", "mvc"],
+    "techStack": ["laravel", "php"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Laravel Model",
-      "description": "Generate a new Eloquent model along with migrations.",
-      "type": "feature",
-      "slug": "add-model",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["backend", "models", "database"],
-      "tags": ["laravel", "eloquent"],
-      "techStack": ["laravel", "php"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-model.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-controller.mdc"
+  },
+  {
+    "name": "Add Laravel Model",
+    "description": "Generate a new Eloquent model along with migrations.",
+    "type": "feature",
+    "slug": "add-model",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["backend", "models", "database"],
+    "tags": ["laravel", "eloquent"],
+    "techStack": ["laravel", "php"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Laravel Route",
-      "description": "Define a new route in web.php or api.php.",
-      "type": "feature",
-      "slug": "add-route",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["backend", "routing"],
-      "tags": ["laravel", "routes"],
-      "techStack": ["laravel", "php"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-route.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-model.mdc"
+  },
+  {
+    "name": "Add Laravel Route",
+    "description": "Define a new route in web.php or api.php.",
+    "type": "feature",
+    "slug": "add-route",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["backend", "routing"],
+    "tags": ["laravel", "routes"],
+    "techStack": ["laravel", "php"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Blade Component",
-      "description": "Create a reusable Blade component in Laravel.",
-      "type": "feature",
-      "slug": "add-blade-component",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "blade"],
-      "tags": ["laravel", "blade"],
-      "techStack": ["laravel", "php"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-blade-component.mdc"
-    }
-  ]
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-route.mdc"
+  },
+  {
+    "name": "Add Blade Component",
+    "description": "Create a reusable Blade component in Laravel.",
+    "type": "feature",
+    "slug": "add-blade-component",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "blade"],
+    "tags": ["laravel", "blade"],
+    "techStack": ["laravel", "php"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-blade-component.mdc"
+  }
+]
