@@ -1,0 +1,56 @@
+[
+    {
+      "name": "Redux Best Practices for React",
+      "description": "Guidelines and best practices for using Redux in a React application, covering state management, selectors, and middleware usage.",
+      "type": "rule",
+      "slug": "rule-redux-react",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["frontend", "state management"],
+      "tags": ["redux", "state management", "best practices"],
+      "techStack": ["react", "redux", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "rule-redux-react.mdc"
+    },
+    {
+      "name": "Redux Setup in React",
+      "description": "Step-by-step guide for setting up Redux in a React application, including installing Redux Toolkit, configuring the store, and connecting components.",
+      "type": "agent",
+      "slug": "agent-setup-redux-react",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["frontend", "state management"],
+      "tags": ["redux", "setup", "agentic"],
+      "techStack": ["react", "redux", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "agent-setup-redux-react.mdc"
+    },
+    {
+      "name": "Adding Global State with Redux in React",
+      "description": "Instructions for adding a new global state slice in Redux for a React application, including actions, reducers, and selectors.",
+      "type": "feature",
+      "slug": "add-redux-global-state-react",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["frontend", "state management"],
+      "tags": ["redux", "state", "global store"],
+      "techStack": ["react", "redux", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "add-redux-global-state-react.mdc"
+    }
+  ]

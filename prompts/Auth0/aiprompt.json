@@ -1,0 +1,74 @@
+[
+    {
+      "name": "Auth0 Best Practices for Nuxt",
+      "description": "Guidelines and best practices for integrating Auth0 authentication in a Nuxt.js application, including security considerations and API usage.",
+      "type": "rule",
+      "slug": "rule-auth0-nuxt",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["backend", "security", "authentication"],
+      "tags": ["auth", "security", "best practices"],
+      "techStack": ["nuxt.js", "vue", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "rule-auth0-nuxt.mdc"
+    },
+    {
+      "name": "Auth0 Setup in Nuxt",
+      "description": "Step-by-step guide for installing and configuring Auth0 authentication in a Nuxt.js application, including middleware setup and session handling.",
+      "type": "agent",
+      "slug": "agent-setup-auth0-nuxt",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["backend", "frontend", "authentication"],
+      "tags": ["automation", "setup", "agentic"],
+      "techStack": ["nuxt.js", "vue", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "agent-setup-auth0-nuxt.mdc"
+    },
+    {
+      "name": "Auth0 User Profile Management in Nuxt",
+      "description": "Instructions for handling user profiles and session management using Auth0 in a Nuxt.js application.",
+      "type": "feature",
+      "slug": "add-auth0-user-profile-nuxt",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["frontend", "authentication"],
+      "tags": ["profile", "auth", "user management"],
+      "techStack": ["auth0", "nuxt.js", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "add-auth0-user-profile-nuxt.mdc"
+    },
+    {
+      "name": "Auth0 Role-Based Access Control in Nuxt",
+      "description": "Steps to implement role-based access control (RBAC) with Auth0 in a Nuxt.js application, including API calls and protecting routes based on user roles.",
+      "type": "feature",
+      "slug": "add-auth0-rbac-nuxt",
+      "development_process": ["plan", "design", "implement", "test", "deploy"],
+      "dev_categories": ["backend", "authentication", "security"],
+      "tags": ["rbac", "auth", "role-based-access"],
+      "techStack": ["auth0", "nuxt.js", "typescript"],
+      "author": {
+        "name": "AI Prompt Engineer",
+        "url": "",
+        "avatar": ""
+      },
+      "model": ["reasoning", "chat"],
+      "version": "1.0",
+      "file": "add-auth0-rbac-nuxt.mdc"
+    }
+  ]
