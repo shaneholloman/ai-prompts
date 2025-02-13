@@ -1,82 +1,82 @@
 [
-    {
-      "name": "Vue 3 Rules",
-      "description": "Guidelines, best practices, dos and don’ts for Vue 3 with Composition API.",
-      "type": "rule",
-      "slug": "rule-vue",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend"],
-      "tags": ["best-practices", "vue3", "guide"],
-      "techStack": ["vue3"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "rule-vue.mdc"
+  {
+    "name": "Vue 3 Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Vue 3 with Composition API.",
+    "type": "rule",
+    "slug": "rule-vue",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend"],
+    "tags": ["best-practices", "vue3", "guide"],
+    "techStack": ["vue3"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Vue Component",
-      "description": "Add a new reusable component in a Vue 3 application.",
-      "type": "feature",
-      "slug": "add-component",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "ui"],
-      "tags": ["vue3", "component"],
-      "techStack": ["vue3"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-component.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "rule-vue.md"
+  },
+  {
+    "name": "Add Vue Component",
+    "description": "Add a new reusable component in a Vue 3 application.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ui"],
+    "tags": ["vue3", "component"],
+    "techStack": ["vue3"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Vue Composable",
-      "description": "Create a reusable composable function for Vue 3 (Composition API).",
-      "type": "feature",
-      "slug": "add-composable",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "logic"],
-      "tags": ["vue3", "composable"],
-      "techStack": ["vue3"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-composable.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-component.md"
+  },
+  {
+    "name": "Add Vue Composable",
+    "description": "Create a reusable composable function for Vue 3 (Composition API).",
+    "type": "feature",
+    "slug": "add-composable",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "logic"],
+    "tags": ["vue3", "composable"],
+    "techStack": ["vue3"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Pinia Store",
-      "description": "Set up or extend a Pinia store for global state management in Vue 3.",
-      "type": "feature",
-      "slug": "add-pinia-store",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "state-management"],
-      "tags": ["vue3", "pinia"],
-      "techStack": ["vue3", "pinia"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-pinia-store.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-composable.md"
+  },
+  {
+    "name": "Add Pinia Store",
+    "description": "Set up or extend a Pinia store for global state management in Vue 3.",
+    "type": "feature",
+    "slug": "add-pinia-store",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "state-management"],
+    "tags": ["vue3", "pinia"],
+    "techStack": ["vue3", "pinia"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Vue Page (Router)",
-      "description": "Create a new page (route) using Vue Router.",
-      "type": "feature",
-      "slug": "add-vue-page",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "routing"],
-      "tags": ["vue3", "vue-router"],
-      "techStack": ["vue3", "vue-router"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-vue-page.mdc"
-    }
-  ]
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-pinia-store.md"
+  },
+  {
+    "name": "Add Vue Page (Router)",
+    "description": "Create a new page (route) using Vue Router.",
+    "type": "feature",
+    "slug": "add-vue-page",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "routing"],
+    "tags": ["vue3", "vue-router"],
+    "techStack": ["vue3", "vue-router"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-vue-page.md"
+  }
+]

@@ -10,32 +10,33 @@ const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "index.json");
 
 /**
- * Parse prompt files (.md, .mdc) in a directory
+ * Parse prompt file specified in the metadata object
  */
-function getPromptContent(dirPath) {
-  const promptFiles = fs
-    .readdirSync(dirPath)
-    .filter((file) =>
-      [".md", ".mdc"].includes(path.extname(file).toLowerCase())
-    )
-    .map((file) => {
-      const filePath = path.join(dirPath, file);
-      const raw = fs.readFileSync(filePath, "utf8");
-      const relative = path.relative(path.join(__dirname, ".."), filePath);
-      const fm = matter(raw);
-      const data = fm.data || {};
-      const content = fm.content || "";
-      const id = data.id || relative.replace(/\//g, "-");
-      return {
-        id,
-        description: data.description || "",
-        globs: data.globs || "",
-        content,
-        filePath: relative,
-      };
-    });
+function getPromptContent(dirPath, fileToRead) {
+  const filePath = path.join(dirPath, fileToRead);
 
-  return promptFiles;
+  // Check if file exists
+  if (!fs.existsSync(filePath)) {
+    console.warn(
+      `Warning: File ${filePath} specified in aiprompt.json not found`
+    );
+    return null;
+  }
+
+  const raw = fs.readFileSync(filePath, "utf8");
+  const relative = path.relative(path.join(__dirname, ".."), filePath);
+  const fm = matter(raw);
+  const data = fm.data || {};
+  const content = fm.content || "";
+  const id = data.id || relative.replace(/\//g, "-");
+
+  return {
+    id,
+    description: data.description || "",
+    globs: data.globs || "",
+    content,
+    filePath: relative,
+  };
 }
 
 /**
@@ -51,13 +52,16 @@ function parseFile(filePath) {
     const data = JSON.parse(raw);
     // Get prompts content from the same directory as aiprompt.json
     const dirPath = path.dirname(filePath);
-    const prompts = getPromptContent(dirPath);
 
-    return {
-      ...data,
-      prompts,
-      filePath: relative,
-    };
+    // Process each object in the array
+    return data.map((item) => {
+      const prompt = getPromptContent(dirPath, item.file);
+      return {
+        ...item,
+        prompts: [prompt].filter(Boolean),
+        filePath: relative,
+      };
+    });
   } else {
     // skip unknown file types
     return null;
@@ -83,12 +87,11 @@ function main() {
     const aiPromptPath = path.join(folderPath, "aiprompt.json");
     if (fs.existsSync(aiPromptPath)) {
       const parsed = parseFile(aiPromptPath);
-      if (parsed) index.push(parsed);
+      if (parsed) index.push(...parsed); // Spread the array since parseFile now returns an array
     }
   });
 
-  // Optionally, we can add some sorting or unify certain fields
-  // e.g., sort by category, then title
+  // Sort by name
   index.sort((a, b) => a.name.localeCompare(b.name));
 
   // Write the final array to index.json

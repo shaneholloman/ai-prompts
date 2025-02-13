@@ -75,37 +75,53 @@ async function validateDirectory(dirPath) {
 
 // Modify the validateMetadata function to check for duplicate slugs
 function validateMetadata(metadata) {
-  z.object({
-    name: z.string().trim().min(1),
-    description: z.string().trim().min(1),
-    type: z.enum(TYPES),
-    slug: z.string().trim().min(1),
-    author: z.object({ name: z.string().trim().min(1) }).passthrough(),
-    development_process: z.array(z.string().trim().min(1)),
-    dev_categories: z.array(z.string().trim().min(1)),
-    tags: z.array(z.string().trim().min(1)),
-    techStack: z.array(z.string().trim().min(1)),
-    model: z.array(z.string().trim().min(1)),
-    version: z.string().trim().min(1),
-  })
-    .partial({
-      development_process: true,
-      dev_categories: true,
-      tags: true,
-      techStack: true,
-      model: true,
-      version: true,
-    })
-    .passthrough()
-    .parse(metadata);
+  z.array(
+    z
+      .object({
+        name: z.string().trim().min(1),
+        description: z.string().trim().min(1),
+        type: z.enum(TYPES),
+        slug: z.string().trim().min(1),
+        file: z.string().trim().min(1),
+        author: z
+          .object({
+            name: z.string().trim().min(1),
+            url: z.string().trim().url(),
+            avatar: z.string().trim().url(),
+          })
+          .partial({
+            url: true,
+            avatar: true,
+          })
+          .passthrough(),
+        development_process: z.array(z.string().trim().min(1)),
+        dev_categories: z.array(z.string().trim().min(1)),
+        tags: z.array(z.string().trim().min(1)),
+        techStack: z.array(z.string().trim().min(1)),
+        model: z.array(z.string().trim().min(1)),
+        version: z.string().trim().min(1),
+      })
+      .partial({
+        development_process: true,
+        dev_categories: true,
+        tags: true,
+        techStack: true,
+        model: true,
+        version: true,
+      })
+      .passthrough()
+  ).parse(metadata);
 
   // Check for duplicate slugs
-  if (slugs.has(metadata.slug)) {
-    throw new Error(
-      `Duplicate slug found: ${metadata.slug}. Slugs must be unique across all prompts.`
-    );
+  for (let i = 0; i < metadata.length; i++) {
+    const d = metadata[i];
+    if (slugs.has(d.slug)) {
+      throw new Error(
+        `Duplicate slug found: ${metadata.slug}. Slugs must be unique across all prompts.`
+      );
+    }
+    slugs.add(metadata.slug);
   }
-  slugs.add(metadata.slug);
 }
 
 // Modify the main function to clear the slugs Set before validation

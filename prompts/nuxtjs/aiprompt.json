@@ -14,7 +14,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "rule-nuxtjs.mdc"
+    "file": "rule-nuxtjs.md"
   },
   {
     "name": "Add Nuxt Component",
@@ -30,7 +30,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-component.mdc"
+    "file": "add-component.md"
   },
   {
     "name": "Add Nuxt Composable",
@@ -46,7 +46,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-composable.mdc"
+    "file": "add-composable.md"
   },
   {
     "name": "Add Nuxt Page",
@@ -62,7 +62,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-page.mdc"
+    "file": "add-page.md"
   },
   {
     "name": "Add Nuxt Store (Pinia)",
@@ -78,6 +78,6 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-store.mdc"
+    "file": "add-store.md"
   }
 ]
