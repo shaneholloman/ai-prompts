@@ -1,66 +1,66 @@
 [
-    {
-      "name": "Angular Rules",
-      "description": "Guidelines, best practices, dos and don’ts for Angular 16+.",
-      "type": "rule",
-      "slug": "rule-angular",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend"],
-      "tags": ["best-practices", "angular", "guide"],
-      "techStack": ["angular"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "rule-angular.mdc"
+  {
+    "name": "Angular Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Angular 16+.",
+    "type": "rule",
+    "slug": "rule-angular",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend"],
+    "tags": ["best-practices", "angular", "guide"],
+    "techStack": ["angular"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Angular Component",
-      "description": "Generate a new component using Angular best practices.",
-      "type": "feature",
-      "slug": "add-component",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "ui"],
-      "tags": ["angular", "component"],
-      "techStack": ["angular"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-component.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "rule-angular.md"
+  },
+  {
+    "name": "Add Angular Component",
+    "description": "Generate a new component using Angular best practices.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ui"],
+    "tags": ["angular", "component"],
+    "techStack": ["angular"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Angular Service",
-      "description": "Create a reusable Angular service with dependency injection.",
-      "type": "feature",
-      "slug": "add-service",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "services"],
-      "tags": ["angular", "service"],
-      "techStack": ["angular"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-service.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-component.md"
+  },
+  {
+    "name": "Add Angular Service",
+    "description": "Create a reusable Angular service with dependency injection.",
+    "type": "feature",
+    "slug": "add-service",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "services"],
+    "tags": ["angular", "service"],
+    "techStack": ["angular"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add NgRx Store",
-      "description": "Set up or extend an NgRx store for global state management.",
-      "type": "feature",
-      "slug": "add-ngrx-store",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "state-management"],
-      "tags": ["angular", "ngrx"],
-      "techStack": ["angular", "ngrx"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-ngrx-store.mdc"
-    }
-  ]
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-service.md"
+  },
+  {
+    "name": "Add NgRx Store",
+    "description": "Set up or extend an NgRx store for global state management.",
+    "type": "feature",
+    "slug": "add-ngrx-store",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "state-management"],
+    "tags": ["angular", "ngrx"],
+    "techStack": ["angular", "ngrx"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-ngrx-store.md"
+  }
+]

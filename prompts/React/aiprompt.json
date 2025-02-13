@@ -1,82 +1,82 @@
 [
-    {
-      "name": "React.js Rules",
-      "description": "Guidelines, best practices, dos and don’ts for React.js.",
-      "type": "rule",
-      "slug": "rule-react",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "ui"],
-      "tags": ["best-practices", "react", "guide"],
-      "techStack": ["react"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "rule-react.mdc"
+  {
+    "name": "React.js Rules",
+    "description": "Guidelines, best practices, dos and don’ts for React.js.",
+    "type": "rule",
+    "slug": "rule-react",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ui"],
+    "tags": ["best-practices", "react", "guide"],
+    "techStack": ["react"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add React Component",
-      "description": "Add a new reusable React component.",
-      "type": "feature",
-      "slug": "add-component",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "ui"],
-      "tags": ["react", "component"],
-      "techStack": ["react"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-component.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "rule-react.md"
+  },
+  {
+    "name": "Add React Component",
+    "description": "Add a new reusable React component.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ui"],
+    "tags": ["react", "component"],
+    "techStack": ["react"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Custom Hook",
-      "description": "Create a custom React Hook for encapsulating logic.",
-      "type": "feature",
-      "slug": "add-hook",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "hooks"],
-      "tags": ["react", "hooks"],
-      "techStack": ["react"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-hook.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-component.md"
+  },
+  {
+    "name": "Add Custom Hook",
+    "description": "Create a custom React Hook for encapsulating logic.",
+    "type": "feature",
+    "slug": "add-hook",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "hooks"],
+    "tags": ["react", "hooks"],
+    "techStack": ["react"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add React Context",
-      "description": "Create a React Context for global or shared state.",
-      "type": "feature",
-      "slug": "add-context",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "state-management"],
-      "tags": ["react", "context"],
-      "techStack": ["react"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-context.mdc"
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-hook.md"
+  },
+  {
+    "name": "Add React Context",
+    "description": "Create a React Context for global or shared state.",
+    "type": "feature",
+    "slug": "add-context",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "state-management"],
+    "tags": ["react", "context"],
+    "techStack": ["react"],
+    "author": {
+      "name": "Prompt Engineer"
     },
-    {
-      "name": "Add Redux Store",
-      "description": "Set up or extend a Redux store in a React project.",
-      "type": "feature",
-      "slug": "add-redux-store",
-      "development_process": ["plan", "design", "implement", "test", "deploy"],
-      "dev_categories": ["frontend", "state-management"],
-      "tags": ["react", "redux"],
-      "techStack": ["react", "redux"],
-      "author": {
-        "name": "Prompt Engineer"
-      },
-      "model": ["reasoning", "chat"],
-      "version": "1.0",
-      "file": "add-redux-store.mdc"
-    }
-  ]
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-context.md"
+  },
+  {
+    "name": "Add Redux Store",
+    "description": "Set up or extend a Redux store in a React project.",
+    "type": "feature",
+    "slug": "add-redux-store",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "state-management"],
+    "tags": ["react", "redux"],
+    "techStack": ["react", "redux"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-redux-store.md"
+  }
+]

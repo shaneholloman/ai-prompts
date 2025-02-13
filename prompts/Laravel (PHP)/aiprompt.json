@@ -13,7 +13,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "rule-laravel.mdc"
+    "file": "rule-laravel.md"
   },
   {
     "name": "Add Laravel Controller",
@@ -29,7 +29,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-controller.mdc"
+    "file": "add-controller.md"
   },
   {
     "name": "Add Laravel Model",
@@ -45,7 +45,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-model.mdc"
+    "file": "add-model.md"
   },
   {
     "name": "Add Laravel Route",
@@ -61,7 +61,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-route.mdc"
+    "file": "add-route.md"
   },
   {
     "name": "Add Blade Component",
@@ -77,6 +77,6 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "file": "add-blade-component.mdc"
+    "file": "add-blade-component.md"
   }
 ]

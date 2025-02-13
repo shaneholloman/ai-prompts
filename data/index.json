@@ -1,16 +1,1239 @@
 [
   {
-    "name": "Metroid-Clone Phaser 3",
-    "description": "A complete Phaser 3 project replicating classic Metroid mechanics and best practices.",
-    "type": "agent",
-    "slug": "metroid-clone-phaser3",
+    "name": "Add Angular Component",
+    "description": "Generate a new component using Angular best practices.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "angular",
+      "component"
+    ],
+    "techStack": [
+      "angular"
+    ],
     "author": {
-      "name": "kevin regenrek",
-      "url": "https://github.com/regenrek",
-      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+      "name": "Prompt Engineer"
     },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
+    "prompts": [
+      {
+        "id": "prompts-Angular-add-component.md",
+        "description": "Generating a new Angular component",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when generating a new Angular component.\n\nCLI:\n- Use `ng generate component MyExample` to create it.\n\nExample:\n```ts\n// my-example.component.ts\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-my-example',\n  templateUrl: './my-example.component.html',\n  styleUrls: ['./my-example.component.css'],\n  changeDetection: 0 // default or ChangeDetectionStrategy.OnPush\n})\nexport class MyExampleComponent {\n  @Input() title!: string;\n  @Output() clicked = new EventEmitter<void>();\n\n  handleClick() {\n    this.clicked.emit();\n  }\n}\n\n<!-- my-example.component.html -->\n<div (click)=\"handleClick()\">\n  {{ title }}\n</div>\n\nUsage:\n\n<!-- In parent template -->\n<app-my-example [title]=\"someTitle\" (clicked)=\"onClicked()\"></app-my-example>\n\nTesting:\n-\tAngular CLI generates a .spec.ts test file. Use TestBed to test.\n\nDos:\n-\tDo use Angular CLI to keep consistent structure.\n-\tDo define clear inputs/outputs.\n\nDon’ts:\n-\tDon’t bind large arrays without trackBy.\n-\tDon’t forget to declare your component in an NgModule.\n\n",
+        "filePath": "prompts/Angular/add-component.md"
+      }
+    ],
+    "filePath": "prompts/Angular/aiprompt.json"
+  },
+  {
+    "name": "Add Angular Service",
+    "description": "Create a reusable Angular service with dependency injection.",
+    "type": "feature",
+    "slug": "add-service",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "services"
+    ],
+    "tags": [
+      "angular",
+      "service"
+    ],
+    "techStack": [
+      "angular"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-service.md",
+    "prompts": [
+      {
+        "id": "prompts-Angular-add-service.md",
+        "description": "Creating an Angular service",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating an Angular service.\n\nCLI:\n- `ng generate service myService`.\n\nExample:\n```ts\nimport { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { Observable } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class MyService {\n  constructor(private http: HttpClient) {}\n\n  getItems(): Observable<any[]> {\n    return this.http.get<any[]>('https://api.example.com/items');\n  }\n}\n\nUsage in Component:\n\nimport { Component, OnInit } from '@angular/core';\nimport { MyService } from '../my-service.service';\n\n@Component({\n  selector: 'app-my-consumer',\n  template: `\n    <div *ngIf=\"items\">\n      <div *ngFor=\"let item of items\">{{ item.name }}</div>\n    </div>\n  `,\n})\nexport class MyConsumerComponent implements OnInit {\n  items: any[] = [];\n\n  constructor(private myService: MyService) {}\n\n  ngOnInit(): void {\n    this.myService.getItems().subscribe((data) => (this.items = data));\n  }\n}\n\nBest Practices:\n-\tKeep logic in services, not in components.\n-\tUse RxJS operators, handle errors, etc.\n\nDos:\n-\tDo inject HttpClient in constructor for REST calls.\n-\tDo handle errors with catchError if needed.\n\nDon’ts:\n-\tDon’t do direct DOM manipulation in services.\n-\tDon’t store ephemeral component state in services (avoid memory leaks).\n\n",
+        "filePath": "prompts/Angular/add-service.md"
+      }
+    ],
+    "filePath": "prompts/Angular/aiprompt.json"
+  },
+  {
+    "name": "Add Blade Component",
+    "description": "Create a reusable Blade component in Laravel.",
+    "type": "feature",
+    "slug": "add-blade-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "blade"
+    ],
+    "tags": [
+      "laravel",
+      "blade"
+    ],
+    "techStack": [
+      "laravel",
+      "php"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-blade-component.md",
+    "prompts": [
+      {
+        "id": "prompts-Laravel (PHP)-add-blade-component.md",
+        "description": "Creating a Blade Component in Laravel",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Blade Component in Laravel.\n\nFile:\n- `php artisan make:component Alert`\n- This creates `app/View/Components/Alert.php` and a Blade view at `resources/views/components/alert.blade.php`.\n\nExample:\n```php\n// app/View/Components/Alert.php\nnamespace App\\View\\Components;\n\nuse Illuminate\\View\\Component;\n\nclass Alert extends Component\n{\n    public $type;\n\n    public function __construct($type = 'info')\n    {\n        $this->type = $type;\n    }\n\n    public function render()\n    {\n        return view('components.alert');\n    }\n}\n\nBlade File:\n\n<!-- resources/views/components/alert.blade.php -->\n<div class=\"alert alert-{{ $type }}\">\n    {{ $slot }}\n</div>\n\nUsage:\n\n<x-alert type=\"danger\">\n    This is a danger alert!\n</x-alert>\n\nDos:\n-\tDo pass dynamic data via constructor or attributes.\n-\tDo keep logic minimal in the component’s class.\n\nDon’ts:\n-\tDon’t embed sensitive logic in the Blade template.\n-\tDon’t forget to sanitize user input if displayed.\n\n",
+        "filePath": "prompts/Laravel (PHP)/add-blade-component.md"
+      }
+    ],
+    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
+  },
+  {
+    "name": "Add Custom Hook",
+    "description": "Create a custom React Hook for encapsulating logic.",
+    "type": "feature",
+    "slug": "add-hook",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "hooks"
+    ],
+    "tags": [
+      "react",
+      "hooks"
+    ],
+    "techStack": [
+      "react"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-hook.md",
+    "prompts": [
+      {
+        "id": "prompts-React-add-hook.md",
+        "description": "Creating a custom React Hook",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules for creating a custom React Hook.\n\nFile Placement:\n- Typically in `src/hooks/` or `src/utils/hooks/`.\n- Name file `useSomething.ts`.\n\nExample:\n```ts\nimport { useState, useEffect } from 'react';\n\nexport function useFetch<T>(url: string): {\n  data: T | null;\n  isLoading: boolean;\n  error: Error | null;\n} {\n  const [data, setData] = useState<T | null>(null);\n  const [isLoading, setIsLoading] = useState(true);\n  const [error, setError] = useState<Error | null>(null);\n\n  useEffect(() => {\n    let cancel = false;\n    setIsLoading(true);\n\n    fetch(url)\n      .then((res) => {\n        if (!res.ok) {\n          throw new Error(`Request failed: ${res.status}`);\n        }\n        return res.json();\n      })\n      .then((json) => {\n        if (!cancel) setData(json);\n      })\n      .catch((err) => {\n        if (!cancel) setError(err);\n      })\n      .finally(() => {\n        if (!cancel) setIsLoading(false);\n      });\n\n    return () => {\n      cancel = true;\n    };\n  }, [url]);\n\n  return { data, isLoading, error };\n}\n\nUsage:\n\nimport React from 'react';\nimport { useFetch } from './useFetch';\n\nexport function DataDisplay() {\n  const { data, isLoading, error } = useFetch<any>('https://api.example.com/items');\n\n  if (isLoading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n  return <pre>{JSON.stringify(data, null, 2)}</pre>;\n}\n\nDos:\n-\tDo prefix with use.\n-\tDo handle cleanup for async operations.\n\nDon’ts:\n-\tDon’t call hooks conditionally.\n-\tDon’t ignore potential re-renders; watch dependencies carefully.\n\n",
+        "filePath": "prompts/React/add-hook.md"
+      }
+    ],
+    "filePath": "prompts/React/aiprompt.json"
+  },
+  {
+    "name": "Add Laravel Controller",
+    "description": "Create a new controller in a Laravel 10+ project.",
+    "type": "feature",
+    "slug": "add-controller",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "backend",
+      "controller"
+    ],
+    "tags": [
+      "laravel",
+      "mvc"
+    ],
+    "techStack": [
+      "laravel",
+      "php"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-controller.md",
+    "prompts": [
+      {
+        "id": "prompts-Laravel (PHP)-add-controller.md",
+        "description": "Creating a Laravel Controller",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Laravel Controller.\n\nArtisan Command:\n- `php artisan make:controller UserController`.\n\nExample:\n```php\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\Models\\User;\nuse Illuminate\\Http\\Request;\n\nclass UserController extends Controller\n{\n    public function index()\n    {\n        $users = User::all();\n        return view('users.index', compact('users'));\n    }\n\n    public function store(Request $request)\n    {\n        $request->validate([\n            'name' => 'required',\n            'email' => 'required|email|unique:users'\n        ]);\n        $user = User::create($request->all());\n        return redirect()->route('users.index')\n                         ->with('success', 'User created successfully');\n    }\n}\n\nRouting:\n-\tIn routes/web.php:\n\nRoute::resource('users', UserController::class);\n\nBlade View:\n-\tresources/views/users/index.blade.php.\n\nDos:\n-\tDo validate input.\n-\tDo use route model binding if possible.\n\nDon’ts:\n-\tDon’t place all logic in the controller—use services for large tasks.\n-\tDon’t forget to sanitize or validate user input.\n\n",
+        "filePath": "prompts/Laravel (PHP)/add-controller.md"
+      }
+    ],
+    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
+  },
+  {
+    "name": "Add Laravel Model",
+    "description": "Generate a new Eloquent model along with migrations.",
+    "type": "feature",
+    "slug": "add-model",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "backend",
+      "models",
+      "database"
+    ],
+    "tags": [
+      "laravel",
+      "eloquent"
+    ],
+    "techStack": [
+      "laravel",
+      "php"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-model.md",
+    "prompts": [
+      {
+        "id": "prompts-Laravel (PHP)-add-model.md",
+        "description": "Creating a Laravel Eloquent Model",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Laravel Eloquent Model.\n\nArtisan Command:\n- `php artisan make:model Product -m` (creates model + migration).\n\nModel Example:\n```php\n<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Product extends Model\n{\n    use HasFactory;\n\n    protected $fillable = ['name', 'price', 'description'];\n\n    public function category()\n    {\n        return $this->belongsTo(Category::class);\n    }\n}\n\nMigration:\n\n// database/migrations/xxxx_create_products_table.php\nSchema::create('products', function (Blueprint $table) {\n    $table->id();\n    $table->string('name');\n    $table->decimal('price', 8, 2);\n    $table->text('description')->nullable();\n    $table->timestamps();\n});\n\nUsage:\n\n// in a Controller\n$product = Product::create($request->all());\n\nDos:\n-\tDo define fillable fields or use guarded.\n-\tDo define relationships.\n\nDon’ts:\n-\tDon’t forget to run php artisan migrate.\n-\tDon’t store business logic in the model if it’s extensive—use services.\n\n",
+        "filePath": "prompts/Laravel (PHP)/add-model.md"
+      }
+    ],
+    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
+  },
+  {
+    "name": "Add Laravel Route",
+    "description": "Define a new route in web.php or api.php.",
+    "type": "feature",
+    "slug": "add-route",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "backend",
+      "routing"
+    ],
+    "tags": [
+      "laravel",
+      "routes"
+    ],
+    "techStack": [
+      "laravel",
+      "php"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-route.md",
+    "prompts": [
+      {
+        "id": "prompts-Laravel (PHP)-add-route.md",
+        "description": "Adding a new Laravel route",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when adding a new Laravel route.\n\nWeb vs API:\n- `routes/web.php` for web routes (session-based, typically Blade).\n- `routes/api.php` for stateless JSON APIs.\n\nExample:\n```php\n// routes/web.php\nuse App\\Http\\Controllers\\HomeController;\nuse Illuminate\\Support\\Facades\\Route;\n\nRoute::get('/', [HomeController::class, 'index'])->name('home');\n\nResource Route:\n\nRoute::resource('products', ProductController::class);\n// GET /products -> index\n// GET /products/create -> create\n// POST /products -> store\n// ...\n\nAPI Route:\n\n// routes/api.php\nRoute::get('/products', [ProductController::class, 'index']);\n\nSecurity:\n\nRoute::middleware('auth')->group(function() {\n  // protected routes\n});\n\nDos:\n-\tDo name routes for easy referencing.\n-\tDo keep web.php organized, grouping routes by domain.\n\nDon’ts:\n-\tDon’t define the same endpoint multiple times without reason.\n-\tDon’t skip authentication for sensitive endpoints.\n\n",
+        "filePath": "prompts/Laravel (PHP)/add-route.md"
+      }
+    ],
+    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
+  },
+  {
+    "name": "Add NgRx Store",
+    "description": "Set up or extend an NgRx store for global state management.",
+    "type": "feature",
+    "slug": "add-ngrx-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "angular",
+      "ngrx"
+    ],
+    "techStack": [
+      "angular",
+      "ngrx"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-ngrx-store.md",
+    "prompts": [
+      {
+        "id": "prompts-Angular-add-ngrx-store.md",
+        "description": "Setting up NgRx for state management in an Angular project",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when setting up NgRx for state management:\n\nInstallation:\n- `npm install @ngrx/store @ngrx/effects`\n\nDefine Actions:\n```ts\n// counter.actions.ts\nimport { createAction } from '@ngrx/store';\n\nexport const increment = createAction('[Counter] Increment');\nexport const decrement = createAction('[Counter] Decrement');\nexport const reset = createAction('[Counter] Reset');\n\nDefine Reducer:\n\n// counter.reducer.ts\nimport { createReducer, on } from '@ngrx/store';\nimport { increment, decrement, reset } from './counter.actions';\n\nexport interface CounterState {\n  value: number;\n}\n\nexport const initialState: CounterState = { value: 0 };\n\nexport const counterReducer = createReducer(\n  initialState,\n  on(increment, (state) => ({ ...state, value: state.value + 1 })),\n  on(decrement, (state) => ({ ...state, value: state.value - 1 })),\n  on(reset, (state) => ({ ...state, value: 0 }))\n);\n\nRegister in Module:\n\n// app.module.ts\nimport { StoreModule } from '@ngrx/store';\nimport { counterReducer } from './store/counter.reducer';\n\n@NgModule({\n  ...\n  imports: [\n    BrowserModule,\n    StoreModule.forRoot({ counter: counterReducer })\n  ],\n})\nexport class AppModule {}\n\nUsage in Component:\n\nimport { Component } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport { increment, decrement } from './store/counter.actions';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'app-counter',\n  template: `\n    <button (click)=\"onIncrement()\">+</button>\n    <span>{{ value$ | async }}</span>\n    <button (click)=\"onDecrement()\">-</button>\n  `\n})\nexport class CounterComponent {\n  value$: Observable<number>;\n\n  constructor(private store: Store<{ counter: { value: number } }>) {\n    this.value$ = store.select(state => state.counter.value);\n  }\n\n  onIncrement() {\n    this.store.dispatch(increment());\n  }\n  onDecrement() {\n    this.store.dispatch(decrement());\n  }\n}\n\nDos:\n-\tDo keep your store, actions, reducers well organized.\n-\tDo use typed selectors for better type safety.\n\nDon’ts:\n-\tDon’t mix UI logic with NgRx logic.\n-\tDon’t forget to unsubscribe if needed (AsyncPipe unsubscribes automatically).\n\n",
+        "filePath": "prompts/Angular/add-ngrx-store.md"
+      }
+    ],
+    "filePath": "prompts/Angular/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Component",
+    "description": "Add a new reusable UI component to a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "nuxt3",
+      "component",
+      "vue"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
     "prompts": [],
-    "filePath": "prompts/metroid-clone-phaser3/aiprompt.json"
+    "filePath": "prompts/Nuxt.js/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Component",
+    "description": "Add a new reusable UI component to a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "nuxt3",
+      "component",
+      "vue"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
+    "prompts": [],
+    "filePath": "prompts/nuxtjs/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Composable",
+    "description": "Add a new composable (Composition API logic) in a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-composable",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "logic"
+    ],
+    "tags": [
+      "nuxt3",
+      "composition-api"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-composable.md",
+    "prompts": [
+      {
+        "id": "prompts-Nuxt.js-add-composable.md",
+        "description": "Creating a reusable composable in a Nuxt 3 project",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules when creating a reusable composable (Vue’s Composition API) in a Nuxt 3 project.\n\nLocation:\n- Place the composable in the `composables/` folder with a descriptive name, e.g. `useAuth.ts`.\n\nComposition API:\n- Use named exports that start with `use`, e.g. `export function useAuth() { ... }`.\n- Return reactive state, computed properties, or functions for any common logic.\n\nExample:\n```ts\n// composables/useAuth.ts\nimport { ref } from 'vue';\nimport { useRouter } from '#imports'; // auto-import in Nuxt 3\n\nexport function useAuth() {\n  const isAuthenticated = ref(false);\n  const router = useRouter();\n\n  function login() {\n    // do login\n    isAuthenticated.value = true;\n  }\n\n  function logout() {\n    // do logout\n    isAuthenticated.value = false;\n    router.push('/login');\n  }\n\n  return {\n    isAuthenticated,\n    login,\n    logout\n  };\n}\n\nUsage:\n-\tIn any component:\n\n<script setup lang=\"ts\">\nimport { useAuth } from '~/composables/useAuth';\n\nconst { isAuthenticated, login, logout } = useAuth();\n</script>\n\nBest Practices:\n-\tKeep composables small, focusing on a single responsibility (e.g., user authentication, form management, data fetching).\n-\tIf the composable grows large, break it into multiple composables.\n\nTesting:\n-\tWrite unit tests for composables. Mock any external modules (like useRouter) if necessary.\n-\tEnsure composables are covered by integration tests in pages or components.\n\nDos:\n-\tDo export only what’s needed.\n-\tDo handle error states or edge cases.\n\nDon’ts:\n-\tDon’t overcomplicate composables with unrelated logic.\n-\tDon’t rely on global variables inside composables.\n\n",
+        "filePath": "prompts/Nuxt.js/add-composable.md"
+      }
+    ],
+    "filePath": "prompts/Nuxt.js/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Composable",
+    "description": "Add a new composable (Composition API logic) in a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-composable",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "logic"
+    ],
+    "tags": [
+      "nuxt3",
+      "composition-api"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-composable.md",
+    "prompts": [],
+    "filePath": "prompts/nuxtjs/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Page",
+    "description": "Add a new page using Nuxt’s file-based routing system.",
+    "type": "feature",
+    "slug": "add-page",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "routing"
+    ],
+    "tags": [
+      "nuxt3",
+      "ssr"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-page.md",
+    "prompts": [
+      {
+        "id": "prompts-Nuxt.js-add-page.md",
+        "description": "Guidelines for creating a new page in Nuxt 3",
+        "globs": "**/*.vue",
+        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules.\n\nProject Structure:\n- File-Based Routing\n  - Create a `.vue` file under `pages/`. For example, `pages/profile.vue` for `/profile` route.\n  - For dynamic routes, use `[param].vue` (like `[id].vue`).\n\nPage Structure:\n- Use `<script setup>` for page logic.\n- Export a default `<template>` in the same file.\n\nFetch Data:\n- If you need async data, use `useAsyncData` or `onMounted`. Example:\n  ```ts\n  const { data, error } = await useAsyncData('profileData', () =>\n    $fetch('/api/profile')\n  );\n  ```\n- Handle errors gracefully (e.g. `error.value`).\n\nExample:\n```vue\n<!-- pages/profile.vue -->\n<template>\n  <h1>User Profile</h1>\n  <div v-if=\"error\">\n    {{ error.message }}\n  </div>\n  <div v-else-if=\"data\">\n    Hello, {{ data.name }}!\n  </div>\n  <div v-else>\n    Loading...\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nconst { data, error } = await useAsyncData('profile', () =>\n  $fetch('/api/profile')\n);\n</script>\n\n<style scoped>\n/* page-specific styles */\n</style>\n```\n\nNavigation:\n- Use `<NuxtLink to=\"/profile\">Go to Profile</NuxtLink>` for internal navigation.\n- If you need programmatic navigation, use `useRouter()`.\n\nSEO:\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n\nDos:\n- Do keep page logic minimal—delegate complex logic to composables.\n- Do handle loading and error states in SSR gracefully.\n\nDonts:\n- Don’t rely on direct route manipulation; use Nuxt’s router.\n- Don’t block SSR with large synchronous tasks.",
+        "filePath": "prompts/Nuxt.js/add-page.md"
+      }
+    ],
+    "filePath": "prompts/Nuxt.js/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Page",
+    "description": "Add a new page using Nuxt’s file-based routing system.",
+    "type": "feature",
+    "slug": "add-page",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "routing"
+    ],
+    "tags": [
+      "nuxt3",
+      "ssr"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-page.md",
+    "prompts": [
+      {
+        "id": "prompts-nuxtjs-add-page.md",
+        "description": "Guidelines for creating a new page in Nuxt 3",
+        "globs": "**/*.vue",
+        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules.\n\nProject Structure:\n- File-Based Routing\n  - Create a `.vue` file under `pages/`. For example, `pages/profile.vue` for `/profile` route.\n  - For dynamic routes, use `[param].vue` (like `[id].vue`).\n\nPage Structure:\n- Use `<script setup>` for page logic.\n- Export a default `<template>` in the same file.\n\nFetch Data:\n- If you need async data, use `useAsyncData` or `onMounted`. Example:\n  ```ts\n  const { data, error } = await useAsyncData('profileData', () =>\n    $fetch('/api/profile')\n  );\n  ```\n- Handle errors gracefully (e.g. `error.value`).\n\nExample:\n```vue\n<!-- pages/profile.vue -->\n<template>\n  <h1>User Profile</h1>\n  <div v-if=\"error\">\n    {{ error.message }}\n  </div>\n  <div v-else-if=\"data\">\n    Hello, {{ data.name }}!\n  </div>\n  <div v-else>\n    Loading...\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nconst { data, error } = await useAsyncData('profile', () =>\n  $fetch('/api/profile')\n);\n</script>\n\n<style scoped>\n/* page-specific styles */\n</style>\n```\n\nNavigation:\n- Use `<NuxtLink to=\"/profile\">Go to Profile</NuxtLink>` for internal navigation.\n- If you need programmatic navigation, use `useRouter()`.\n\nSEO:\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n\nDos:\n- Do keep page logic minimal—delegate complex logic to composables.\n- Do handle loading and error states in SSR gracefully.\n\nDonts:\n- Don’t rely on direct route manipulation; use Nuxt’s router.\n- Don’t block SSR with large synchronous tasks.",
+        "filePath": "prompts/nuxtjs/add-page.md"
+      }
+    ],
+    "filePath": "prompts/nuxtjs/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Store (Pinia)",
+    "description": "Set up or extend a Pinia store in a Nuxt 3 project for global state management.",
+    "type": "feature",
+    "slug": "add-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "nuxt3",
+      "pinia"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3",
+      "pinia"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-store.md",
+    "prompts": [
+      {
+        "id": "prompts-Nuxt.js-add-store.md",
+        "description": "Setting up a Pinia store in a Nuxt 3 project",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are an experienced senior developer. You must always follow these rules when setting up a Pinia store in a Nuxt 3 project (Nuxt supports Pinia as a store solution).\n\nInstallation:\n- Ensure Pinia is installed: `npm install pinia`.\n- Create a `stores/` directory at the root or under `~/stores`.\n\nBasic Store Example:\n```ts\n// stores/useCounterStore.ts\nimport { defineStore } from 'pinia';\n\nexport const useCounterStore = defineStore('counter', {\n  state: () => ({\n    count: 0,\n  }),\n  getters: {\n    double: (state) => state.count * 2,\n  },\n  actions: {\n    increment() {\n      this.count++;\n    },\n    reset() {\n      this.count = 0;\n    },\n  },\n});\n\nUsage in Nuxt:\n-\tIn nuxt.config.ts (or .js):\n\nexport default defineNuxtConfig({\n  modules: [\n    '@pinia/nuxt',\n  ],\n  // ...\n});\n\n-\tIn a component or page:\n\n<script setup lang=\"ts\">\nimport { useCounterStore } from '~/stores/useCounterStore';\n\nconst counterStore = useCounterStore();\n\nfunction increaseCount() {\n  counterStore.increment();\n}\n</script>\n\n<template>\n  <div>\n    <p>Count: {{ counterStore.count }}</p>\n    <p>Double: {{ counterStore.double }}</p>\n    <button @click=\"increaseCount\">+1</button>\n  </div>\n</template>\n\nBest Practices:\n-\tUse actions for any state modifications. Avoid directly mutating state properties outside an action (except in simple scripts).\n-\tSplit large stores into multiple smaller ones by domain.\n-\tRely on getters for derived data.\n\nTesting:\n-\tTest store logic in isolation (e.g., with Vitest/Jest).\n-\tMock or stub external dependencies.\n\nDos:\n-\tDo keep store logic self-contained.\n-\tDo use store getters for complex computed logic.\n\nDon’ts:\n-\tDon’t place heavy asynchronous calls directly in multiple components—use an action or a composable if it’s not strictly related to store.\n\n",
+        "filePath": "prompts/Nuxt.js/add-store.md"
+      }
+    ],
+    "filePath": "prompts/Nuxt.js/aiprompt.json"
+  },
+  {
+    "name": "Add Nuxt Store (Pinia)",
+    "description": "Set up or extend a Pinia store in a Nuxt 3 project for global state management.",
+    "type": "feature",
+    "slug": "add-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "nuxt3",
+      "pinia"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3",
+      "pinia"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-store.md",
+    "prompts": [],
+    "filePath": "prompts/nuxtjs/aiprompt.json"
+  },
+  {
+    "name": "Add Pinia Store",
+    "description": "Set up or extend a Pinia store for global state management in Vue 3.",
+    "type": "feature",
+    "slug": "add-pinia-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "vue3",
+      "pinia"
+    ],
+    "techStack": [
+      "vue3",
+      "pinia"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-pinia-store.md",
+    "prompts": [
+      {
+        "id": "prompts-Vue.js-add-pinia-store.md",
+        "description": "Creating a Pinia store in Vue 3",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Pinia store in Vue 3.\n\nSetup:\n- `npm install pinia` (if not installed).\n- In main.ts:\n```ts\nimport { createPinia } from 'pinia';\nconst pinia = createPinia();\napp.use(pinia);\n\nExample Store:\n\n// stores/useCounterStore.ts\nimport { defineStore } from 'pinia';\n\nexport const useCounterStore = defineStore('counter', {\n  state: () => ({ count: 0 }),\n  getters: {\n    doubleCount: (state) => state.count * 2,\n  },\n  actions: {\n    increment() {\n      this.count++;\n    },\n    reset() {\n      this.count = 0;\n    },\n  },\n});\n\nUsage:\n\n<script setup lang=\"ts\">\nimport { useCounterStore } from '@/stores/useCounterStore';\n\nconst counterStore = useCounterStore();\n\nfunction handleIncrement() {\n  counterStore.increment();\n}\n</script>\n\n<template>\n  <p>Count: {{ counterStore.count }}</p>\n  <button @click=\"handleIncrement\">+1</button>\n</template>\n\nDos:\n-\tDo keep store logic self-contained.\n-\tDo name the store function and ID clearly.\n\nDon’ts:\n-\tDon’t do heavy DOM manipulation in Pinia actions.\n-\tDon’t forget to test store logic in isolation.\n\n",
+        "filePath": "prompts/Vue.js/add-pinia-store.md"
+      }
+    ],
+    "filePath": "prompts/Vue.js/aiprompt.json"
+  },
+  {
+    "name": "Add React Component",
+    "description": "Add a new reusable React component.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "react",
+      "component"
+    ],
+    "techStack": [
+      "react"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
+    "prompts": [
+      {
+        "id": "prompts-React-add-component.md",
+        "description": "Adding a reusable React component",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when adding a reusable React component.\n\nFile Structure:\n- Place in `src/components/` or relevant folder.\n- Use a descriptive name: `UserCard.tsx`.\n\nExample:\n```tsx\nimport React from 'react';\n\ntype User = {\n  name: string;\n  avatarUrl: string;\n};\n\ntype UserCardProps = {\n  user: User;\n  onSelect?: (user: User) => void;\n};\n\nexport function UserCard({ user, onSelect }: UserCardProps) {\n  return (\n    <div onClick={() => onSelect?.(user)}>\n      <img src={user.avatarUrl} alt=\"avatar\" />\n      <p>{user.name}</p>\n    </div>\n  );\n}\n\nUsage:\n\nimport { UserCard } from './UserCard';\n\nfunction App() {\n  const handleSelect = (user) => {\n    console.log('Selected user:', user);\n  };\n\n  return (\n    <UserCard\n      user={{ name: 'Alice', avatarUrl: '/alice.png' }}\n      onSelect={handleSelect}\n    />\n  );\n}\nexport default App;\n\nDos:\n-\tDo keep the component’s functionality focused.\n-\tDo add prop type definitions.\n\nDon’ts:\n-\tDon’t rely on global variables.\n-\tDon’t do heavy data fetching directly in the component (abstract it if needed).\n\n",
+        "filePath": "prompts/React/add-component.md"
+      }
+    ],
+    "filePath": "prompts/React/aiprompt.json"
+  },
+  {
+    "name": "Add React Context",
+    "description": "Create a React Context for global or shared state.",
+    "type": "feature",
+    "slug": "add-context",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "react",
+      "context"
+    ],
+    "techStack": [
+      "react"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-context.md",
+    "prompts": [
+      {
+        "id": "prompts-React-add-context.md",
+        "description": "Creating a React Context for global or shared state",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior React developer. You must always follow these rules when creating a React Context for global or shared state.\n\nSetup:\n```tsx\nimport React, { createContext, useContext, useState, ReactNode } from 'react';\n\ninterface AuthContextProps {\n  user: string | null;\n  setUser: React.Dispatch<React.SetStateAction<string | null>>;\n}\n\nconst AuthContext = createContext<AuthContextProps | undefined>(undefined);\n\nexport function AuthProvider({ children }: { children: ReactNode }) {\n  const [user, setUser] = useState<string | null>(null);\n\n  return (\n    <AuthContext.Provider value={{ user, setUser }}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n\nexport function useAuth() {\n  const context = useContext(AuthContext);\n  if (!context) {\n    throw new Error('useAuth must be used within an AuthProvider');\n  }\n  return context;\n}\n\nUsage:\n\n// App.tsx\nimport { AuthProvider } from './AuthContext';\n\nfunction App() {\n  return (\n    <AuthProvider>\n      <MyRoutes />\n    </AuthProvider>\n  );\n}\n\nConsuming Context:\n\nimport { useAuth } from './AuthContext';\n\nexport function Profile() {\n  const { user, setUser } = useAuth();\n  if (!user) return <p>Not logged in</p>;\n  return <p>Logged in as {user}</p>;\n}\n\nDos:\n-\tDo keep context focused on domain (e.g., auth context, theme context).\n-\tDo handle the case where context might be missing with an error or fallback.\n\nDon’ts:\n-\tDon’t store large or frequently updated data in context that can cause performance issues.\n-\tDon’t create context for trivial data that a single component can manage.\n\n",
+        "filePath": "prompts/React/add-context.md"
+      }
+    ],
+    "filePath": "prompts/React/aiprompt.json"
+  },
+  {
+    "name": "Add Redux Store",
+    "description": "Set up or extend a Redux store in a React project.",
+    "type": "feature",
+    "slug": "add-redux-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "react",
+      "redux"
+    ],
+    "techStack": [
+      "react",
+      "redux"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-redux-store.md",
+    "prompts": [
+      {
+        "id": "prompts-React-add-redux-store.md",
+        "description": "Setting up Redux in a React project",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when setting up Redux in a React project.\n\nInstallation:\n- `npm install redux react-redux @reduxjs/toolkit`.\n\nSetup Store:\n```ts\n// store.ts\nimport { configureStore } from '@reduxjs/toolkit';\nimport counterReducer from './features/counterSlice';\n\nexport const store = configureStore({\n  reducer: {\n    counter: counterReducer\n  }\n});\n\nexport type RootState = ReturnType<typeof store.getState>;\nexport type AppDispatch = typeof store.dispatch;\n\nProvide Store:\n\n// main.tsx or App.tsx\nimport { Provider } from 'react-redux';\nimport { store } from './store';\n\nexport function App() {\n  return (\n    <Provider store={store}>\n      <MyApp />\n    </Provider>\n  );\n}\n\nExample Slice:\n\n// features/counterSlice.ts\nimport { createSlice } from '@reduxjs/toolkit';\n\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: (state) => { state.value += 1; },\n    decrement: (state) => { state.value -= 1; }\n  }\n});\n\nexport const { increment, decrement } = counterSlice.actions;\nexport default counterSlice.reducer;\n\nUsage:\n\nimport { useDispatch, useSelector } from 'react-redux';\nimport { increment, decrement } from './features/counterSlice';\nimport { RootState } from './store';\n\nfunction Counter() {\n  const dispatch = useDispatch();\n  const value = useSelector((state: RootState) => state.counter.value);\n  return (\n    <div>\n      <p>{value}</p>\n      <button onClick={() => dispatch(increment())}>+1</button>\n      <button onClick={() => dispatch(decrement())}>-1</button>\n    </div>\n  );\n}\n\n",
+        "filePath": "prompts/React/add-redux-store.md"
+      }
+    ],
+    "filePath": "prompts/React/aiprompt.json"
+  },
+  {
+    "name": "Add Svelte Action",
+    "description": "Implement a custom Svelte action for reusable DOM logic.",
+    "type": "feature",
+    "slug": "add-action",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "dom-manipulation"
+    ],
+    "tags": [
+      "svelte",
+      "actions"
+    ],
+    "techStack": [
+      "svelte"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-action.md",
+    "prompts": [
+      {
+        "id": "prompts-Svelte-add-action.md",
+        "description": "Creating a Svelte Action",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Svelte Action.\n\nAction Definition:\n```js\n// clickOutside.js\nexport function clickOutside(node) {\n  function handleClick(event) {\n    if (!node.contains(event.target)) {\n      node.dispatchEvent(new CustomEvent('outclick'));\n    }\n  }\n  document.addEventListener('click', handleClick, true);\n\n  return {\n    destroy() {\n      document.removeEventListener('click', handleClick, true);\n    }\n  };\n}\n\nUsage:\n\n<!-- Dropdown.svelte -->\n<script>\n  import { clickOutside } from './clickOutside.js';\n  let open = false;\n</script>\n\n<button on:click={() => (open = !open)}>Toggle</button>\n{#if open}\n  <div use:clickOutside on:outclick={() => (open = false)}>\n    <p>Dropdown content</p>\n  </div>\n{/if}\n\nDos:\n-\tDo return a destroy function to clean up listeners.\n-\tDo use custom events or a callback param.\n\nDon’ts:\n-\tDon’t manipulate the DOM heavily in an action.\n-\tDon’t forget to remove event listeners.\n\n",
+        "filePath": "prompts/Svelte/add-action.md"
+      }
+    ],
+    "filePath": "prompts/Svelte/aiprompt.json"
+  },
+  {
+    "name": "Add Svelte Component",
+    "description": "Create a new component in Svelte.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "svelte",
+      "component"
+    ],
+    "techStack": [
+      "svelte"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
+    "prompts": [
+      {
+        "id": "prompts-Svelte-add-component.md",
+        "description": "",
+        "globs": "",
+        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# add-component.mdc\n\nYou are creating a **Svelte component**:\n\n1) File\n   - `UserCard.svelte`.\n\n2) Example\n   ```html\n   <script>\n     export let user = { name: '', avatarUrl: '' };\n     export let onSelect = null;\n\n     function handleClick() {\n       if (onSelect) onSelect(user);\n     }\n   </script>\n\n   <div on:click={handleClick}>\n     <img src={user.avatarUrl} alt=\"User avatar\" />\n     <span>{user.name}</span>\n   </div>\n\n   <style>\n     div {\n       cursor: pointer;\n       display: flex;\n       align-items: center;\n     }\n     img {\n       width: 40px;\n       height: 40px;\n       border-radius: 50%;\n       margin-right: 8px;\n     }\n   </style>\n   ```\n\n3) Usage\n   ```html\n   <!-- App.svelte -->\n   <script>\n     import UserCard from './UserCard.svelte';\n     let currentUser = { name: 'Alice', avatarUrl: '/alice.png' };\n\n     function selectUser(u) {\n       console.log('Selected user:', u);\n     }\n   </script>\n\n   <UserCard {currentUser} onSelect={selectUser} />\n   ```\n\n**Dos**\n- Do export props with `export let propName`.  \n- Do keep style scoped by default.\n\n**Don’ts**\n- Don’t rely on external CSS unless truly global.  \n- Don’t manipulate parent data inside the child.\n\n---",
+        "filePath": "prompts/Svelte/add-component.md"
+      }
+    ],
+    "filePath": "prompts/Svelte/aiprompt.json"
+  },
+  {
+    "name": "Add Svelte Store",
+    "description": "Implement a writable or derived store in Svelte for global state.",
+    "type": "feature",
+    "slug": "add-store",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "state-management"
+    ],
+    "tags": [
+      "svelte",
+      "store"
+    ],
+    "techStack": [
+      "svelte"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-store.md",
+    "prompts": [
+      {
+        "id": "prompts-Svelte-add-store.md",
+        "description": "",
+        "globs": "",
+        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# add-store.mdc\n\nYou are creating a **Svelte store**:\n\n1) File\n   - `src/stores/user.js`.\n\n2) Example\n   ```js\n   import { writable } from 'svelte/store';\n\n   export const user = writable({ loggedIn: false, name: '' });\n\n   export function logIn(name) {\n     user.set({ loggedIn: true, name });\n   }\n\n   export function logOut() {\n     user.set({ loggedIn: false, name: '' });\n   }\n   ```\n\n3) Usage\n   ```html\n   <!-- Navbar.svelte -->\n   <script>\n     import { user, logIn, logOut } from './stores/user.js';\n   </script>\n\n   <nav>\n     {#if $user.loggedIn}\n       <span>Welcome, {$user.name}!</span>\n       <button on:click={logOut}>Logout</button>\n     {:else}\n       <button on:click={() => logIn('Alice')}>Login</button>\n     {/if}\n   </nav>\n   ```\n\n**Dos**\n- Do keep store logic in separate files.  \n- Do create helper functions to set or update the store if needed.\n\n**Don’ts**\n- Don’t store large arrays without reason.  \n- Don’t forget unsubscribing if manually subscribing in scripts.\n\n---",
+        "filePath": "prompts/Svelte/add-store.md"
+      }
+    ],
+    "filePath": "prompts/Svelte/aiprompt.json"
+  },
+  {
+    "name": "Add SvelteKit Page",
+    "description": "Create a new page in SvelteKit using file-based routing.",
+    "type": "feature",
+    "slug": "add-page",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "routing"
+    ],
+    "tags": [
+      "sveltekit",
+      "ssr"
+    ],
+    "techStack": [
+      "sveltekit"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-page.md",
+    "prompts": [
+      {
+        "id": "prompts-Svelte-add-page.md",
+        "description": "Creating a new SvelteKit page",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a new SvelteKit page.\n\nDirectory:\n- Create a file under `src/routes/`, e.g. `src/routes/about/+page.svelte`.\n\nExample:\n```html\n<!-- src/routes/about/+page.svelte -->\n<script>\n  export let data; // if you have load() from +page.js\n  let message = 'About Page';\n</script>\n\n<h1>{message}</h1>\n<p>This is the about page for our SvelteKit app.</p>\n\nLoad Function:\n\n// src/routes/about/+page.js\nexport async function load() {\n  return {\n    props: {\n      someData: 'Hello from the server'\n    }\n  };\n}\n\n-\tThen in +page.svelte, export let data to access it.\n\nNavigation:\n-\tUse SvelteKit’s <a href=\"/about\">About</a> or the built-in $app/navigation for programmatic navigation.\n\nDos:\n-\tDo keep page-specific logic in +page.svelte.\n-\tDo use load for server data fetching if needed.\n\nDon’ts:\n-\tDon’t store secrets in client-exposed data.\n-\tDon’t skip error handling in load functions.\n\n",
+        "filePath": "prompts/Svelte/add-page.md"
+      }
+    ],
+    "filePath": "prompts/Svelte/aiprompt.json"
+  },
+  {
+    "name": "Add Vue Component",
+    "description": "Add a new reusable component in a Vue 3 application.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "vue3",
+      "component"
+    ],
+    "techStack": [
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-component.md",
+    "prompts": [
+      {
+        "id": "prompts-Vue.js-add-component.md",
+        "description": "Adding a reusable Vue 3 component",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when adding a reusable Vue 3 component.\n\nFile:\n- `components/UserCard.vue` with `<script setup>`.\n\nExample:\n```vue\n<script setup lang=\"ts\">\ninterface User {\n  name: string;\n  avatarUrl: string;\n}\n\nconst props = defineProps<{\n  user: User;\n  onSelect?: (user: User) => void;\n}>();\n\nfunction handleClick() {\n  props.onSelect?.(props.user);\n}\n</script>\n\n<template>\n  <div @click=\"handleClick\">\n    <img :src=\"props.user.avatarUrl\" :alt=\"props.user.name\" />\n    <p>{{ props.user.name }}</p>\n  </div>\n</template>\n\n<style scoped>\ndiv {\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n}\nimg {\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  margin-right: 8px;\n}\n</style>\n\nUsage:\n\n<template>\n  <UserCard :user=\"someUser\" :onSelect=\"handleSelect\" />\n</template>\n\n<script setup lang=\"ts\">\nimport UserCard from '@/components/UserCard.vue';\n\nconst someUser = { name: 'Alice', avatarUrl: '/images/alice.png' };\n\nfunction handleSelect(user) {\n  console.log('Selected:', user);\n}\n</script>\n\nDos:\n-\tDo keep the component’s logic minimal.\n-\tDo define prop types carefully.\n\nDon’ts:\n-\tDon’t mutate user prop.\n-\tDon’t add global styles in the component <style>.\n\n",
+        "filePath": "prompts/Vue.js/add-component.md"
+      }
+    ],
+    "filePath": "prompts/Vue.js/aiprompt.json"
+  },
+  {
+    "name": "Add Vue Composable",
+    "description": "Create a reusable composable function for Vue 3 (Composition API).",
+    "type": "feature",
+    "slug": "add-composable",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "logic"
+    ],
+    "tags": [
+      "vue3",
+      "composable"
+    ],
+    "techStack": [
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-composable.md",
+    "prompts": [
+      {
+        "id": "prompts-Vue.js-add-composable.md",
+        "description": "Creating a composable for Vue 3 (Composition API reuse)",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when creating a Vue 3 composable.\n\nFile:\n- `src/composables/useExample.ts`.\n\nExample:\n```ts\nimport { ref } from 'vue';\n\nexport function useExample(initialValue: number) {\n  const count = ref(initialValue);\n\n  function increment() {\n    count.value++;\n  }\n\n  return { count, increment };\n}\n\nUsage:\n\n<script setup lang=\"ts\">\nimport { useExample } from '@/composables/useExample';\n\nconst { count, increment } = useExample(0);\n</script>\n\n<template>\n  <button @click=\"increment\">Count: {{ count }}</button>\n</template>\n\nDos:\n-\tDo name composables useSomething.\n-\tDo keep logic domain-focused.\n\nDon’ts:\n-\tDon’t do direct DOM manipulation in composables.\n-\tDon’t rely on global variables in composables.\n\n",
+        "filePath": "prompts/Vue.js/add-composable.md"
+      }
+    ],
+    "filePath": "prompts/Vue.js/aiprompt.json"
+  },
+  {
+    "name": "Add Vue Page (Router)",
+    "description": "Create a new page (route) using Vue Router.",
+    "type": "feature",
+    "slug": "add-vue-page",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "routing"
+    ],
+    "tags": [
+      "vue3",
+      "vue-router"
+    ],
+    "techStack": [
+      "vue3",
+      "vue-router"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "add-vue-page.md",
+    "prompts": [
+      {
+        "id": "prompts-Vue.js-add-vue-page.md",
+        "description": "Adding a new page in a Vue 3 application using Vue Router",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when adding a new page in a Vue application with Vue Router.\n\nRouter Setup:\n- Typically in `src/router/index.ts` with a routes array.\n\nAdd Route:\n```ts\nimport { createRouter, createWebHistory } from 'vue-router';\nimport HomePage from '@/pages/HomePage.vue';\nimport AboutPage from '@/pages/AboutPage.vue';\n\nconst routes = [\n  { path: '/', name: 'Home', component: HomePage },\n  { path: '/about', name: 'About', component: AboutPage },\n];\n\nexport const router = createRouter({\n  history: createWebHistory(),\n  routes,\n});\n\nCreate Page Component:\n\n<!-- src/pages/AboutPage.vue -->\n<script setup lang=\"ts\">\nconst msg = 'About Us';\n</script>\n\n<template>\n  <h1>{{ msg }}</h1>\n  <p>This is the about page.</p>\n</template>\n\nApp.vue:\n\n<template>\n  <router-view />\n</template>\n\n<script setup lang=\"ts\">\n// Basic root App\n</script>\n\nUsage:\n-\t<router-link to=\"/\">Home</router-link>\n\nDos:\n-\tDo break out pages in separate .vue files.\n-\tDo name your routes for easy navigation with route names.\n\nDon’ts:\n-\tDon’t create enormous single-file routes for everything.\n-\tDon’t push the same route repeatedly (handle logic checks).\n\n",
+        "filePath": "prompts/Vue.js/add-vue-page.md"
+      }
+    ],
+    "filePath": "prompts/Vue.js/aiprompt.json"
+  },
+  {
+    "name": "Angular Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Angular 16+.",
+    "type": "rule",
+    "slug": "rule-angular",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [
+      "best-practices",
+      "angular",
+      "guide"
+    ],
+    "techStack": [
+      "angular"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-angular.md",
+    "prompts": [
+      {
+        "id": "prompts-Angular-rule-angular.md",
+        "description": "Guidelines and best practices for Angular 16+ development",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior Angular 16+ developer. You must always follow these rules:\n\nProject Structure:\n- Use Angular CLI (`ng generate`) for scaffolding.\n- Organize code in modules (feature modules, shared modules).\n\nComponents:\n- Use the recommended `.component.ts` and `.component.html` structure.\n- Keep selectors in kebab-case prefixed with `app-` or a domain prefix.\n\nServices & DI:\n- Use `@Injectable({ providedIn: 'root' })` for global services.\n- Inject services in constructors, not via `new`.\n\nTemplates:\n- Prefer `*ngFor` and `*ngIf`.\n- Use `trackBy` for large lists.\n\nForms:\n- Choose Reactive Forms for complex data.\n- Use template-driven forms for simpler cases.\n\nObservables & RxJS:\n- Use `AsyncPipe` in templates to auto-subscribe and avoid memory leaks.\n- Manage subscriptions in components (or use the `takeUntil` pattern).\n\nChange Detection & Performance:\n- Use `OnPush` strategy for pure/fully input-driven components.\n- Lazy load feature modules.\n\nTesting:\n- Use Angular TestBed for unit tests.\n- Keep specs co-located with components/services.\n\nDos:\n- Do follow Angular’s official style guide.\n- Do structure your modules logically.\n\nDon’ts:\n- Don’t mutate state in Observables without immutability in mind.\n- Don’t disable Angular’s strict mode lightly.",
+        "filePath": "prompts/Angular/rule-angular.md"
+      }
+    ],
+    "filePath": "prompts/Angular/aiprompt.json"
+  },
+  {
+    "name": "Laravel Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Laravel 10+.",
+    "type": "rule",
+    "slug": "rule-laravel",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "backend"
+    ],
+    "tags": [
+      "laravel",
+      "best-practices"
+    ],
+    "techStack": [
+      "laravel",
+      "php"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-laravel.md",
+    "prompts": [
+      {
+        "id": "prompts-Laravel (PHP)-rule-laravel.md",
+        "description": "Guidelines and best practices for Laravel (PHP 10.0 in 2025) projects",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior developer. You must always follow these rules when developing Laravel (PHP 10.0 in 2025) applications.\n\nProject Structure:\n- Organize controllers in `app/Http/Controllers`.\n- Use Eloquent models in `app/Models`.\n\nRouting:\n- Define routes in `routes/web.php` for web and `routes/api.php` for APIs.\n- Use resource controllers for CRUD endpoints.\n\nControllers & Models:\n- Keep controllers thin; push business logic into services or models.\n- Use model factories & migrations properly.\n\nDatabase & Eloquent:\n- Prefer Eloquent relationships for simpler code.\n- Use migrations for schema changes.\n- Use seeders for test data.\n\nSecurity:\n- Validate all inputs (Form Requests or manual validation).\n- Protect against SQL injection, XSS, CSRF.\n- Store secrets in `.env`, never commit `.env` to version control.\n\nBlade Templates:\n- Keep Blade templates simple.\n- Use components for repeated UI blocks.\n\nTesting:\n- Use Pest or PHPUnit for tests.\n- Test controllers, models, and services.\n- Use `php artisan test` or `vendor/bin/pest`.\n\nDos:\n- Do keep code DRY (Don’t Repeat Yourself).\n- Do use official packages like Sanctum/Passport for authentication.\n\nDon’ts:\n- Don’t query the DB directly in Blade.\n- Don’t store large logic in controllers. Use dedicated classes or form requests.",
+        "filePath": "prompts/Laravel (PHP)/rule-laravel.md"
+      }
+    ],
+    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
   },
   {
     "name": "Next.js",
@@ -22,36 +1245,17 @@
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "prompts": [],
-    "filePath": "prompts/Next.js/aiprompt.json"
-  },
-  {
-    "name": "Next.js Bootstrap Supabase",
-    "description": "Next.js project with Supabase integration, Bootstrap CSS, and TypeScript.",
-    "type": "agent",
-    "slug": "nextjs-bootstrap-supabase",
-    "author": {
-      "name": "kevin regenrek",
-      "url": "https://github.com/regenrek",
-      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
-    },
+    "file": "rule-nextjs15.md",
     "prompts": [
       {
-        "id": "prompts-next-js-bootstrap-supabase-rule1.md",
-        "description": "Guidelines for installing and setting up Next.js 15 with ShadCN and Lucide React",
+        "id": "prompts-Next.js-rule-nextjs15.md",
+        "description": "Best practices, rules, dos and don'ts for Next.js 15 projects",
         "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\n# Next.js 15 + ShadCN + Lucide React Installation Guide\n\nYou are a frontend expert setting up a Next.js 15 project with ShadCN UI and Lucide React for a consistent, optimized, and maintainable component system.\n\n## 🚀 Installation Steps\n\n- Uses App Router (`app/` directory).\n- Comes with ESLint and TailwindCSS pre-configured.\n\nATTENTION: Nextjs is already installed and has a pre setup since if\nyou install nextjs with ai then it will create a new directory within the current\ndirectory and this leads to an error!\n\n2. Set up ShadCN UI\n```bash\nnpx shadcn@latest init\n```\n- Select TypeScript and TailwindCSS when prompted.\n- ShadCN will create the `components/ui/` folder for UI components.\n\n3. Install Lucide React (Icons)\n```bash\nnpm install lucide-react\n```\n- Use Lucide icons consistently in UI components.\n\n4. Add ShadCN Components\n```bash\nnpx shadcn@latest add button input dialog\n```\n- Only install necessary components to keep the bundle size small.\n- The CLI will add them to `components/ui/`.\n\n---\n\n## ⚙️ Configuration & Setup\n\n### 1. Global Theme & Styling\n\nShadCN relies on Tailwind, so configure your `tailwind.config.ts`:\n\n```ts\nimport type { Config } from \"tailwindcss\";\n\nconst config: Config = {\n  darkMode: \"class\",\n  content: [\n    \"./app/**/*.{js,ts,jsx,tsx}\",\n    \"./components/**/*.{js,ts,jsx,tsx}\",\n    \"./pages/**/*.{js,ts,jsx,tsx}\"\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};\n\nexport default config;\n```\n\n### 2. Using ShadCN Components with Lucide Icons\n\nExample: Button with an icon.\n\n```tsx\nimport { Button } from \"@/components/ui/button\";\nimport { ArrowRight } from \"lucide-react\";\n\nexport default function ExampleButton() {\n  return (\n    <Button variant=\"outline\">\n      Click me\n      <ArrowRight className=\"ml-2 h-4 w-4\" />\n    </Button>\n  );\n}\n```\n\n### 3. Customizing Components\n\nYou can extend ShadCN components instead of modifying them directly.\n\nExample: Creating a custom button variant.\n\n```tsx\nimport { cn } from \"@/lib/utils\";\nimport { Button, ButtonProps } from \"@/components/ui/button\";\n\nexport function CustomButton({ className, ...props }: ButtonProps) {\n  return <Button className={cn(\"bg-primary text-white\", className)} {...props} />;\n}\n```\n\n---\n\n## ⚡ Performance & Best Practices\n\n### ✅ Do This\n✔ Use `npx shadcn add <component>` instead of manually copying components.  \n✔ Keep UI logic inside `components/ui/` and business logic separate.  \n✔ Lazy load large or infrequently used UI components with `dynamic()`.  \n\n### ❌ Avoid This\n✖ Importing all ShadCN components at once.  \n✖ Overriding ShadCN styles inside individual components (use Tailwind config instead).  \n✖ Using non-standard icons or mixing multiple icon libraries.  \n\n---\n\n## 🔥 Final Project Structure\n\n```\napp/\n│── layout.tsx\n│── page.tsx\n│── dashboard/\n│   ├── page.tsx\ncomponents/\n│── ui/\n│   ├── button.tsx\n│   ├── input.tsx\n│── CustomButton.tsx\nlib/\n│── utils.ts\nstyles/\n│── globals.css\n│── tailwind.config.ts\n```\n\n---\n\n## ✅ Final Notes\n\n- Always keep ShadCN and Lucide up to date with `npx shadcn@latest upgrade`.\n- Only install necessary UI components to reduce build size.\n- Ensure accessibility by keeping ARIA attributes in ShadCN components.\n\nThis guide ensures a clean, scalable, and high-performance Next.js 15 project with ShadCN UI & Lucide React.\n",
-        "filePath": "prompts/next-js-bootstrap-supabase/rule1.md"
-      },
-      {
-        "id": "prompts-next-js-bootstrap-supabase-rule2.md",
-        "description": "Guidelines for installing and setting up Next.js 15 with ShadCN and Lucide React",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\n# Next.js 15 + ShadCN + Lucide React Installation Guide\n\nYou are a frontend expert setting up a Next.js 15 project with ShadCN UI and Lucide React for a consistent, optimized, and maintainable component system.\n\n## 🚀 Installation Steps\n\n- Uses App Router (`app/` directory).\n- Comes with ESLint and TailwindCSS pre-configured.\n\nATTENTION: Nextjs is already installed and has a pre setup since if\nyou install nextjs with ai then it will create a new directory within the current\ndirectory and this leads to an error!\n\n2. Set up ShadCN UI\n```bash\nnpx shadcn@latest init\n```\n- Select TypeScript and TailwindCSS when prompted.\n- ShadCN will create the `components/ui/` folder for UI components.\n\n3. Install Lucide React (Icons)\n```bash\nnpm install lucide-react\n```\n- Use Lucide icons consistently in UI components.\n\n4. Add ShadCN Components\n```bash\nnpx shadcn@latest add button input dialog\n```\n- Only install necessary components to keep the bundle size small.\n- The CLI will add them to `components/ui/`.\n\n---\n\n## ⚙️ Configuration & Setup\n\n### 1. Global Theme & Styling\n\nShadCN relies on Tailwind, so configure your `tailwind.config.ts`:\n\n```ts\nimport type { Config } from \"tailwindcss\";\n\nconst config: Config = {\n  darkMode: \"class\",\n  content: [\n    \"./app/**/*.{js,ts,jsx,tsx}\",\n    \"./components/**/*.{js,ts,jsx,tsx}\",\n    \"./pages/**/*.{js,ts,jsx,tsx}\"\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};\n\nexport default config;\n```\n\n### 2. Using ShadCN Components with Lucide Icons\n\nExample: Button with an icon.\n\n```tsx\nimport { Button } from \"@/components/ui/button\";\nimport { ArrowRight } from \"lucide-react\";\n\nexport default function ExampleButton() {\n  return (\n    <Button variant=\"outline\">\n      Click me\n      <ArrowRight className=\"ml-2 h-4 w-4\" />\n    </Button>\n  );\n}\n```\n\n### 3. Customizing Components\n\nYou can extend ShadCN components instead of modifying them directly.\n\nExample: Creating a custom button variant.\n\n```tsx\nimport { cn } from \"@/lib/utils\";\nimport { Button, ButtonProps } from \"@/components/ui/button\";\n\nexport function CustomButton({ className, ...props }: ButtonProps) {\n  return <Button className={cn(\"bg-primary text-white\", className)} {...props} />;\n}\n```\n\n---\n\n## ⚡ Performance & Best Practices\n\n### ✅ Do This\n✔ Use `npx shadcn add <component>` instead of manually copying components.  \n✔ Keep UI logic inside `components/ui/` and business logic separate.  \n✔ Lazy load large or infrequently used UI components with `dynamic()`.  \n\n### ❌ Avoid This\n✖ Importing all ShadCN components at once.  \n✖ Overriding ShadCN styles inside individual components (use Tailwind config instead).  \n✖ Using non-standard icons or mixing multiple icon libraries.  \n\n---\n\n## 🔥 Final Project Structure\n\n```\napp/\n│── layout.tsx\n│── page.tsx\n│── dashboard/\n│   ├── page.tsx\ncomponents/\n│── ui/\n│   ├── button.tsx\n│   ├── input.tsx\n│── CustomButton.tsx\nlib/\n│── utils.ts\nstyles/\n│── globals.css\n│── tailwind.config.ts\n```\n\n---\n\n## ✅ Final Notes\n\n- Always keep ShadCN and Lucide up to date with `npx shadcn@latest upgrade`.\n- Only install necessary UI components to reduce build size.\n- Ensure accessibility by keeping ARIA attributes in ShadCN components.\n\nThis guide ensures a clean, scalable, and high-performance Next.js 15 project with ShadCN UI & Lucide React.\n",
-        "filePath": "prompts/next-js-bootstrap-supabase/rule2.md"
+        "content": "\nYou are a senior Next.js 15 developer. You must always follow these rules, best practices, dos and don’ts:\n\nProject Structure:\n- Use the App Router (`app` directory) in Next.js 15.\n- Keep components in `app/components/` or wherever suits your project conventions.\n- Co-locate route handlers, loading/error states, and page-level components under `app/yourRoute/`.\n\nServer and Client Components:\n- Leverage Server Components for data-fetching and rendering whenever possible.\n- Use Client Components (with `\"use client\"`) for interactive/JS-based UI.\n- Keep server components free of client-side React hooks or browser APIs.\n\nData Fetching:\n- Use the new fetch pattern or `getServerSideProps` in the older pages router if you’re migrating.\n- For serverless deployments, keep fetch calls minimal and consider caching data.\n- If you need revalidation, use `fetch(..., { next: { revalidate: 60 } })` or dynamic route handlers.\n\nFile-Based Routing with `app/`:\n- Store page code in `app/route/page.tsx` or `.js`.\n- For dynamic routes, use `[slug]/page.tsx`.\n- Use nested layouts in `app/route/layout.tsx` for shared structure.\n\nAPI Routes / Route Handlers:\n- Use the new Route Handlers in the `app/api/` directory for serverless endpoints.\n- Validate incoming data to avoid security vulnerabilities.\n- Keep business logic separate in utility modules or server-side services.\n\nStyling & Assets:\n- Use CSS Modules, Tailwind, or other CSS-in-JS solutions.\n- For images, use the built-in `<Image />` component for optimized images.\n- For fonts, consider Next.js’ built-in font optimization with `@next/font`.\n\nPerformance:\n- Mark expensive components or libraries for dynamic imports if not needed at initial load.\n- Use `React.useMemo`, `React.useCallback` in client components to avoid unnecessary re-renders.\n- Keep bundle size small by splitting large dependencies (code-splitting).\n\nDeployment:\n- For Vercel, use the integrated deployment pipeline.\n- For self-hosting, consider Node server or Dockerizing.\n- Test SSR or static outputs thoroughly (including edge cases).\n\nTesting & Linting:\n- Integrate ESLint and Prettier. Use Next.js’ recommended config: `next lint`.\n- Use Jest, React Testing Library, or Cypress for end-to-end.\n- Keep test files near the code (e.g. `component.test.tsx`).\n\nDos:\n- Do separate server and client logic carefully.\n- Do optimize images and use the built-in `<Link>` for internal routing.\n\nDon’ts:\n- Don’t import client-only modules into a Server Component.\n- Don’t store secrets in client environment variables. Use server `.env` and server-side code.",
+        "filePath": "prompts/Next.js/rule-nextjs15.md"
       }
     ],
-    "filePath": "prompts/next-js-bootstrap-supabase/aiprompt.json"
+    "filePath": "prompts/Next.js/aiprompt.json"
   },
   {
     "name": "Next.js Shadcn Lucide",
@@ -81,6 +1285,7 @@
       "chat"
     ],
     "version": "1.0",
+    "file": "next-js-shadcn-lucide.md",
     "prompts": [
       {
         "id": "prompts-next-js-shadcn-lucide-next-js-shadcn-lucide.md",
@@ -91,5 +1296,222 @@
       }
     ],
     "filePath": "prompts/next-js-shadcn-lucide/aiprompt.json"
+  },
+  {
+    "name": "Nuxt.js Rules",
+    "description": "Guidelines, best practices, dos and dont's for Nuxt 3 projects.",
+    "type": "rule",
+    "slug": "rule-nuxtjs",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ssr",
+      "routing"
+    ],
+    "tags": [
+      "best-practices",
+      "nuxt3",
+      "guide"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3",
+      "pinia"
+    ],
+    "author": {
+      "name": "Prompt Engineer",
+      "url": "https://example.com"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-nuxtjs.md",
+    "prompts": [
+      {
+        "id": "prompts-Nuxt.js-rule-nuxtjs.md",
+        "description": "Guidelines, best practices, and do's & don'ts for Nuxt 3 projects",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules, best practices, dos and don'ts:\n\nProject Structure:\n- Keep your code structured in the following folders:\n  - `pages/` for your application pages\n  - `components/` for re-usable UI parts\n  - `composables/` for re-usable logic (Vue Composition API)\n  - `layouts/` for shared layouts across pages\n  - `plugins/` for registering modules or plugins\n- Maintain single responsibility for each file—avoid mixing logic.\n\nPages & Routing:\n- Rely on Nuxt's File-based Routing. Each `.vue` file under `pages/` automatically becomes a route.\n- Use Dynamic Routes by prefixing filenames with `_`, like `[id].vue`.\n- Minimize nested directory levels if not absolutely necessary.\n\nServer-Side Rendering:\n- Utilize SSR for better performance and SEO, but remain mindful of exposing sensitive data through server responses.\n\nData Fetching:\n- Prefer the built-in `useAsyncData` or `fetch` composable in Nuxt 3.\n- Keep data fetching logic inside page or layout components, or factor out to composables if shared among multiple components.\n\nState Management:\n- For global state, use Nuxt's `useState` or an external solution like Pinia.\n- Avoid scattering global data across multiple composables unnecessarily.\n\nCoding Conventions:\n- Use PascalCase for Vue components and directories, and kebab-case for `.vue` file names.\n- Keep each component's logic minimal. If a component grows too large, break it into smaller, more focused components.\n\nPerformance & Caching:\n- Leverage Nuxt’s auto-imported composables.\n- Use lazy loading for components not needed above-the-fold.\n- Use server middleware sparingly for expensive operations.\n\nPlugins & Modules:\n- Register your plugins in the `plugins/` folder and list them in `nuxt.config.js`.\n- Use official modules (e.g., Auth, i18n) for standard tasks. Read their docs thoroughly to avoid conflicts.\n\nSecurity:\n- Never store API credentials or secrets in client-exposed code.\n- Avoid direct `window` or `document` manipulations; rely on Nuxt's SSR context or Vue reactivity.\n\nTesting & Linting:\n- Write unit tests for components, composables, and server routes (if present).\n- Lint your code with ESLint (`@nuxtjs/eslint-config` or other recommended presets).\n- Set up continuous integration to automate tests on each pull request or commit.\n\nDeployment:\n- Build for production with `npm run build`.\n- Test the SSR bundle locally with `npm run preview` or similar.\n- For static site generation, use Nuxt’s `nitro`-powered output if required.\n\nDos:\n- Do leverage Nuxt’s built-in composables like `useRoute`, `useRouter`, `useAsyncData`.\n- Do keep secrets and tokens strictly in server-side composables or environment variables.\n- Do carefully use `.env` files for sensitive info, referencing them in `nuxt.config.js`.\n\nDon’ts:\n- Don’t expose secrets in your `.env` or `nuxt.config.js` that gets shipped to the client.\n- Don’t place complex logic in the template—use `<script setup>` or external composables.\n- Don’t forget to handle errors gracefully in SSR hooks (e.g., try/catch in `useAsyncData`).",
+        "filePath": "prompts/Nuxt.js/rule-nuxtjs.md"
+      }
+    ],
+    "filePath": "prompts/Nuxt.js/aiprompt.json"
+  },
+  {
+    "name": "Nuxt.js Rules",
+    "description": "Guidelines, best practices, dos and dont's for Nuxt 3 projects.",
+    "type": "rule",
+    "slug": "rule-nuxtjs",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ssr",
+      "routing"
+    ],
+    "tags": [
+      "best-practices",
+      "nuxt3",
+      "guide"
+    ],
+    "techStack": [
+      "nuxt.js",
+      "vue3",
+      "pinia"
+    ],
+    "author": {
+      "name": "Prompt Engineer",
+      "url": "https://example.com"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-nuxtjs.md",
+    "prompts": [],
+    "filePath": "prompts/nuxtjs/aiprompt.json"
+  },
+  {
+    "name": "React.js Rules",
+    "description": "Guidelines, best practices, dos and don’ts for React.js.",
+    "type": "rule",
+    "slug": "rule-react",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend",
+      "ui"
+    ],
+    "tags": [
+      "best-practices",
+      "react",
+      "guide"
+    ],
+    "techStack": [
+      "react"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-react.md",
+    "prompts": [
+      {
+        "id": "prompts-React-rule-react.md",
+        "description": "Guidelines and best practices for React.js development",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior React.js developer. You must always follow these rules:\n\nComponent Structure:\n- Use Functional Components + Hooks.\n- Keep components small; break down large components.\n\nProps & State:\n- Treat props as immutable.\n- Use `useState` or `useReducer` for state management within a component.\n\nHooks Best Practices:\n- Adhere to the Rules of Hooks (only call hooks at the top level of functional components).\n- Name custom hooks starting with `use`.\n\nData Fetching:\n- Use `useEffect` for fetching data in client apps.\n- Consider `useQuery` from libraries like React Query for advanced caching.\n\nState Management:\n- Use React Context for light global state.\n- For complex or large-scale, consider Redux, Zustand, Recoil, or other state libs.\n\nPerformance:\n- Use `React.memo` to memoize components if they render frequently with the same props.\n- Use `useCallback` and `useMemo` to avoid re-creating functions/objects every render.\n\nTesting:\n- Use React Testing Library or Enzyme for unit tests.\n- Keep tests close to the component.\n\nDos:\n- Do maintain consistent naming and file structure.\n- Do type your components if using TypeScript (recommended).\n\nDon’ts:\n- Don’t mutate state directly (always use updater functions).\n- Don’t place heavy logic in the render method; use separate functions or hooks.",
+        "filePath": "prompts/React/rule-react.md"
+      }
+    ],
+    "filePath": "prompts/React/aiprompt.json"
+  },
+  {
+    "name": "Svelte Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Svelte 3+.",
+    "type": "rule",
+    "slug": "rule-svelte",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [
+      "svelte",
+      "best-practices"
+    ],
+    "techStack": [
+      "svelte"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-svelte.md",
+    "prompts": [
+      {
+        "id": "prompts-Svelte-rule-svelte.md",
+        "description": "",
+        "globs": "",
+        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# rule-svelte.mdc\n\nYou are an expert Svelte developer. Follow these rules:\n\n1) Single File Components\n   - Each `.svelte` file is self-contained (template, script, style).\n\n2) Reactivity\n   - Use the `$:` label for reactive statements. \n   - Use stores for global/shared state.\n\n3) Props\n   - Declare props with `export let propName`.\n\n4) Lifecycle\n   - Use `onMount`, `beforeUpdate`, `afterUpdate`, `onDestroy` for side effects.\n\n5) Actions\n   - Use actions (`use:someAction`) for DOM manipulation or event management.\n\n6) Performance\n   - Key your `{#each}` blocks to help Svelte track items.\n\n7) Testing\n   - Use svelte-testing-library or Cypress for E2E.\n\n**Dos**\n- Do use Svelte’s built-in transitions when possible.  \n- Do keep data fetch logic in onMount or external modules.\n\n**Don’ts**\n- Don’t do manual DOM queries if you can use data binding or actions.  \n- Don’t mutate props passed from a parent directly.\n\n---",
+        "filePath": "prompts/Svelte/rule-svelte.md"
+      }
+    ],
+    "filePath": "prompts/Svelte/aiprompt.json"
+  },
+  {
+    "name": "Vue 3 Rules",
+    "description": "Guidelines, best practices, dos and don’ts for Vue 3 with Composition API.",
+    "type": "rule",
+    "slug": "rule-vue",
+    "development_process": [
+      "plan",
+      "design",
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [
+      "best-practices",
+      "vue3",
+      "guide"
+    ],
+    "techStack": [
+      "vue3"
+    ],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "file": "rule-vue.md",
+    "prompts": [
+      {
+        "id": "prompts-Vue.js-rule-vue.md",
+        "description": "Guidelines for Vue.js 3 development",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\nYou are a senior Vue.js 3 developer. You must always follow these rules:\n\nSingle File Components:\n- Use `<script setup>` or Composition API.\n- Name files in PascalCase, e.g. `UserCard.vue`.\n\nProps & Emits:\n- Use `defineProps` and `defineEmits` in `<script setup>`.\n- Don’t mutate props directly.\n\nState Management:\n- Use Pinia or provide/inject.\n- Avoid large or confusing usage of global data.\n\nReactive Utilities:\n- Use `ref` and `reactive`.\n- Use `computed` for derived state.\n\nLifecycle:\n- Use `onMounted`, `onUnmounted`, etc. in `<script setup>` or from Vue’s composition API.\n\nPerformance:\n- Key your `v-for` loops with unique IDs.\n- Use `watch` or watchers carefully to avoid performance hits.\n\nTesting:\n- Use Vue Test Utils for unit tests.\n- Keep components small and testable.\n\nDos:\n- Do keep logic in composables for reuse.\n- Do keep styles scoped if possible.\n\nDon’ts:\n- Don’t pollute global config with repetitive logic.\n- Don’t mix Options and Composition API in the same component unless migrating code.",
+        "filePath": "prompts/Vue.js/rule-vue.md"
+      }
+    ],
+    "filePath": "prompts/Vue.js/aiprompt.json"
   }
 ]
