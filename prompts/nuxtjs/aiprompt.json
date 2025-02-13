@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Nuxt.js Rules",
+    "description": "Guidelines, best practices, dos and dont's for Nuxt 3 projects.",
+    "type": "rule",
+    "slug": "rule-nuxtjs",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ssr", "routing"],
+    "tags": ["best-practices", "nuxt3", "guide"],
+    "techStack": ["nuxt.js", "vue3", "pinia"],
+    "author": {
+      "name": "Prompt Engineer",
+      "url": "https://example.com"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "rule-nuxtjs.mdc"
+  },
+  {
+    "name": "Add Nuxt Component",
+    "description": "Add a new reusable UI component to a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-component",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "ui"],
+    "tags": ["nuxt3", "component", "vue"],
+    "techStack": ["nuxt.js", "vue3"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-component.mdc"
+  },
+  {
+    "name": "Add Nuxt Composable",
+    "description": "Add a new composable (Composition API logic) in a Nuxt 3 project.",
+    "type": "feature",
+    "slug": "add-composable",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "logic"],
+    "tags": ["nuxt3", "composition-api"],
+    "techStack": ["nuxt.js", "vue3"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-composable.mdc"
+  },
+  {
+    "name": "Add Nuxt Page",
+    "description": "Add a new page using Nuxt’s file-based routing system.",
+    "type": "feature",
+    "slug": "add-page",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "routing"],
+    "tags": ["nuxt3", "ssr"],
+    "techStack": ["nuxt.js", "vue3"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-page.mdc"
+  },
+  {
+    "name": "Add Nuxt Store (Pinia)",
+    "description": "Set up or extend a Pinia store in a Nuxt 3 project for global state management.",
+    "type": "feature",
+    "slug": "add-store",
+    "development_process": ["plan", "design", "implement", "test", "deploy"],
+    "dev_categories": ["frontend", "state-management"],
+    "tags": ["nuxt3", "pinia"],
+    "techStack": ["nuxt.js", "vue3", "pinia"],
+    "author": {
+      "name": "Prompt Engineer"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "file": "add-store.mdc"
+  }
+]
