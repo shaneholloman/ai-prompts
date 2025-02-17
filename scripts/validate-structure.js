@@ -4,7 +4,7 @@ const z = require("zod").z;
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 
-const TYPES = ["rule", "agent", "feature"];
+const TYPES = ["agent", "feature", "rule", "setup", "starter"];
 
 // Add this at the top level of the file, after the TYPES constant
 const slugs = new Set();
