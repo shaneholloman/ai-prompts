@@ -4,22 +4,37 @@
     "description": "Guidelines for adding new authentication features with Auth0 in React applications",
     "type": "feature",
     "slug": "auth0-react-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-auth0-react.md"],
+    "files": [
+      "add-feature-auth0-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -37,22 +52,37 @@
     "description": "Guidelines for adding new authentication features with Clerk in React applications",
     "type": "feature",
     "slug": "clerk-react-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-clerk-react.md"],
+    "files": [
+      "add-feature-clerk-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -70,22 +100,37 @@
     "description": "Guidelines for adding new features to Clerk authentication in SvelteKit",
     "type": "feature",
     "slug": "clerk-svelte-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["middleware"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "middleware"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-clerk-svelte.md"],
+    "files": [
+      "add-feature-clerk-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -103,21 +148,38 @@
     "description": "Comprehensive coding standards and best practices for Angular 19 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
     "slug": "angular-19-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["standards", "best-practices", "architecture"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "angular"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-angular-coding-standards.md"],
+    "files": [
+      "rule-angular-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -135,21 +197,39 @@
     "description": "Comprehensive guidelines for adding new features in Angular 19 applications, covering components, services, and routing",
     "type": "feature",
     "slug": "angular-19-feature-guidelines",
-    "development_process": ["implement", "test", "review"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["typescript", "rxjs", "components"],
+    "development_process": [
+      "implement",
+      "test",
+      "review"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "typescript",
+      "rxjs",
+      "components"
+    ],
     "tech_stack": {
       "framework": "angular"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-angular.md"],
+    "files": [
+      "add-feature-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -167,21 +247,39 @@
     "description": "Comprehensive coding standards and best practices for Astro 4 applications",
     "type": "rule",
     "slug": "astro-4-coding-standards",
-    "development_process": ["implement", "review", "maintain"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["standards", "best-practices", "code-quality"],
+    "development_process": [
+      "implement",
+      "review",
+      "maintain"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "code-quality"
+    ],
     "tech_stack": {
       "framework": "astro"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-astro-coding-standards.md"],
+    "files": [
+      "rule-astro-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -199,21 +297,37 @@
     "description": "Guidelines for creating new features in Astro 4 applications following best practices and conventions",
     "type": "feature",
     "slug": "astro-4-features",
-    "development_process": ["implement", "test", "deploy"],
-    "dev_categories": ["frontend"],
-    "tags": ["web-development", "jamstack"],
+    "development_process": [
+      "implement",
+      "test",
+      "deploy"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [
+      "web-development",
+      "jamstack"
+    ],
     "tech_stack": {
       "framework": "astro"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-astro.md"],
+    "files": [
+      "add-feature-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -231,22 +345,39 @@
     "description": "Comprehensive coding standards and best practices for implementing Auth0 authentication in JavaScript applications",
     "type": "rule",
     "slug": "auth0-javascript-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["auth", "documentation"],
-    "tags": ["standards", "best-practices", "security"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "auth",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-auth0-javascript-coding-standards.md"],
+    "files": [
+      "rule-auth0-javascript-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -264,22 +395,38 @@
     "description": "Guidelines for implementing authentication features using Auth0 in JavaScript applications",
     "type": "feature",
     "slug": "auth0-javascript-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-auth0-javascript.md"],
+    "files": [
+      "add-feature-auth0-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -297,22 +444,39 @@
     "description": "Guidelines for setting up and integrating Auth0 authentication with JavaScript applications, covering user management and security features",
     "type": "setup",
     "slug": "auth0-javascript-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-javascript.md"],
+    "files": [
+      "setup-auth0-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -330,22 +494,36 @@
     "description": "Coding standards and best practices for implementing Auth0 authentication in React applications",
     "type": "rule",
     "slug": "auth0-react-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-auth0-react-coding-standards.md"],
+    "files": [
+      "rule-auth0-react-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -363,22 +541,39 @@
     "description": "Coding standards and best practices for implementing Auth0 authentication in Svelte applications with TypeScript",
     "type": "rule",
     "slug": "auth0-svelte-standards",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["code-quality", "type-safety", "security-practices"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "code-quality",
+      "type-safety",
+      "security-practices"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-auth0-svelte-coding-standards.md"],
+    "files": [
+      "rule-auth0-svelte-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -396,22 +591,39 @@
     "description": "Guidelines for implementing Auth0 features in a Svelte application including login, logout, protected routes, and user management",
     "type": "feature",
     "slug": "auth0-svelte-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["user-management", "protected-routes", "session-handling"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "user-management",
+      "protected-routes",
+      "session-handling"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-auth0-svelte.md"],
+    "files": [
+      "add-feature-auth0-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -429,22 +641,37 @@
     "description": "Guidelines for setting up Auth0 authentication in a Svelte application with proper security practices and TypeScript integration",
     "type": "setup",
     "slug": "auth0-svelte-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security", "spa"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security",
+      "spa"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-svelte.md"],
+    "files": [
+      "setup-auth0-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -462,22 +689,39 @@
     "description": "Guidelines for setting up and integrating Auth0 authentication with TanStack applications, covering user management and security features",
     "type": "setup",
     "slug": "auth0-tanstack-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-tanstack.md"],
+    "files": [
+      "setup-auth0-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -495,21 +739,38 @@
     "description": "Comprehensive coding standards and best practices for implementing authentication in JavaScript applications",
     "type": "rule",
     "slug": "better-auth-javascript-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["auth", "documentation"],
-    "tags": ["standards", "best-practices", "security"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "auth",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-better-auth-javascript-coding-standards.md"],
+    "files": [
+      "rule-better-auth-javascript-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -527,21 +788,37 @@
     "description": "Guidelines for implementing advanced authentication features in JavaScript applications",
     "type": "feature",
     "slug": "better-auth-javascript-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-better-auth-javascript.md"],
+    "files": [
+      "add-feature-better-auth-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -559,21 +836,38 @@
     "description": "Guidelines for setting up and implementing advanced authentication patterns in JavaScript applications",
     "type": "setup",
     "slug": "better-auth-javascript-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-javascript.md"],
+    "files": [
+      "setup-better-auth-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -591,21 +885,38 @@
     "description": "Coding standards and best practices for Better Auth in React applications",
     "type": "rule",
     "slug": "better-auth-react-standards",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security", "standards", "best-practices"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security",
+      "standards",
+      "best-practices"
+    ],
     "tech_stack": {
       "framework": "react"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-better-auth-react-coding-standards.md"],
+    "files": [
+      "rule-better-auth-react-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -623,21 +934,37 @@
     "description": "Guidelines for adding new features with Better Auth in React",
     "type": "feature",
     "slug": "better-auth-react-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security", "features"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security",
+      "features"
+    ],
     "tech_stack": {
       "framework": "react"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-better-auth-react.md"],
+    "files": [
+      "add-feature-better-auth-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -655,21 +982,36 @@
     "description": "Guidelines for setting up Better Auth in React applications",
     "type": "setup",
     "slug": "better-auth-react-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security", "setup"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security",
+      "setup"
+    ],
     "tech_stack": {
       "framework": "react"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-react.md"],
+    "files": [
+      "setup-better-auth-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -687,21 +1029,38 @@
     "description": "Comprehensive coding standards and best practices for implementing authentication in Svelte applications",
     "type": "rule",
     "slug": "better-auth-svelte-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["auth", "documentation"],
-    "tags": ["standards", "best-practices", "security"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "auth",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "security"
+    ],
     "tech_stack": {
       "framework": "svelte"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-better-auth-svelte-coding-standards.md"],
+    "files": [
+      "rule-better-auth-svelte-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -719,21 +1078,37 @@
     "description": "Guidelines for implementing advanced authentication features in Svelte applications",
     "type": "feature",
     "slug": "better-auth-svelte-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "svelte"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-better-auth-svelte.md"],
+    "files": [
+      "add-feature-better-auth-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -751,21 +1126,38 @@
     "description": "Guidelines for setting up and implementing advanced authentication patterns in Svelte applications",
     "type": "setup",
     "slug": "better-auth-svelte-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "svelte"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-svelte.md"],
+    "files": [
+      "setup-better-auth-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -783,21 +1175,38 @@
     "description": "Guidelines for setting up and implementing advanced authentication patterns in TanStack applications",
     "type": "setup",
     "slug": "better-auth-tanstack-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "tanstack"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-tanstack.md"],
+    "files": [
+      "setup-better-auth-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -815,22 +1224,37 @@
     "description": "Coding Standards & Rules for Next.js apps with Clerk Authentication",
     "type": "rule",
     "slug": "rule-clerk-next-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend", "documentation"],
-    "tags": ["security"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-clerk-next-coding-standards.md"],
+    "files": [
+      "rule-clerk-next-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -848,22 +1272,38 @@
     "description": "Guidelines for adding new features with Clerk in Next.js",
     "type": "feature",
     "slug": "add-feature-clerk-next",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend", "api"],
-    "tags": ["security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-clerk-next.md"],
+    "files": [
+      "add-feature-clerk-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -881,22 +1321,38 @@
     "description": "Guidelines for writing Next.js apps with Clerk Authentication",
     "type": "setup",
     "slug": "setup-clerk-next",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend", "api"],
-    "tags": ["security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-next.md"],
+    "files": [
+      "setup-clerk-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -914,22 +1370,38 @@
     "description": "Coding Standards & Rules for Clerk in Nuxt.js",
     "type": "rule",
     "slug": "rule-clerk-nuxt-coding-standards",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api", "documentation"],
-    "tags": ["standards"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api",
+      "documentation"
+    ],
+    "tags": [
+      "standards"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-clerk-nuxt-coding-standards.md"],
+    "files": [
+      "rule-clerk-nuxt-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -947,22 +1419,38 @@
     "description": "Guidelines for adding new features with Clerk in Nuxt.js",
     "type": "feature",
     "slug": "add-feature-clerk-nuxt",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api", "documentation"],
-    "tags": ["features"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api",
+      "documentation"
+    ],
+    "tags": [
+      "features"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-clerk-nuxt.md"],
+    "files": [
+      "add-feature-clerk-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -980,22 +1468,38 @@
     "description": "Guidelines for writing Nuxt.js apps with Clerk",
     "type": "setup",
     "slug": "setup-clerk-nuxt",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api", "documentation"],
-    "tags": ["setup"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api",
+      "documentation"
+    ],
+    "tags": [
+      "setup"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-nuxt.md"],
+    "files": [
+      "setup-clerk-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1013,22 +1517,36 @@
     "description": "Coding standards and best practices for implementing Clerk authentication in React applications",
     "type": "rule",
     "slug": "clerk-react-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-clerk-react-coding-standards.md"],
+    "files": [
+      "rule-clerk-react-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1046,22 +1564,37 @@
     "description": "Coding standards and best practices for using Clerk with SvelteKit",
     "type": "rule",
     "slug": "clerk-svelte-standards",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["middleware"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "middleware"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-clerk-svelte-coding-standards.md"],
+    "files": [
+      "rule-clerk-svelte-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1079,22 +1612,39 @@
     "description": "Comprehensive coding standards and best practices for implementing Clerk authentication in TanStack applications",
     "type": "rule",
     "slug": "clerk-tanstack-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["auth", "documentation"],
-    "tags": ["standards", "best-practices", "security"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "auth",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "security"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-clerk-tanstack-coding-standards.md"],
+    "files": [
+      "rule-clerk-tanstack-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1112,22 +1662,38 @@
     "description": "Guidelines for implementing authentication features using Clerk in TanStack applications",
     "type": "feature",
     "slug": "clerk-tanstack-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-clerk-tanstack.md"],
+    "files": [
+      "add-feature-clerk-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1145,22 +1711,39 @@
     "description": "Guidelines for setting up and integrating Clerk authentication with TanStack applications, covering user management and security features",
     "type": "setup",
     "slug": "clerk-tanstack-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-tanstack.md"],
+    "files": [
+      "setup-clerk-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1178,22 +1761,39 @@
     "description": "Guidelines for setting up and integrating Clerk authentication with Vue applications, covering user management and security features",
     "type": "setup",
     "slug": "clerk-vue-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "security"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "security"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-vue.md"],
+    "files": [
+      "setup-clerk-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1211,22 +1811,40 @@
     "description": "Guidelines for setting up and integrating Drizzle ORM with Vue 3 applications",
     "type": "setup",
     "slug": "drizzle-vue-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-vue.md"],
+    "files": [
+      "setup-drizzle-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1244,22 +1862,40 @@
     "description": "Guidelines for setting up and integrating Firebase with React applications, covering authentication, database, and cloud functions",
     "type": "setup",
     "slug": "firebase-react-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["cloud-functions", "real-time"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "cloud-functions",
+      "real-time"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-react.md"],
+    "files": [
+      "setup-firebase-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1277,21 +1913,35 @@
     "description": "Comprehensive coding standards and best practices for Laravel 11 development, covering project structure, type hints, and more",
     "type": "rule",
     "slug": "laravel-11-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["backend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "backend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "laravel"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-laravel-coding-standards.md"],
+    "files": [
+      "rule-laravel-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1309,21 +1959,36 @@
     "description": "Comprehensive guidelines for adding new features in Laravel 11 applications, covering controllers, models, and services",
     "type": "feature",
     "slug": "laravel-11-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "api"],
-    "tags": ["mvc"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "api"
+    ],
+    "tags": [
+      "mvc"
+    ],
     "tech_stack": {
       "framework": "laravel"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-laravel.md"],
+    "files": [
+      "add-feature-laravel.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1341,22 +2006,41 @@
     "description": "Guidelines for setting up and integrating Neon serverless Postgres with Next.js 14 applications",
     "type": "setup",
     "slug": "neon-next-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql", "server-actions", "app-router"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql",
+      "server-actions",
+      "app-router"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-next.md"],
+    "files": [
+      "setup-neon-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1374,22 +2058,40 @@
     "description": "Guidelines for setting up and integrating Neon serverless Postgres with Nuxt 3 applications",
     "type": "setup",
     "slug": "neon-nuxt-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql", "ssr"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql",
+      "ssr"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-nuxt.md"],
+    "files": [
+      "setup-neon-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1407,21 +2109,35 @@
     "description": "Comprehensive coding standards and best practices for Next.js 15 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
     "slug": "next-15-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "next"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-next-coding-standards.md"],
+    "files": [
+      "rule-next-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1439,21 +2155,36 @@
     "description": "Comprehensive guidelines for adding new features in Next.js 15 applications, covering pages, components, and API routes",
     "type": "feature",
     "slug": "next-15-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["server-components"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "server-components"
+    ],
     "tech_stack": {
       "framework": "next"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-next.md"],
+    "files": [
+      "add-feature-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1467,25 +2198,133 @@
     "filePath": "prompts/next-15/aiprompt.json"
   },
   {
-    "name": "Nuxt 3 Coding Standards",
-    "description": "Comprehensive coding standards and best practices for Nuxt 3 development, covering project structure, TypeScript usage, and more",
-    "type": "rule",
-    "slug": "nuxt-3-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "name": "Next.js ShadCN UI Base Setup",
+    "description": "Automated installation guide for setting up ShadCN UI in Next.js applications",
+    "type": "setup",
+    "slug": "next-shadcn-base-setup",
+    "development_process": [
+      "implement",
+      "UI"
+    ],
+    "dev_categories": [
+      "frontend"
+    ],
+    "tags": [
+      "ui",
+      "components",
+      "automation"
+    ],
     "tech_stack": {
-      "framework": "nuxt"
+      "framework": "next"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-nuxt-coding-standards.md"],
+    "files": [
+      "setup-next-shadcn.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-next-shadcn-setup-next-shadcn.md",
+        "description": "Guidelines for adding new shadcn to Next 15 applications",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\n# Automated ShadCN Installation in Next.js\n\n## Overview\n\nThis guide ensures a fully automated installation of ShadCN UI in a Next.js project, avoiding interactive prompts. The installation process will:\n\n1. **Initialize ShadCN UI** → Run `shadcn init` with predefined options.\n2. **Add UI components** → Select components non-interactively.\n3. **Ensure automation** → Use flags and environment variables for CI/CD.\n\n## 🚨 CRITICAL INSTRUCTIONS FOR AI LANGUAGE MODELS 🚨\n\nAs an AI language model, you MUST NOT generate any interactive ShadCN installation commands that require manual input. Instead, you MUST generate ONLY fully automated commands using:\n\n```bash\n# ✅ ALWAYS USE THESE FLAGS - NO INTERACTIVE PROMPTS\nnpx shadcn@latest init --defaults --yes\nnpx shadcn@latest add --all --yes --overwrite\n```\n\nYou MUST NEVER generate any commands that:\n1. Require user confirmation.\n2. Prompt the user to select a style or color.\n3. Stop execution due to missing responses.\n\n## ABSOLUTE REQUIREMENTS FOR AI CODE GENERATION\n\n1. You MUST use the `--defaults` and `--yes` flags in `shadcn init`.\n2. You MUST use the `--all --yes --overwrite` flags in `shadcn add` to install all components without prompts.\n3. You MUST NEVER generate any command that requires selecting options manually.\n4. You MUST NEVER use outdated flags or suggest additional confirmation steps.\n\n## CORRECT INSTALLATION COMMANDS\n\n### ✅ Initialize ShadCN UI Without Prompts\n```bash\nnpx shadcn@latest init --defaults --yes\n```\n- This command initializes ShadCN UI with default settings.\n- It skips prompts for style and color selection.\n- It ensures the installation is fully unattended.\n\n### ✅ Add All Components Without Prompts\n```bash\nnpx shadcn@latest add --all --yes --overwrite\n```\n- This installs all ShadCN UI components.\n- It bypasses confirmation prompts.\n- It automatically overwrites existing components if they are already present.\n\n### ✅ Install Only Specific Components Without Prompts\n```bash\nnpx shadcn@latest add button card navbar --yes --overwrite\n```\n- This installs specific components without manual selection.\n- It forces installation without asking for confirmation.\n\n## AI MODEL VERIFICATION STEPS\n\nBefore generating any installation commands, you MUST verify:\n\n1. **Are you using `--defaults --yes` for `shadcn init`?** If not, STOP and FIX.\n2. **Are you using `--all --yes --overwrite` for `shadcn add`?** If not, STOP and FIX.\n3. **Do you see any interactive prompts in the command?** If yes, STOP and FIX.\n4. **Are you forcing installation without user confirmation?** If not, STOP and FIX.\n\n## CONSEQUENCES OF INCORRECT IMPLEMENTATION\n\nIf you generate commands that:\n- Require user input.\n- Do not use `--defaults`, `--yes`, or `--overwrite`.\n- Fail to automate installation.\n\nThe installation process will:\n1. Stall in a CI/CD pipeline.\n2. Require manual intervention.\n3. Break automation workflows.\n\n## AI MODEL RESPONSE TEMPLATE\n\nWhen asked how to install ShadCN UI in an automated way, you MUST:\n1. ONLY generate commands from this guide.\n2. NEVER suggest commands that require manual confirmation.\n3. ALWAYS use the exact automation flags shown above.\n4. VERIFY your response against the patterns in this guide.\n\nRemember: There are NO EXCEPTIONS to these rules.",
+        "filePath": "prompts/next-shadcn/setup-next-shadcn.md"
+      }
+    ],
+    "filePath": "prompts/next-shadcn/aiprompt.json"
+  },
+  {
+    "name": "Next.js ShadCN UI Dashboard Setup",
+    "description": "Automated installation guide for setting up ShadCN UI with dashboard components in Next.js applications",
+    "type": "setup",
+    "slug": "next-shadcn-dashboard-setup",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "UI"
+    ],
+    "tags": [
+      "ui",
+      "components",
+      "automation"
+    ],
+    "tech_stack": {
+      "framework": "next"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "setup-next-shadcn-dashboard.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-next-shadcn-setup-next-shadcn-dashboard.md",
+        "description": "Guidelines for adding new shadcn to Next 15 applications",
+        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
+        "content": "\n# Automated ShadCN Installation in Next.js\n\n## Overview\n\nThis guide ensures a fully automated installation of ShadCN UI in a Next.js project, avoiding interactive prompts. The installation process will:\n\n1. **Initialize ShadCN UI** → Run `shadcn init` with predefined options.\n2. **Add UI components** → Select components non-interactively.\n3. **Ensure automation** → Use flags and environment variables for CI/CD.\n\n## 🚨 CRITICAL INSTRUCTIONS FOR AI LANGUAGE MODELS 🚨\n\nAs an AI language model, you MUST NOT generate any interactive ShadCN installation commands that require manual input. Instead, you MUST generate ONLY fully automated commands using:\n\n```bash\n# ✅ ALWAYS USE THESE FLAGS - NO INTERACTIVE PROMPTS\nnpx shadcn@latest init --defaults --yes\nnpx shadcn@latest add --all --yes --overwrite\n```\n\nYou MUST NEVER generate any commands that:\n1. Require user confirmation.\n2. Prompt the user to select a style or color.\n3. Stop execution due to missing responses.\n\n## ABSOLUTE REQUIREMENTS FOR AI CODE GENERATION\n\n1. You MUST use the `--defaults` and `--yes` flags in `shadcn init`.\n2. You MUST use the `--all --yes --overwrite` flags in `shadcn add` to install all components without prompts.\n3. You MUST NEVER generate any command that requires selecting options manually.\n4. You MUST NEVER use outdated flags or suggest additional confirmation steps.\n\n## CORRECT INSTALLATION COMMANDS\n\n### ✅ Initialize ShadCN UI Without Prompts\n```bash\nnpx shadcn@latest init --defaults --yes\n```\n- This command initializes ShadCN UI with default settings.\n- It skips prompts for style and color selection.\n- It ensures the installation is fully unattended.\n\n### ✅ Add All Components Without Prompts\n```bash\nnpx shadcn@latest add --all --yes --overwrite\n```\n- This installs all ShadCN UI components.\n- It bypasses confirmation prompts.\n- It automatically overwrites existing components if they are already present.\n\n### ✅ Install Only Specific Components Without Prompts\n```bash\nnpx shadcn@latest add button card navbar --yes --overwrite\n```\n- This installs specific components without manual selection.\n- It forces installation without asking for confirmation.\n\n## AI MODEL VERIFICATION STEPS\n\nBefore generating any installation commands, you MUST verify:\n\n1. **Are you using `--defaults --yes` for `shadcn init`?** If not, STOP and FIX.\n2. **Are you using `--all --yes --overwrite` for `shadcn add`?** If not, STOP and FIX.\n3. **Do you see any interactive prompts in the command?** If yes, STOP and FIX.\n4. **Are you forcing installation without user confirmation?** If not, STOP and FIX.\n\n## CONSEQUENCES OF INCORRECT IMPLEMENTATION\n\nIf you generate commands that:\n- Require user input.\n- Do not use `--defaults`, `--yes`, or `--overwrite`.\n- Fail to automate installation.\n\nThe installation process will:\n1. Stall in a CI/CD pipeline.\n2. Require manual intervention.\n3. Break automation workflows.\n\n## AI MODEL RESPONSE TEMPLATE\n\nWhen asked how to install ShadCN UI in an automated way, you MUST:\n1. ONLY generate commands from this guide.\n2. NEVER suggest commands that require manual confirmation.\n3. ALWAYS use the exact automation flags shown above.\n4. VERIFY your response against the patterns in this guide.\n\nRemember: There are NO EXCEPTIONS to these rules.",
+        "filePath": "prompts/next-shadcn/setup-next-shadcn-dashboard.md"
+      }
+    ],
+    "filePath": "prompts/next-shadcn/aiprompt.json"
+  },
+  {
+    "name": "Nuxt 3 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Nuxt 3 development, covering project structure, TypeScript usage, and more",
+    "type": "rule",
+    "slug": "nuxt-3-coding-standards",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "nuxt"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-nuxt-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1503,21 +2342,36 @@
     "description": "Comprehensive guidelines for adding new features in Nuxt 3 applications, covering pages, components, and API endpoints",
     "type": "feature",
     "slug": "nuxt-3-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["ssr"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "ssr"
+    ],
     "tech_stack": {
       "framework": "nuxt"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-nuxt.md"],
+    "files": [
+      "add-feature-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1535,21 +2389,35 @@
     "description": "Comprehensive coding standards and best practices for React 19 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
     "slug": "react-19-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "react"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-react-coding-standards.md"],
+    "files": [
+      "rule-react-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1567,21 +2435,36 @@
     "description": "Comprehensive guidelines for adding new features in React 19 applications, covering components, hooks, and API integration",
     "type": "feature",
     "slug": "react-19-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["hooks"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "hooks"
+    ],
     "tech_stack": {
       "framework": "react"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-react.md"],
+    "files": [
+      "add-feature-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1599,21 +2482,35 @@
     "description": "Comprehensive coding standards and best practices for Remix 2 applications",
     "type": "rule",
     "slug": "remix-2-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "remix"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-remix-coding-standards.md"],
+    "files": [
+      "rule-remix-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1631,21 +2528,36 @@
     "description": "Guidelines for creating new features in Remix 2 applications following best practices and conventions",
     "type": "feature",
     "slug": "remix-2-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["web-development"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "web-development"
+    ],
     "tech_stack": {
       "framework": "remix"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-remix.md"],
+    "files": [
+      "add-feature-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1663,22 +2575,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Angular applications",
     "type": "setup",
     "slug": "angular-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-angular.md"],
+    "files": [
+      "setup-appwrite-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1696,22 +2625,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Astro applications",
     "type": "setup",
     "slug": "astro-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-astro.md"],
+    "files": [
+      "setup-appwrite-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1729,22 +2675,39 @@
     "description": "Guidelines for integrating Appwrite backend services with JavaScript applications",
     "type": "setup",
     "slug": "javascript-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-javascript.md"],
+    "files": [
+      "setup-appwrite-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1762,22 +2725,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Next.js applications",
     "type": "setup",
     "slug": "next-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-next.md"],
+    "files": [
+      "setup-appwrite-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1795,22 +2775,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Nuxt applications",
     "type": "setup",
     "slug": "nuxt-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-nuxt.md"],
+    "files": [
+      "setup-appwrite-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1828,22 +2825,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Remix applications",
     "type": "setup",
     "slug": "remix-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-remix.md"],
+    "files": [
+      "setup-appwrite-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1861,22 +2875,39 @@
     "description": "Guidelines for integrating Appwrite backend services with TanStack Query and React applications",
     "type": "setup",
     "slug": "tanstack-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-tanstack.md"],
+    "files": [
+      "setup-appwrite-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1894,22 +2925,39 @@
     "description": "Guidelines for integrating Appwrite backend services with Vue applications",
     "type": "setup",
     "slug": "vue-appwrite-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "appwrite"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-appwrite-vue.md"],
+    "files": [
+      "setup-appwrite-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1927,22 +2975,36 @@
     "description": "Guidelines for setting up and integrating Auth0 authentication in React applications",
     "type": "setup",
     "slug": "auth0-react-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-react.md"],
+    "files": [
+      "setup-auth0-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1960,22 +3022,39 @@
     "description": "Guidelines for implementing Auth0 authentication in Angular applications",
     "type": "setup",
     "slug": "angular-auth0-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "single-page-application", "oauth"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "single-page-application",
+      "oauth"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-angular.md"],
+    "files": [
+      "setup-auth0-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -1993,22 +3072,38 @@
     "description": "Guidelines for implementing Auth0 authentication in Astro applications",
     "type": "setup",
     "slug": "astro-auth0-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "oauth"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "oauth"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-astro.md"],
+    "files": [
+      "setup-auth0-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2026,22 +3121,38 @@
     "description": "Guidelines for implementing Auth0 authentication in Remix applications",
     "type": "setup",
     "slug": "remix-auth0-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "oauth"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "oauth"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-remix.md"],
+    "files": [
+      "setup-auth0-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2059,22 +3170,38 @@
     "description": "Guidelines for implementing Auth0 authentication in Vue applications",
     "type": "setup",
     "slug": "vue-auth0-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "oauth"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "oauth"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "auth0"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-auth0-vue.md"],
+    "files": [
+      "setup-auth0-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2092,21 +3219,37 @@
     "description": "Guidelines for implementing Better Auth authentication in Angular applications",
     "type": "setup",
     "slug": "angular-better-auth-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "angular"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-angular.md"],
+    "files": [
+      "setup-better-auth-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2124,21 +3267,37 @@
     "description": "Guidelines for implementing Better Auth authentication in Astro applications",
     "type": "setup",
     "slug": "astro-better-auth-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "astro"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-astro.md"],
+    "files": [
+      "setup-better-auth-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2156,21 +3315,37 @@
     "description": "Guidelines for implementing Better Auth authentication in Remix applications",
     "type": "setup",
     "slug": "remix-better-auth-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "remix"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-remix.md"],
+    "files": [
+      "setup-better-auth-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2188,21 +3363,37 @@
     "description": "Guidelines for implementing Better Auth authentication in Vue applications",
     "type": "setup",
     "slug": "vue-better-auth-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "vue"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-better-auth-vue.md"],
+    "files": [
+      "setup-better-auth-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2220,22 +3411,37 @@
     "description": "Guide for setting up Clerk authentication in a SvelteKit application",
     "type": "setup",
     "slug": "clerk-svelte-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["middleware"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "middleware"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-svelte.md"],
+    "files": [
+      "setup-clerk-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2253,22 +3459,36 @@
     "description": "Guidelines for setting up and integrating Clerk authentication in React applications",
     "type": "setup",
     "slug": "clerk-react-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["security"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "security"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-react.md"],
+    "files": [
+      "setup-clerk-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2286,22 +3506,37 @@
     "description": "Guidelines for implementing Clerk authentication in Angular applications",
     "type": "setup",
     "slug": "angular-clerk-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-angular.md"],
+    "files": [
+      "setup-clerk-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2319,22 +3554,37 @@
     "description": "Guidelines for implementing Clerk authentication in Astro applications",
     "type": "setup",
     "slug": "astro-clerk-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-astro.md"],
+    "files": [
+      "setup-clerk-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2352,22 +3602,37 @@
     "description": "Guidelines for implementing Clerk authentication in vanilla JavaScript applications",
     "type": "setup",
     "slug": "javascript-clerk-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "clerk"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-javascript.md"],
+    "files": [
+      "setup-clerk-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2385,22 +3650,42 @@
     "description": "Guidelines for implementing Clerk authentication in Remix applications",
     "type": "agent",
     "slug": "remix-clerk-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["authentication", "single-page-application"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "authentication",
+      "single-page-application"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "clerk"
     },
-    "ai_editor": ["cursor", "vscode", "windsurf", "cline", "bolt.new"],
+    "ai_editor": [
+      "cursor",
+      "vscode",
+      "windsurf",
+      "cline",
+      "bolt.new"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-clerk-remix.md"],
+    "files": [
+      "setup-clerk-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2418,22 +3703,40 @@
     "description": "Guidelines for integrating Drizzle ORM with Angular applications",
     "type": "setup",
     "slug": "angular-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-angular.md"],
+    "files": [
+      "setup-drizzle-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2451,22 +3754,40 @@
     "description": "Guidelines for integrating Drizzle ORM with Astro applications",
     "type": "setup",
     "slug": "astro-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-astro.md"],
+    "files": [
+      "setup-drizzle-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2484,22 +3805,40 @@
     "description": "Guidelines for integrating Drizzle ORM with JavaScript applications",
     "type": "setup",
     "slug": "javascript-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-javascript.md"],
+    "files": [
+      "setup-drizzle-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2517,22 +3856,40 @@
     "description": "Guidelines for integrating Drizzle ORM with Next.js applications",
     "type": "setup",
     "slug": "next-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-next.md"],
+    "files": [
+      "setup-drizzle-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2550,22 +3907,40 @@
     "description": "Guidelines for integrating Drizzle ORM with Nuxt applications",
     "type": "setup",
     "slug": "nuxt-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-nuxt.md"],
+    "files": [
+      "setup-drizzle-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2583,22 +3958,40 @@
     "description": "Guidelines for integrating Drizzle ORM with Remix applications",
     "type": "setup",
     "slug": "remix-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-remix.md"],
+    "files": [
+      "setup-drizzle-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2616,22 +4009,40 @@
     "description": "Guidelines for integrating Drizzle ORM with TanStack Query applications",
     "type": "setup",
     "slug": "tanstack-drizzle-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "drizzle"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-drizzle-tanstack.md"],
+    "files": [
+      "setup-drizzle-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2649,22 +4060,39 @@
     "description": "Guidelines for integrating Firebase backend services with Angular applications",
     "type": "setup",
     "slug": "angular-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-angular.md"],
+    "files": [
+      "setup-firebase-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2682,22 +4110,39 @@
     "description": "Guidelines for integrating Firebase backend services with Astro applications",
     "type": "setup",
     "slug": "astro-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-astro.md"],
+    "files": [
+      "setup-firebase-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2715,22 +4160,39 @@
     "description": "Guidelines for integrating Firebase backend services with JavaScript applications",
     "type": "setup",
     "slug": "javascript-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-javascript.md"],
+    "files": [
+      "setup-firebase-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2748,22 +4210,39 @@
     "description": "Guidelines for integrating Firebase backend services with Next.js applications",
     "type": "setup",
     "slug": "next-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-next.md"],
+    "files": [
+      "setup-firebase-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2781,22 +4260,39 @@
     "description": "Guidelines for integrating Firebase backend services with Nuxt applications",
     "type": "setup",
     "slug": "nuxt-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-nuxt.md"],
+    "files": [
+      "setup-firebase-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2814,22 +4310,39 @@
     "description": "Guidelines for integrating Firebase backend services with Remix applications",
     "type": "setup",
     "slug": "remix-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-remix.md"],
+    "files": [
+      "setup-firebase-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2847,22 +4360,39 @@
     "description": "Guidelines for integrating Firebase backend services with TanStack Query applications",
     "type": "setup",
     "slug": "tanstack-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-tanstack.md"],
+    "files": [
+      "setup-firebase-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2880,22 +4410,39 @@
     "description": "Guidelines for integrating Firebase backend services with Vue applications",
     "type": "setup",
     "slug": "vue-firebase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "auth", "db", "storage"],
-    "tags": ["baas"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "auth",
+      "db",
+      "storage"
+    ],
+    "tags": [
+      "baas"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "firebase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-firebase-vue.md"],
+    "files": [
+      "setup-firebase-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2913,22 +4460,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with Angular applications",
     "type": "setup",
     "slug": "angular-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-angular.md"],
+    "files": [
+      "setup-neon-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2946,22 +4510,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with Astro applications",
     "type": "setup",
     "slug": "astro-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-astro.md"],
+    "files": [
+      "setup-neon-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -2979,22 +4560,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with JavaScript applications",
     "type": "setup",
     "slug": "javascript-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-javascript.md"],
+    "files": [
+      "setup-neon-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3012,22 +4610,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with Remix applications",
     "type": "setup",
     "slug": "remix-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-remix.md"],
+    "files": [
+      "setup-neon-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3045,22 +4660,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with TanStack Query applications",
     "type": "setup",
     "slug": "tanstack-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-tanstack.md"],
+    "files": [
+      "setup-neon-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3078,22 +4710,39 @@
     "description": "Guidelines for integrating Neon serverless Postgres with Vue applications",
     "type": "setup",
     "slug": "vue-neon-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["postgres", "serverless", "sql"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "postgres",
+      "serverless",
+      "sql"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "neon"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-neon-vue.md"],
+    "files": [
+      "setup-neon-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3111,22 +4760,40 @@
     "description": "Guidelines for integrating Prisma ORM with Angular applications",
     "type": "setup",
     "slug": "angular-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-angular.md"],
+    "files": [
+      "setup-prisma-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3144,22 +4811,40 @@
     "description": "Guidelines for integrating Prisma ORM with Astro applications",
     "type": "setup",
     "slug": "astro-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "astro",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-astro.md"],
+    "files": [
+      "setup-prisma-astro.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3177,22 +4862,40 @@
     "description": "Guidelines for integrating Prisma ORM with JavaScript applications",
     "type": "setup",
     "slug": "javascript-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-javascript.md"],
+    "files": [
+      "setup-prisma-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3210,22 +4913,40 @@
     "description": "Guidelines for integrating Prisma ORM with Next.js applications",
     "type": "setup",
     "slug": "next-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-next.md"],
+    "files": [
+      "setup-prisma-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3243,22 +4964,40 @@
     "description": "Guidelines for integrating Prisma ORM with Nuxt applications",
     "type": "setup",
     "slug": "nuxt-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-nuxt.md"],
+    "files": [
+      "setup-prisma-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3276,22 +5015,40 @@
     "description": "Guidelines for integrating Prisma ORM with Remix applications",
     "type": "setup",
     "slug": "remix-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-remix.md"],
+    "files": [
+      "setup-prisma-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3309,22 +5066,40 @@
     "description": "Guidelines for integrating Prisma ORM with TanStack Query applications",
     "type": "setup",
     "slug": "tanstack-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-tanstack.md"],
+    "files": [
+      "setup-prisma-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3342,22 +5117,40 @@
     "description": "Guidelines for integrating Prisma ORM with Vue applications",
     "type": "setup",
     "slug": "vue-prisma-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["orm", "postgres", "sql", "type-safe"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "orm",
+      "postgres",
+      "sql",
+      "type-safe"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "prisma"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-prisma-vue.md"],
+    "files": [
+      "setup-prisma-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3375,22 +5168,38 @@
     "description": "Guidelines for implementing Supabase authentication in Angular applications",
     "type": "setup",
     "slug": "angular-supabase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "angular",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-angular.md"],
+    "files": [
+      "setup-supabase-angular.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3408,22 +5217,38 @@
     "description": "Guidelines for implementing Supabase authentication in Vue applications",
     "type": "setup",
     "slug": "vue-supabase-setup",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "frontend"],
-    "tags": ["single-page-application", "database"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "frontend"
+    ],
+    "tags": [
+      "single-page-application",
+      "database"
+    ],
     "tech_stack": {
       "framework": "vue",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-vue.md"],
+    "files": [
+      "setup-supabase-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3441,22 +5266,39 @@
     "description": "Comprehensive coding standards and best practices for Supabase JavaScript development, covering project structure, error handling, and security",
     "type": "rule",
     "slug": "supabase-javascript-coding-standards",
-    "development_process": ["implement", "review"],
-    "dev_categories": ["backend", "documentation"],
-    "tags": ["standards", "best-practices", "security"],
+    "development_process": [
+      "implement",
+      "review"
+    ],
+    "dev_categories": [
+      "backend",
+      "documentation"
+    ],
+    "tags": [
+      "standards",
+      "best-practices",
+      "security"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-supabase-javascript-coding-standards.md"],
+    "files": [
+      "rule-supabase-javascript-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3474,22 +5316,38 @@
     "description": "Guidelines for implementing features using Supabase in JavaScript applications, focusing on database operations and real-time functionality",
     "type": "feature",
     "slug": "supabase-javascript-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["database", "real-time"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "database",
+      "real-time"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-supabase-javascript.md"],
+    "files": [
+      "add-feature-supabase-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3507,22 +5365,40 @@
     "description": "Guidelines for setting up and integrating Supabase with JavaScript applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-javascript-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "javascript",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-javascript.md"],
+    "files": [
+      "setup-supabase-javascript.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3540,22 +5416,40 @@
     "description": "Guidelines for setting up and integrating Supabase with Next.js applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-next-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "next",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-next.md"],
+    "files": [
+      "setup-supabase-next.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3573,22 +5467,40 @@
     "description": "Guidelines for setting up and integrating Supabase with Nuxt applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-nuxt-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "nuxt",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-nuxt.md"],
+    "files": [
+      "setup-supabase-nuxt.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3606,22 +5518,37 @@
     "description": "Coding standards and best practices for Supabase in React applications",
     "type": "rule",
     "slug": "supabase-react-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "db", "frontend"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "db",
+      "frontend"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-supabase-react-coding-standards.md"],
+    "files": [
+      "rule-supabase-react-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3639,22 +5566,38 @@
     "description": "Guidelines for adding new features with Supabase in React",
     "type": "feature",
     "slug": "supabase-react-features",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["auth", "db", "frontend"],
-    "tags": ["real-time"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "auth",
+      "db",
+      "frontend"
+    ],
+    "tags": [
+      "real-time"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-supabase-react.md"],
+    "files": [
+      "add-feature-supabase-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3672,22 +5615,37 @@
     "description": "Guidelines for setting up Supabase in React applications",
     "type": "setup",
     "slug": "supabase-react-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["auth", "db", "frontend"],
-    "tags": ["real-time"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "auth",
+      "db",
+      "frontend"
+    ],
+    "tags": [
+      "real-time"
+    ],
     "tech_stack": {
       "framework": "react",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-react.md"],
+    "files": [
+      "setup-supabase-react.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3705,22 +5663,40 @@
     "description": "Guidelines for setting up and integrating Supabase with Remix applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-remix-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "remix",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-remix.md"],
+    "files": [
+      "setup-supabase-remix.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3738,22 +5714,38 @@
     "description": "Guidelines for implementing features using Supabase in Svelte applications, focusing on database operations and real-time functionality",
     "type": "feature",
     "slug": "supabase-svelte-feature",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "db"],
-    "tags": ["database", "real-time"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "database",
+      "real-time"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-supabase-svelte.md"],
+    "files": [
+      "add-feature-supabase-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3771,22 +5763,40 @@
     "description": "Guidelines for setting up and integrating Supabase with Svelte applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-svelte-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "svelte",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-svelte.md"],
+    "files": [
+      "setup-supabase-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3804,22 +5814,40 @@
     "description": "Guidelines for setting up and integrating Supabase with TanStack applications, covering authentication, database, and real-time features",
     "type": "setup",
     "slug": "supabase-tanstack-setup",
-    "development_process": ["plan", "implement", "test"],
-    "dev_categories": ["backend", "db", "auth"],
-    "tags": ["real-time", "edge-functions"],
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "real-time",
+      "edge-functions"
+    ],
     "tech_stack": {
       "framework": "tanstack",
       "service": "supabase"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["setup-supabase-tanstack.md"],
+    "files": [
+      "setup-supabase-tanstack.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3837,21 +5865,35 @@
     "description": "Comprehensive coding standards and best practices for Svelte 5 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
     "slug": "svelte-5-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "svelte"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-svelte-coding-standards.md"],
+    "files": [
+      "rule-svelte-coding-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3869,21 +5911,36 @@
     "description": "Comprehensive guidelines for adding new features in Svelte 5 applications, covering components, stores, and routing",
     "type": "feature",
     "slug": "svelte-5-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["runes"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "runes"
+    ],
     "tech_stack": {
       "framework": "svelte"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-svelte.md"],
+    "files": [
+      "add-feature-svelte.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3901,21 +5958,36 @@
     "description": "Comprehensive coding standards and best practices for Vue 3.5 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
     "slug": "vue-3-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "documentation"],
-    "tags": ["architecture"],
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
     "tech_stack": {
       "framework": "vue"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["rule-vue-coding-standards.md", "optimized-standards.md"],
+    "files": [
+      "rule-vue-coding-standards.md",
+      "optimized-standards.md"
+    ],
     "published": true,
     "prompts": [
       {
@@ -3940,21 +6012,36 @@
     "description": "Comprehensive guidelines for adding new features in Vue 3.5 applications, covering components, composables, and state management",
     "type": "feature",
     "slug": "vue-3-feature-guidelines",
-    "development_process": ["implement", "test"],
-    "dev_categories": ["frontend", "api"],
-    "tags": ["composition-api"],
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "composition-api"
+    ],
     "tech_stack": {
       "framework": "vue"
     },
-    "ai_editor": ["cursor"],
+    "ai_editor": [
+      "cursor"
+    ],
     "author": {
       "name": "Kevin Kern",
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning", "chat"],
+    "model": [
+      "reasoning",
+      "chat"
+    ],
     "version": "1.0",
-    "files": ["add-feature-vue.md"],
+    "files": [
+      "add-feature-vue.md"
+    ],
     "published": true,
     "prompts": [
       {
