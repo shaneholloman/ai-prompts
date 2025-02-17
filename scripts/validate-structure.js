@@ -82,7 +82,8 @@ function validateMetadata(metadata) {
         description: z.string().trim().min(1),
         type: z.enum(TYPES),
         slug: z.string().trim().min(1),
-        file: z.string().trim().min(1),
+        files: z.array(z.string()),
+        published: z.boolean(),
         author: z
           .object({
             name: z.string().trim().min(1),
@@ -97,15 +98,25 @@ function validateMetadata(metadata) {
         development_process: z.array(z.string().trim().min(1)),
         dev_categories: z.array(z.string().trim().min(1)),
         tags: z.array(z.string().trim().min(1)),
-        techStack: z.array(z.string().trim().min(1)),
+        tech_stack: z
+          .object({
+            framework: z.string().trim().min(1),
+            service: z.string().trim().min(1),
+            library: z.string().trim().min(1),
+          })
+          .partial({
+            service: true,
+            library: true,
+          }),
         model: z.array(z.string().trim().min(1)),
+        ai_editor: z.array(z.string().trim().min(1)),
         version: z.string().trim().min(1),
       })
       .partial({
+        ai_editor: true,
         development_process: true,
         dev_categories: true,
         tags: true,
-        techStack: true,
         model: true,
         version: true,
       })

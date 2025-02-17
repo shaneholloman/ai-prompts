@@ -5,6 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { parseMdc } = require("./parse-mdc");
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "index.json");
@@ -25,7 +26,7 @@ function getPromptContent(dirPath, fileToRead) {
 
   const raw = fs.readFileSync(filePath, "utf8");
   const relative = path.relative(path.join(__dirname, ".."), filePath);
-  const fm = matter(raw);
+  const fm = parseMdc(raw);
   const data = fm.data || {};
   const content = fm.content || "";
   const id = data.id || relative.replace(/\//g, "-");
@@ -50,15 +51,19 @@ function parseFile(filePath) {
 
   if (ext === ".json") {
     const data = JSON.parse(raw);
-    // Get prompts content from the same directory as aiprompt.json
     const dirPath = path.dirname(filePath);
 
     // Process each object in the array
     return data.map((item) => {
-      const prompt = getPromptContent(dirPath, item.file);
+      // Handle both string and array of files
+      const files = Array.isArray(item.files) ? item.files : [item.file];
+      const prompts = files
+        .map((file) => getPromptContent(dirPath, file))
+        .filter(Boolean);
+
       return {
         ...item,
-        prompts: [prompt].filter(Boolean),
+        prompts,
         filePath: relative,
       };
     });
