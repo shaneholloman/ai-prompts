@@ -1,4 +1,4 @@
-[![Instructa AI Prompts Banner](https://user-images.githubusercontent.com/000000/placeholder-banner.svg)](https://www.instructa.ai/ai-prompts)
+[![Instructa AI Prompts Banner](/public/image.png)](https://www.instructa.ai/ai-prompts)
 
 # AI Prompts & Rules
 
