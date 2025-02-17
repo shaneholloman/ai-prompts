@@ -1,125 +1,164 @@
 ---
-description: Automate ShadCN installation and create a simple dashboard with a sidebar.
-globs: "**/*.ts, **/*.tsx, **/*.js, **/*.jsx"
+description: Guidelines for writing Next.js apps with shadcn/ui
+globs: **/*.ts, **/*.tsx, **/*.js, **/*.jsx
 ---
 
-# Automated ShadCN Installation & Simple Dashboard
+# Next.js Dashboard Setup with shadcn/ui
 
-## Overview
+Follow these steps in order to create a modern dashboard application:
 
-This guide ensures a fully automated installation of ShadCN UI and sets up a simple dashboard featuring a sidebar.
+1. Create Project
+   - Run: pnpm dlx shadcn@latest init
+   - For quick setup with defaults: pnpm dlx shadcn@latest init -d
+   - Select New York style and Zinc color scheme when prompted
+   - Enable CSS variables for theming support
 
-1. Initialize ShadCN UI → Run `shadcn init` with predefined options.
-2. Add UI components → Install necessary building blocks.
-3. Create a basic dashboard → Implement a sidebar and content area.
+2. Configure Project Structure
+   - Remove app/page.tsx (default demo page)
+   - Create following directory structure:
+     ```
+     app/
+     ├── layout.tsx
+     ├── page.tsx (dashboard page)
+     ├── loading.tsx
+     ├── error.tsx
+     └── components/
+         ├── ui/ (shadcn components)
+         └── dashboard/
+             ├── header.tsx
+             ├── sidebar.tsx
+             ├── main.tsx
+             └── widgets/
+     ```
 
-## 🚨 CRITICAL INSTRUCTIONS FOR AI LANGUAGE MODELS 🚨
+3. Install Essential Components
+   ```bash
+   pnpm dlx shadcn@latest add card
+   pnpm dlx shadcn@latest add button
+   pnpm dlx shadcn@latest add dropdown-menu
+   pnpm dlx shadcn@latest add separator
+   pnpm dlx shadcn@latest add sheet
+   pnpm dlx shadcn@latest add theme-toggle
+   ```
 
-As an AI language model, you MUST NOT generate any interactive installation commands that require manual input. Instead, you MUST generate ONLY fully automated commands using:
+4. Create Root Layout
+   ```tsx
+   // app/layout.tsx
+   import { ThemeProvider } from '@/components/theme-provider'
+   
+   export default function RootLayout({
+     children,
+   }: {
+     children: React.ReactNode
+   }) {
+     return (
+       <html lang="en" suppressHydrationWarning>
+         <body>
+           <ThemeProvider
+             attribute="class"
+             defaultTheme="system"
+             enableSystem
+           >
+             {children}
+           </ThemeProvider>
+         </body>
+       </html>
+     )
+   }
+   ```
 
-```bash
-# ✅ ALWAYS USE THESE FLAGS - NO INTERACTIVE PROMPTS
-npx shadcn@latest init --defaults --yes
-npx shadcn@latest add button card navbar sidebar --yes --overwrite
-```
+5. Implement Dashboard Layout Components
+   ```tsx
+   // components/dashboard/header.tsx
+   export function Header() {
+     return (
+       <header className="border-b">
+         <div className="flex h-16 items-center px-4">
+           <div className="ml-auto flex items-center space-x-4">
+             <ThemeToggle />
+           </div>
+         </div>
+       </header>
+     )
+   }
 
-You MUST NEVER generate any commands that:
-1. Require user confirmation.
-2. Prompt the user to select a style or color.
-3. Stop execution due to missing responses.
+   // components/dashboard/sidebar.tsx
+   export function Sidebar() {
+     return (
+       <div className="hidden border-r bg-background md:block md:w-64">
+         <div className="space-y-4 py-4">
+           {/* Add navigation items */}
+         </div>
+       </div>
+     )
+   }
+   ```
 
-## ABSOLUTE REQUIREMENTS FOR AI CODE GENERATION
+6. Create Main Dashboard Page
+   ```tsx
+   // app/page.tsx
+   import { Header } from '@/components/dashboard/header'
+   import { Sidebar } from '@/components/dashboard/sidebar'
+   
+   export default function DashboardPage() {
+     return (
+       <div className="flex min-h-screen flex-col">
+         <Header />
+         <div className="flex flex-1">
+           <Sidebar />
+           <main className="flex-1 p-6">
+             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+               {/* Add dashboard widgets */}
+             </div>
+           </main>
+         </div>
+       </div>
+     )
+   }
+   ```
 
-1. You MUST use the `--defaults` and `--yes` flags in `shadcn init`.
-2. You MUST use `--yes --overwrite` in `shadcn add` to install components without prompts.
-3. You MUST NEVER generate any command that requires manual selection.
-4. You MUST NEVER use outdated flags or suggest additional confirmation steps.
+7. Add Mobile Responsiveness
+   - Add Sheet component for mobile navigation
+   - Implement responsive breakpoints
+   - Create mobile menu toggle button
 
-## CORRECT INSTALLATION COMMANDS
+8. Implement Loading States
+   ```tsx
+   // app/loading.tsx
+   export default function Loading() {
+     return (
+       <div className="flex h-screen w-screen items-center justify-center">
+         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary" />
+       </div>
+     )
+   }
+   ```
 
-### ✅ Initialize ShadCN UI Without Prompts
-```bash
-npx shadcn@latest init --defaults --yes
-```
-- Initializes ShadCN UI with default settings.
-- Skips prompts for style and color selection.
-- Ensures unattended installation.
+9. Follow Best Practices
+   - Use TypeScript for all components
+   - Keep shadcn components in ui directory
+   - Create wrapper components for customization
+   - Use React Server Components by default
+   - Add client-side interactivity only when needed
+   - Implement proper error boundaries
+   - Follow accessibility guidelines
 
-### ✅ Add Required Components Without Prompts
-```bash
-npx shadcn@latest add button card navbar sidebar --yes --overwrite
-```
-- Installs necessary components for a dashboard.
-- Bypasses confirmation prompts.
-- Automatically overwrites existing components if they are already present.
+10. Performance Optimization
+    - Implement code splitting
+    - Use dynamic imports for heavy components
+    - Add Suspense boundaries
+    - Monitor bundle size
+    - Optimize images and assets
 
-## Creating a Simple Dashboard
+11. Theme Configuration
+    - Maintain consistent spacing with Tailwind
+    - Use CSS variables for dynamic theming
+    - Follow New York style guidelines
+    - Implement dark mode correctly
 
-### ✅ Dashboard Layout
-```tsx
-import { useState } from "react";
-import { Button, Card } from "@/components/ui";
-import { Sidebar } from "@/components/sidebar";
-
-export default function Dashboard() {
-  const [open, setOpen] = useState(true);
-
-  return (
-    <div className="flex h-screen">
-      <Sidebar open={open} setOpen={setOpen} />
-      <div className="flex-1 p-4">
-        <Card className="p-4">
-          <h1 className="text-xl font-bold">Dashboard</h1>
-          <Button onClick={() => alert("Clicked!")}>Click me</Button>
-        </Card>
-      </div>
-    </div>
-  );
-}
-```
-
-### ✅ Sidebar Component
-```tsx
-import { Button } from "@/components/ui";
-
-export function Sidebar({ open, setOpen }) {
-  return (
-    <div className={`w-64 bg-gray-900 text-white p-4 ${open ? "block" : "hidden"}`}>
-      <h2 className="text-lg font-semibold">Sidebar</h2>
-      <Button onClick={() => setOpen(!open)}>Toggle Sidebar</Button>
-    </div>
-  );
-}
-```
-
-## AI MODEL VERIFICATION STEPS
-
-Before generating any installation commands or code, you MUST verify:
-
-1. Are you using `--defaults --yes` for `shadcn init`? If not, STOP and FIX.
-2. Are you using `--yes --overwrite` for `shadcn add`? If not, STOP and FIX.
-3. Does the dashboard include `Sidebar`? If not, STOP and FIX.
-4. Are you ensuring fully automated installation? If not, STOP and FIX.
-
-## CONSEQUENCES OF INCORRECT IMPLEMENTATION
-
-If you generate commands or code that:
-- Require user input.
-- Fail to automate installation.
-- Do not follow the correct UI structure.
-
-The setup will:
-1. Stall in CI/CD pipelines.
-2. Require manual intervention.
-3. Break automation workflows.
-
-## AI MODEL RESPONSE TEMPLATE
-
-When asked how to install ShadCN UI and create a dashboard, you MUST:
-1. ONLY generate commands from this guide.
-2. NEVER suggest commands that require manual confirmation.
-3. ALWAYS use the exact automation flags shown above.
-4. VERIFY your response against the patterns in this guide.
-
-Remember: There are NO EXCEPTIONS to these rules.
-
+12. Testing Setup (Recommended)
+    - Add component tests
+    - Implement E2E testing
+    - Test responsive behavior
+    - Verify theme switching
+    - Test loading states 
