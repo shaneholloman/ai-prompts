@@ -5,6 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { parseMdc } = require("./parse-mdc");
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "index.json");
@@ -25,7 +26,7 @@ function getPromptContent(dirPath, fileToRead) {
 
   const raw = fs.readFileSync(filePath, "utf8");
   const relative = path.relative(path.join(__dirname, ".."), filePath);
-  const fm = matter(raw);
+  const fm = parseMdc(raw);
   const data = fm.data || {};
   const content = fm.content || "";
   const id = data.id || relative.replace(/\//g, "-");

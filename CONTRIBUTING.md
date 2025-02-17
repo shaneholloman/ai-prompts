@@ -6,11 +6,11 @@ Thanks for your interest in contributing prompts!
 
 ## **Naming Proposal**
 
-| Type | Prefix | Purpose |
-| --- | --- | --- |
-| **rule** | `rule-<name>.mdc` | Define coding standards, best practices, and naming conventions. |
-| **agent** | `agent-<task>.mdc` | Automate multi-step processes like setting up Dependencies, configuring ESLint, or deploying. |
-| **feature** | `add-<feature>.mdc` | Add new components or modify existing parts of a project. |
+| Type        | Prefix              | Purpose                                                                                       |
+| ----------- | ------------------- | --------------------------------------------------------------------------------------------- |
+| **rule**    | `rule-<name>.mdc`   | Define coding standards, best practices, and naming conventions.                              |
+| **agent**   | `agent-<task>.mdc`  | Automate multi-step processes like setting up Dependencies, configuring ESLint, or deploying. |
+| **feature** | `add-<feature>.mdc` | Add new components or modify existing parts of a project.                                     |
 
 # Adding a prompt
 

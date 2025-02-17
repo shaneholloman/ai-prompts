@@ -1,6 +1,6 @@
 ---
 description: Coding Standards & Rules for Nextjs 15 and React 19
-globs: "**/*.tsx, **/*.ts, **/*.js, **/*.jsx"
+globs: **/*.tsx, **/*.ts, **/*.js, **/*.jsx
 ---
 
 # Project Structure And App Router

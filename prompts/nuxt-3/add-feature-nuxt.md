@@ -1,6 +1,6 @@
 ---
 description: Guidelines for adding new features in Nuxt 3 applications
-globs: "**/*.vue, **/*.ts, **/*.js"
+globs: **/*.vue, **/*.ts, **/*.js
 ---
 
 You are a senior Nuxt 3 developer with expertise in building scalable applications.
