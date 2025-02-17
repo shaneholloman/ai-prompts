@@ -9,9 +9,9 @@ globs: **/*.ts, **/*.tsx, **/*.js, **/*.jsx
 
 This guide ensures a fully automated installation of ShadCN UI in a Next.js project, avoiding interactive prompts. The installation process will:
 
-1. **Initialize ShadCN UI** → Run `shadcn init` with predefined options.
-2. **Add UI components** → Select components non-interactively.
-3. **Ensure automation** → Use flags and environment variables for CI/CD.
+1. Initialize ShadCN UI → Run `shadcn init` with predefined options.
+2. Add UI components → Select components non-interactively.
+3. Ensure automation → Use flags and environment variables for CI/CD.
 
 ## 🚨 CRITICAL INSTRUCTIONS FOR AI LANGUAGE MODELS 🚨
 
@@ -64,10 +64,10 @@ npx shadcn@latest add button card navbar --yes --overwrite
 
 Before generating any installation commands, you MUST verify:
 
-1. **Are you using `--defaults --yes` for `shadcn init`?** If not, STOP and FIX.
-2. **Are you using `--all --yes --overwrite` for `shadcn add`?** If not, STOP and FIX.
-3. **Do you see any interactive prompts in the command?** If yes, STOP and FIX.
-4. **Are you forcing installation without user confirmation?** If not, STOP and FIX.
+1. Are you using `--defaults --yes` for `shadcn init`? If not, STOP and FIX.
+2. Are you using `--all --yes --overwrite` for `shadcn add`? If not, STOP and FIX.
+3. Do you see any interactive prompts in the command? If yes, STOP and FIX.
+4. Are you forcing installation without user confirmation? If not, STOP and FIX.
 
 ## CONSEQUENCES OF INCORRECT IMPLEMENTATION
 

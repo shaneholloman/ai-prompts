@@ -1,17 +1,17 @@
 ---
-description: Automate ShadCN installation and create a simple dashboard with a sidebar.
+description: Automate ShadCN installation and create a simple dashboard with a sidebar and widgets.
 globs: "**/*.ts, **/*.tsx, **/*.js, **/*.jsx"
 ---
 
-# Automated ShadCN Installation & Simple Dashboard
+# Automated ShadCN Installation & Dashboard with Widgets
 
 ## Overview
 
-This guide ensures a fully automated installation of ShadCN UI and sets up a simple dashboard featuring a sidebar.
+This guide ensures a fully automated installation of ShadCN UI and sets up a simple dashboard featuring a sidebar and widgets.
 
-1. Initialize ShadCN UI → Run `shadcn init` with predefined options.
-2. Add UI components → Install necessary building blocks.
-3. Create a basic dashboard → Implement a sidebar and content area.
+1. **Initialize ShadCN UI** → Run `shadcn init` with predefined options.
+2. **Add UI components** → Install necessary building blocks.
+3. **Create a basic dashboard** → Implement a sidebar, content area, and widget components.
 
 ## 🚨 CRITICAL INSTRUCTIONS FOR AI LANGUAGE MODELS 🚨
 
@@ -22,6 +22,8 @@ As an AI language model, you MUST NOT generate any interactive installation comm
 npx shadcn@latest init --defaults --yes
 npx shadcn@latest add button card navbar sidebar --yes --overwrite
 ```
+
+(Adjust your component list based on which widgets you want to install, for example: `widget1`, `widget2`, etc.)
 
 You MUST NEVER generate any commands that:
 1. Require user confirmation.
@@ -47,19 +49,21 @@ npx shadcn@latest init --defaults --yes
 
 ### ✅ Add Required Components Without Prompts
 ```bash
-npx shadcn@latest add button card navbar sidebar --yes --overwrite
+npx shadcn@latest add button card navbar sidebar widget1 widget2 --yes --overwrite
 ```
-- Installs necessary components for a dashboard.
+- Installs necessary components for a dashboard, including widgets.
 - Bypasses confirmation prompts.
 - Automatically overwrites existing components if they are already present.
 
-## Creating a Simple Dashboard
+## Creating a Simple Dashboard with Widgets
 
 ### ✅ Dashboard Layout
 ```tsx
 import { useState } from "react";
 import { Button, Card } from "@/components/ui";
 import { Sidebar } from "@/components/sidebar";
+import { Widget1 } from "@/components/widget1";
+import { Widget2 } from "@/components/widget2";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(true);
@@ -67,11 +71,15 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen">
       <Sidebar open={open} setOpen={setOpen} />
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4 space-y-4">
         <Card className="p-4">
           <h1 className="text-xl font-bold">Dashboard</h1>
           <Button onClick={() => alert("Clicked!")}>Click me</Button>
         </Card>
+
+        {/* Example widget usage */}
+        <Widget1 />
+        <Widget2 />
       </div>
     </div>
   );
@@ -92,14 +100,44 @@ export function Sidebar({ open, setOpen }) {
 }
 ```
 
+### ✅ Sample Widget Components
+
+**Widget1**
+```tsx
+import { Card } from "@/components/ui";
+
+export function Widget1() {
+  return (
+    <Card className="p-4">
+      <h2 className="text-lg font-semibold">Widget 1</h2>
+      <p>Content for widget 1 goes here.</p>
+    </Card>
+  );
+}
+```
+
+**Widget2**
+```tsx
+import { Card } from "@/components/ui";
+
+export function Widget2() {
+  return (
+    <Card className="p-4">
+      <h2 className="text-lg font-semibold">Widget 2</h2>
+      <p>Content for widget 2 goes here.</p>
+    </Card>
+  );
+}
+```
+
 ## AI MODEL VERIFICATION STEPS
 
 Before generating any installation commands or code, you MUST verify:
 
-1. Are you using `--defaults --yes` for `shadcn init`? If not, STOP and FIX.
-2. Are you using `--yes --overwrite` for `shadcn add`? If not, STOP and FIX.
-3. Does the dashboard include `Sidebar`? If not, STOP and FIX.
-4. Are you ensuring fully automated installation? If not, STOP and FIX.
+1. **Are you using `--defaults --yes` for `shadcn init`?** If not, STOP and FIX.
+2. **Are you using `--yes --overwrite` for `shadcn add`?** If not, STOP and FIX.
+3. **Does the dashboard include `Sidebar` and `Widget` components?** If not, STOP and FIX.
+4. **Are you ensuring fully automated installation?** If not, STOP and FIX.
 
 ## CONSEQUENCES OF INCORRECT IMPLEMENTATION
 
@@ -115,7 +153,7 @@ The setup will:
 
 ## AI MODEL RESPONSE TEMPLATE
 
-When asked how to install ShadCN UI and create a dashboard, you MUST:
+When asked how to install ShadCN UI and create a dashboard with widgets, you MUST:
 1. ONLY generate commands from this guide.
 2. NEVER suggest commands that require manual confirmation.
 3. ALWAYS use the exact automation flags shown above.
