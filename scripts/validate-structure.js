@@ -102,9 +102,11 @@ function validateMetadata(metadata) {
           .object({
             framework: z.string().trim().min(1),
             service: z.string().trim().min(1),
+            library: z.string().trim().min(1),
           })
           .partial({
             service: true,
+            library: true,
           }),
         model: z.array(z.string().trim().min(1)),
         ai_editor: z.array(z.string().trim().min(1)),
