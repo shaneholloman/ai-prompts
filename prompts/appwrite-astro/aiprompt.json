@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Appwrite Astro Setup",
+    "description": "Guidelines for writing Astro apps with Appwrite authentication and database integration",
+    "type": "setup",
+    "slug": "appwrite-astro-setup",
+    "development_process": ["implement"],
+    "dev_categories": ["frontend", "auth", "db"],
+    "tags": ["middleware"],
+    "tech_stack": {
+      "framework": "astro",
+      "service": "appwrite"
+    },
+    "ai_editor": ["cursor"],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": ["reasoning"],
+    "version": "1.0",
+    "files": ["setup-appwrite-astro.md"],
+    "published": true
+  }
+]

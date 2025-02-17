@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Neon Remix Integration Setup",
+    "description": "Guidelines for setting up and integrating Neon serverless Postgres with Remix applications",
+    "type": "setup",
+    "slug": "neon-remix-setup",
+    "development_process": ["implement", "test"],
+    "dev_categories": ["backend", "db"],
+    "tags": ["serverless"],
+    "tech_stack": {
+      "framework": "remix",
+      "service": "neon"
+    },
+    "ai_editor": ["cursor"],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": ["reasoning"],
+    "version": "1.0",
+    "files": ["setup-neon-remix.md"],
+    "published": true
+  }
+]

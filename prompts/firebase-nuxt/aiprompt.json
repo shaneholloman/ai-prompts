@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Firebase Nuxt Integration Setup",
+    "description": "Guidelines for setting up and integrating Firebase with Nuxt 3 applications",
+    "type": "setup",
+    "slug": "firebase-nuxt-setup",
+    "development_process": ["implement", "test"],
+    "dev_categories": ["backend", "api", "db", "auth"],
+    "tags": ["realtime", "nosql"],
+    "tech_stack": {
+      "framework": "nuxt",
+      "service": "firebase"
+    },
+    "ai_editor": ["cursor"],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": ["reasoning"],
+    "version": "1.0",
+    "files": ["setup-firebase-nuxt.md"],
+    "published": true
+  }
+]
