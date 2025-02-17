@@ -50,15 +50,19 @@ function parseFile(filePath) {
 
   if (ext === ".json") {
     const data = JSON.parse(raw);
-    // Get prompts content from the same directory as aiprompt.json
     const dirPath = path.dirname(filePath);
 
     // Process each object in the array
     return data.map((item) => {
-      const prompt = getPromptContent(dirPath, item.file);
+      // Handle both string and array of files
+      const files = Array.isArray(item.files) ? item.files : [item.file];
+      const prompts = files
+        .map((file) => getPromptContent(dirPath, file))
+        .filter(Boolean);
+
       return {
         ...item,
-        prompts: [prompt].filter(Boolean),
+        prompts,
         filePath: relative,
       };
     });

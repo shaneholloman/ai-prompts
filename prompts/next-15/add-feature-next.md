@@ -1,6 +1,6 @@
 ---
 description: Guidelines for adding new features in Next.js 15 applications
-globs: **/*.tsx, **/*.ts
+globs: "**/*.tsx, **/*.ts"
 ---
 
 You are a senior Next.js 15 developer with expertise in building scalable applications.

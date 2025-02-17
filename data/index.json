@@ -1,1279 +1,26 @@
 [
   {
-    "name": "Add Angular Component",
-    "description": "Generate a new component using Angular best practices.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "angular",
-      "component"
-    ],
-    "techStack": [
-      "angular"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [
-      {
-        "id": "prompts-Angular-add-component.md",
-        "description": "Generating a new Angular component",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when generating a new Angular component.\n\nCLI:\n- Use `ng generate component MyExample` to create it.\n\nExample:\n```ts\n// my-example.component.ts\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-my-example',\n  templateUrl: './my-example.component.html',\n  styleUrls: ['./my-example.component.css'],\n  changeDetection: 0 // default or ChangeDetectionStrategy.OnPush\n})\nexport class MyExampleComponent {\n  @Input() title!: string;\n  @Output() clicked = new EventEmitter<void>();\n\n  handleClick() {\n    this.clicked.emit();\n  }\n}\n\n<!-- my-example.component.html -->\n<div (click)=\"handleClick()\">\n  {{ title }}\n</div>\n\nUsage:\n\n<!-- In parent template -->\n<app-my-example [title]=\"someTitle\" (clicked)=\"onClicked()\"></app-my-example>\n\nTesting:\n-\tAngular CLI generates a .spec.ts test file. Use TestBed to test.\n\nDos:\n-\tDo use Angular CLI to keep consistent structure.\n-\tDo define clear inputs/outputs.\n\nDon’ts:\n-\tDon’t bind large arrays without trackBy.\n-\tDon’t forget to declare your component in an NgModule.\n\n",
-        "filePath": "prompts/Angular/add-component.md"
-      }
-    ],
-    "filePath": "prompts/Angular/aiprompt.json"
-  },
-  {
-    "name": "Add Angular Service",
-    "description": "Create a reusable Angular service with dependency injection.",
-    "type": "feature",
-    "slug": "add-service",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "services"
-    ],
-    "tags": [
-      "angular",
-      "service"
-    ],
-    "techStack": [
-      "angular"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-service.md",
-    "prompts": [
-      {
-        "id": "prompts-Angular-add-service.md",
-        "description": "Creating an Angular service",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating an Angular service.\n\nCLI:\n- `ng generate service myService`.\n\nExample:\n```ts\nimport { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\nimport { Observable } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class MyService {\n  constructor(private http: HttpClient) {}\n\n  getItems(): Observable<any[]> {\n    return this.http.get<any[]>('https://api.example.com/items');\n  }\n}\n\nUsage in Component:\n\nimport { Component, OnInit } from '@angular/core';\nimport { MyService } from '../my-service.service';\n\n@Component({\n  selector: 'app-my-consumer',\n  template: `\n    <div *ngIf=\"items\">\n      <div *ngFor=\"let item of items\">{{ item.name }}</div>\n    </div>\n  `,\n})\nexport class MyConsumerComponent implements OnInit {\n  items: any[] = [];\n\n  constructor(private myService: MyService) {}\n\n  ngOnInit(): void {\n    this.myService.getItems().subscribe((data) => (this.items = data));\n  }\n}\n\nBest Practices:\n-\tKeep logic in services, not in components.\n-\tUse RxJS operators, handle errors, etc.\n\nDos:\n-\tDo inject HttpClient in constructor for REST calls.\n-\tDo handle errors with catchError if needed.\n\nDon’ts:\n-\tDon’t do direct DOM manipulation in services.\n-\tDon’t store ephemeral component state in services (avoid memory leaks).\n\n",
-        "filePath": "prompts/Angular/add-service.md"
-      }
-    ],
-    "filePath": "prompts/Angular/aiprompt.json"
-  },
-  {
-    "name": "Add Blade Component",
-    "description": "Create a reusable Blade component in Laravel.",
-    "type": "feature",
-    "slug": "add-blade-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "blade"
-    ],
-    "tags": [
-      "laravel",
-      "blade"
-    ],
-    "techStack": [
-      "laravel",
-      "php"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-blade-component.md",
-    "prompts": [
-      {
-        "id": "prompts-Laravel (PHP)-add-blade-component.md",
-        "description": "Creating a Blade Component in Laravel",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Blade Component in Laravel.\n\nFile:\n- `php artisan make:component Alert`\n- This creates `app/View/Components/Alert.php` and a Blade view at `resources/views/components/alert.blade.php`.\n\nExample:\n```php\n// app/View/Components/Alert.php\nnamespace App\\View\\Components;\n\nuse Illuminate\\View\\Component;\n\nclass Alert extends Component\n{\n    public $type;\n\n    public function __construct($type = 'info')\n    {\n        $this->type = $type;\n    }\n\n    public function render()\n    {\n        return view('components.alert');\n    }\n}\n\nBlade File:\n\n<!-- resources/views/components/alert.blade.php -->\n<div class=\"alert alert-{{ $type }}\">\n    {{ $slot }}\n</div>\n\nUsage:\n\n<x-alert type=\"danger\">\n    This is a danger alert!\n</x-alert>\n\nDos:\n-\tDo pass dynamic data via constructor or attributes.\n-\tDo keep logic minimal in the component’s class.\n\nDon’ts:\n-\tDon’t embed sensitive logic in the Blade template.\n-\tDon’t forget to sanitize user input if displayed.\n\n",
-        "filePath": "prompts/Laravel (PHP)/add-blade-component.md"
-      }
-    ],
-    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
-  },
-  {
-    "name": "Add Custom Hook",
-    "description": "Create a custom React Hook for encapsulating logic.",
-    "type": "feature",
-    "slug": "add-hook",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "hooks"
-    ],
-    "tags": [
-      "react",
-      "hooks"
-    ],
-    "techStack": [
-      "react"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-hook.md",
-    "prompts": [
-      {
-        "id": "prompts-React-add-hook.md",
-        "description": "Creating a custom React Hook",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules for creating a custom React Hook.\n\nFile Placement:\n- Typically in `src/hooks/` or `src/utils/hooks/`.\n- Name file `useSomething.ts`.\n\nExample:\n```ts\nimport { useState, useEffect } from 'react';\n\nexport function useFetch<T>(url: string): {\n  data: T | null;\n  isLoading: boolean;\n  error: Error | null;\n} {\n  const [data, setData] = useState<T | null>(null);\n  const [isLoading, setIsLoading] = useState(true);\n  const [error, setError] = useState<Error | null>(null);\n\n  useEffect(() => {\n    let cancel = false;\n    setIsLoading(true);\n\n    fetch(url)\n      .then((res) => {\n        if (!res.ok) {\n          throw new Error(`Request failed: ${res.status}`);\n        }\n        return res.json();\n      })\n      .then((json) => {\n        if (!cancel) setData(json);\n      })\n      .catch((err) => {\n        if (!cancel) setError(err);\n      })\n      .finally(() => {\n        if (!cancel) setIsLoading(false);\n      });\n\n    return () => {\n      cancel = true;\n    };\n  }, [url]);\n\n  return { data, isLoading, error };\n}\n\nUsage:\n\nimport React from 'react';\nimport { useFetch } from './useFetch';\n\nexport function DataDisplay() {\n  const { data, isLoading, error } = useFetch<any>('https://api.example.com/items');\n\n  if (isLoading) return <p>Loading...</p>;\n  if (error) return <p>Error: {error.message}</p>;\n  return <pre>{JSON.stringify(data, null, 2)}</pre>;\n}\n\nDos:\n-\tDo prefix with use.\n-\tDo handle cleanup for async operations.\n\nDon’ts:\n-\tDon’t call hooks conditionally.\n-\tDon’t ignore potential re-renders; watch dependencies carefully.\n\n",
-        "filePath": "prompts/React/add-hook.md"
-      }
-    ],
-    "filePath": "prompts/React/aiprompt.json"
-  },
-  {
-    "name": "Add Laravel Controller",
-    "description": "Create a new controller in a Laravel 10+ project.",
-    "type": "feature",
-    "slug": "add-controller",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "backend",
-      "controller"
-    ],
-    "tags": [
-      "laravel",
-      "mvc"
-    ],
-    "techStack": [
-      "laravel",
-      "php"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-controller.md",
-    "prompts": [
-      {
-        "id": "prompts-Laravel (PHP)-add-controller.md",
-        "description": "Creating a Laravel Controller",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Laravel Controller.\n\nArtisan Command:\n- `php artisan make:controller UserController`.\n\nExample:\n```php\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\Models\\User;\nuse Illuminate\\Http\\Request;\n\nclass UserController extends Controller\n{\n    public function index()\n    {\n        $users = User::all();\n        return view('users.index', compact('users'));\n    }\n\n    public function store(Request $request)\n    {\n        $request->validate([\n            'name' => 'required',\n            'email' => 'required|email|unique:users'\n        ]);\n        $user = User::create($request->all());\n        return redirect()->route('users.index')\n                         ->with('success', 'User created successfully');\n    }\n}\n\nRouting:\n-\tIn routes/web.php:\n\nRoute::resource('users', UserController::class);\n\nBlade View:\n-\tresources/views/users/index.blade.php.\n\nDos:\n-\tDo validate input.\n-\tDo use route model binding if possible.\n\nDon’ts:\n-\tDon’t place all logic in the controller—use services for large tasks.\n-\tDon’t forget to sanitize or validate user input.\n\n",
-        "filePath": "prompts/Laravel (PHP)/add-controller.md"
-      }
-    ],
-    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
-  },
-  {
-    "name": "Add Laravel Model",
-    "description": "Generate a new Eloquent model along with migrations.",
-    "type": "feature",
-    "slug": "add-model",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "backend",
-      "models",
-      "database"
-    ],
-    "tags": [
-      "laravel",
-      "eloquent"
-    ],
-    "techStack": [
-      "laravel",
-      "php"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-model.md",
-    "prompts": [
-      {
-        "id": "prompts-Laravel (PHP)-add-model.md",
-        "description": "Creating a Laravel Eloquent Model",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Laravel Eloquent Model.\n\nArtisan Command:\n- `php artisan make:model Product -m` (creates model + migration).\n\nModel Example:\n```php\n<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Product extends Model\n{\n    use HasFactory;\n\n    protected $fillable = ['name', 'price', 'description'];\n\n    public function category()\n    {\n        return $this->belongsTo(Category::class);\n    }\n}\n\nMigration:\n\n// database/migrations/xxxx_create_products_table.php\nSchema::create('products', function (Blueprint $table) {\n    $table->id();\n    $table->string('name');\n    $table->decimal('price', 8, 2);\n    $table->text('description')->nullable();\n    $table->timestamps();\n});\n\nUsage:\n\n// in a Controller\n$product = Product::create($request->all());\n\nDos:\n-\tDo define fillable fields or use guarded.\n-\tDo define relationships.\n\nDon’ts:\n-\tDon’t forget to run php artisan migrate.\n-\tDon’t store business logic in the model if it’s extensive—use services.\n\n",
-        "filePath": "prompts/Laravel (PHP)/add-model.md"
-      }
-    ],
-    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
-  },
-  {
-    "name": "Add Laravel Route",
-    "description": "Define a new route in web.php or api.php.",
-    "type": "feature",
-    "slug": "add-route",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "backend",
-      "routing"
-    ],
-    "tags": [
-      "laravel",
-      "routes"
-    ],
-    "techStack": [
-      "laravel",
-      "php"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-route.md",
-    "prompts": [
-      {
-        "id": "prompts-Laravel (PHP)-add-route.md",
-        "description": "Adding a new Laravel route",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when adding a new Laravel route.\n\nWeb vs API:\n- `routes/web.php` for web routes (session-based, typically Blade).\n- `routes/api.php` for stateless JSON APIs.\n\nExample:\n```php\n// routes/web.php\nuse App\\Http\\Controllers\\HomeController;\nuse Illuminate\\Support\\Facades\\Route;\n\nRoute::get('/', [HomeController::class, 'index'])->name('home');\n\nResource Route:\n\nRoute::resource('products', ProductController::class);\n// GET /products -> index\n// GET /products/create -> create\n// POST /products -> store\n// ...\n\nAPI Route:\n\n// routes/api.php\nRoute::get('/products', [ProductController::class, 'index']);\n\nSecurity:\n\nRoute::middleware('auth')->group(function() {\n  // protected routes\n});\n\nDos:\n-\tDo name routes for easy referencing.\n-\tDo keep web.php organized, grouping routes by domain.\n\nDon’ts:\n-\tDon’t define the same endpoint multiple times without reason.\n-\tDon’t skip authentication for sensitive endpoints.\n\n",
-        "filePath": "prompts/Laravel (PHP)/add-route.md"
-      }
-    ],
-    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
-  },
-  {
-    "name": "Add NgRx Store",
-    "description": "Set up or extend an NgRx store for global state management.",
-    "type": "feature",
-    "slug": "add-ngrx-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "angular",
-      "ngrx"
-    ],
-    "techStack": [
-      "angular",
-      "ngrx"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-ngrx-store.md",
-    "prompts": [
-      {
-        "id": "prompts-Angular-add-ngrx-store.md",
-        "description": "Setting up NgRx for state management in an Angular project",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when setting up NgRx for state management:\n\nInstallation:\n- `npm install @ngrx/store @ngrx/effects`\n\nDefine Actions:\n```ts\n// counter.actions.ts\nimport { createAction } from '@ngrx/store';\n\nexport const increment = createAction('[Counter] Increment');\nexport const decrement = createAction('[Counter] Decrement');\nexport const reset = createAction('[Counter] Reset');\n\nDefine Reducer:\n\n// counter.reducer.ts\nimport { createReducer, on } from '@ngrx/store';\nimport { increment, decrement, reset } from './counter.actions';\n\nexport interface CounterState {\n  value: number;\n}\n\nexport const initialState: CounterState = { value: 0 };\n\nexport const counterReducer = createReducer(\n  initialState,\n  on(increment, (state) => ({ ...state, value: state.value + 1 })),\n  on(decrement, (state) => ({ ...state, value: state.value - 1 })),\n  on(reset, (state) => ({ ...state, value: 0 }))\n);\n\nRegister in Module:\n\n// app.module.ts\nimport { StoreModule } from '@ngrx/store';\nimport { counterReducer } from './store/counter.reducer';\n\n@NgModule({\n  ...\n  imports: [\n    BrowserModule,\n    StoreModule.forRoot({ counter: counterReducer })\n  ],\n})\nexport class AppModule {}\n\nUsage in Component:\n\nimport { Component } from '@angular/core';\nimport { Store } from '@ngrx/store';\nimport { increment, decrement } from './store/counter.actions';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'app-counter',\n  template: `\n    <button (click)=\"onIncrement()\">+</button>\n    <span>{{ value$ | async }}</span>\n    <button (click)=\"onDecrement()\">-</button>\n  `\n})\nexport class CounterComponent {\n  value$: Observable<number>;\n\n  constructor(private store: Store<{ counter: { value: number } }>) {\n    this.value$ = store.select(state => state.counter.value);\n  }\n\n  onIncrement() {\n    this.store.dispatch(increment());\n  }\n  onDecrement() {\n    this.store.dispatch(decrement());\n  }\n}\n\nDos:\n-\tDo keep your store, actions, reducers well organized.\n-\tDo use typed selectors for better type safety.\n\nDon’ts:\n-\tDon’t mix UI logic with NgRx logic.\n-\tDon’t forget to unsubscribe if needed (AsyncPipe unsubscribes automatically).\n\n",
-        "filePath": "prompts/Angular/add-ngrx-store.md"
-      }
-    ],
-    "filePath": "prompts/Angular/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Component",
-    "description": "Add a new reusable UI component to a Nuxt 3 project.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "nuxt3",
-      "component",
-      "vue"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [],
-    "filePath": "prompts/Nuxt.js/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Component",
-    "description": "Add a new reusable UI component to a Nuxt 3 project.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "nuxt3",
-      "component",
-      "vue"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [],
-    "filePath": "prompts/nuxtjs/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Composable",
-    "description": "Add a new composable (Composition API logic) in a Nuxt 3 project.",
-    "type": "feature",
-    "slug": "add-composable",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "logic"
-    ],
-    "tags": [
-      "nuxt3",
-      "composition-api"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-composable.md",
-    "prompts": [
-      {
-        "id": "prompts-Nuxt.js-add-composable.md",
-        "description": "Creating a reusable composable in a Nuxt 3 project",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules when creating a reusable composable (Vue’s Composition API) in a Nuxt 3 project.\n\nLocation:\n- Place the composable in the `composables/` folder with a descriptive name, e.g. `useAuth.ts`.\n\nComposition API:\n- Use named exports that start with `use`, e.g. `export function useAuth() { ... }`.\n- Return reactive state, computed properties, or functions for any common logic.\n\nExample:\n```ts\n// composables/useAuth.ts\nimport { ref } from 'vue';\nimport { useRouter } from '#imports'; // auto-import in Nuxt 3\n\nexport function useAuth() {\n  const isAuthenticated = ref(false);\n  const router = useRouter();\n\n  function login() {\n    // do login\n    isAuthenticated.value = true;\n  }\n\n  function logout() {\n    // do logout\n    isAuthenticated.value = false;\n    router.push('/login');\n  }\n\n  return {\n    isAuthenticated,\n    login,\n    logout\n  };\n}\n\nUsage:\n-\tIn any component:\n\n<script setup lang=\"ts\">\nimport { useAuth } from '~/composables/useAuth';\n\nconst { isAuthenticated, login, logout } = useAuth();\n</script>\n\nBest Practices:\n-\tKeep composables small, focusing on a single responsibility (e.g., user authentication, form management, data fetching).\n-\tIf the composable grows large, break it into multiple composables.\n\nTesting:\n-\tWrite unit tests for composables. Mock any external modules (like useRouter) if necessary.\n-\tEnsure composables are covered by integration tests in pages or components.\n\nDos:\n-\tDo export only what’s needed.\n-\tDo handle error states or edge cases.\n\nDon’ts:\n-\tDon’t overcomplicate composables with unrelated logic.\n-\tDon’t rely on global variables inside composables.\n\n",
-        "filePath": "prompts/Nuxt.js/add-composable.md"
-      }
-    ],
-    "filePath": "prompts/Nuxt.js/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Composable",
-    "description": "Add a new composable (Composition API logic) in a Nuxt 3 project.",
-    "type": "feature",
-    "slug": "add-composable",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "logic"
-    ],
-    "tags": [
-      "nuxt3",
-      "composition-api"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-composable.md",
-    "prompts": [],
-    "filePath": "prompts/nuxtjs/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Page",
-    "description": "Add a new page using Nuxt’s file-based routing system.",
-    "type": "feature",
-    "slug": "add-page",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "routing"
-    ],
-    "tags": [
-      "nuxt3",
-      "ssr"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-page.md",
-    "prompts": [
-      {
-        "id": "prompts-Nuxt.js-add-page.md",
-        "description": "Guidelines for creating a new page in Nuxt 3",
-        "globs": "**/*.vue",
-        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules.\n\nProject Structure:\n- File-Based Routing\n  - Create a `.vue` file under `pages/`. For example, `pages/profile.vue` for `/profile` route.\n  - For dynamic routes, use `[param].vue` (like `[id].vue`).\n\nPage Structure:\n- Use `<script setup>` for page logic.\n- Export a default `<template>` in the same file.\n\nFetch Data:\n- If you need async data, use `useAsyncData` or `onMounted`. Example:\n  ```ts\n  const { data, error } = await useAsyncData('profileData', () =>\n    $fetch('/api/profile')\n  );\n  ```\n- Handle errors gracefully (e.g. `error.value`).\n\nExample:\n```vue\n<!-- pages/profile.vue -->\n<template>\n  <h1>User Profile</h1>\n  <div v-if=\"error\">\n    {{ error.message }}\n  </div>\n  <div v-else-if=\"data\">\n    Hello, {{ data.name }}!\n  </div>\n  <div v-else>\n    Loading...\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nconst { data, error } = await useAsyncData('profile', () =>\n  $fetch('/api/profile')\n);\n</script>\n\n<style scoped>\n/* page-specific styles */\n</style>\n```\n\nNavigation:\n- Use `<NuxtLink to=\"/profile\">Go to Profile</NuxtLink>` for internal navigation.\n- If you need programmatic navigation, use `useRouter()`.\n\nSEO:\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n\nDos:\n- Do keep page logic minimal—delegate complex logic to composables.\n- Do handle loading and error states in SSR gracefully.\n\nDonts:\n- Don’t rely on direct route manipulation; use Nuxt’s router.\n- Don’t block SSR with large synchronous tasks.",
-        "filePath": "prompts/Nuxt.js/add-page.md"
-      }
-    ],
-    "filePath": "prompts/Nuxt.js/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Page",
-    "description": "Add a new page using Nuxt’s file-based routing system.",
-    "type": "feature",
-    "slug": "add-page",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "routing"
-    ],
-    "tags": [
-      "nuxt3",
-      "ssr"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-page.md",
-    "prompts": [
-      {
-        "id": "prompts-nuxtjs-add-page.md",
-        "description": "Guidelines for creating a new page in Nuxt 3",
-        "globs": "**/*.vue",
-        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules.\n\nProject Structure:\n- File-Based Routing\n  - Create a `.vue` file under `pages/`. For example, `pages/profile.vue` for `/profile` route.\n  - For dynamic routes, use `[param].vue` (like `[id].vue`).\n\nPage Structure:\n- Use `<script setup>` for page logic.\n- Export a default `<template>` in the same file.\n\nFetch Data:\n- If you need async data, use `useAsyncData` or `onMounted`. Example:\n  ```ts\n  const { data, error } = await useAsyncData('profileData', () =>\n    $fetch('/api/profile')\n  );\n  ```\n- Handle errors gracefully (e.g. `error.value`).\n\nExample:\n```vue\n<!-- pages/profile.vue -->\n<template>\n  <h1>User Profile</h1>\n  <div v-if=\"error\">\n    {{ error.message }}\n  </div>\n  <div v-else-if=\"data\">\n    Hello, {{ data.name }}!\n  </div>\n  <div v-else>\n    Loading...\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nconst { data, error } = await useAsyncData('profile', () =>\n  $fetch('/api/profile')\n);\n</script>\n\n<style scoped>\n/* page-specific styles */\n</style>\n```\n\nNavigation:\n- Use `<NuxtLink to=\"/profile\">Go to Profile</NuxtLink>` for internal navigation.\n- If you need programmatic navigation, use `useRouter()`.\n\nSEO:\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n\nDos:\n- Do keep page logic minimal—delegate complex logic to composables.\n- Do handle loading and error states in SSR gracefully.\n\nDonts:\n- Don’t rely on direct route manipulation; use Nuxt’s router.\n- Don’t block SSR with large synchronous tasks.",
-        "filePath": "prompts/nuxtjs/add-page.md"
-      }
-    ],
-    "filePath": "prompts/nuxtjs/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Store (Pinia)",
-    "description": "Set up or extend a Pinia store in a Nuxt 3 project for global state management.",
-    "type": "feature",
-    "slug": "add-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "nuxt3",
-      "pinia"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3",
-      "pinia"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-store.md",
-    "prompts": [
-      {
-        "id": "prompts-Nuxt.js-add-store.md",
-        "description": "Setting up a Pinia store in a Nuxt 3 project",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are an experienced senior developer. You must always follow these rules when setting up a Pinia store in a Nuxt 3 project (Nuxt supports Pinia as a store solution).\n\nInstallation:\n- Ensure Pinia is installed: `npm install pinia`.\n- Create a `stores/` directory at the root or under `~/stores`.\n\nBasic Store Example:\n```ts\n// stores/useCounterStore.ts\nimport { defineStore } from 'pinia';\n\nexport const useCounterStore = defineStore('counter', {\n  state: () => ({\n    count: 0,\n  }),\n  getters: {\n    double: (state) => state.count * 2,\n  },\n  actions: {\n    increment() {\n      this.count++;\n    },\n    reset() {\n      this.count = 0;\n    },\n  },\n});\n\nUsage in Nuxt:\n-\tIn nuxt.config.ts (or .js):\n\nexport default defineNuxtConfig({\n  modules: [\n    '@pinia/nuxt',\n  ],\n  // ...\n});\n\n-\tIn a component or page:\n\n<script setup lang=\"ts\">\nimport { useCounterStore } from '~/stores/useCounterStore';\n\nconst counterStore = useCounterStore();\n\nfunction increaseCount() {\n  counterStore.increment();\n}\n</script>\n\n<template>\n  <div>\n    <p>Count: {{ counterStore.count }}</p>\n    <p>Double: {{ counterStore.double }}</p>\n    <button @click=\"increaseCount\">+1</button>\n  </div>\n</template>\n\nBest Practices:\n-\tUse actions for any state modifications. Avoid directly mutating state properties outside an action (except in simple scripts).\n-\tSplit large stores into multiple smaller ones by domain.\n-\tRely on getters for derived data.\n\nTesting:\n-\tTest store logic in isolation (e.g., with Vitest/Jest).\n-\tMock or stub external dependencies.\n\nDos:\n-\tDo keep store logic self-contained.\n-\tDo use store getters for complex computed logic.\n\nDon’ts:\n-\tDon’t place heavy asynchronous calls directly in multiple components—use an action or a composable if it’s not strictly related to store.\n\n",
-        "filePath": "prompts/Nuxt.js/add-store.md"
-      }
-    ],
-    "filePath": "prompts/Nuxt.js/aiprompt.json"
-  },
-  {
-    "name": "Add Nuxt Store (Pinia)",
-    "description": "Set up or extend a Pinia store in a Nuxt 3 project for global state management.",
-    "type": "feature",
-    "slug": "add-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "nuxt3",
-      "pinia"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3",
-      "pinia"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-store.md",
-    "prompts": [],
-    "filePath": "prompts/nuxtjs/aiprompt.json"
-  },
-  {
-    "name": "Add Pinia Store",
-    "description": "Set up or extend a Pinia store for global state management in Vue 3.",
-    "type": "feature",
-    "slug": "add-pinia-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "vue3",
-      "pinia"
-    ],
-    "techStack": [
-      "vue3",
-      "pinia"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-pinia-store.md",
-    "prompts": [
-      {
-        "id": "prompts-Vue.js-add-pinia-store.md",
-        "description": "Creating a Pinia store in Vue 3",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Pinia store in Vue 3.\n\nSetup:\n- `npm install pinia` (if not installed).\n- In main.ts:\n```ts\nimport { createPinia } from 'pinia';\nconst pinia = createPinia();\napp.use(pinia);\n\nExample Store:\n\n// stores/useCounterStore.ts\nimport { defineStore } from 'pinia';\n\nexport const useCounterStore = defineStore('counter', {\n  state: () => ({ count: 0 }),\n  getters: {\n    doubleCount: (state) => state.count * 2,\n  },\n  actions: {\n    increment() {\n      this.count++;\n    },\n    reset() {\n      this.count = 0;\n    },\n  },\n});\n\nUsage:\n\n<script setup lang=\"ts\">\nimport { useCounterStore } from '@/stores/useCounterStore';\n\nconst counterStore = useCounterStore();\n\nfunction handleIncrement() {\n  counterStore.increment();\n}\n</script>\n\n<template>\n  <p>Count: {{ counterStore.count }}</p>\n  <button @click=\"handleIncrement\">+1</button>\n</template>\n\nDos:\n-\tDo keep store logic self-contained.\n-\tDo name the store function and ID clearly.\n\nDon’ts:\n-\tDon’t do heavy DOM manipulation in Pinia actions.\n-\tDon’t forget to test store logic in isolation.\n\n",
-        "filePath": "prompts/Vue.js/add-pinia-store.md"
-      }
-    ],
-    "filePath": "prompts/Vue.js/aiprompt.json"
-  },
-  {
-    "name": "Add React Component",
-    "description": "Add a new reusable React component.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "react",
-      "component"
-    ],
-    "techStack": [
-      "react"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [
-      {
-        "id": "prompts-React-add-component.md",
-        "description": "Adding a reusable React component",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when adding a reusable React component.\n\nFile Structure:\n- Place in `src/components/` or relevant folder.\n- Use a descriptive name: `UserCard.tsx`.\n\nExample:\n```tsx\nimport React from 'react';\n\ntype User = {\n  name: string;\n  avatarUrl: string;\n};\n\ntype UserCardProps = {\n  user: User;\n  onSelect?: (user: User) => void;\n};\n\nexport function UserCard({ user, onSelect }: UserCardProps) {\n  return (\n    <div onClick={() => onSelect?.(user)}>\n      <img src={user.avatarUrl} alt=\"avatar\" />\n      <p>{user.name}</p>\n    </div>\n  );\n}\n\nUsage:\n\nimport { UserCard } from './UserCard';\n\nfunction App() {\n  const handleSelect = (user) => {\n    console.log('Selected user:', user);\n  };\n\n  return (\n    <UserCard\n      user={{ name: 'Alice', avatarUrl: '/alice.png' }}\n      onSelect={handleSelect}\n    />\n  );\n}\nexport default App;\n\nDos:\n-\tDo keep the component’s functionality focused.\n-\tDo add prop type definitions.\n\nDon’ts:\n-\tDon’t rely on global variables.\n-\tDon’t do heavy data fetching directly in the component (abstract it if needed).\n\n",
-        "filePath": "prompts/React/add-component.md"
-      }
-    ],
-    "filePath": "prompts/React/aiprompt.json"
-  },
-  {
-    "name": "Add React Context",
-    "description": "Create a React Context for global or shared state.",
-    "type": "feature",
-    "slug": "add-context",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "react",
-      "context"
-    ],
-    "techStack": [
-      "react"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-context.md",
-    "prompts": [
-      {
-        "id": "prompts-React-add-context.md",
-        "description": "Creating a React Context for global or shared state",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior React developer. You must always follow these rules when creating a React Context for global or shared state.\n\nSetup:\n```tsx\nimport React, { createContext, useContext, useState, ReactNode } from 'react';\n\ninterface AuthContextProps {\n  user: string | null;\n  setUser: React.Dispatch<React.SetStateAction<string | null>>;\n}\n\nconst AuthContext = createContext<AuthContextProps | undefined>(undefined);\n\nexport function AuthProvider({ children }: { children: ReactNode }) {\n  const [user, setUser] = useState<string | null>(null);\n\n  return (\n    <AuthContext.Provider value={{ user, setUser }}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n\nexport function useAuth() {\n  const context = useContext(AuthContext);\n  if (!context) {\n    throw new Error('useAuth must be used within an AuthProvider');\n  }\n  return context;\n}\n\nUsage:\n\n// App.tsx\nimport { AuthProvider } from './AuthContext';\n\nfunction App() {\n  return (\n    <AuthProvider>\n      <MyRoutes />\n    </AuthProvider>\n  );\n}\n\nConsuming Context:\n\nimport { useAuth } from './AuthContext';\n\nexport function Profile() {\n  const { user, setUser } = useAuth();\n  if (!user) return <p>Not logged in</p>;\n  return <p>Logged in as {user}</p>;\n}\n\nDos:\n-\tDo keep context focused on domain (e.g., auth context, theme context).\n-\tDo handle the case where context might be missing with an error or fallback.\n\nDon’ts:\n-\tDon’t store large or frequently updated data in context that can cause performance issues.\n-\tDon’t create context for trivial data that a single component can manage.\n\n",
-        "filePath": "prompts/React/add-context.md"
-      }
-    ],
-    "filePath": "prompts/React/aiprompt.json"
-  },
-  {
-    "name": "Add Redux Store",
-    "description": "Set up or extend a Redux store in a React project.",
-    "type": "feature",
-    "slug": "add-redux-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "react",
-      "redux"
-    ],
-    "techStack": [
-      "react",
-      "redux"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-redux-store.md",
-    "prompts": [
-      {
-        "id": "prompts-React-add-redux-store.md",
-        "description": "Setting up Redux in a React project",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when setting up Redux in a React project.\n\nInstallation:\n- `npm install redux react-redux @reduxjs/toolkit`.\n\nSetup Store:\n```ts\n// store.ts\nimport { configureStore } from '@reduxjs/toolkit';\nimport counterReducer from './features/counterSlice';\n\nexport const store = configureStore({\n  reducer: {\n    counter: counterReducer\n  }\n});\n\nexport type RootState = ReturnType<typeof store.getState>;\nexport type AppDispatch = typeof store.dispatch;\n\nProvide Store:\n\n// main.tsx or App.tsx\nimport { Provider } from 'react-redux';\nimport { store } from './store';\n\nexport function App() {\n  return (\n    <Provider store={store}>\n      <MyApp />\n    </Provider>\n  );\n}\n\nExample Slice:\n\n// features/counterSlice.ts\nimport { createSlice } from '@reduxjs/toolkit';\n\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: (state) => { state.value += 1; },\n    decrement: (state) => { state.value -= 1; }\n  }\n});\n\nexport const { increment, decrement } = counterSlice.actions;\nexport default counterSlice.reducer;\n\nUsage:\n\nimport { useDispatch, useSelector } from 'react-redux';\nimport { increment, decrement } from './features/counterSlice';\nimport { RootState } from './store';\n\nfunction Counter() {\n  const dispatch = useDispatch();\n  const value = useSelector((state: RootState) => state.counter.value);\n  return (\n    <div>\n      <p>{value}</p>\n      <button onClick={() => dispatch(increment())}>+1</button>\n      <button onClick={() => dispatch(decrement())}>-1</button>\n    </div>\n  );\n}\n\n",
-        "filePath": "prompts/React/add-redux-store.md"
-      }
-    ],
-    "filePath": "prompts/React/aiprompt.json"
-  },
-  {
-    "name": "Add Svelte Action",
-    "description": "Implement a custom Svelte action for reusable DOM logic.",
-    "type": "feature",
-    "slug": "add-action",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "dom-manipulation"
-    ],
-    "tags": [
-      "svelte",
-      "actions"
-    ],
-    "techStack": [
-      "svelte"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-action.md",
-    "prompts": [
-      {
-        "id": "prompts-Svelte-add-action.md",
-        "description": "Creating a Svelte Action",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Svelte Action.\n\nAction Definition:\n```js\n// clickOutside.js\nexport function clickOutside(node) {\n  function handleClick(event) {\n    if (!node.contains(event.target)) {\n      node.dispatchEvent(new CustomEvent('outclick'));\n    }\n  }\n  document.addEventListener('click', handleClick, true);\n\n  return {\n    destroy() {\n      document.removeEventListener('click', handleClick, true);\n    }\n  };\n}\n\nUsage:\n\n<!-- Dropdown.svelte -->\n<script>\n  import { clickOutside } from './clickOutside.js';\n  let open = false;\n</script>\n\n<button on:click={() => (open = !open)}>Toggle</button>\n{#if open}\n  <div use:clickOutside on:outclick={() => (open = false)}>\n    <p>Dropdown content</p>\n  </div>\n{/if}\n\nDos:\n-\tDo return a destroy function to clean up listeners.\n-\tDo use custom events or a callback param.\n\nDon’ts:\n-\tDon’t manipulate the DOM heavily in an action.\n-\tDon’t forget to remove event listeners.\n\n",
-        "filePath": "prompts/Svelte/add-action.md"
-      }
-    ],
-    "filePath": "prompts/Svelte/aiprompt.json"
-  },
-  {
-    "name": "Add Svelte Component",
-    "description": "Create a new component in Svelte.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "svelte",
-      "component"
-    ],
-    "techStack": [
-      "svelte"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [
-      {
-        "id": "prompts-Svelte-add-component.md",
-        "description": "",
-        "globs": "",
-        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# add-component.mdc\n\nYou are creating a **Svelte component**:\n\n1) File\n   - `UserCard.svelte`.\n\n2) Example\n   ```html\n   <script>\n     export let user = { name: '', avatarUrl: '' };\n     export let onSelect = null;\n\n     function handleClick() {\n       if (onSelect) onSelect(user);\n     }\n   </script>\n\n   <div on:click={handleClick}>\n     <img src={user.avatarUrl} alt=\"User avatar\" />\n     <span>{user.name}</span>\n   </div>\n\n   <style>\n     div {\n       cursor: pointer;\n       display: flex;\n       align-items: center;\n     }\n     img {\n       width: 40px;\n       height: 40px;\n       border-radius: 50%;\n       margin-right: 8px;\n     }\n   </style>\n   ```\n\n3) Usage\n   ```html\n   <!-- App.svelte -->\n   <script>\n     import UserCard from './UserCard.svelte';\n     let currentUser = { name: 'Alice', avatarUrl: '/alice.png' };\n\n     function selectUser(u) {\n       console.log('Selected user:', u);\n     }\n   </script>\n\n   <UserCard {currentUser} onSelect={selectUser} />\n   ```\n\n**Dos**\n- Do export props with `export let propName`.  \n- Do keep style scoped by default.\n\n**Don’ts**\n- Don’t rely on external CSS unless truly global.  \n- Don’t manipulate parent data inside the child.\n\n---",
-        "filePath": "prompts/Svelte/add-component.md"
-      }
-    ],
-    "filePath": "prompts/Svelte/aiprompt.json"
-  },
-  {
-    "name": "Add Svelte Store",
-    "description": "Implement a writable or derived store in Svelte for global state.",
-    "type": "feature",
-    "slug": "add-store",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "state-management"
-    ],
-    "tags": [
-      "svelte",
-      "store"
-    ],
-    "techStack": [
-      "svelte"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-store.md",
-    "prompts": [
-      {
-        "id": "prompts-Svelte-add-store.md",
-        "description": "",
-        "globs": "",
-        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# add-store.mdc\n\nYou are creating a **Svelte store**:\n\n1) File\n   - `src/stores/user.js`.\n\n2) Example\n   ```js\n   import { writable } from 'svelte/store';\n\n   export const user = writable({ loggedIn: false, name: '' });\n\n   export function logIn(name) {\n     user.set({ loggedIn: true, name });\n   }\n\n   export function logOut() {\n     user.set({ loggedIn: false, name: '' });\n   }\n   ```\n\n3) Usage\n   ```html\n   <!-- Navbar.svelte -->\n   <script>\n     import { user, logIn, logOut } from './stores/user.js';\n   </script>\n\n   <nav>\n     {#if $user.loggedIn}\n       <span>Welcome, {$user.name}!</span>\n       <button on:click={logOut}>Logout</button>\n     {:else}\n       <button on:click={() => logIn('Alice')}>Login</button>\n     {/if}\n   </nav>\n   ```\n\n**Dos**\n- Do keep store logic in separate files.  \n- Do create helper functions to set or update the store if needed.\n\n**Don’ts**\n- Don’t store large arrays without reason.  \n- Don’t forget unsubscribing if manually subscribing in scripts.\n\n---",
-        "filePath": "prompts/Svelte/add-store.md"
-      }
-    ],
-    "filePath": "prompts/Svelte/aiprompt.json"
-  },
-  {
-    "name": "Add SvelteKit Page",
-    "description": "Create a new page in SvelteKit using file-based routing.",
-    "type": "feature",
-    "slug": "add-page",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "routing"
-    ],
-    "tags": [
-      "sveltekit",
-      "ssr"
-    ],
-    "techStack": [
-      "sveltekit"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-page.md",
-    "prompts": [
-      {
-        "id": "prompts-Svelte-add-page.md",
-        "description": "Creating a new SvelteKit page",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a new SvelteKit page.\n\nDirectory:\n- Create a file under `src/routes/`, e.g. `src/routes/about/+page.svelte`.\n\nExample:\n```html\n<!-- src/routes/about/+page.svelte -->\n<script>\n  export let data; // if you have load() from +page.js\n  let message = 'About Page';\n</script>\n\n<h1>{message}</h1>\n<p>This is the about page for our SvelteKit app.</p>\n\nLoad Function:\n\n// src/routes/about/+page.js\nexport async function load() {\n  return {\n    props: {\n      someData: 'Hello from the server'\n    }\n  };\n}\n\n-\tThen in +page.svelte, export let data to access it.\n\nNavigation:\n-\tUse SvelteKit’s <a href=\"/about\">About</a> or the built-in $app/navigation for programmatic navigation.\n\nDos:\n-\tDo keep page-specific logic in +page.svelte.\n-\tDo use load for server data fetching if needed.\n\nDon’ts:\n-\tDon’t store secrets in client-exposed data.\n-\tDon’t skip error handling in load functions.\n\n",
-        "filePath": "prompts/Svelte/add-page.md"
-      }
-    ],
-    "filePath": "prompts/Svelte/aiprompt.json"
-  },
-  {
-    "name": "Add Vue Component",
-    "description": "Add a new reusable component in a Vue 3 application.",
-    "type": "feature",
-    "slug": "add-component",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "vue3",
-      "component"
-    ],
-    "techStack": [
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-component.md",
-    "prompts": [
-      {
-        "id": "prompts-Vue.js-add-component.md",
-        "description": "Adding a reusable Vue 3 component",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when adding a reusable Vue 3 component.\n\nFile:\n- `components/UserCard.vue` with `<script setup>`.\n\nExample:\n```vue\n<script setup lang=\"ts\">\ninterface User {\n  name: string;\n  avatarUrl: string;\n}\n\nconst props = defineProps<{\n  user: User;\n  onSelect?: (user: User) => void;\n}>();\n\nfunction handleClick() {\n  props.onSelect?.(props.user);\n}\n</script>\n\n<template>\n  <div @click=\"handleClick\">\n    <img :src=\"props.user.avatarUrl\" :alt=\"props.user.name\" />\n    <p>{{ props.user.name }}</p>\n  </div>\n</template>\n\n<style scoped>\ndiv {\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n}\nimg {\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  margin-right: 8px;\n}\n</style>\n\nUsage:\n\n<template>\n  <UserCard :user=\"someUser\" :onSelect=\"handleSelect\" />\n</template>\n\n<script setup lang=\"ts\">\nimport UserCard from '@/components/UserCard.vue';\n\nconst someUser = { name: 'Alice', avatarUrl: '/images/alice.png' };\n\nfunction handleSelect(user) {\n  console.log('Selected:', user);\n}\n</script>\n\nDos:\n-\tDo keep the component’s logic minimal.\n-\tDo define prop types carefully.\n\nDon’ts:\n-\tDon’t mutate user prop.\n-\tDon’t add global styles in the component <style>.\n\n",
-        "filePath": "prompts/Vue.js/add-component.md"
-      }
-    ],
-    "filePath": "prompts/Vue.js/aiprompt.json"
-  },
-  {
-    "name": "Add Vue Composable",
-    "description": "Create a reusable composable function for Vue 3 (Composition API).",
-    "type": "feature",
-    "slug": "add-composable",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "logic"
-    ],
-    "tags": [
-      "vue3",
-      "composable"
-    ],
-    "techStack": [
-      "vue3"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-composable.md",
-    "prompts": [
-      {
-        "id": "prompts-Vue.js-add-composable.md",
-        "description": "Creating a composable for Vue 3 (Composition API reuse)",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when creating a Vue 3 composable.\n\nFile:\n- `src/composables/useExample.ts`.\n\nExample:\n```ts\nimport { ref } from 'vue';\n\nexport function useExample(initialValue: number) {\n  const count = ref(initialValue);\n\n  function increment() {\n    count.value++;\n  }\n\n  return { count, increment };\n}\n\nUsage:\n\n<script setup lang=\"ts\">\nimport { useExample } from '@/composables/useExample';\n\nconst { count, increment } = useExample(0);\n</script>\n\n<template>\n  <button @click=\"increment\">Count: {{ count }}</button>\n</template>\n\nDos:\n-\tDo name composables useSomething.\n-\tDo keep logic domain-focused.\n\nDon’ts:\n-\tDon’t do direct DOM manipulation in composables.\n-\tDon’t rely on global variables in composables.\n\n",
-        "filePath": "prompts/Vue.js/add-composable.md"
-      }
-    ],
-    "filePath": "prompts/Vue.js/aiprompt.json"
-  },
-  {
-    "name": "Add Vue Page (Router)",
-    "description": "Create a new page (route) using Vue Router.",
-    "type": "feature",
-    "slug": "add-vue-page",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "routing"
-    ],
-    "tags": [
-      "vue3",
-      "vue-router"
-    ],
-    "techStack": [
-      "vue3",
-      "vue-router"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "add-vue-page.md",
-    "prompts": [
-      {
-        "id": "prompts-Vue.js-add-vue-page.md",
-        "description": "Adding a new page in a Vue 3 application using Vue Router",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when adding a new page in a Vue application with Vue Router.\n\nRouter Setup:\n- Typically in `src/router/index.ts` with a routes array.\n\nAdd Route:\n```ts\nimport { createRouter, createWebHistory } from 'vue-router';\nimport HomePage from '@/pages/HomePage.vue';\nimport AboutPage from '@/pages/AboutPage.vue';\n\nconst routes = [\n  { path: '/', name: 'Home', component: HomePage },\n  { path: '/about', name: 'About', component: AboutPage },\n];\n\nexport const router = createRouter({\n  history: createWebHistory(),\n  routes,\n});\n\nCreate Page Component:\n\n<!-- src/pages/AboutPage.vue -->\n<script setup lang=\"ts\">\nconst msg = 'About Us';\n</script>\n\n<template>\n  <h1>{{ msg }}</h1>\n  <p>This is the about page.</p>\n</template>\n\nApp.vue:\n\n<template>\n  <router-view />\n</template>\n\n<script setup lang=\"ts\">\n// Basic root App\n</script>\n\nUsage:\n-\t<router-link to=\"/\">Home</router-link>\n\nDos:\n-\tDo break out pages in separate .vue files.\n-\tDo name your routes for easy navigation with route names.\n\nDon’ts:\n-\tDon’t create enormous single-file routes for everything.\n-\tDon’t push the same route repeatedly (handle logic checks).\n\n",
-        "filePath": "prompts/Vue.js/add-vue-page.md"
-      }
-    ],
-    "filePath": "prompts/Vue.js/aiprompt.json"
-  },
-  {
-    "name": "Angular Rules",
-    "description": "Guidelines, best practices, dos and don’ts for Angular 16+.",
-    "type": "rule",
-    "slug": "rule-angular",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend"
-    ],
-    "tags": [
-      "best-practices",
-      "angular",
-      "guide"
-    ],
-    "techStack": [
-      "angular"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "rule-angular.md",
-    "prompts": [
-      {
-        "id": "prompts-Angular-rule-angular.md",
-        "description": "Guidelines and best practices for Angular 16+ development",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior Angular 16+ developer. You must always follow these rules:\n\nProject Structure:\n- Use Angular CLI (`ng generate`) for scaffolding.\n- Organize code in modules (feature modules, shared modules).\n\nComponents:\n- Use the recommended `.component.ts` and `.component.html` structure.\n- Keep selectors in kebab-case prefixed with `app-` or a domain prefix.\n\nServices & DI:\n- Use `@Injectable({ providedIn: 'root' })` for global services.\n- Inject services in constructors, not via `new`.\n\nTemplates:\n- Prefer `*ngFor` and `*ngIf`.\n- Use `trackBy` for large lists.\n\nForms:\n- Choose Reactive Forms for complex data.\n- Use template-driven forms for simpler cases.\n\nObservables & RxJS:\n- Use `AsyncPipe` in templates to auto-subscribe and avoid memory leaks.\n- Manage subscriptions in components (or use the `takeUntil` pattern).\n\nChange Detection & Performance:\n- Use `OnPush` strategy for pure/fully input-driven components.\n- Lazy load feature modules.\n\nTesting:\n- Use Angular TestBed for unit tests.\n- Keep specs co-located with components/services.\n\nDos:\n- Do follow Angular’s official style guide.\n- Do structure your modules logically.\n\nDon’ts:\n- Don’t mutate state in Observables without immutability in mind.\n- Don’t disable Angular’s strict mode lightly.",
-        "filePath": "prompts/Angular/rule-angular.md"
-      }
-    ],
-    "filePath": "prompts/Angular/aiprompt.json"
-  },
-  {
-    "name": "Laravel Rules",
-    "description": "Guidelines, best practices, dos and don’ts for Laravel 10+.",
-    "type": "rule",
-    "slug": "rule-laravel",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "backend"
-    ],
-    "tags": [
-      "laravel",
-      "best-practices"
-    ],
-    "techStack": [
-      "laravel",
-      "php"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "rule-laravel.md",
-    "prompts": [
-      {
-        "id": "prompts-Laravel (PHP)-rule-laravel.md",
-        "description": "Guidelines and best practices for Laravel (PHP 10.0 in 2025) projects",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior developer. You must always follow these rules when developing Laravel (PHP 10.0 in 2025) applications.\n\nProject Structure:\n- Organize controllers in `app/Http/Controllers`.\n- Use Eloquent models in `app/Models`.\n\nRouting:\n- Define routes in `routes/web.php` for web and `routes/api.php` for APIs.\n- Use resource controllers for CRUD endpoints.\n\nControllers & Models:\n- Keep controllers thin; push business logic into services or models.\n- Use model factories & migrations properly.\n\nDatabase & Eloquent:\n- Prefer Eloquent relationships for simpler code.\n- Use migrations for schema changes.\n- Use seeders for test data.\n\nSecurity:\n- Validate all inputs (Form Requests or manual validation).\n- Protect against SQL injection, XSS, CSRF.\n- Store secrets in `.env`, never commit `.env` to version control.\n\nBlade Templates:\n- Keep Blade templates simple.\n- Use components for repeated UI blocks.\n\nTesting:\n- Use Pest or PHPUnit for tests.\n- Test controllers, models, and services.\n- Use `php artisan test` or `vendor/bin/pest`.\n\nDos:\n- Do keep code DRY (Don’t Repeat Yourself).\n- Do use official packages like Sanctum/Passport for authentication.\n\nDon’ts:\n- Don’t query the DB directly in Blade.\n- Don’t store large logic in controllers. Use dedicated classes or form requests.",
-        "filePath": "prompts/Laravel (PHP)/rule-laravel.md"
-      }
-    ],
-    "filePath": "prompts/Laravel (PHP)/aiprompt.json"
-  },
-  {
-    "name": "Next.js",
-    "description": "A complete Next.js project with all the necessary files and folders.",
-    "type": "agent",
-    "slug": "nextjs",
-    "author": {
-      "name": "kevin regenrek",
-      "url": "https://github.com/regenrek",
-      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
-    },
-    "file": "rule-nextjs15.md",
-    "prompts": [
-      {
-        "id": "prompts-Next.js-rule-nextjs15.md",
-        "description": "Best practices, rules, dos and don'ts for Next.js 15 projects",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior Next.js 15 developer. You must always follow these rules, best practices, dos and don’ts:\n\nProject Structure:\n- Use the App Router (`app` directory) in Next.js 15.\n- Keep components in `app/components/` or wherever suits your project conventions.\n- Co-locate route handlers, loading/error states, and page-level components under `app/yourRoute/`.\n\nServer and Client Components:\n- Leverage Server Components for data-fetching and rendering whenever possible.\n- Use Client Components (with `\"use client\"`) for interactive/JS-based UI.\n- Keep server components free of client-side React hooks or browser APIs.\n\nData Fetching:\n- Use the new fetch pattern or `getServerSideProps` in the older pages router if you’re migrating.\n- For serverless deployments, keep fetch calls minimal and consider caching data.\n- If you need revalidation, use `fetch(..., { next: { revalidate: 60 } })` or dynamic route handlers.\n\nFile-Based Routing with `app/`:\n- Store page code in `app/route/page.tsx` or `.js`.\n- For dynamic routes, use `[slug]/page.tsx`.\n- Use nested layouts in `app/route/layout.tsx` for shared structure.\n\nAPI Routes / Route Handlers:\n- Use the new Route Handlers in the `app/api/` directory for serverless endpoints.\n- Validate incoming data to avoid security vulnerabilities.\n- Keep business logic separate in utility modules or server-side services.\n\nStyling & Assets:\n- Use CSS Modules, Tailwind, or other CSS-in-JS solutions.\n- For images, use the built-in `<Image />` component for optimized images.\n- For fonts, consider Next.js’ built-in font optimization with `@next/font`.\n\nPerformance:\n- Mark expensive components or libraries for dynamic imports if not needed at initial load.\n- Use `React.useMemo`, `React.useCallback` in client components to avoid unnecessary re-renders.\n- Keep bundle size small by splitting large dependencies (code-splitting).\n\nDeployment:\n- For Vercel, use the integrated deployment pipeline.\n- For self-hosting, consider Node server or Dockerizing.\n- Test SSR or static outputs thoroughly (including edge cases).\n\nTesting & Linting:\n- Integrate ESLint and Prettier. Use Next.js’ recommended config: `next lint`.\n- Use Jest, React Testing Library, or Cypress for end-to-end.\n- Keep test files near the code (e.g. `component.test.tsx`).\n\nDos:\n- Do separate server and client logic carefully.\n- Do optimize images and use the built-in `<Link>` for internal routing.\n\nDon’ts:\n- Don’t import client-only modules into a Server Component.\n- Don’t store secrets in client environment variables. Use server `.env` and server-side code.",
-        "filePath": "prompts/Next.js/rule-nextjs15.md"
-      }
-    ],
-    "filePath": "prompts/Next.js/aiprompt.json"
-  },
-  {
-    "name": "Next.js Shadcn Lucide",
-    "description": "Installs shadcn and lucide icon library within a Next.js project",
-    "slug": "nextjs-shadcn-lucide",
-    "type": "agent",
+    "name": "Appwrite Astro Setup",
+    "description": "Guidelines for writing Astro apps with Appwrite authentication and database integration",
+    "type": "setup",
+    "slug": "appwrite-astro-setup",
     "development_process": [
       "implement"
     ],
     "dev_categories": [
-      "frontend"
+      "frontend",
+      "auth",
+      "db"
     ],
-    "tags": [],
-    "techStack": [
-      "next.js",
-      "react",
-      "shadcn",
-      "lucide"
+    "tags": [
+      "middleware"
+    ],
+    "tech_stack": {
+      "framework": "astro",
+      "service": "appwrite"
+    },
+    "ai_editor": [
+      "cursor"
     ],
     "author": {
       "name": "Kevin Kern",
@@ -1281,237 +28,399 @@
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
     "model": [
-      "reasoning",
-      "chat"
+      "reasoning"
     ],
     "version": "1.0",
-    "file": "next-js-shadcn-lucide.md",
+    "files": [
+      "setup-appwrite-astro.md"
+    ],
+    "published": true,
     "prompts": [
       {
-        "id": "prompts-next-js-shadcn-lucide-next-js-shadcn-lucide.md",
-        "description": "Guidelines for installing and setting up Next.js 15 with ShadCN and Lucide React",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\n# Next.js 15 + ShadCN + Lucide React Installation Guide\n\nYou are a frontend expert setting up a Next.js 15 project with ShadCN UI and Lucide React for a consistent, optimized, and maintainable component system.\n\n## 🚀 Installation Steps\n\n- Uses App Router (`app/` directory).\n- Comes with ESLint and TailwindCSS pre-configured.\n\nATTENTION: Nextjs is already installed and has a pre setup since if\nyou install nextjs with ai then it will create a new directory within the current\ndirectory and this leads to an error!\n\n2. Set up ShadCN UI\n```bash\nnpx shadcn@latest init\n```\n- Select TypeScript and TailwindCSS when prompted.\n- ShadCN will create the `components/ui/` folder for UI components.\n\n3. Install Lucide React (Icons)\n```bash\nnpm install lucide-react\n```\n- Use Lucide icons consistently in UI components.\n\n4. Add ShadCN Components\n```bash\nnpx shadcn@latest add button input dialog\n```\n- Only install necessary components to keep the bundle size small.\n- The CLI will add them to `components/ui/`.\n\n---\n\n## ⚙️ Configuration & Setup\n\n### 1. Global Theme & Styling\n\nShadCN relies on Tailwind, so configure your `tailwind.config.ts`:\n\n```ts\nimport type { Config } from \"tailwindcss\";\n\nconst config: Config = {\n  darkMode: \"class\",\n  content: [\n    \"./app/**/*.{js,ts,jsx,tsx}\",\n    \"./components/**/*.{js,ts,jsx,tsx}\",\n    \"./pages/**/*.{js,ts,jsx,tsx}\"\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};\n\nexport default config;\n```\n\n### 2. Using ShadCN Components with Lucide Icons\n\nExample: Button with an icon.\n\n```tsx\nimport { Button } from \"@/components/ui/button\";\nimport { ArrowRight } from \"lucide-react\";\n\nexport default function ExampleButton() {\n  return (\n    <Button variant=\"outline\">\n      Click me\n      <ArrowRight className=\"ml-2 h-4 w-4\" />\n    </Button>\n  );\n}\n```\n\n### 3. Customizing Components\n\nYou can extend ShadCN components instead of modifying them directly.\n\nExample: Creating a custom button variant.\n\n```tsx\nimport { cn } from \"@/lib/utils\";\nimport { Button, ButtonProps } from \"@/components/ui/button\";\n\nexport function CustomButton({ className, ...props }: ButtonProps) {\n  return <Button className={cn(\"bg-primary text-white\", className)} {...props} />;\n}\n```\n\n---\n\n## ⚡ Performance & Best Practices\n\n### ✅ Do This\n✔ Use `npx shadcn add <component>` instead of manually copying components.  \n✔ Keep UI logic inside `components/ui/` and business logic separate.  \n✔ Lazy load large or infrequently used UI components with `dynamic()`.  \n\n### ❌ Avoid This\n✖ Importing all ShadCN components at once.  \n✖ Overriding ShadCN styles inside individual components (use Tailwind config instead).  \n✖ Using non-standard icons or mixing multiple icon libraries.  \n\n---\n\n## 🔥 Final Project Structure\n\n```\napp/\n│── layout.tsx\n│── page.tsx\n│── dashboard/\n│   ├── page.tsx\ncomponents/\n│── ui/\n│   ├── button.tsx\n│   ├── input.tsx\n│── CustomButton.tsx\nlib/\n│── utils.ts\nstyles/\n│── globals.css\n│── tailwind.config.ts\n```\n\n---\n\n## ✅ Final Notes\n\n- Always keep ShadCN and Lucide up to date with `npx shadcn@latest upgrade`.\n- Only install necessary UI components to reduce build size.\n- Ensure accessibility by keeping ARIA attributes in ShadCN components.\n\nThis guide ensures a clean, scalable, and high-performance Next.js 15 project with ShadCN UI & Lucide React.\n",
-        "filePath": "prompts/next-js-shadcn-lucide/next-js-shadcn-lucide.md"
+        "id": "prompts-appwrite-astro-setup-appwrite-astro.md",
+        "description": "Guidelines for writing Astro apps with Appwrite",
+        "globs": "src/**/*.ts, src/**/*.astro",
+        "content": "\n# Appwrite + Astro Integration Setup Guide\n\n## Prerequisites\n- Node.js and npm installed\n- Astro project initialized\n- Appwrite account and project created\n\n## Installation\n\nInstall required dependencies:\n```bash\nnpm install appwrite node-appwrite\nnpm install @astrojs/node\n```\n\nAdd Node adapter to Astro:\n```bash\nnpx astro add node\n```\n\n## Core Configuration\n\nCreate Appwrite client configuration (src/lib/appwrite.ts):\n```typescript\nimport { Client, Account, Databases, Storage } from 'appwrite';\n\nconst client = new Client()\n  .setEndpoint(import.meta.env.PUBLIC_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1')\n  .setProject(import.meta.env.PUBLIC_APPWRITE_PROJECT_ID || '');\n\nexport const account = new Account(client);\nexport const databases = new Databases(client);\nexport const storage = new Storage(client);\nexport default client;\n```\n\n## Authentication Implementation\n\nCreate middleware for session handling (src/middleware.ts):\n```typescript\nimport { defineMiddleware } from 'astro:middleware';\nimport { account } from './lib/appwrite';\n\nexport const onRequest = defineMiddleware(async ({ locals, cookies }, next) => {\n  const sessionId = cookies.get('sessionId')?.value;\n  \n  if (sessionId) {\n    try {\n      const user = await account.get();\n      locals.user = user;\n    } catch (error) {\n      cookies.delete('sessionId');\n      locals.user = null;\n    }\n  }\n  \n  return next();\n});\n```\n\n## Route Implementation Examples\n\nLogin Page (src/pages/login.astro):\n```astro\n---\nimport Layout from '../layouts/Layout.astro';\nimport { account } from '../lib/appwrite';\n\nlet error = null;\n\nif (Astro.request.method === 'POST') {\n  try {\n    const data = await Astro.request.formData();\n    const email = data.get('email')?.toString();\n    const password = data.get('password')?.toString();\n\n    if (email && password) {\n      const session = await account.createEmailSession(email, password);\n      Astro.cookies.set('sessionId', session.$id, {\n        httpOnly: true,\n        secure: import.meta.env.PROD,\n        sameSite: 'lax',\n        path: '/'\n      });\n      return Astro.redirect('/dashboard');\n    }\n  } catch (e) {\n    error = 'Invalid credentials';\n  }\n}\n---\n\n<Layout title=\"Login\">\n  <main>\n    <form method=\"POST\">\n      <div>\n        <label for=\"email\">Email</label>\n        <input type=\"email\" id=\"email\" name=\"email\" required />\n      </div>\n      <div>\n        <label for=\"password\">Password</label>\n        <input type=\"password\" id=\"password\" name=\"password\" required />\n      </div>\n      {error && <div class=\"error\">{error}</div>}\n      <button type=\"submit\">Login</button>\n    </form>\n  </main>\n</Layout>\n```\n\nProtected Dashboard Page (src/pages/dashboard.astro):\n```astro\n---\nimport Layout from '../layouts/Layout.astro';\nimport { databases } from '../lib/appwrite';\n\nif (!Astro.locals.user) {\n  return Astro.redirect('/login');\n}\n\nlet documents = [];\ntry {\n  const response = await databases.listDocuments(\n    'DATABASE_ID',\n    'COLLECTION_ID',\n    []\n  );\n  documents = response.documents;\n} catch (error) {\n  console.error('Failed to fetch documents:', error);\n}\n---\n\n<Layout title=\"Dashboard\">\n  <main>\n    <h1>Welcome, {Astro.locals.user.name}</h1>\n    <div class=\"documents\">\n      {documents.map(doc => (\n        <div class=\"document\" key={doc.$id}>\n          <h2>{doc.title}</h2>\n          <p>{doc.content}</p>\n        </div>\n      ))}\n    </div>\n  </main>\n</Layout>\n```\n\n## Security Guidelines\n\n1. Store sensitive configuration in environment variables\n2. Implement proper session management using secure cookies\n3. Set appropriate collection permissions in Appwrite Console\n4. Use API keys with minimal required scopes\n5. Enable HTTPS for production deployments\n\n## Implementation Guidelines\n\n1. Use server-side authentication with secure cookies\n2. Implement proper error handling and validation\n3. Create type definitions for Appwrite responses\n4. Keep Appwrite client configuration in server-only files\n5. Handle loading and error states consistently\n6. Use Astro's built-in form handling\n\n## Error Handling Example\n\nCreate an error component (src/components/ErrorBoundary.astro):\n```astro\n---\nconst { error } = Astro.props;\n---\n\n<div class=\"error-boundary\">\n  <h1>Error</h1>\n  <p>{error.message}</p>\n  <a href=\"/\">Return Home</a>\n</div>\n\n<style>\n  .error-boundary {\n    padding: 2rem;\n    text-align: center;\n  }\n</style>\n``` ",
+        "filePath": "prompts/appwrite-astro/setup-appwrite-astro.md"
       }
     ],
-    "filePath": "prompts/next-js-shadcn-lucide/aiprompt.json"
+    "filePath": "prompts/appwrite-astro/aiprompt.json"
   },
   {
-    "name": "Nuxt.js Rules",
-    "description": "Guidelines, best practices, dos and dont's for Nuxt 3 projects.",
-    "type": "rule",
-    "slug": "rule-nuxtjs",
+    "name": "Drizzle Next.js Integration Setup",
+    "description": "Guidelines for setting up and integrating Drizzle ORM with Next.js applications, including database configuration, server actions, client components, and best practices for security and performance.",
+    "type": "setup",
+    "slug": "drizzle-next-setup",
     "development_process": [
       "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
+      "implement"
     ],
     "dev_categories": [
-      "frontend",
-      "ssr",
-      "routing"
+      "backend",
+      "db"
     ],
     "tags": [
-      "best-practices",
-      "nuxt3",
-      "guide"
+      "orm"
     ],
-    "techStack": [
-      "nuxt.js",
-      "vue3",
-      "pinia"
+    "tech_stack": {
+      "framework": "next",
+      "service": "drizzle"
+    },
+    "ai_editor": [
+      "cursor"
     ],
     "author": {
-      "name": "Prompt Engineer",
-      "url": "https://example.com"
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
     "model": [
-      "reasoning",
-      "chat"
+      "reasoning"
     ],
     "version": "1.0",
-    "file": "rule-nuxtjs.md",
+    "files": [
+      "setup-drizzle-next.md"
+    ],
+    "published": true,
     "prompts": [
       {
-        "id": "prompts-Nuxt.js-rule-nuxtjs.md",
-        "description": "Guidelines, best practices, and do's & don'ts for Nuxt 3 projects",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior Nuxt 3 developer. You must always follow these rules, best practices, dos and don'ts:\n\nProject Structure:\n- Keep your code structured in the following folders:\n  - `pages/` for your application pages\n  - `components/` for re-usable UI parts\n  - `composables/` for re-usable logic (Vue Composition API)\n  - `layouts/` for shared layouts across pages\n  - `plugins/` for registering modules or plugins\n- Maintain single responsibility for each file—avoid mixing logic.\n\nPages & Routing:\n- Rely on Nuxt's File-based Routing. Each `.vue` file under `pages/` automatically becomes a route.\n- Use Dynamic Routes by prefixing filenames with `_`, like `[id].vue`.\n- Minimize nested directory levels if not absolutely necessary.\n\nServer-Side Rendering:\n- Utilize SSR for better performance and SEO, but remain mindful of exposing sensitive data through server responses.\n\nData Fetching:\n- Prefer the built-in `useAsyncData` or `fetch` composable in Nuxt 3.\n- Keep data fetching logic inside page or layout components, or factor out to composables if shared among multiple components.\n\nState Management:\n- For global state, use Nuxt's `useState` or an external solution like Pinia.\n- Avoid scattering global data across multiple composables unnecessarily.\n\nCoding Conventions:\n- Use PascalCase for Vue components and directories, and kebab-case for `.vue` file names.\n- Keep each component's logic minimal. If a component grows too large, break it into smaller, more focused components.\n\nPerformance & Caching:\n- Leverage Nuxt’s auto-imported composables.\n- Use lazy loading for components not needed above-the-fold.\n- Use server middleware sparingly for expensive operations.\n\nPlugins & Modules:\n- Register your plugins in the `plugins/` folder and list them in `nuxt.config.js`.\n- Use official modules (e.g., Auth, i18n) for standard tasks. Read their docs thoroughly to avoid conflicts.\n\nSecurity:\n- Never store API credentials or secrets in client-exposed code.\n- Avoid direct `window` or `document` manipulations; rely on Nuxt's SSR context or Vue reactivity.\n\nTesting & Linting:\n- Write unit tests for components, composables, and server routes (if present).\n- Lint your code with ESLint (`@nuxtjs/eslint-config` or other recommended presets).\n- Set up continuous integration to automate tests on each pull request or commit.\n\nDeployment:\n- Build for production with `npm run build`.\n- Test the SSR bundle locally with `npm run preview` or similar.\n- For static site generation, use Nuxt’s `nitro`-powered output if required.\n\nDos:\n- Do leverage Nuxt’s built-in composables like `useRoute`, `useRouter`, `useAsyncData`.\n- Do keep secrets and tokens strictly in server-side composables or environment variables.\n- Do carefully use `.env` files for sensitive info, referencing them in `nuxt.config.js`.\n\nDon’ts:\n- Don’t expose secrets in your `.env` or `nuxt.config.js` that gets shipped to the client.\n- Don’t place complex logic in the template—use `<script setup>` or external composables.\n- Don’t forget to handle errors gracefully in SSR hooks (e.g., try/catch in `useAsyncData`).",
-        "filePath": "prompts/Nuxt.js/rule-nuxtjs.md"
-      }
-    ],
-    "filePath": "prompts/Nuxt.js/aiprompt.json"
-  },
-  {
-    "name": "Nuxt.js Rules",
-    "description": "Guidelines, best practices, dos and dont's for Nuxt 3 projects.",
-    "type": "rule",
-    "slug": "rule-nuxtjs",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ssr",
-      "routing"
-    ],
-    "tags": [
-      "best-practices",
-      "nuxt3",
-      "guide"
-    ],
-    "techStack": [
-      "nuxt.js",
-      "vue3",
-      "pinia"
-    ],
-    "author": {
-      "name": "Prompt Engineer",
-      "url": "https://example.com"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "rule-nuxtjs.md",
-    "prompts": [],
-    "filePath": "prompts/nuxtjs/aiprompt.json"
-  },
-  {
-    "name": "React.js Rules",
-    "description": "Guidelines, best practices, dos and don’ts for React.js.",
-    "type": "rule",
-    "slug": "rule-react",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend",
-      "ui"
-    ],
-    "tags": [
-      "best-practices",
-      "react",
-      "guide"
-    ],
-    "techStack": [
-      "react"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "rule-react.md",
-    "prompts": [
-      {
-        "id": "prompts-React-rule-react.md",
-        "description": "Guidelines and best practices for React.js development",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior React.js developer. You must always follow these rules:\n\nComponent Structure:\n- Use Functional Components + Hooks.\n- Keep components small; break down large components.\n\nProps & State:\n- Treat props as immutable.\n- Use `useState` or `useReducer` for state management within a component.\n\nHooks Best Practices:\n- Adhere to the Rules of Hooks (only call hooks at the top level of functional components).\n- Name custom hooks starting with `use`.\n\nData Fetching:\n- Use `useEffect` for fetching data in client apps.\n- Consider `useQuery` from libraries like React Query for advanced caching.\n\nState Management:\n- Use React Context for light global state.\n- For complex or large-scale, consider Redux, Zustand, Recoil, or other state libs.\n\nPerformance:\n- Use `React.memo` to memoize components if they render frequently with the same props.\n- Use `useCallback` and `useMemo` to avoid re-creating functions/objects every render.\n\nTesting:\n- Use React Testing Library or Enzyme for unit tests.\n- Keep tests close to the component.\n\nDos:\n- Do maintain consistent naming and file structure.\n- Do type your components if using TypeScript (recommended).\n\nDon’ts:\n- Don’t mutate state directly (always use updater functions).\n- Don’t place heavy logic in the render method; use separate functions or hooks.",
-        "filePath": "prompts/React/rule-react.md"
-      }
-    ],
-    "filePath": "prompts/React/aiprompt.json"
-  },
-  {
-    "name": "Svelte Rules",
-    "description": "Guidelines, best practices, dos and don’ts for Svelte 3+.",
-    "type": "rule",
-    "slug": "rule-svelte",
-    "development_process": [
-      "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
-    ],
-    "dev_categories": [
-      "frontend"
-    ],
-    "tags": [
-      "svelte",
-      "best-practices"
-    ],
-    "techStack": [
-      "svelte"
-    ],
-    "author": {
-      "name": "Prompt Engineer"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "file": "rule-svelte.md",
-    "prompts": [
-      {
-        "id": "prompts-Svelte-rule-svelte.md",
+        "id": "prompts-drizzle-next-setup-drizzle-next.md",
         "description": "",
         "globs": "",
-        "content": "format the prompt below with the following.\n\n\n1. remove all bold ** markdown asterisk. not needed\n2. remove the \"#\" h1 heading\nExample:\n```\n# rule-nuxtjs.mdc <-- remove this header\n```\n\n3. add also the frontmatter header in this style:\n\nExample:\n```\n---\ndescription: Guidelines for writing Next.js apps with Supabase Auth\nglobs: \"**/*.ts, **/*.tsx, **/*.js, **/*.jsx\"\n---\n```\n\n4. instead of writing adhere you change the role sentence (mostly first part) to \"you are an .... senior developer. You must always follow these rules.\"\n5. remove the numbers use this style of formatting\n\nExample:\n```\nProject Structure:\n- rule 1\n - rule 1.1\n- rule 2\n```\n5. only output the rule, filename.mdc and format it to markdown code output\n6. open it in canvas\n\n\nPROMPT:\n\n\"\"\"\n\n# rule-svelte.mdc\n\nYou are an expert Svelte developer. Follow these rules:\n\n1) Single File Components\n   - Each `.svelte` file is self-contained (template, script, style).\n\n2) Reactivity\n   - Use the `$:` label for reactive statements. \n   - Use stores for global/shared state.\n\n3) Props\n   - Declare props with `export let propName`.\n\n4) Lifecycle\n   - Use `onMount`, `beforeUpdate`, `afterUpdate`, `onDestroy` for side effects.\n\n5) Actions\n   - Use actions (`use:someAction`) for DOM manipulation or event management.\n\n6) Performance\n   - Key your `{#each}` blocks to help Svelte track items.\n\n7) Testing\n   - Use svelte-testing-library or Cypress for E2E.\n\n**Dos**\n- Do use Svelte’s built-in transitions when possible.  \n- Do keep data fetch logic in onMount or external modules.\n\n**Don’ts**\n- Don’t do manual DOM queries if you can use data binding or actions.  \n- Don’t mutate props passed from a parent directly.\n\n---",
-        "filePath": "prompts/Svelte/rule-svelte.md"
+        "content": "# Drizzle ORM with Next.js Integration Setup Guide\n\nThis guide provides step-by-step instructions for integrating Drizzle ORM with a Next.js application.\n\n## Prerequisites\n- Node.js and npm installed\n- Next.js project initialized\n- PostgreSQL database (or any other supported database)\n\n## Installation\n\n1. Install Drizzle ORM and database driver:\n```bash\nnpm install drizzle-orm pg\nnpm install -D drizzle-kit @types/pg\n```\n\n2. For TypeScript support, ensure tsconfig.json includes:\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"es2017\",\n    \"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],\n    \"allowJs\": true,\n    \"skipLibCheck\": true,\n    \"strict\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"noEmit\": true,\n    \"esModuleInterop\": true,\n    \"module\": \"esnext\",\n    \"moduleResolution\": \"node\",\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"jsx\": \"preserve\",\n    \"incremental\": true,\n    \"plugins\": [\n      {\n        \"name\": \"next\"\n      }\n    ]\n  }\n}\n```\n\n## Database Configuration\n\n1. Create a database configuration file `src/db/config.ts`:\n```typescript\nimport { drizzle } from 'drizzle-orm/node-postgres';\nimport { Pool } from 'pg';\n \nconst pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});\n \nexport const db = drizzle(pool);\n```\n\n2. Create schema definition `src/db/schema.ts`:\n```typescript\nimport { pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';\n \nexport const users = pgTable('users', {\n  id: serial('id').primaryKey(),\n  name: text('name').notNull(),\n  email: text('email').notNull().unique(),\n  createdAt: timestamp('created_at').defaultNow(),\n});\n```\n\n3. Create migration configuration `drizzle.config.ts`:\n```typescript\nimport type { Config } from 'drizzle-kit';\n \nexport default {\n  schema: './src/db/schema.ts',\n  out: './drizzle',\n  driver: 'pg',\n  dbCredentials: {\n    connectionString: process.env.DATABASE_URL!,\n  },\n} satisfies Config;\n```\n\n4. Add migration scripts to package.json:\n```json\n{\n  \"scripts\": {\n    \"db:generate\": \"drizzle-kit generate:pg\",\n    \"db:push\": \"drizzle-kit push:pg\",\n    \"db:studio\": \"drizzle-kit studio\"\n  }\n}\n```\n\n## Server Actions Implementation\n\n1. Create a server action file `src/app/actions/users.ts`:\n```typescript\n'use server'\n \nimport { db } from '@/db/config';\nimport { users } from '@/db/schema';\nimport { eq } from 'drizzle-orm';\n \nexport async function getUsers() {\n  try {\n    return await db.select().from(users);\n  } catch (error) {\n    console.error('Failed to fetch users:', error);\n    throw error;\n  }\n}\n \nexport async function getUserById(id: number) {\n  try {\n    const [user] = await db\n      .select()\n      .from(users)\n      .where(eq(users.id, id));\n    return user;\n  } catch (error) {\n    console.error(`Failed to fetch user ${id}:`, error);\n    throw error;\n  }\n}\n \nexport async function createUser(data: { name: string; email: string }) {\n  try {\n    const [user] = await db\n      .insert(users)\n      .values(data)\n      .returning();\n    return user;\n  } catch (error) {\n    console.error('Failed to create user:', error);\n    throw error;\n  }\n}\n \nexport async function updateUser(id: number, data: { name?: string; email?: string }) {\n  try {\n    const [user] = await db\n      .update(users)\n      .set(data)\n      .where(eq(users.id, id))\n      .returning();\n    return user;\n  } catch (error) {\n    console.error(`Failed to update user ${id}:`, error);\n    throw error;\n  }\n}\n \nexport async function deleteUser(id: number) {\n  try {\n    await db\n      .delete(users)\n      .where(eq(users.id, id));\n  } catch (error) {\n    console.error(`Failed to delete user ${id}:`, error);\n    throw error;\n  }\n}\n```\n\n## Client Component Implementation\n\nCreate a client component `src/app/components/UserList.tsx`:\n```typescript\n'use client'\n \nimport { useEffect, useState } from 'react';\nimport { getUsers, createUser, updateUser, deleteUser } from '@/app/actions/users';\n \nexport default function UserList() {\n  const [users, setUsers] = useState([]);\n \n  useEffect(() => {\n    const loadUsers = async () => {\n      const data = await getUsers();\n      setUsers(data);\n    };\n    loadUsers();\n  }, []);\n \n  const handleCreateUser = async (e) => {\n    e.preventDefault();\n    const formData = new FormData(e.target);\n    await createUser({\n      name: formData.get('name') as string,\n      email: formData.get('email') as string,\n    });\n    const data = await getUsers();\n    setUsers(data);\n    e.target.reset();\n  };\n \n  return (\n    <div>\n      <form onSubmit={handleCreateUser}>\n        <input name=\"name\" placeholder=\"Name\" required />\n        <input name=\"email\" type=\"email\" placeholder=\"Email\" required />\n        <button type=\"submit\">Add User</button>\n      </form>\n \n      <ul>\n        {users.map((user) => (\n          <li key={user.id}>\n            {user.name} ({user.email})\n            <button onClick={() => deleteUser(user.id)}>Delete</button>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n```\n\n## Environment Setup\n\n1. Create `.env.local` file:\n```env\nDATABASE_URL=postgresql://user:password@localhost:5432/dbname\n```\n\n2. Add `.env.local` to `.gitignore`:\n```\n.env.local\n```\n\n## Best Practices\n\n1. Database Connection\n   - Use connection pooling for better performance\n   - Keep environment variables secure\n   - Use migrations for schema changes\n\n2. Server Actions\n   - Implement proper error handling\n   - Use TypeScript for type safety\n   - Keep actions atomic and focused\n\n3. Client Components\n   - Implement proper loading states\n   - Handle errors gracefully\n   - Use optimistic updates when appropriate\n\n4. Security\n   - Validate input data\n   - Implement proper authentication\n   - Use prepared statements (handled by Drizzle)\n\n5. Performance\n   - Use indexes for frequently queried fields\n   - Implement pagination for large datasets\n   - Cache frequently accessed data\n\n## Migrations\n\n1. Generate migrations:\n```bash\nnpm run db:generate\n```\n\n2. Apply migrations:\n```bash\nnpm run db:push\n```\n\n3. View and manage database with Drizzle Studio:\n```bash\nnpm run db:studio\n``` ",
+        "filePath": "prompts/drizzle-next/setup-drizzle-next.md"
       }
     ],
-    "filePath": "prompts/Svelte/aiprompt.json"
+    "filePath": "prompts/drizzle-next/aiprompt.json"
   },
   {
-    "name": "Vue 3 Rules",
-    "description": "Guidelines, best practices, dos and don’ts for Vue 3 with Composition API.",
-    "type": "rule",
-    "slug": "rule-vue",
+    "name": "Drizzle Nuxt Integration Setup",
+    "description": "Guidelines for setting up and integrating Drizzle ORM with Nuxt 3 applications",
+    "type": "setup",
+    "slug": "drizzle-nuxt-setup",
     "development_process": [
       "plan",
-      "design",
-      "implement",
-      "test",
-      "deploy"
+      "implement"
     ],
     "dev_categories": [
-      "frontend"
+      "backend",
+      "db"
     ],
     "tags": [
-      "best-practices",
-      "vue3",
-      "guide"
+      "orm"
     ],
-    "techStack": [
-      "vue3"
+    "tech_stack": {
+      "framework": "nuxt",
+      "service": "drizzle"
+    },
+    "ai_editor": [
+      "cursor"
     ],
     "author": {
-      "name": "Prompt Engineer"
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
     "model": [
-      "reasoning",
-      "chat"
+      "reasoning"
     ],
     "version": "1.0",
-    "file": "rule-vue.md",
+    "files": [
+      "setup-drizzle-nuxt.md"
+    ],
+    "published": true,
     "prompts": [
       {
-        "id": "prompts-Vue.js-rule-vue.md",
-        "description": "Guidelines for Vue.js 3 development",
-        "globs": "**/*.ts, **/*.tsx, **/*.js, **/*.jsx",
-        "content": "\nYou are a senior Vue.js 3 developer. You must always follow these rules:\n\nSingle File Components:\n- Use `<script setup>` or Composition API.\n- Name files in PascalCase, e.g. `UserCard.vue`.\n\nProps & Emits:\n- Use `defineProps` and `defineEmits` in `<script setup>`.\n- Don’t mutate props directly.\n\nState Management:\n- Use Pinia or provide/inject.\n- Avoid large or confusing usage of global data.\n\nReactive Utilities:\n- Use `ref` and `reactive`.\n- Use `computed` for derived state.\n\nLifecycle:\n- Use `onMounted`, `onUnmounted`, etc. in `<script setup>` or from Vue’s composition API.\n\nPerformance:\n- Key your `v-for` loops with unique IDs.\n- Use `watch` or watchers carefully to avoid performance hits.\n\nTesting:\n- Use Vue Test Utils for unit tests.\n- Keep components small and testable.\n\nDos:\n- Do keep logic in composables for reuse.\n- Do keep styles scoped if possible.\n\nDon’ts:\n- Don’t pollute global config with repetitive logic.\n- Don’t mix Options and Composition API in the same component unless migrating code.",
-        "filePath": "prompts/Vue.js/rule-vue.md"
+        "id": "prompts-drizzle-nuxt-setup-drizzle-nuxt.md",
+        "description": "",
+        "globs": "",
+        "content": "# Drizzle + Nuxt Integration Setup Guide\n\nThis guide provides step-by-step instructions for integrating Drizzle ORM with a Nuxt 3 application.\n\n## Prerequisites\n- Node.js and npm installed\n- Nuxt 3 project initialized\n- PostgreSQL database (or any other supported database)\n\n## Installation\n\n1. Install required dependencies:\n```bash\nnpm install drizzle-orm pg\nnpm install -D drizzle-kit @types/pg\n```\n\n## Configuration\n\n1. Create a `.env` file in your project root:\n```env\nDATABASE_URL=postgres://<user>:<password>@<host>:<port>/<dbname>\n```\n\n2. Create a database schema file `server/db/schema.ts`:\n```typescript\nimport { pgTable, serial, text, varchar } from 'drizzle-orm/pg-core';\n\nexport const users = pgTable('users', {\n  id: serial('id').primaryKey(),\n  name: varchar('name', { length: 255 }).notNull(),\n  email: text('email').notNull().unique(),\n});\n\nexport type User = typeof users.$inferSelect;\nexport type NewUser = typeof users.$inferInsert;\n```\n\n3. Create a database configuration file `server/db/index.ts`:\n```typescript\nimport { drizzle } from 'drizzle-orm/node-postgres';\nimport { Pool } from 'pg';\nimport * as schema from './schema';\n\nconst pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});\n\nexport const db = drizzle(pool, { schema });\n```\n\n4. Create a migration script `drizzle.config.ts`:\n```typescript\nimport type { Config } from 'drizzle-kit';\n\nexport default {\n  schema: './server/db/schema.ts',\n  out: './drizzle',\n  driver: 'pg',\n  dbCredentials: {\n    connectionString: process.env.DATABASE_URL!,\n  },\n} satisfies Config;\n```\n\n5. Add migration scripts to `package.json`:\n```json\n{\n  \"scripts\": {\n    \"generate\": \"drizzle-kit generate:pg\",\n    \"migrate\": \"drizzle-kit push:pg\"\n  }\n}\n```\n\n## Usage Examples\n\n### Server Routes\n```typescript\n// server/api/users/index.ts\nimport { db } from '../../db';\nimport { users } from '../../db/schema';\nimport { eq } from 'drizzle-orm';\n\nexport default defineEventHandler(async (event) => {\n  const method = getMethod(event);\n\n  try {\n    switch (method) {\n      case 'GET':\n        return await db.select().from(users).orderBy(users.name);\n\n      case 'POST': {\n        const body = await readBody(event);\n        const [user] = await db\n          .insert(users)\n          .values(body)\n          .returning();\n        return user;\n      }\n\n      default:\n        throw createError({\n          statusCode: 405,\n          message: 'Method not allowed',\n        });\n    }\n  } catch (error: any) {\n    throw createError({\n      statusCode: 500,\n      message: error.message,\n    });\n  }\n});\n\n// server/api/users/[id].ts\nexport default defineEventHandler(async (event) => {\n  const method = getMethod(event);\n  const id = parseInt(event.context.params.id);\n\n  try {\n    switch (method) {\n      case 'GET': {\n        const [user] = await db\n          .select()\n          .from(users)\n          .where(eq(users.id, id));\n\n        if (!user) {\n          throw createError({\n            statusCode: 404,\n            message: 'User not found',\n          });\n        }\n\n        return user;\n      }\n\n      case 'PUT': {\n        const body = await readBody(event);\n        const [user] = await db\n          .update(users)\n          .set(body)\n          .where(eq(users.id, id))\n          .returning();\n\n        if (!user) {\n          throw createError({\n            statusCode: 404,\n            message: 'User not found',\n          });\n        }\n\n        return user;\n      }\n\n      case 'DELETE': {\n        await db.delete(users).where(eq(users.id, id));\n        return { success: true };\n      }\n\n      default:\n        throw createError({\n          statusCode: 405,\n          message: 'Method not allowed',\n        });\n    }\n  } catch (error: any) {\n    throw createError({\n      statusCode: 500,\n      message: error.message,\n    });\n  }\n});\n```\n\n### Composables\n```typescript\n// composables/useUsers.ts\nimport type { User, NewUser } from '~/server/db/schema';\n\nexport function useUsers() {\n  const users = ref<User[]>([]);\n  const loading = ref(false);\n  const error = ref<string | null>(null);\n\n  const fetchUsers = async () => {\n    loading.value = true;\n    error.value = null;\n    try {\n      users.value = await $fetch('/api/users');\n    } catch (e: any) {\n      error.value = e.message;\n    } finally {\n      loading.value = false;\n    }\n  };\n\n  const getUser = async (id: number) => {\n    loading.value = true;\n    error.value = null;\n    try {\n      return await $fetch(`/api/users/${id}`);\n    } catch (e: any) {\n      error.value = e.message;\n      throw e;\n    } finally {\n      loading.value = false;\n    }\n  };\n\n  const createUser = async (user: NewUser) => {\n    loading.value = true;\n    error.value = null;\n    try {\n      const newUser = await $fetch('/api/users', {\n        method: 'POST',\n        body: user,\n      });\n      users.value.push(newUser);\n      return newUser;\n    } catch (e: any) {\n      error.value = e.message;\n      throw e;\n    } finally {\n      loading.value = false;\n    }\n  };\n\n  const updateUser = async (id: number, user: Partial<NewUser>) => {\n    loading.value = true;\n    error.value = null;\n    try {\n      const updatedUser = await $fetch(`/api/users/${id}`, {\n        method: 'PUT',\n        body: user,\n      });\n      const index = users.value.findIndex(u => u.id === id);\n      if (index !== -1) {\n        users.value[index] = updatedUser;\n      }\n      return updatedUser;\n    } catch (e: any) {\n      error.value = e.message;\n      throw e;\n    } finally {\n      loading.value = false;\n    }\n  };\n\n  const deleteUser = async (id: number) => {\n    loading.value = true;\n    error.value = null;\n    try {\n      await $fetch(`/api/users/${id}`, { method: 'DELETE' });\n      users.value = users.value.filter(u => u.id !== id);\n    } catch (e: any) {\n      error.value = e.message;\n      throw e;\n    } finally {\n      loading.value = false;\n    }\n  };\n\n  return {\n    users,\n    loading,\n    error,\n    fetchUsers,\n    getUser,\n    createUser,\n    updateUser,\n    deleteUser,\n  };\n}\n```\n\n### Page Components\n```vue\n<!-- pages/users/index.vue -->\n<script setup lang=\"ts\">\nimport type { NewUser } from '~/server/db/schema';\n\nconst {\n  users,\n  loading,\n  error,\n  fetchUsers,\n  createUser,\n  deleteUser\n} = useUsers();\n\nconst newUser = ref<NewUser>({\n  name: '',\n  email: '',\n});\n\nonMounted(() => {\n  fetchUsers();\n});\n\nconst handleSubmit = async () => {\n  try {\n    await createUser(newUser.value);\n    newUser.value = { name: '', email: '' };\n  } catch (error) {\n    console.error('Failed to create user:', error);\n  }\n};\n</script>\n\n<template>\n  <div>\n    <h1>Users</h1>\n\n    <div v-if=\"loading\">Loading...</div>\n    <div v-else-if=\"error\" class=\"error\">{{ error }}</div>\n\n    <form @submit.prevent=\"handleSubmit\">\n      <input\n        v-model=\"newUser.name\"\n        placeholder=\"Name\"\n        required\n      />\n      <input\n        v-model=\"newUser.email\"\n        type=\"email\"\n        placeholder=\"Email\"\n        required\n      />\n      <button type=\"submit\">Add User</button>\n    </form>\n\n    <ul v-if=\"users.length\">\n      <li v-for=\"user in users\" :key=\"user.id\">\n        {{ user.name }} ({{ user.email }})\n        <button @click=\"deleteUser(user.id)\">Delete</button>\n      </li>\n    </ul>\n    <p v-else>No users found.</p>\n  </div>\n</template>\n\n<!-- pages/users/[id].vue -->\n<script setup lang=\"ts\">\nconst route = useRoute();\nconst router = useRouter();\n\nconst id = parseInt(route.params.id as string);\nconst { getUser, updateUser } = useUsers();\n\nconst user = ref(await getUser(id));\n\nconst handleSubmit = async (e: Event) => {\n  const form = e.target as HTMLFormElement;\n  const formData = new FormData(form);\n\n  try {\n    await updateUser(id, {\n      name: formData.get('name') as string,\n      email: formData.get('email') as string,\n    });\n    router.push('/users');\n  } catch (error) {\n    console.error('Failed to update user:', error);\n  }\n};\n</script>\n\n<template>\n  <div>\n    <h1>Edit User</h1>\n\n    <form @submit.prevent=\"handleSubmit\">\n      <input\n        name=\"name\"\n        :value=\"user.name\"\n        placeholder=\"Name\"\n        required\n      />\n      <input\n        name=\"email\"\n        type=\"email\"\n        :value=\"user.email\"\n        placeholder=\"Email\"\n        required\n      />\n      <button type=\"submit\">Update User</button>\n    </form>\n  </div>\n</template>\n```\n\n## Best Practices\n\n1. **Schema Management**\n   - Define schemas using Drizzle's type-safe builders\n   - Use migrations for schema changes\n   - Keep schema files organized and modular\n\n2. **Database Access**\n   - Keep database logic in server-side code\n   - Use typed queries with interfaces\n   - Implement proper error handling\n\n3. **Query Safety**\n   - Use Drizzle's query builders\n   - Validate input data before queries\n   - Implement proper error handling\n\n4. **Performance**\n   - Use connection pooling\n   - Implement pagination for large datasets\n   - Cache frequently accessed data\n\n5. **Type Safety**\n   - Use Drizzle's type inference\n   - Define proper interfaces\n   - Implement proper validation\n\n## Security Considerations\n\n1. **Database Access**\n   - Use least privilege database users\n   - Enable SSL for database connections\n   - Regularly rotate database credentials\n\n2. **Query Safety**\n   - Use Drizzle's query builders to prevent SQL injection\n   - Validate and sanitize all user inputs\n   - Implement rate limiting\n\n3. **Data Protection**\n   - Encrypt sensitive data\n   - Implement proper access controls\n   - Regular security audits\n\n## Troubleshooting\n\nCommon issues and solutions:\n\n1. **Connection Issues**\n   - Verify database URL format\n   - Check network connectivity\n   - Ensure SSL is properly configured\n\n2. **Migration Issues**\n   - Check schema syntax\n   - Verify migration files\n   - Run migrations in order\n\n3. **Performance Problems**\n   - Monitor query execution time\n   - Check for missing indexes\n   - Optimize large queries\n\n## Additional Resources\n\n- [Drizzle Documentation](https://orm.drizzle.team)\n- [Nuxt 3 Documentation](https://nuxt.com/docs)\n- [PostgreSQL Documentation](https://www.postgresql.org/docs/) ",
+        "filePath": "prompts/drizzle-nuxt/setup-drizzle-nuxt.md"
       }
     ],
-    "filePath": "prompts/Vue.js/aiprompt.json"
+    "filePath": "prompts/drizzle-nuxt/aiprompt.json"
+  },
+  {
+    "name": "Firebase Nuxt Integration Setup",
+    "description": "Guidelines for setting up and integrating Firebase with Nuxt 3 applications",
+    "type": "setup",
+    "slug": "firebase-nuxt-setup",
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "api",
+      "db",
+      "auth"
+    ],
+    "tags": [
+      "realtime",
+      "nosql"
+    ],
+    "tech_stack": {
+      "framework": "nuxt",
+      "service": "firebase"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "setup-firebase-nuxt.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-firebase-nuxt-setup-firebase-nuxt.md",
+        "description": "",
+        "globs": "",
+        "content": "# Firebase + Nuxt Integration Setup Guide\n\nThis guide provides step-by-step instructions for integrating Firebase with Nuxt 3 using VueFire.\n\n## Prerequisites\n- Node.js and npm installed\n- Nuxt 3 project set up\n- Firebase account and project created\n- Basic understanding of Nuxt and Firebase\n\n## Installation\n\n1. Install required dependencies:\n```bash\nnpm install firebase nuxt-vuefire\n```\n\n2. Configure Nuxt and Firebase in `nuxt.config.ts`:\n```typescript\nexport default defineNuxtConfig({\n  modules: ['nuxt-vuefire'],\n  vuefire: {\n    config: {\n      apiKey: process.env.FIREBASE_API_KEY,\n      authDomain: process.env.FIREBASE_AUTH_DOMAIN,\n      projectId: process.env.FIREBASE_PROJECT_ID,\n      storageBucket: process.env.FIREBASE_STORAGE_BUCKET,\n      messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,\n      appId: process.env.FIREBASE_APP_ID\n    },\n    auth: {\n      enabled: true,\n      sessionCookie: true // Enable server-side auth\n    },\n    admin: {\n      // Optional: Enable Firebase Admin for server-side operations\n      serviceAccount: {\n        projectId: process.env.FIREBASE_ADMIN_PROJECT_ID,\n        clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,\n        privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY\n      }\n    }\n  },\n  runtimeConfig: {\n    public: {\n      firebaseApiKey: process.env.FIREBASE_API_KEY,\n      firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,\n      firebaseProjectId: process.env.FIREBASE_PROJECT_ID,\n      firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,\n      firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,\n      firebaseAppId: process.env.FIREBASE_APP_ID\n    }\n  }\n})\n```\n\n3. Create `.env` file:\n```env\nFIREBASE_API_KEY=your-api-key\nFIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com\nFIREBASE_PROJECT_ID=your-project-id\nFIREBASE_STORAGE_BUCKET=your-project.appspot.com\nFIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id\nFIREBASE_APP_ID=your-app-id\n\n# Optional: Firebase Admin SDK credentials\nFIREBASE_ADMIN_PROJECT_ID=your-project-id\nFIREBASE_ADMIN_CLIENT_EMAIL=your-client-email\nFIREBASE_ADMIN_PRIVATE_KEY=your-private-key\n```\n\n## Usage Examples\n\n### Authentication Composable\n\n1. Create `composables/useFirebaseAuth.ts`:\n```typescript\nimport { useFirebaseAuth, useCurrentUser } from 'vuefire'\nimport {\n  signInWithEmailAndPassword,\n  createUserWithEmailAndPassword,\n  signInWithPopup,\n  GoogleAuthProvider,\n  signOut as firebaseSignOut,\n  onAuthStateChanged,\n  type User\n} from 'firebase/auth'\n\nexport function useAuth() {\n  const auth = useFirebaseAuth()!\n  const user = useCurrentUser()\n  const router = useRouter()\n  const loading = ref(false)\n  const error = ref<string | null>(null)\n\n  // Email/Password Sign In\n  const signInWithEmail = async (email: string, password: string) => {\n    loading.value = true\n    error.value = null\n    try {\n      await signInWithEmailAndPassword(auth, email, password)\n      router.push('/dashboard')\n    } catch (e: any) {\n      error.value = e.message\n    } finally {\n      loading.value = false\n    }\n  }\n\n  // Email/Password Sign Up\n  const signUpWithEmail = async (email: string, password: string) => {\n    loading.value = true\n    error.value = null\n    try {\n      await createUserWithEmailAndPassword(auth, email, password)\n      router.push('/dashboard')\n    } catch (e: any) {\n      error.value = e.message\n    } finally {\n      loading.value = false\n    }\n  }\n\n  // Google Sign In\n  const signInWithGoogle = async () => {\n    loading.value = true\n    error.value = null\n    try {\n      const provider = new GoogleAuthProvider()\n      await signInWithPopup(auth, provider)\n      router.push('/dashboard')\n    } catch (e: any) {\n      error.value = e.message\n    } finally {\n      loading.value = false\n    }\n  }\n\n  // Sign Out\n  const signOut = async () => {\n    loading.value = true\n    error.value = null\n    try {\n      await firebaseSignOut(auth)\n      router.push('/')\n    } catch (e: any) {\n      error.value = e.message\n    } finally {\n      loading.value = false\n    }\n  }\n\n  return {\n    user,\n    loading,\n    error,\n    signInWithEmail,\n    signUpWithEmail,\n    signInWithGoogle,\n    signOut\n  }\n}\n```\n\n### Firestore Composables\n\n1. Create `composables/useFirestore.ts`:\n```typescript\nimport { useFirestore, useCollection, useDocument } from 'vuefire'\nimport {\n  collection,\n  doc,\n  query,\n  where,\n  orderBy,\n  limit,\n  addDoc,\n  updateDoc,\n  deleteDoc,\n  type DocumentData,\n  type QueryConstraint\n} from 'firebase/firestore'\n\nexport function useFirestoreCollection<T = DocumentData>(\n  path: string,\n  constraints?: {\n    where?: [string, firebase.firestore.WhereFilterOp, any][];\n    orderBy?: [string, 'asc' | 'desc'][];\n    limit?: number;\n  }\n) {\n  const db = useFirestore()\n  const loading = ref(false)\n  const error = ref<string | null>(null)\n\n  const buildQuery = () => {\n    let collectionRef = collection(db, path)\n    const queryConstraints: QueryConstraint[] = []\n\n    if (constraints) {\n      if (constraints.where) {\n        constraints.where.forEach(([field, op, value]) => {\n          queryConstraints.push(where(field, op, value))\n        })\n      }\n\n      if (constraints.orderBy) {\n        constraints.orderBy.forEach(([field, direction]) => {\n          queryConstraints.push(orderBy(field, direction))\n        })\n      }\n\n      if (constraints.limit) {\n        queryConstraints.push(limit(constraints.limit))\n      }\n    }\n\n    return queryConstraints.length > 0\n      ? query(collectionRef, ...queryConstraints)\n      : collectionRef\n  }\n\n  const data = useCollection<T>(buildQuery())\n\n  const add = async (document: Omit<T, 'id'>) => {\n    loading.value = true\n    error.value = null\n    try {\n      const docRef = await addDoc(collection(db, path), document)\n      return docRef.id\n    } catch (e: any) {\n      error.value = e.message\n      throw e\n    } finally {\n      loading.value = false\n    }\n  }\n\n  return {\n    data,\n    loading,\n    error,\n    add\n  }\n}\n\nexport function useFirestoreDocument<T = DocumentData>(path: string, id: string) {\n  const db = useFirestore()\n  const loading = ref(false)\n  const error = ref<string | null>(null)\n\n  const docRef = doc(db, path, id)\n  const data = useDocument<T>(docRef)\n\n  const update = async (updates: Partial<T>) => {\n    loading.value = true\n    error.value = null\n    try {\n      await updateDoc(docRef, updates as DocumentData)\n    } catch (e: any) {\n      error.value = e.message\n      throw e\n    } finally {\n      loading.value = false\n    }\n  }\n\n  const remove = async () => {\n    loading.value = true\n    error.value = null\n    try {\n      await deleteDoc(docRef)\n    } catch (e: any) {\n      error.value = e.message\n      throw e\n    } finally {\n      loading.value = false\n    }\n  }\n\n  return {\n    data,\n    loading,\n    error,\n    update,\n    remove\n  }\n}\n```\n\n### Storage Composable\n\n1. Create `composables/useStorage.ts`:\n```typescript\nimport { useFirebaseStorage } from 'vuefire'\nimport {\n  ref as storageRef,\n  uploadBytes,\n  getDownloadURL,\n  deleteObject\n} from 'firebase/storage'\n\nexport function useStorage(path: string) {\n  const storage = useFirebaseStorage()!\n  const loading = ref(false)\n  const error = ref<string | null>(null)\n  const downloadURL = ref<string | null>(null)\n\n  const upload = async (file: File) => {\n    loading.value = true\n    error.value = null\n    try {\n      const fileRef = storageRef(storage, `${path}/${file.name}`)\n      await uploadBytes(fileRef, file)\n      downloadURL.value = await getDownloadURL(fileRef)\n      return downloadURL.value\n    } catch (e: any) {\n      error.value = e.message\n      throw e\n    } finally {\n      loading.value = false\n    }\n  }\n\n  const remove = async (filename: string) => {\n    loading.value = true\n    error.value = null\n    try {\n      const fileRef = storageRef(storage, `${path}/${filename}`)\n      await deleteObject(fileRef)\n      downloadURL.value = null\n    } catch (e: any) {\n      error.value = e.message\n      throw e\n    } finally {\n      loading.value = false\n    }\n  }\n\n  return {\n    loading,\n    error,\n    downloadURL,\n    upload,\n    remove\n  }\n}\n```\n\n### Example Components\n\n1. Authentication Component:\n```vue\n<!-- components/Auth.vue -->\n<template>\n  <div>\n    <div v-if=\"error\" class=\"error\">{{ error }}</div>\n    \n    <form @submit.prevent=\"handleSubmit\" v-if=\"!user\">\n      <input\n        v-model=\"email\"\n        type=\"email\"\n        placeholder=\"Email\"\n        required\n      />\n      <input\n        v-model=\"password\"\n        type=\"password\"\n        placeholder=\"Password\"\n        required\n      />\n      <button type=\"submit\" :disabled=\"loading\">\n        {{ isSignUp ? 'Sign Up' : 'Sign In' }}\n      </button>\n      <button\n        type=\"button\"\n        @click=\"signInWithGoogle\"\n        :disabled=\"loading\"\n      >\n        Sign in with Google\n      </button>\n      <a href=\"#\" @click.prevent=\"isSignUp = !isSignUp\">\n        {{ isSignUp ? 'Already have an account?' : 'Need an account?' }}\n      </a>\n    </form>\n\n    <div v-else>\n      <p>Welcome, {{ user.email }}</p>\n      <button @click=\"signOut\" :disabled=\"loading\">Sign Out</button>\n    </div>\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nconst {\n  user,\n  loading,\n  error,\n  signInWithEmail,\n  signUpWithEmail,\n  signInWithGoogle,\n  signOut\n} = useAuth()\n\nconst email = ref('')\nconst password = ref('')\nconst isSignUp = ref(false)\n\nconst handleSubmit = async () => {\n  if (isSignUp.value) {\n    await signUpWithEmail(email.value, password.value)\n  } else {\n    await signInWithEmail(email.value, password.value)\n  }\n}\n</script>\n```\n\n2. Firestore CRUD Component:\n```vue\n<!-- components/TodoList.vue -->\n<template>\n  <div>\n    <div v-if=\"error\" class=\"error\">{{ error }}</div>\n\n    <form @submit.prevent=\"handleSubmit\">\n      <input\n        v-model=\"newTodo\"\n        type=\"text\"\n        placeholder=\"New todo\"\n        required\n      />\n      <button type=\"submit\" :disabled=\"loading\">Add Todo</button>\n    </form>\n\n    <ul v-if=\"todos.data\">\n      <li v-for=\"todo in todos.data\" :key=\"todo.id\">\n        <span>{{ todo.text }}</span>\n        <button\n          @click=\"deleteTodo(todo.id)\"\n          :disabled=\"loading\"\n        >\n          Delete\n        </button>\n      </li>\n    </ul>\n  </div>\n</template>\n\n<script setup lang=\"ts\">\ninterface Todo {\n  id: string\n  text: string\n  completed: boolean\n  createdAt: Date\n}\n\nconst newTodo = ref('')\nconst todos = useFirestoreCollection<Todo>('todos', {\n  orderBy: [['createdAt', 'desc']]\n})\n\nconst handleSubmit = async () => {\n  if (!newTodo.value.trim()) return\n\n  await todos.add({\n    text: newTodo.value,\n    completed: false,\n    createdAt: new Date()\n  })\n\n  newTodo.value = ''\n}\n\nconst deleteTodo = async (id: string) => {\n  const todo = useFirestoreDocument<Todo>('todos', id)\n  await todo.remove()\n}\n</script>\n```\n\n## Server-Side Usage\n\n1. Create server middleware for authentication:\n```typescript\n// server/middleware/auth.ts\nexport default defineEventHandler(async (event) => {\n  const session = await getUserSession(event)\n  if (!session && !event.path.startsWith('/api/public')) {\n    throw createError({\n      statusCode: 401,\n      message: 'Unauthorized'\n    })\n  }\n})\n```\n\n2. Create API routes with Firebase Admin:\n```typescript\n// server/api/users/[id].ts\nimport { getFirestore } from 'firebase-admin/firestore'\n\nexport default defineEventHandler(async (event) => {\n  const id = event.context.params.id\n  const db = getFirestore()\n  \n  try {\n    const doc = await db.collection('users').doc(id).get()\n    if (!doc.exists) {\n      throw createError({\n        statusCode: 404,\n        message: 'User not found'\n      })\n    }\n    return { id: doc.id, ...doc.data() }\n  } catch (error: any) {\n    throw createError({\n      statusCode: 500,\n      message: error.message\n    })\n  }\n})\n```\n\n## Security Considerations\n1. Use environment variables for Firebase configuration\n2. Implement proper Firebase security rules\n3. Enable App Check for additional security\n4. Use server-side session cookies for authentication\n5. Validate data on both client and server\n6. Implement rate limiting\n7. Use Firebase Admin SDK for server-side operations\n\n## Best Practices\n1. Use composables for Firebase services\n2. Implement proper error handling\n3. Use TypeScript for better type safety\n4. Follow Nuxt 3 conventions\n5. Implement proper loading states\n6. Use Firebase emulators for development\n7. Keep Firebase configuration secure\n8. Use proper data validation\n\n## Troubleshooting\n1. Check Nuxt server logs\n2. Monitor Firebase console\n3. Verify security rules\n4. Check network requests\n5. Validate environment variables\n6. Check Firebase emulator\n7. Verify authentication state\n\n## Additional Resources\n- [Nuxt 3 Documentation](https://nuxt.com/docs)\n- [VueFire Documentation](https://vuefire.vuejs.org/)\n- [Firebase Documentation](https://firebase.google.com/docs)\n- [Firebase Console](https://console.firebase.google.com/) ",
+        "filePath": "prompts/firebase-nuxt/setup-firebase-nuxt.md"
+      }
+    ],
+    "filePath": "prompts/firebase-nuxt/aiprompt.json"
+  },
+  {
+    "name": "Neon Remix Integration Setup",
+    "description": "Guidelines for setting up and integrating Neon serverless Postgres with Remix applications",
+    "type": "setup",
+    "slug": "neon-remix-setup",
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "backend",
+      "db"
+    ],
+    "tags": [
+      "serverless"
+    ],
+    "tech_stack": {
+      "framework": "remix",
+      "service": "neon"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "setup-neon-remix.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-neon-remix-setup-neon-remix.md",
+        "description": "",
+        "globs": "",
+        "content": "# Neon + Remix Integration Setup Guide\n\nThis guide provides step-by-step instructions for integrating Neon serverless Postgres with a Remix application.\n\n## Prerequisites\n- Node.js and npm installed\n- Remix project initialized\n- Neon account and project created\n\n## Installation\n\n1. Install required dependencies:\n```bash\nnpm install @neondatabase/serverless\n```\n\n## Configuration\n\n1. Create a `.env` file in your project root:\n```env\nDATABASE_URL=postgresql://<user>:<password>@<endpoint>.neon.tech/<dbname>?sslmode=require\n```\n\n2. Create a database configuration file `app/lib/db.server.ts`:\n```typescript\nimport { neon } from '@neondatabase/serverless';\n\nconst sql = neon(process.env.DATABASE_URL!);\n\nexport { sql };\n```\n\n## Usage Examples\n\n### Basic Database Operations\n```typescript\n// app/routes/users.tsx\nimport { json, type LoaderFunctionArgs } from '@remix-run/node';\nimport { useLoaderData } from '@remix-run/react';\nimport { sql } from '~/lib/db.server';\n\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nexport async function loader({ request }: LoaderFunctionArgs) {\n  try {\n    const users = await sql<User[]>`\n      SELECT id, name, email\n      FROM users\n      ORDER BY name ASC\n    `;\n    return json({ users });\n  } catch (error: any) {\n    throw new Error(`Failed to fetch users: ${error.message}`);\n  }\n}\n\nexport async function action({ request }: LoaderFunctionArgs) {\n  const formData = await request.formData();\n  const action = formData.get('action');\n\n  try {\n    switch (action) {\n      case 'create': {\n        const name = formData.get('name') as string;\n        const email = formData.get('email') as string;\n\n        const [user] = await sql<User[]>`\n          INSERT INTO users (name, email)\n          VALUES (${name}, ${email})\n          RETURNING id, name, email\n        `;\n        return json({ user });\n      }\n\n      case 'update': {\n        const id = parseInt(formData.get('id') as string);\n        const name = formData.get('name') as string;\n        const email = formData.get('email') as string;\n\n        const [user] = await sql<User[]>`\n          UPDATE users\n          SET name = ${name}, email = ${email}\n          WHERE id = ${id}\n          RETURNING id, name, email\n        `;\n        return json({ user });\n      }\n\n      case 'delete': {\n        const id = parseInt(formData.get('id') as string);\n        await sql`DELETE FROM users WHERE id = ${id}`;\n        return json({ success: true });\n      }\n\n      default:\n        throw new Error('Invalid action');\n    }\n  } catch (error: any) {\n    throw new Error(`Failed to perform action: ${error.message}`);\n  }\n}\n\nexport default function Users() {\n  const { users } = useLoaderData<typeof loader>();\n\n  return (\n    <div>\n      <h1>Users</h1>\n\n      <form method=\"post\">\n        <input type=\"hidden\" name=\"action\" value=\"create\" />\n        <input type=\"text\" name=\"name\" placeholder=\"Name\" required />\n        <input type=\"email\" name=\"email\" placeholder=\"Email\" required />\n        <button type=\"submit\">Add User</button>\n      </form>\n\n      <ul>\n        {users.map((user) => (\n          <li key={user.id}>\n            <form method=\"post\" style={{ display: 'inline' }}>\n              <input type=\"hidden\" name=\"action\" value=\"delete\" />\n              <input type=\"hidden\" name=\"id\" value={user.id} />\n              <span>{user.name} ({user.email})</span>\n              <button type=\"submit\">Delete</button>\n            </form>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n```\n\n### Database Utility Functions\n```typescript\n// app/lib/db.utils.server.ts\nimport { sql } from './db.server';\n\nexport async function withTransaction<T>(\n  callback: (transaction: typeof sql) => Promise<T>\n): Promise<T> {\n  try {\n    await sql`BEGIN`;\n    const result = await callback(sql);\n    await sql`COMMIT`;\n    return result;\n  } catch (error) {\n    await sql`ROLLBACK`;\n    throw error;\n  }\n}\n\nexport async function createPaginatedQuery<T>(\n  baseQuery: string,\n  page: number,\n  pageSize: number,\n  params: any[] = []\n): Promise<{ data: T[]; total: number; pages: number }> {\n  const offset = (page - 1) * pageSize;\n  const countQuery = `SELECT COUNT(*) as total FROM (${baseQuery}) as subquery`;\n  \n  const [{ total }] = await sql.raw(countQuery, params);\n  const data = await sql.raw<T[]>(\n    `${baseQuery} LIMIT ${pageSize} OFFSET ${offset}`,\n    params\n  );\n\n  return {\n    data,\n    total: parseInt(total),\n    pages: Math.ceil(total / pageSize)\n  };\n}\n\nexport async function executeInBatch<T>(\n  items: T[],\n  batchSize: number,\n  callback: (batch: T[]) => Promise<void>\n): Promise<void> {\n  for (let i = 0; i < items.length; i += batchSize) {\n    const batch = items.slice(i, i + batchSize);\n    await callback(batch);\n  }\n}\n```\n\n## Best Practices\n\n1. **Environment Configuration**\n   - Use environment variables for database credentials\n   - Never commit sensitive credentials to version control\n   - Use different database branches for development/production\n\n2. **Database Access**\n   - Keep database logic in server-only files (*.server.ts)\n   - Use typed queries with interfaces\n   - Implement proper error handling\n\n3. **Query Safety**\n   - Use parameterized queries to prevent SQL injection\n   - Validate input data before queries\n   - Implement proper error handling\n\n4. **Performance**\n   - Use connection pooling when possible\n   - Implement pagination for large datasets\n   - Cache frequently accessed data\n\n5. **Type Safety**\n   - Define interfaces for database models\n   - Use TypeScript's strict mode\n   - Implement proper data validation\n\n## Security Considerations\n\n1. **Database Access**\n   - Use least privilege database users\n   - Enable SSL for database connections\n   - Regularly rotate database credentials\n\n2. **Query Safety**\n   - Always use parameterized queries\n   - Validate and sanitize all user inputs\n   - Implement rate limiting\n\n3. **Data Protection**\n   - Encrypt sensitive data\n   - Implement proper access controls\n   - Regular security audits\n\n## Troubleshooting\n\nCommon issues and solutions:\n\n1. **Connection Issues**\n   - Verify database URL format\n   - Check network connectivity\n   - Ensure SSL is properly configured\n\n2. **Query Errors**\n   - Check SQL syntax\n   - Verify table and column names\n   - Validate data types\n\n3. **Performance Problems**\n   - Monitor query execution time\n   - Check for missing indexes\n   - Optimize large queries\n\n## Additional Resources\n\n- [Neon Documentation](https://neon.tech/docs)\n- [Remix Documentation](https://remix.run/docs)\n- [TypeScript Documentation](https://www.typescriptlang.org/) ",
+        "filePath": "prompts/neon-remix/setup-neon-remix.md"
+      }
+    ],
+    "filePath": "prompts/neon-remix/aiprompt.json"
+  },
+  {
+    "name": "Next.js 15 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Next.js 15 development, covering project structure, TypeScript usage, and more",
+    "type": "rule",
+    "slug": "next-coding-standards",
+    "development_process": [
+      "plan",
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "next"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-next-coding-standards.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-next-15-rule-next-coding-standards.md",
+        "description": "Coding Standards & Rules for Nextjs 15 and React 19",
+        "globs": "**/*.tsx, **/*.ts, **/*.js, **/*.jsx",
+        "content": "\n# Project Structure And App Router\n\n- Use the App Router (`app` directory) in Next.js 15\n- Co-locate route handlers, loading and error states, and page-level components within the `app` directory\n- Use route groups (parentheses) to organize without affecting URLs\n- Use parallel or intercepting routes for complex layouts and modals\n- Place API route handlers in `app/api`\n\n# Server Components\n\n- Default to Server Components for data fetching and rendering\n- Keep them free of client-side hooks or browser APIs\n- Use `Suspense` boundaries for streaming and granular loading states\n- Use `generateMetadata` in `layout.tsx` or `page.tsx` for dynamic SEO metadata\n- Prefer `fetch` with `revalidate` options for caching in Server Components\n- Implement `generateStaticParams` for static builds of dynamic routes\n- Use `unstable_noStore` for fully dynamic, non-cached rendering\n- Use `Promise.all` for parallel data fetching and `React.cache` for request deduplication\n\n# Client Components\n\n- Mark Client Components with `\"use client\"` at the top\n- Use `next/navigation` hooks such as `useRouter` and `usePathname` instead of `next/router`\n- Handle form state with `useFormStatus`, `useFormState`, and `useOptimistic` when using Server Actions\n- Include client-specific logic like user interaction and browser APIs here\n\n# Data Fetching\n\n- Use the built-in `fetch` in Server Components for data retrieval\n- Pass caching strategies with `fetch(url, { next: { revalidate: <seconds> } })`\n- Keep external requests minimal if deploying to serverless environments\n- Avoid fetching in Client Components if it can be done on the server\n\n# Route Handlers\n\n- Replace deprecated `pages/api` routes with Route Handlers under `app/api`\n- `GET` handlers are static by default unless otherwise configured\n- Validate incoming data and use proper CORS or security measures\n- Support JSON, text, and other file responses\n\n# Server Actions\n\n- Define Server Actions with the `use server` directive\n- Call them from both Server and Client Components for data mutations\n- Use `useFormStatus` and `useFormState` in Client Components to track form submissions\n- Use `useOptimistic` to update the UI optimistically before server confirmation\n\n# Middleware And Edge Runtime\n\n- Use `middleware.ts` for route interception, authentication, redirects, and rewrites\n- Use the Edge Runtime for faster startup and location-based personalization\n- Handle cookies, headers, and dynamic rewrites in `middleware`\n- Be mindful of constraints when running at the edge\n\n# Styling And Assets\n\n- Use CSS Modules, Tailwind CSS, or CSS-in-JS solutions\n- Use the built-in `<Image />` component for optimized images\n- Consider built-in font optimization with `@next/font` or newer APIs\n\n# Performance\n\n- Use streaming and `Suspense` for faster initial rendering\n- Dynamically import large dependencies in Client Components\n- Use `React.useMemo` and `React.useCallback` in Client Components to avoid re-renders\n- Use `fetch` caching and revalidation carefully\n\n# Deployment\n\n- Use Vercel for integrated features or self-host with Node or Docker\n- Test SSR and static outputs thoroughly\n- Keep environment variables secure, never expose private values on the client\n\n# Testing And Linting\n\n- Use `next lint` with ESLint and integrate Prettier\n- Use Jest, React Testing Library, or Cypress for testing\n- Keep test files near related components\n\n# Dos\n\n- Do organize routes and components in the `app` directory\n- Do leverage Server Components for data fetching\n- Do use Server Actions for form submissions\n- Do use `next/link` for internal routing and prefetching\n- Do implement loading states with `loading` files\n- Do optimize images with the `<Image />` component\n- Do separate server and client logic carefully\n\n# Donts\n\n- Dont mix the `pages` and `app` directories for routing\n- Dont fetch data in Client Components if it can be done on the server\n- Dont use `router.push` for form submissions when Server Actions are available\n- Never expose sensitive environment variables in client code\n- Dont import client-only modules into Server Components\n- Avoid using `next/router` in App Router projects\n",
+        "filePath": "prompts/next-15/rule-next-coding-standards.md"
+      }
+    ],
+    "filePath": "prompts/next-15/aiprompt.json"
+  },
+  {
+    "name": "Next.js 15 Feature Guidelines",
+    "description": "Comprehensive guidelines for adding new features in Next.js 15 applications, covering pages, components, and API routes",
+    "type": "feature",
+    "slug": "next-feature-guidelines",
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "server-components"
+    ],
+    "tech_stack": {
+      "framework": "next"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "add-feature-next.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-next-15-add-feature-next.md",
+        "description": "Guidelines for adding new features in Next.js 15 applications",
+        "globs": "**/*.tsx, **/*.ts",
+        "content": "\nYou are a senior Next.js 15 developer with expertise in building scalable applications.\n\n# App Router Features\n- Use server components by default. Example: app/products/page.tsx\n- Implement parallel routes. Example: app/@modal/login/page.tsx\n- Use intercepting routes. Example: app/feed/(..)photo/[id]/page.tsx\n- Implement route groups. Example: app/(auth)/login/page.tsx\n- Use loading states with suspense. Example: app/products/loading.tsx\n\n# Data Fetching\n- Use server-side data fetching with caching. Example:\n```typescript\nasync function getProduct(id: string) {\n  const res = await fetch(`/api/products/${id}`, { \n    next: { revalidate: 3600 } \n  })\n  return res.json()\n}\n```\n\n- Implement streaming with suspense. Example:\n```typescript\nimport { Suspense } from 'react'\n\nexport default function Page() {\n  return (\n    <Suspense fallback={<ProductSkeleton />}>\n      <ProductInfo />\n    </Suspense>\n  )\n}\n```\n\n- Use parallel data fetching. Example:\n```typescript\nasync function ProductPage() {\n  const [product, reviews] = await Promise.all([\n    getProduct(id),\n    getProductReviews(id)\n  ])\n  return <ProductDetails product={product} reviews={reviews} />\n}\n```\n\n# Server Actions\n- Use form actions for mutations. Example:\n```typescript\nexport default function AddToCart() {\n  async function addItem(formData: FormData) {\n    'use server'\n    const id = formData.get('productId')\n    await db.cart.add({ productId: id })\n    revalidatePath('/cart')\n  }\n  \n  return (\n    <form action={addItem}>\n      <input name=\"productId\" type=\"hidden\" value=\"123\" />\n      <button type=\"submit\">Add to Cart</button>\n    </form>\n  )\n}\n```\n\n# Component Architecture\n- Use client components when needed. Example:\n```typescript\n'use client'\n\nexport function InteractiveButton({ onClick }: { onClick: () => void }) {\n  const [isLoading, setLoading] = useState(false)\n  \n  return (\n    <button \n      onClick={async () => {\n        setLoading(true)\n        await onClick()\n        setLoading(false)\n      }}\n      disabled={isLoading}\n    >\n      {isLoading ? 'Loading...' : 'Click me'}\n    </button>\n  )\n}\n```\n\n# Server Components\n- Create type-safe server components. Example:\n```typescript\ninterface ProductGridProps {\n  category: string\n  sort?: 'asc' | 'desc'\n}\n\nexport async function ProductGrid({ category, sort }: ProductGridProps) {\n  const products = await db.products.findMany({\n    where: { category },\n    orderBy: { price: sort }\n  })\n  \n  return (\n    <div className=\"grid grid-cols-3 gap-4\">\n      {products.map(product => (\n        <ProductCard key={product.id} product={product} />\n      ))}\n    </div>\n  )\n}\n```\n\n# API Routes\n- Use route handlers with proper types. Example:\n```typescript\nimport { NextRequest } from 'next/server'\n\nexport async function GET(request: NextRequest) {\n  const { searchParams } = request.nextUrl\n  const query = searchParams.get('q')\n  \n  const products = await db.products.search(query)\n  return Response.json(products)\n}\n```\n\n# Performance Features\n- Use image optimization. Example: <Image src={src} width={300} height={200} alt=\"Product\" />\n- Implement route prefetching. Example: <Link href=\"/products\" prefetch={true}>Products</Link>\n- Use React Suspense for code splitting. Example: const Modal = lazy(() => import('./Modal'))\n- Implement proper caching strategies. Example: export const revalidate = 3600\n- Use streaming for large lists. Example: <Suspense><ProductStream /></Suspense>\n\n# Metadata\n- Use dynamic metadata generation. Example:\n```typescript\nexport async function generateMetadata({ params }: Props) {\n  const product = await getProduct(params.id)\n  \n  return {\n    title: product.name,\n    description: product.description,\n    openGraph: {\n      images: [{ url: product.image }]\n    }\n  }\n}\n```\n\n# Error Handling\n- Use error boundaries effectively. Example: app/products/[id]/error.tsx\n- Implement not-found pages. Example: app/products/[id]/not-found.tsx\n- Use loading states. Example: app/products/loading.tsx\n- Implement global error handling. Example: app/global-error.tsx\n- Use proper API error responses\n\n# SEO Features\n- Use metadata API for SEO. Example:\n```typescript\nexport const metadata = {\n  title: 'Product Catalog',\n  description: 'Browse our products',\n  robots: {\n    index: true,\n    follow: true\n  }\n}\n```\n- Implement dynamic sitemap generation\n- Use proper canonical URLs\n- Implement JSON-LD structured data\n- Use proper OpenGraph tags",
+        "filePath": "prompts/next-15/add-feature-next.md"
+      }
+    ],
+    "filePath": "prompts/next-15/aiprompt.json"
+  },
+  {
+    "name": "Nuxt 3 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Nuxt 3 development, covering project structure, TypeScript usage, and more",
+    "type": "rule",
+    "slug": "nuxt-coding-standards",
+    "development_process": [
+      "plan",
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "nuxt"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-nuxt-coding-standards.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-nuxt-3-rule-nuxt-coding-standards.md",
+        "description": "Framework-specific coding standards for Nuxt 3 applications",
+        "globs": "**/*.vue, **/*.ts, **/*.js",
+        "content": "\nYou are a senior Nuxt 3 developer with extensive expertise in modern Nuxt development, TypeScript, and web development best practices for 2025. Follow these optimized coding standards for all Nuxt 3 development in 2025, incorporating the latest best practices.\n\n# Project Structure\n- Maintain Nuxt's directory-based structure for clarity and convention.\n- Organize components within `components/`, categorized by feature or domain.\n- Place pages in `pages/` to leverage Nuxt's file-based routing.\n- Store composables in `composables/` for reusable logic.\n- Keep layouts in `layouts/` for consistent page structures.\n- Place middleware in `middleware/` for route-level logic.\n- Store plugins in `plugins/` for Vue and Nuxt extensions.\n- Keep API routes in `server/api/` for backend functionality.\n- Place utilities in `utils/` or `lib/` for helper functions.\n- Store static assets in `public/`.\n\n# Code Style\n- Use TypeScript consistently for type safety and maintainability.\n- Prefer `<script setup>` syntax for concise and performant components.\n- Follow Vue 3 Composition API for all component logic.\n- Adhere to PascalCase for component filenames and names (e.g., `MyComponent.vue`).\n- Use kebab-case for directories and other non-component filenames.\n\n# TypeScript Usage\n- Enforce strict mode in TypeScript configuration.\n- Define explicit types for component props, composables, and API responses.\n- Avoid `any` type; utilize generics for reusable and type-safe code.\n- Leverage type inference where it enhances readability but be explicit for clarity in complex types.\n- Use interfaces for defining object structures and class contracts.\n\n# Components\n- Keep components small, focused, and reusable, adhering to the single responsibility principle.\n- Utilize `<script setup>` for cleaner, more performant components with Composition API.\n- Implement clear prop validation and use TypeScript to define prop types for component contracts.\n- Use slots for creating flexible and composable components.\n- Optimize component performance by minimizing re-renders and using `memoization` where necessary.\n\n# State Management\n- Use `useState` for component-local state management for simplicity.\n- Implement Pinia for global or module-level state management, especially for complex applications requiring shared state across components.\n- Organize Pinia stores into modules for better maintainability and separation of concerns.\n- Utilize Vue 3's reactivity system for managing component state effectively.\n- Leverage Nuxt's built-in `useStorage()` for simple session management, utilizing key-value storage.\n\n# Data Fetching\n- Utilize `useFetch` for server-rendered data fetching, benefiting from SSR, caching, and reactive updates.\n- Implement `useAsyncData` for more complex data fetching scenarios, including error handling and transformations.\n- Use `$fetch` for client-side requests when SSR is not required, or within event handlers.\n- Handle loading and error states gracefully in templates to provide a smooth user experience.\n- Optimize data fetching by setting `lazy: true` for non-critical data to defer loading until after the initial render.\n\n# Routing\n- Adhere to Nuxt's file-based routing for page creation and navigation.\n- Use dynamic routes with `[param].vue` syntax for dynamic segments.\n- Implement nested routes using directory structures within the `pages/` directory.\n- Utilize `<NuxtLink>` component for internal navigation, ensuring accessibility and performance.\n- Use `navigateTo()` for programmatic navigation within composables or `<script setup>`.\n\n# Performance Optimization\n- Set `extractCSS: true` in `nuxt.config.ts` to reduce CSS bundle sizes.\n- Include `min-height` for main page layouts to prevent content layout shifts during loading.\n- Optimize images using `<NuxtImage>` and `<NuxtPicture>` components for responsive and optimized image delivery.\n\n# UI\n- For color mode handling, use the built-in '@nuxtjs/color-mode' with the 'useColorMode()' function.\n- use app.config.ts for app theme configuration.\n\n# SEO\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n- For SEO use useHead and useSeoMeta.\n\n# Development Setup\n- Place static assets in the `public/` directory for direct serving.\n- Utilize TypeScript throughout the project for enhanced type safety and developer experience.\n\n# Best Practices\n- Do: Leverage auto-imports, built-in storage, and Nuxt components for optimized development.\n- Do: Implement ESLint and Prettier for code quality and consistency.\n- Do: Utilize `<NuxtLink>` for secure navigation.\n- Do: Optimize performance with lazy hydration and efficient script loading.\n- Don't: Use deprecated routing syntax (`_id`, `_.vue`).\n- Don't: Rely on `this.$router` for navigation; use `navigateTo()`.\n- Don't: Neglect performance optimizations or error handling.",
+        "filePath": "prompts/nuxt-3/rule-nuxt-coding-standards.md"
+      }
+    ],
+    "filePath": "prompts/nuxt-3/aiprompt.json"
+  },
+  {
+    "name": "Nuxt 3 Feature Guidelines",
+    "description": "Comprehensive guidelines for adding new features in Nuxt 3 applications, covering pages, components, and API endpoints",
+    "type": "feature",
+    "slug": "nuxt-feature-guidelines",
+    "development_process": [
+      "plan",
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "composition-api"
+    ],
+    "tech_stack": {
+      "framework": "nuxt"
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning"
+    ],
+    "version": "1.0",
+    "files": [
+      "add-feature-nuxt.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-nuxt-3-add-feature-nuxt.md",
+        "description": "Guidelines for adding new features in Nuxt 3 applications",
+        "globs": "**/*.vue, **/*.ts, **/*.js",
+        "content": "\nYou are a senior Nuxt 3 developer with expertise in building scalable applications.\n\n# Page Features\n- Use Nuxt's file-based routing in pages directory. Example: pages/products/[id].vue\n- Implement hybrid rendering modes. Example: definePageMeta({ ssr: true, swr: 3600 })\n- Use route middleware for navigation guards. Example: definePageMeta({ middleware: ['auth'] })\n- Implement layout system effectively. Example: definePageMeta({ layout: 'custom' })\n- Use route validation with validate helper. Example: definePageMeta({ validate: route => /^\\d+$/.test(route.params.id) })\n\n# Data Fetching\n- Use useAsyncData for complex data operations. Example:\n```typescript\nconst { data, pending } = await useAsyncData('products', \n  () => $fetch('/api/products', { \n    query: { category: 'electronics' }\n  })\n)\n```\n\n- Implement useFetch for simple API calls. Example:\n```typescript\nconst { data: product } = await useFetch(`/api/products/${id}`, {\n  key: `product-${id}`,\n  pick: ['id', 'title', 'price']\n})\n```\n\n- Use useLazyFetch for deferred loading. Example:\n```typescript\nconst { pending, data: comments } = useLazyFetch(`/api/products/${id}/comments`, {\n  watch: [id]\n})\n```\n\n# State Management\n- Use useState for shared state. Example: const counter = useState('counter', () => 0)\n- Implement Pinia stores with auto-imports. Example:\n```typescript\nexport const useProductStore = defineStore('products', {\n  state: () => ({ items: [] as Product[] }),\n  actions: {\n    async fetch() {\n      this.items = await $fetch('/api/products')\n    }\n  }\n})\n```\n\n# Component Architecture\n- Use component slots for flexible layouts. Example:\n```vue\n<BaseCard>\n  <template #header>\n    <h2>{{ title }}</h2>\n  </template>\n  <template #default>\n    <p>{{ content }}</p>\n  </template>\n</BaseCard>\n```\n\n- Implement composables for reusable logic. Example:\n```typescript\nexport const useCart = () => {\n  const items = useState<CartItem[]>('cart-items', () => [])\n  const add = (product: Product) => items.value.push({ ...product, quantity: 1 })\n  return { items, add }\n}\n```\n\n# Server Features\n- Use Nitro API routes with typed handlers. Example:\n```typescript\nexport default defineEventHandler(async (event) => {\n  const { id } = getRouterParams(event)\n  const body = await readBody(event)\n  return await prisma.product.update({ \n    where: { id }, \n    data: body \n  })\n})\n```\n\n- Implement server middleware. Example:\n```typescript\nexport default defineEventHandler((event) => {\n  event.context.auth = { user: getUser(event) }\n})\n```\n\n# Performance Features\n- Use component lazy loading. Example: const Modal = defineAsyncComponent(() => import('./Modal.vue'))\n- Implement image optimization with Nuxt Image. Example: <NuxtImg src=\"/product.jpg\" width=\"300\" format=\"webp\" />\n- Use route level code splitting. Example: definePageMeta({ keepalive: true, key: route => route.fullPath })\n- Implement proper chunk naming. Example: defineNuxtConfig({ vite: { build: { rollupOptions: { output: { manualChunks: { vendor: ['vue'] } } } } } })\n- Use proper cache headers. Example: useHead({ cacheControl: 'max-age=3600' })\n\n# Composables\n- Create type-safe composables. Example:\n```typescript\nexport const useSearch = <T extends { id: string }>(url: string) => {\n  const query = ref('')\n  const results = ref<T[]>([])\n  \n  watch(query, async (value) => {\n    results.value = await $fetch(url, { \n      query: { search: value } \n    })\n  })\n  \n  return { query, results }\n}\n```\n\n# Error Handling\n- Use error boundaries with onErrorCaptured. Example: const error = useError()\n- Implement custom error pages. Example: error.vue with proper error props\n- Use proper API error handling. Example: createError({ statusCode: 404, message: 'Not found' })\n- Implement toast notifications for errors\n- Use proper validation error handling\n\n# SEO Features\n- Use useHead for dynamic meta tags. Example:\n```typescript\nuseHead({\n  title: computed(() => product.value?.title),\n  meta: [\n    { name: 'description', content: computed(() => product.value?.description) }\n  ]\n})\n```\n- Implement canonical URLs dynamically\n- Use proper OpenGraph tags\n- Implement JSON-LD structured data\n- Use proper sitemap generation ",
+        "filePath": "prompts/nuxt-3/add-feature-nuxt.md"
+      }
+    ],
+    "filePath": "prompts/nuxt-3/aiprompt.json"
   }
 ]

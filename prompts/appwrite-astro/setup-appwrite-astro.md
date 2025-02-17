@@ -1,6 +1,6 @@
 ---
 description: Guidelines for writing Astro apps with Appwrite
-globs: src/**/*.ts, src/**/*.astro
+globs: "src/**/*.ts, src/**/*.astro"
 ---
 
 # Appwrite + Astro Integration Setup Guide
