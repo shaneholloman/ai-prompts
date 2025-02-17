@@ -8,7 +8,7 @@
     "dev_categories": ["frontend", "api"],
     "tags": ["server-components"],
     "tech_stack": {
-      "framework": "nextjs"
+      "framework": "next"
     },
     "ai_editor": ["cursor"],
     "author": {
@@ -30,7 +30,7 @@
     "dev_categories": ["frontend", "documentation"],
     "tags": ["architecture"],
     "tech_stack": {
-      "framework": "nextjs"
+      "framework": "next"
     },
     "ai_editor": ["cursor"],
     "author": {
