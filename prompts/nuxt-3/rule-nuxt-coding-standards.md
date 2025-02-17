@@ -1,6 +1,6 @@
 ---
 description: "Framework-specific coding standards for Nuxt 3 applications"
-globs: **/*.vue, **/*.ts, **/*.js
+globs: "**/*.vue, **/*.ts, **/*.js"
 ---
 
 You are a senior Nuxt 3 developer with extensive expertise in modern Nuxt development, TypeScript, and web development best practices for 2025. Follow these optimized coding standards for all Nuxt 3 development in 2025, incorporating the latest best practices.

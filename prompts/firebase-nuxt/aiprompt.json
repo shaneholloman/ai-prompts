@@ -1,12 +1,12 @@
 [
   {
-    "name": "Firebase Nuxt Integration Setup",
-    "description": "Guidelines for setting up and integrating Firebase with Nuxt 3 applications",
+    "name": "Setup Firebase with Nuxt",
+    "description": "Guidelines for integrating Firebase backend services with Nuxt applications",
     "type": "setup",
-    "slug": "firebase-nuxt-setup",
+    "slug": "nuxt-firebase-setup",
     "development_process": ["implement", "test"],
-    "dev_categories": ["backend", "api", "db", "auth"],
-    "tags": ["realtime", "nosql"],
+    "dev_categories": ["backend", "auth", "db", "storage"],
+    "tags": ["baas"],
     "tech_stack": {
       "framework": "nuxt",
       "service": "firebase"
@@ -17,7 +17,7 @@
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning"],
+    "model": ["reasoning", "chat"],
     "version": "1.0",
     "files": ["setup-firebase-nuxt.md"],
     "published": true

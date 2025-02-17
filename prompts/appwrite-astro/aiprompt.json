@@ -1,12 +1,12 @@
 [
   {
-    "name": "Appwrite Astro Setup",
-    "description": "Guidelines for writing Astro apps with Appwrite authentication and database integration",
+    "name": "Setup Appwrite with Astro",
+    "description": "Guidelines for integrating Appwrite backend services with Astro applications",
     "type": "setup",
-    "slug": "appwrite-astro-setup",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "auth", "db"],
-    "tags": ["middleware"],
+    "slug": "astro-appwrite-setup",
+    "development_process": ["implement", "test"],
+    "dev_categories": ["backend", "auth", "db", "storage"],
+    "tags": ["baas"],
     "tech_stack": {
       "framework": "astro",
       "service": "appwrite"
@@ -17,7 +17,7 @@
       "url": "https://github.com/regenrek",
       "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
     },
-    "model": ["reasoning"],
+    "model": ["reasoning", "chat"],
     "version": "1.0",
     "files": ["setup-appwrite-astro.md"],
     "published": true
