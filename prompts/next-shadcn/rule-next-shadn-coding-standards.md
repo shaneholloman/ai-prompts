@@ -30,6 +30,8 @@ You are a senior Next.js (v15) developer with extensive expertise in modern Reac
 # ShadCN UI Integration
 - Structure: Keep ShadCN UI components in `@/components/ui/`
 - Tailwind CSS: ShadCN relies on Tailwind for styles, so ensure Tailwind is configured properly in `postcss.config.js` and `tailwind.config.js`. Use consistent class naming and purge unused CSS.
+- Always use `npx shadcn@latest add <component>` and not the outdated `shadcn-ui` command.
+
 
 # Components
 - Use Next.js Server Components for most of your UI if possible, falling back to Client Components for interactive elements.
