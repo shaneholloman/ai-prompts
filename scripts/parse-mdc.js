@@ -6,9 +6,10 @@
 /**
  * Parses front matter and content from .mdc files
  * @param {string} content - Raw file content
+ * @param {string} [filePath] - Optional file path for warning messages
  * @returns {{data: Object, content: string}} Parsed front matter and content
  */
-function parseMdc(content) {
+function parseMdc(content, filePath) {
   // Default return structure
   const result = {
     data: {},
@@ -17,12 +18,16 @@ function parseMdc(content) {
 
   // Check for front matter delimiters
   if (!content.startsWith("---\n")) {
+    console.warn(`Warning: No front matter delimiters found in ${filePath}`);
     return result;
   }
 
   // Find the closing front matter delimiter
   const secondDelimiter = content.indexOf("\n---\n", 4);
   if (secondDelimiter === -1) {
+    console.warn(
+      `Warning: Missing closing front matter delimiter in ${filePath}`
+    );
     return result;
   }
 
@@ -39,7 +44,7 @@ function parseMdc(content) {
       content: mainContent,
     };
   } catch (error) {
-    console.warn("Error parsing front matter:", error);
+    console.warn(`Error parsing front matter in ${filePath}:`, error);
     return result;
   }
 }
