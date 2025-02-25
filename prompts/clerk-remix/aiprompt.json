@@ -2,7 +2,7 @@
   {
     "name": "Setup Clerk with Remix",
     "description": "Guidelines for implementing Clerk authentication in Remix applications",
-    "type": "agent",
+    "type": "setup",
     "slug": "remix-clerk-setup",
     "development_process": ["implement", "test"],
     "dev_categories": ["auth", "frontend"],
