@@ -26,7 +26,7 @@ function getPromptContent(dirPath, fileToRead) {
 
   const raw = fs.readFileSync(filePath, "utf8");
   const relative = path.relative(path.join(__dirname, ".."), filePath);
-  const fm = parseMdc(raw);
+  const fm = parseMdc(raw, filePath);
   const data = fm.data || {};
   const content = fm.content || "";
   const id = data.id || relative.replace(/\//g, "-");
@@ -35,6 +35,7 @@ function getPromptContent(dirPath, fileToRead) {
     id,
     description: data.description || "",
     globs: data.globs || "",
+    ...(data.alwaysApply && { alwaysApply: data.alwaysApply }),
     content,
     filePath: relative,
   };
