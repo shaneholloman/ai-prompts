@@ -4,7 +4,6 @@
  */
 const fs = require("fs");
 const path = require("path");
-const matter = require("gray-matter");
 const { parseMdc } = require("./parse-mdc");
 
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
@@ -62,8 +61,21 @@ function parseFile(filePath) {
         .map((file) => getPromptContent(dirPath, file))
         .filter(Boolean);
 
+      const tech_stack = {
+        framework: item.tech_stack.framework,
+        service: (Array.isArray(item.tech_stack.service)
+          ? item.tech_stack.service
+          : [item.tech_stack.service]
+        ).filter(Boolean),
+        library: (Array.isArray(item.tech_stack.library)
+          ? item.tech_stack.library
+          : [item.tech_stack.library]
+        ).filter(Boolean),
+      };
+
       return {
         ...item,
+        tech_stack,
         prompts,
         filePath: relative,
       };
