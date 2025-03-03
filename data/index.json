@@ -2487,6 +2487,39 @@
     "filePath": "prompts/next-shadcn/aiprompt.json"
   },
   {
+    "name": "Next.js Stripe Integration",
+    "description": "Stripe integration standards and practicesfor Next.js applications",
+    "type": "setup",
+    "slug": "stripe-next",
+    "author": {
+      "name": "Reid Brown",
+      "url": "https://github.com/nworbdier",
+      "avatar": "https://avatars.githubusercontent.com/u/114105651?s=400&u=be8b472255d0b091b6fa403146386aaefa23eb86&v=4"
+    },
+    "tech_stack": {
+      "framework": "next",
+      "service": "stripe"
+    },
+    "model": [
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "stripe-next.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-stripe-next-stripe-next.md",
+        "description": "Stripe integration standards and practicesfor Next.js applications",
+        "globs": "**/*.ts, **/*.js",
+        "content": "\n# Stripe Setup Guide for NextJS\n\n## 1. Prerequisites\n\n- Stripe account\n- Next.js project\n- PostgreSQL database (using Drizzle ORM)\n- Node.js\n- Stripe CLI\n\n## 2. Environment Variables\n\nAdd these to your `.env` file:\n\n```\n# Stripe API keys\nSTRIPE_SECRET_KEY=sk_test_xxxx (replace with your Stripe secret key)\nSTRIPE_WEBHOOK_SECRET=whsec_xxxx (replace with your webhook signing secret)\nSTRIPE_PUBLISHABLE_KEY=pk_test_xxxx (for client-side operations)\n\n# Subscription price IDs from Stripe Dashboard\nSTRIPE_MONTHLY_PRICE_ID=price_xxxx\nSTRIPE_YEARLY_PRICE_ID=price_xxxx\n\n# Application URL (ensure no trailing slash)\nNEXT_PUBLIC_URL=http://localhost:3000 (update for production)\n```\n\n## 3. Database Schema\n\nThe project uses the following Stripe-related tables:\n\n```typescript\n// Users table with Stripe fields\nexport const users = pgTable(\"users\", {\n  uuid: text(\"uuid\").notNull().primaryKey(),\n  email: text(\"email\").unique(),\n  pro_access: boolean(\"pro_access\").default(false),\n  stripeCustomerId: text(\"stripe_customer_id\").unique(),\n  stripeSubscriptionId: text(\"stripe_subscription_id\").unique(),\n  subscriptionStatus: text(\"subscription_status\"),\n  subscriptionPriceId: text(\"subscription_price_id\"),\n  subscriptionCurrentPeriodEnd: timestamp(\"subscription_current_period_end\"),\n  cancelAtPeriodEnd: boolean(\"cancel_at_period_end\").default(false),\n  lastInvoiceStatus: text(\"last_invoice_status\"),\n  lastPaymentError: text(\"last_payment_error\"),\n});\n\n// Stripe events table for webhook processing\nexport const stripeEvents = pgTable(\"stripe_events\", {\n  stripeEventId: text(\"stripe_event_id\").primaryKey(),\n  type: text(\"type\").notNull(),\n  data: jsonb(\"data\").notNull(),\n  createdAt: timestamp(\"created_at\").defaultNow(),\n  processedAt: timestamp(\"processed_at\"),\n});\n```\n\n## 4. API Routes Setup\n\n### 4.1 Create Checkout Session (`/api/stripe/create-checkout/route.js`)\n\n```javascript\nimport Stripe from \"stripe\";\nconst stripe = new Stripe(process.env.STRIPE_SECRET_KEY);\n\nexport async function POST(request) {\n  // Create or retrieve Stripe customer\n  let stripeCustomerId = user?.stripeCustomerId;\n\n  // Create checkout session\n  const session = await stripe.checkout.sessions.create({\n    mode: \"subscription\",\n    payment_method_types: [\"card\"],\n    line_items: [\n      {\n        price: priceId,\n        quantity: 1,\n      },\n    ],\n    success_url: `${process.env.NEXT_PUBLIC_URL}/settings?success=true`,\n    cancel_url: `${process.env.NEXT_PUBLIC_URL}/settings?canceled=true`,\n    customer: stripeCustomerId,\n  });\n\n  return { url: session.url };\n}\n```\n\n### 4.2 Customer Portal (`/api/stripe/create-portal/route.js`)\n\n```javascript\nexport async function POST(request) {\n  // Create Stripe Portal session\n  const session = await stripe.billingPortal.sessions.create({\n    customer: user.stripeCustomerId,\n    return_url: `${process.env.NEXT_PUBLIC_URL}/settings?portal_return=true`,\n  });\n\n  return { url: session.url };\n}\n```\n\n### 4.3 Webhook Handler (`/api/stripe/webhook/route.js`)\n\n```javascript\nexport const config = {\n  api: { bodyParser: false },\n};\n\nexport async function POST(request) {\n  // Verify webhook signature\n  const sig = headers().get(\"stripe-signature\");\n  const event = stripe.webhooks.constructEvent(body, sig, webhookSecret);\n\n  // Handle various webhook events\n  switch (event.type) {\n    case \"customer.subscription.created\":\n      // Handle new subscription\n      break;\n    case \"customer.subscription.updated\":\n      // Handle subscription updates\n      break;\n    case \"customer.subscription.deleted\":\n      // Handle subscription cancellation\n      break;\n    case \"payment_intent.succeeded\":\n      // Handle successful payments\n      break;\n    case \"payment_intent.payment_failed\":\n      // Handle failed payments\n      break;\n  }\n}\n```\n\n## 5. Frontend Implementation\n\n### 5.1 Subscription Management Component\n\n```javascript\n// In your settings or subscription page\nconst handleUpgrade = async () => {\n  const response = await fetch(\"/api/stripe/create-checkout\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n      Authorization: `Bearer ${token}`,\n    },\n    body: JSON.stringify({\n      priceId:\n        selectedPlan === \"monthly\"\n          ? process.env.STRIPE_MONTHLY_PRICE_ID\n          : process.env.STRIPE_YEARLY_PRICE_ID,\n    }),\n  });\n\n  const { url } = await response.json();\n  window.location.href = url;\n};\n\nconst handleManageSubscription = async () => {\n  const response = await fetch(\"/api/stripe/create-portal\", {\n    method: \"POST\",\n    headers: {\n      Authorization: `Bearer ${token}`,\n    },\n  });\n\n  const { url } = await response.json();\n  window.location.href = url;\n};\n```\n\n## 6. Webhook Setup\n\n1. Install the Stripe CLI\n2. Forward webhooks locally:\n\n```bash\nstripe listen --forward-to localhost:3000/api/stripe/webhook\n```\n\n3. Configure webhook endpoints in Stripe Dashboard with these events:\n\n- customer.subscription.created\n- customer.subscription.updated\n- customer.subscription.deleted\n- customer.subscription.trial_will_end\n- payment_intent.succeeded\n- payment_intent.payment_failed\n\n## 7. Testing\n\n1. Use Stripe test mode and test cards\n2. Test webhook handling using the Stripe CLI\n3. Verify subscription lifecycle:\n   - Creation\n   - Updates\n   - Cancellation\n   - Failed payments\n   - Successful payments\n\n## 8. Security Considerations\n\n1. Always verify webhook signatures\n2. Store Stripe customer IDs securely\n3. Never log complete payment details\n4. Use environment variables for sensitive data\n5. Implement proper error handling\n6. Verify user authentication before subscription management\n\n## 9. Monitoring and Maintenance\n\n1. Monitor webhook processing\n2. Track failed payments\n3. Handle subscription status changes\n4. Maintain customer portal sessions\n5. Keep Stripe libraries updated\n\nThis setup provides a complete subscription system with:\n\n- Monthly and yearly subscription options\n- Customer portal for subscription management\n- Webhook handling for subscription lifecycle events\n- Proper error handling and security measures\n- Database tracking of subscription status\n\nRemember to test thoroughly in Stripe's test mode before going live with real payments.\n",
+        "filePath": "prompts/stripe-next/stripe-next.md"
+      }
+    ],
+    "filePath": "prompts/stripe-next/aiprompt.json"
+  },
+  {
     "name": "Nuxt 3 Coding Standards",
     "description": "Comprehensive coding standards and best practices for Nuxt 3 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
