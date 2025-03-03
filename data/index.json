@@ -17,7 +17,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -65,7 +68,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -113,7 +119,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -162,7 +171,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "angular"
+      "framework": "angular",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -212,7 +223,9 @@
       "components"
     ],
     "tech_stack": {
-      "framework": "angular"
+      "framework": "angular",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -262,7 +275,9 @@
       "code-quality"
     ],
     "tech_stack": {
-      "framework": "astro"
+      "framework": "astro",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -310,7 +325,9 @@
       "jamstack"
     ],
     "tech_stack": {
-      "framework": "astro"
+      "framework": "astro",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -360,7 +377,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -409,7 +429,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -459,7 +482,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -506,7 +532,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -556,7 +585,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -606,7 +638,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -654,7 +689,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -704,7 +742,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -753,7 +794,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "javascript"
+      "framework": "javascript",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -801,7 +844,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "javascript"
+      "framework": "javascript",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -850,7 +895,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "javascript"
+      "framework": "javascript",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -899,7 +946,9 @@
       "best-practices"
     ],
     "tech_stack": {
-      "framework": "react"
+      "framework": "react",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -947,7 +996,9 @@
       "features"
     ],
     "tech_stack": {
-      "framework": "react"
+      "framework": "react",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -994,7 +1045,9 @@
       "setup"
     ],
     "tech_stack": {
-      "framework": "react"
+      "framework": "react",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1043,7 +1096,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "svelte"
+      "framework": "svelte",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1091,7 +1146,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "svelte"
+      "framework": "svelte",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1140,7 +1197,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "svelte"
+      "framework": "svelte",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1189,7 +1248,9 @@
       "security"
     ],
     "tech_stack": {
-      "framework": "tanstack"
+      "framework": "tanstack",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1237,7 +1298,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1286,7 +1350,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1335,7 +1402,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1384,7 +1454,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1433,7 +1506,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1482,7 +1558,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1529,7 +1608,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1577,7 +1659,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1627,7 +1712,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1676,7 +1764,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1726,7 +1817,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1776,7 +1870,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1827,7 +1924,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1878,7 +1978,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1924,7 +2027,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "laravel"
+      "framework": "laravel",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -1971,7 +2076,9 @@
       "mvc"
     ],
     "tech_stack": {
-      "framework": "laravel"
+      "framework": "laravel",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2023,7 +2130,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2074,7 +2184,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2120,7 +2233,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "next"
+      "framework": "next",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2167,7 +2282,9 @@
       "server-components"
     ],
     "tech_stack": {
-      "framework": "next"
+      "framework": "next",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2219,7 +2336,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "fal.ai"
+      "service": [
+        "fal.ai"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2317,7 +2437,9 @@
       "automation"
     ],
     "tech_stack": {
-      "framework": "next"
+      "framework": "next",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2363,7 +2485,9 @@
       "best-practices"
     ],
     "tech_stack": {
-      "framework": "next"
+      "framework": "next",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2410,7 +2534,9 @@
       "automation"
     ],
     "tech_stack": {
-      "framework": "next"
+      "framework": "next",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2457,7 +2583,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2498,7 +2627,11 @@
     },
     "tech_stack": {
       "framework": "next",
-      "service": "stripe"
+      "service": [
+        "stripe",
+        "drizzle"
+      ],
+      "library": []
     },
     "model": [
       "chat"
@@ -2535,7 +2668,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "nuxt"
+      "framework": "nuxt",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2582,7 +2717,9 @@
       "ssr"
     ],
     "tech_stack": {
-      "framework": "nuxt"
+      "framework": "nuxt",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2628,7 +2765,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "react"
+      "framework": "react",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2675,7 +2814,9 @@
       "hooks"
     ],
     "tech_stack": {
-      "framework": "react"
+      "framework": "react",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2721,7 +2862,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "remix"
+      "framework": "remix",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2768,7 +2911,9 @@
       "web-development"
     ],
     "tech_stack": {
-      "framework": "remix"
+      "framework": "remix",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2818,7 +2963,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2868,7 +3016,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2918,7 +3069,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -2968,7 +3122,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3018,7 +3175,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3068,7 +3228,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3118,7 +3281,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3168,7 +3334,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "appwrite"
+      "service": [
+        "appwrite"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3215,7 +3384,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3265,7 +3437,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3314,7 +3489,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3363,7 +3541,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3412,7 +3593,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "auth0"
+      "service": [
+        "auth0"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3460,7 +3644,9 @@
       "database"
     ],
     "tech_stack": {
-      "framework": "angular"
+      "framework": "angular",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3508,7 +3694,9 @@
       "database"
     ],
     "tech_stack": {
-      "framework": "astro"
+      "framework": "astro",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3556,7 +3744,9 @@
       "database"
     ],
     "tech_stack": {
-      "framework": "remix"
+      "framework": "remix",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3604,7 +3794,9 @@
       "database"
     ],
     "tech_stack": {
-      "framework": "vue"
+      "framework": "vue",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3652,7 +3844,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3699,7 +3894,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3747,7 +3945,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3795,7 +3996,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3843,7 +4047,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3892,7 +4099,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "clerk"
+      "service": [
+        "clerk"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor",
@@ -3947,7 +4157,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -3998,7 +4211,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4049,7 +4265,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4100,7 +4319,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4151,7 +4373,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4202,7 +4427,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4253,7 +4481,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "drizzle"
+      "service": [
+        "drizzle"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4303,7 +4534,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4353,7 +4587,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4403,7 +4640,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4453,7 +4693,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4503,7 +4746,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4553,7 +4799,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4603,7 +4852,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4653,7 +4905,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "firebase"
+      "service": [
+        "firebase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4703,7 +4958,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4753,7 +5011,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4803,7 +5064,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4853,7 +5117,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4903,7 +5170,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -4953,7 +5223,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "neon"
+      "service": [
+        "neon"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5004,7 +5277,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5055,7 +5331,10 @@
     ],
     "tech_stack": {
       "framework": "astro",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5106,7 +5385,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5157,7 +5439,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5208,7 +5493,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5259,7 +5547,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5310,7 +5601,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5361,7 +5655,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "prisma"
+      "service": [
+        "prisma"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5410,7 +5707,10 @@
     ],
     "tech_stack": {
       "framework": "angular",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5459,7 +5759,10 @@
     ],
     "tech_stack": {
       "framework": "vue",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5509,7 +5812,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5558,7 +5864,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5609,7 +5918,10 @@
     ],
     "tech_stack": {
       "framework": "javascript",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5660,7 +5972,10 @@
     ],
     "tech_stack": {
       "framework": "next",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5711,7 +6026,10 @@
     ],
     "tech_stack": {
       "framework": "nuxt",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5759,7 +6077,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5808,7 +6129,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5856,7 +6180,10 @@
     ],
     "tech_stack": {
       "framework": "react",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5907,7 +6234,10 @@
     ],
     "tech_stack": {
       "framework": "remix",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -5956,7 +6286,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6007,7 +6340,10 @@
     ],
     "tech_stack": {
       "framework": "svelte",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6058,7 +6394,10 @@
     ],
     "tech_stack": {
       "framework": "tanstack",
-      "service": "supabase"
+      "service": [
+        "supabase"
+      ],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6104,7 +6443,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "svelte"
+      "framework": "svelte",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6151,7 +6492,9 @@
       "runes"
     ],
     "tech_stack": {
-      "framework": "svelte"
+      "framework": "svelte",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6197,7 +6540,9 @@
       "architecture"
     ],
     "tech_stack": {
-      "framework": "vue"
+      "framework": "vue",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"
@@ -6252,7 +6597,9 @@
       "composition-api"
     ],
     "tech_stack": {
-      "framework": "vue"
+      "framework": "vue",
+      "service": [],
+      "library": []
     },
     "ai_editor": [
       "cursor"

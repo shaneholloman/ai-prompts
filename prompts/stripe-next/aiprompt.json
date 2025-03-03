@@ -11,7 +11,7 @@
     },
     "tech_stack": {
       "framework": "next",
-      "service": "stripe"
+      "service": ["stripe", "drizzle"]
     },
     "model": ["chat"],
     "version": "1.0",

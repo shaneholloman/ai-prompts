@@ -101,8 +101,14 @@ function validateMetadata(metadata) {
         tech_stack: z
           .object({
             framework: z.string().trim().min(1),
-            service: z.string().trim().min(1),
-            library: z.string().trim().min(1),
+            service: z.union([
+              z.string().trim().min(1),
+              z.array(z.string().trim().min(1)),
+            ]),
+            library: z.union([
+              z.string().trim().min(1),
+              z.array(z.string().trim().min(1)),
+            ]),
           })
           .partial({
             service: true,
