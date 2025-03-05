@@ -2012,6 +2012,55 @@
     "filePath": "prompts/firebase-react/aiprompt.json"
   },
   {
+    "name": "Flutter 3.29 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Flutter 3.29 development, covering project structure, Dart usage, and performance optimization",
+    "type": "rule",
+    "slug": "flutter-3-29-coding-standards",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "mobile"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "flutter",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-flutter-3-29-coding-standards.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-flutter-rule-flutter-3-29-coding-standards.md",
+        "description": "Coding Standards & Rules for Flutter 3.29",
+        "globs": "**/*.dart",
+        "alwaysApply": true,
+        "content": "\nYou are an expert in Flutter 3.29, TypeScript, and related libraries. You are focusing on producing clear, readable code. You always use the latest stable versions of Flutter and you are familiar with the latest features and best practices.\n\n### Project Structure\n- Use `lib/` for all application code and `lib/src/` for internal implementation details with subdirectories like `models/`, `views/`, `constants/`, and `themes/`.\n- Keep `main.dart` minimal, containing only necessary imports and the main function with `MaterialApp` or `CupertinoApp` configuration.\n- Name files using camelCase or snake_case and classes in PascalCase for consistency.\n\n### Code Style\n- Apply `const` to immutable objects and widgets to enhance performance by reducing rebuilds.\n- Minimize widget rebuilds by preferring `StatelessWidget` when state is not needed and using keys appropriately.\n- Follow Dart and Flutter coding style guidelines with consistent spacing, indentation, and single quotes for strings.\n- Handle platform calls efficiently with asynchronous programming to avoid blocking the main thread, as Dart code now runs synchronously on Android and iOS.\n\n### Usage\n- Leverage `CupertinoNavigationBar` and `CupertinoSliverNavigationBar` with the `bottom` property for additional controls and configure `bottomMode` for scrolling behavior.\n- Use `CupertinoSheetRoute` and `showCupertinoSheet` for iOS-style modal sheets with drag-to-dismiss functionality.\n- Enable Material 3 styles by setting `year2023` to `false` and use `FadeForwardsPageTransitionsBuilder` for page transitions.\n- Wrap widgets with `SelectionListener` to monitor text selection details and use `SelectableRegionSelectionStatusScope` to check selection status.\n- Ensure forms announce only the first error with screen readers and label dropdown menus correctly for accessibility.\n- Account for WebAssembly HTTP header changes and use `webHtmlElementStrategy` for web image rendering control.\n- Optimize performance with `BackdropGroup` for multiple blurs and `ImageFilter.shader` for custom effects.\n- Avoid discontinued packages like `css_colors`, `flutter_adaptive_scaffold`, `flutter_image`, `flutter_markdown`, `ios_platform_images`, and `palette_generator` by April 30, 2025, and seek alternatives.",
+        "filePath": "prompts/flutter/rule-flutter-3-29-coding-standards.md"
+      }
+    ],
+    "filePath": "prompts/flutter/aiprompt.json"
+  },
+  {
     "name": "Laravel 11 Coding Standards",
     "description": "Comprehensive coding standards and best practices for Laravel 11 development, covering project structure, type hints, and more",
     "type": "rule",
@@ -6523,6 +6572,55 @@
       }
     ],
     "filePath": "prompts/svelte-5/aiprompt.json"
+  },
+  {
+    "name": "Tailwind CSS v4 Best Practices",
+    "description": "Tailwind CSS usage rules for styling",
+    "type": "rule",
+    "slug": "tailwind-v4-best-practices",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "styling"
+    ],
+    "tags": [
+      "css",
+      "tailwind"
+    ],
+    "tech_stack": {
+      "framework": "tailwind",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-tailwind-v4.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-tailwind-rule-tailwind-v4.md",
+        "description": "Tailwind CSS usage rules for styling (2025 best practices)",
+        "globs": "**/*.{html,js,jsx,ts,tsx,vue,svelte,css,scss,sass,md,mdx,php,blade.php,ejs,hbs,twig,liquid,njk,pug,astro,xml,json,yml,yaml,svg}",
+        "content": "- Use Tailwind CSS utility classes for all component styling to maintain consistency. Avoid writing custom CSS unless necessary for a special case that Tailwind cannot cover (utility-first approach keeps styles uniform and themable)\n- Organize Tailwind classes in your markup logically and readably. For example, list display and positioning utilities first, then spacing/margins/padding, followed by color and typography classes.\n- Utilize Tailwind's responsive design utilities (sm:, md:, lg:, etc.) and state variants (like hover:, focus:, dark:) instead of writing custom media queries or inline JS for state-based styling. This ensures responsiveness and interactivity styles stay in the markup and are easier to maintain  \n- Take advantage of new Tailwind v4 features. For instance, use container queries (`@container` rules and corresponding utility classes) to create truly responsive components based on container size, and leverage CSS variables in Tailwind for dynamic theming if your design requires it  \n- Keep the `tailwind.config.ts` updated and aligned with your design system. Define your project's color palette, spacing scale, fonts, and other theme customizations there so that you use consistent design tokens throughout. Ensure the `content` paths in the config include all relevant file patterns (e.g., your .tsx files in src/components) so Tailwind can purge unused styles in production builds  \n- Use the `@apply` directive sparingly for extracting repetitive utility combinations in your CSS, but prefer making React components or using composition for reusability. Avoid too much custom CSS – lean on Tailwind's utilities and component structure for code reuse  \n- When possible, choose Tailwind classes over inline styles or separate CSS files for UI components to maintain a consistent design language across the game interface",
+        "filePath": "prompts/tailwind/rule-tailwind-v4.md"
+      }
+    ],
+    "filePath": "prompts/tailwind/aiprompt.json"
   },
   {
     "name": "Vue 3.5 Coding Standards",
