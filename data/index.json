@@ -2061,6 +2061,46 @@
     "filePath": "prompts/flutter/aiprompt.json"
   },
   {
+    "name": "Flutter 3.29 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Flutter 3.29 development, covering project structure, Dart usage, and performance optimization",
+    "type": "rule",
+    "slug": "flutter-3-29-coding-standards",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "mobile"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "flutter",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-flutter-3-29-coding-standards.md"
+    ],
+    "published": true,
+    "prompts": [],
+    "filePath": "prompts/tailwind-4/aiprompt.json"
+  },
+  {
     "name": "Laravel 11 Coding Standards",
     "description": "Comprehensive coding standards and best practices for Laravel 11 development, covering project structure, type hints, and more",
     "type": "rule",
@@ -6575,6 +6615,46 @@
   },
   {
     "name": "Tailwind CSS v4 Best Practices",
+    "description": "Tailwind CSS usage rules for styling (2025 best practices), focusing on utility classes, organization, and v4 features",
+    "type": "rule",
+    "slug": "tailwind-v4-best-practices",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "styling"
+    ],
+    "tags": [
+      "css"
+    ],
+    "tech_stack": {
+      "framework": "tailwind",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-tailwind-v4-ext.md"
+    ],
+    "published": true,
+    "prompts": [],
+    "filePath": "prompts/flutter/aiprompt.json"
+  },
+  {
+    "name": "Tailwind CSS v4 Best Practices",
     "description": "Tailwind CSS usage rules for styling",
     "type": "rule",
     "slug": "tailwind-v4-best-practices",
@@ -6621,6 +6701,54 @@
       }
     ],
     "filePath": "prompts/tailwind/aiprompt.json"
+  },
+  {
+    "name": "Tailwind CSS v4 Best Practices",
+    "description": "Tailwind CSS usage rules for styling (2025 best practices), focusing on utility classes, organization, and v4 features",
+    "type": "rule",
+    "slug": "tailwind-v4-best-practices",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "styling"
+    ],
+    "tags": [
+      "css"
+    ],
+    "tech_stack": {
+      "framework": "tailwind",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-tailwind-v4-ext.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-tailwind-4-rule-tailwind-v4-ext.md",
+        "description": "Tailwind CSS usage rules for styling (2025 best practices)",
+        "globs": "**/*.{html,js,jsx,ts,tsx,vue,svelte,css,scss,sass,md,mdx,php,blade.php,ejs,hbs,twig,liquid,njk,pug,astro,xml,json,yml,yaml,svg}",
+        "content": "\n## General Guidelines\n- Use Tailwind utility classes for consistent styling, with custom CSS only for special cases  \n- Organize classes logically (layout, spacing, color, typography)  \n- Use responsive and state variants (e.g., sm:, md:, lg:, hover:, focus:, dark:) in markup  \n- Embrace Tailwind v4 features like container queries and CSS variables  \n- Keep `tailwind.config.ts` updated with design tokens and purge paths  \n- Rely on Tailwind classes rather than inline styles or external CSS files for a unified design language\n\n## Configuration (CSS Files)\n- Use the `@theme` directive to define custom design tokens like fonts, breakpoints, and colors\n- Prefer modern color formats such as `oklch` for better color gamut support, defining them in the `:root` scope\n- Take advantage of automatic content detection, which eliminates the need for a `content` array in configuration\n- Rely on Oxide engine to scan project files, excluding those in `.gitignore` and binary extensions\n- Add specific sources with `@source` only when necessary\n- Extend Tailwind with custom utilities using the `@utility` directive in CSS files\n\n## Styling (CSS Files)\n- Incorporate 3D transform utilities like `rotate-x-*`, `rotate-y-*`, and `scale-z-*` for advanced visual effects\n- Implement container queries with `@container`, `@max-*`, and `@min-*` utilities for adaptive layouts\n- Use arbitrary values and properties with square bracket notation (e.g., `[mask-type:luminance]` or `top-[117px]`)\n- Apply modifiers like `hover` or `lg` with arbitrary values for flexible styling\n- Use the `not-*` variant for `:not()` pseudo-classes and the `starting` variant for `@starting-style`\n- Check browser support for advanced features like `@starting-style` using resources like caniuse\n\n## Components (HTML)\n- Apply Tailwind utility classes directly in HTML for styling components\n- Use dynamic arbitrary values like `grid-cols-[1fr_500px_2fr]` for flexible layouts\n- Implement data attribute variants like `data-current:opacity-100` for conditional styling\n- Ensure accessibility by pairing Tailwind utilities with appropriate ARIA attributes\n- Use `aria-hidden=\"true\"` or `role=\"presentation\"` when applying utilities like `hidden` or `sr-only`\n\n## Components (TypeScript/JavaScript)\n- Prefer TypeScript over JavaScript for component files to ensure type safety when applying Tailwind classes\n- Use dynamic utility classes with template literals or arrays (e.g., `className={`p-${padding} bg-${color}`}`)\n- Validate dynamic values with TypeScript types\n- Integrate Tailwind with modern frameworks by applying utilities in component logic\n- Favor functional components over class-based ones in frameworks like React\n\n## Project-Wide Systems\n- Leverage the Oxide engine's fast build times for performance optimization\n- Avoid manual content configuration unless explicitly required\n- Maintain consistency by using theme variables defined in CSS configuration files\n- Reference theme variables in both utility classes and custom CSS (e.g., `text-[--color-primary]`)\n- Update rules regularly to reflect Tailwind v4's evolving feature set\n- Be aware of deprecated options from v3.x like `text-opacity`\n",
+        "filePath": "prompts/tailwind-4/rule-tailwind-v4-ext.md"
+      }
+    ],
+    "filePath": "prompts/tailwind-4/aiprompt.json"
   },
   {
     "name": "Vue 3.5 Coding Standards",
