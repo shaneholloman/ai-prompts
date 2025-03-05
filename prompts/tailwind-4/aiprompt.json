@@ -1,31 +1,9 @@
 [
   {
-    "name": "Flutter 3.29 Coding Standards",
-    "description": "Comprehensive coding standards and best practices for Flutter 3.29 development, covering project structure, Dart usage, and performance optimization",
+    "name": "Tailwind CSS v4 Extended Best Practices",
+    "description": "Comprehensive Tailwind CSS v4 usage rules for styling (2025 best practices), focusing on utility classes, organization, and advanced v4 features",
     "type": "rule",
-    "slug": "flutter-3-29-coding-standards",
-    "development_process": ["implement"],
-    "dev_categories": ["frontend", "mobile"],
-    "tags": ["architecture"],
-    "tech_stack": {
-      "framework": "flutter"
-    },
-    "ai_editor": ["cursor"],
-    "author": {
-      "name": "Kevin Kern",
-      "url": "https://github.com/regenrek",
-      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
-    },
-    "model": ["reasoning", "chat"],
-    "version": "1.0",
-    "files": ["rule-flutter-3-29-coding-standards.md"],
-    "published": true
-  },
-  {
-    "name": "Tailwind CSS v4 Best Practices",
-    "description": "Tailwind CSS usage rules for styling (2025 best practices), focusing on utility classes, organization, and v4 features",
-    "type": "rule",
-    "slug": "tailwind-v4-best-practices",
+    "slug": "tailwind-v4-extended-best-practices",
     "development_process": ["implement"],
     "dev_categories": ["frontend", "styling"],
     "tags": ["css"],
@@ -41,6 +19,28 @@
     "model": ["reasoning", "chat"],
     "version": "1.0",
     "files": ["rule-tailwind-v4-ext.md"],
+    "published": true
+  },
+  {
+    "name": "Tailwind CSS v4 Core Best Practices",
+    "description": "Core Tailwind CSS v4 usage rules for styling (2025 best practices), focusing on essential utility classes and organization",
+    "type": "rule",
+    "slug": "tailwind-v4-core-best-practices",
+    "development_process": ["implement"],
+    "dev_categories": ["frontend", "styling"],
+    "tags": ["css"],
+    "tech_stack": {
+      "framework": "tailwind"
+    },
+    "ai_editor": ["cursor"],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": ["reasoning", "chat"],
+    "version": "1.0",
+    "files": ["rule-tailwind-v4.md"],
     "published": true
   }
 ]
