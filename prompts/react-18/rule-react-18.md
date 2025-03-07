@@ -1,6 +1,6 @@
 ---
 description: Coding Standards & Rules for React 18.3.1
-globs: **/*.tsx, **/*.jsx
+globs: **/*.tsx, **/*.jsx, **/*.ts
 alwaysApply: true
 ---
 

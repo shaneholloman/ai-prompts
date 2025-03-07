@@ -1,7 +1,7 @@
 Filename: supabase-react-rules.mdc
 ---
 description: Coding Standards & Rules for Supabase with React 18.3.1
-globs: **/*.tsx, **/*.jsx, src/supabase/**/*.ts
+globs: **/*.tsx, **/*.ts, **/*.jsx, src/supabase/**/*.ts
 alwaysApply: true
 ---
 
