@@ -8,7 +8,6 @@ globs: **/*.{html,js,jsx,ts,tsx,vue,svelte,css,scss,sass,md,mdx,php,blade.php,ej
 - Organize classes logically (layout, spacing, color, typography)  
 - Use responsive and state variants (e.g., sm:, md:, lg:, hover:, focus:, dark:) in markup  
 - Embrace Tailwind v4 features like container queries and CSS variables  
-- Keep `tailwind.config.ts` updated with design tokens and purge paths  
 - Rely on Tailwind classes rather than inline styles or external CSS files for a unified design language
 
 ## Configuration (CSS Files)
