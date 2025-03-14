@@ -1281,6 +1281,58 @@
     "filePath": "prompts/better-auth-tanstack/aiprompt.json"
   },
   {
+    "name": "Claude 3.7 Sonnet Best Practices",
+    "description": "Rules and best practices for working with Claude 3.7 Sonnet in Cursor, focusing on efficient codebase navigation and system file management",
+    "type": "rule",
+    "slug": "claude-sonnet-37-best-practices",
+    "development_process": [
+      "implement",
+      "maintain"
+    ],
+    "dev_categories": [
+      "ai",
+      "tooling"
+    ],
+    "tags": [
+      "claude",
+      "cursor",
+      "ai-assistant"
+    ],
+    "tech_stack": {
+      "framework": "cursor",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-claude-sonnet-37.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-claude-sonnet-37-rule-claude-sonnet-37.md",
+        "description": "Base",
+        "globs": "*,**/*",
+        "alwaysApply": true,
+        "content": "\n# ---------------------------------------------------------------\n# DESCRIPTION:\n# this rule helps to better control sonnet-3.7 + cursor. (like doing to much, creating unnecessary new files e.g.).\n# especially the first two rules give the cursor agent already the most important instructions that worked for me.\n# \n# ❗ ATTENTION:  \n# 1. this does not work so easily for large codebases\n# 2. remove everything from these rules that you do not need\n# 3. also remove this comments\n# ---------------------------------------------------------------\n\n\n# Instructions\n\n1. Always use codebase_search with target_directories=\"{{INSERT YOUR DIRECTORY}}\" first to find existing core files\n2. Always check existing system files purposes before creating new ones with similar functionality\n3. Always list the cursor rules youre using\n\n# Optional\n\n- If a prompt or request specifies certain behaviors, languages, or output formats, you must obey them without deviation.\n- Do not include explanations, reasoning, or filler text unless explicitly instructed. Stick strictly to the requested output.\n- If multiple steps or sub-requests are given, address them in the specified order. Provide answers in the exact format or sequence requested.\n- Pay close attention to all stated constraints (e.g., language choice, performance goals, coding style). Do not ignore any requirement or best practice stated.\n- Only produce output relevant to the question or instructions. Do not add features, code, or details beyond what is explicitly asked.\n- Deliver the response in a minimal yet complete form. Avoid unnecessary verbosity and tangential remarks.\n- If the prompt requests a specific output format (e.g., a fenced code block, bullet points, JSON), follow that format exactly.\n- If a prompt includes a pre-seeded answer structure (e.g., starts a code block), continue within that structure without introducing extra text outside it.\n- If the request is ambiguous, you may ask clarifying questions (if instructions allow). Otherwise, state briefly that more information is needed.\n- When generating or modifying code, adhere to best practices for clarity, maintainability, and efficiency, as appropriate to the specified language or framework.\n- Do not generate or include private data (API keys, secrets) unless explicitly provided in context. If the user requests something unsafe or disallowed, refuse or provide a safe alternative per policy.\n",
+        "filePath": "prompts/claude-sonnet-37/rule-claude-sonnet-37.md"
+      }
+    ],
+    "filePath": "prompts/claude-sonnet-37/aiprompt.json"
+  },
+  {
     "name": "Clerk Next.js Coding Standards",
     "description": "Coding Standards & Rules for Next.js apps with Clerk Authentication",
     "type": "rule",
