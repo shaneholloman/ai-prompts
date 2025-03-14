@@ -1,7 +1,7 @@
 [
   {
-    "name": "Claude 3.7 Sonnet Best Practices",
-    "description": "Rules and best practices for working with Claude 3.7 Sonnet in Cursor, focusing on efficient codebase navigation and system file management",
+    "name": "Guidelines for Using Claude 3.7 Sonnet in Cursor",
+    "description": "A Cursor Rule for working with Claude 3.7 Sonnet in Cursor, focusing on efficient codebase navigation and system file management",
     "type": "rule",
     "slug": "claude-sonnet-37-best-practices",
     "development_process": ["implement", "maintain"],
