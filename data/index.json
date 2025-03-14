@@ -1281,58 +1281,6 @@
     "filePath": "prompts/better-auth-tanstack/aiprompt.json"
   },
   {
-    "name": "Claude 3.7 Sonnet Best Practices",
-    "description": "Rules and best practices for working with Claude 3.7 Sonnet in Cursor, focusing on efficient codebase navigation and system file management",
-    "type": "rule",
-    "slug": "claude-sonnet-37-best-practices",
-    "development_process": [
-      "implement",
-      "maintain"
-    ],
-    "dev_categories": [
-      "ai",
-      "tooling"
-    ],
-    "tags": [
-      "claude",
-      "cursor",
-      "ai-assistant"
-    ],
-    "tech_stack": {
-      "framework": "cursor",
-      "service": [],
-      "library": []
-    },
-    "ai_editor": [
-      "cursor"
-    ],
-    "author": {
-      "name": "Kevin Kern",
-      "url": "https://github.com/regenrek",
-      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
-    },
-    "model": [
-      "reasoning",
-      "chat"
-    ],
-    "version": "1.0",
-    "files": [
-      "rule-claude-sonnet-37.md"
-    ],
-    "published": true,
-    "prompts": [
-      {
-        "id": "prompts-claude-sonnet-37-rule-claude-sonnet-37.md",
-        "description": "Base",
-        "globs": "*,**/*",
-        "alwaysApply": true,
-        "content": "\n# ---------------------------------------------------------------\n# DESCRIPTION:\n# this rule helps to better control sonnet-3.7 + cursor. (like doing to much, creating unnecessary new files e.g.).\n# especially the first two rules give the cursor agent already the most important instructions that worked for me.\n# \n# ❗ ATTENTION:  \n# 1. this does not work so easily for large codebases\n# 2. remove everything from these rules that you do not need\n# 3. also remove this comments\n# ---------------------------------------------------------------\n\n\n# Instructions\n\n1. Always use codebase_search with target_directories=\"{{INSERT YOUR DIRECTORY}}\" first to find existing core files\n2. Always check existing system files purposes before creating new ones with similar functionality\n3. Always list the cursor rules youre using\n\n# Optional\n\n- If a prompt or request specifies certain behaviors, languages, or output formats, you must obey them without deviation.\n- Do not include explanations, reasoning, or filler text unless explicitly instructed. Stick strictly to the requested output.\n- If multiple steps or sub-requests are given, address them in the specified order. Provide answers in the exact format or sequence requested.\n- Pay close attention to all stated constraints (e.g., language choice, performance goals, coding style). Do not ignore any requirement or best practice stated.\n- Only produce output relevant to the question or instructions. Do not add features, code, or details beyond what is explicitly asked.\n- Deliver the response in a minimal yet complete form. Avoid unnecessary verbosity and tangential remarks.\n- If the prompt requests a specific output format (e.g., a fenced code block, bullet points, JSON), follow that format exactly.\n- If a prompt includes a pre-seeded answer structure (e.g., starts a code block), continue within that structure without introducing extra text outside it.\n- If the request is ambiguous, you may ask clarifying questions (if instructions allow). Otherwise, state briefly that more information is needed.\n- When generating or modifying code, adhere to best practices for clarity, maintainability, and efficiency, as appropriate to the specified language or framework.\n- Do not generate or include private data (API keys, secrets) unless explicitly provided in context. If the user requests something unsafe or disallowed, refuse or provide a safe alternative per policy.\n",
-        "filePath": "prompts/claude-sonnet-37/rule-claude-sonnet-37.md"
-      }
-    ],
-    "filePath": "prompts/claude-sonnet-37/aiprompt.json"
-  },
-  {
     "name": "Clerk Next.js Coding Standards",
     "description": "Coding Standards & Rules for Next.js apps with Clerk Authentication",
     "type": "rule",
@@ -2113,6 +2061,58 @@
     "filePath": "prompts/flutter/aiprompt.json"
   },
   {
+    "name": "Guidelines for Using Claude 3.7 Sonnet in Cursor",
+    "description": "A Cursor Rule for working with Claude 3.7 Sonnet in Cursor, focusing on efficient codebase navigation and system file management",
+    "type": "rule",
+    "slug": "claude-sonnet-37-best-practices",
+    "development_process": [
+      "implement",
+      "maintain"
+    ],
+    "dev_categories": [
+      "ai",
+      "tooling"
+    ],
+    "tags": [
+      "claude",
+      "cursor",
+      "ai-assistant"
+    ],
+    "tech_stack": {
+      "framework": "cursor",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-claude-sonnet-37.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-claude-sonnet-37-rule-claude-sonnet-37.md",
+        "description": "Base",
+        "globs": "*,**/*",
+        "alwaysApply": true,
+        "content": "\n# ---------------------------------------------------------------\n# DESCRIPTION:\n# this rule helps to better control sonnet-3.7 + cursor. (like doing to much, creating unnecessary new files e.g.).\n# especially the first two rules give the cursor agent already the most important instructions that worked for me.\n# \n# ❗ ATTENTION:  \n# 1. this does not work so easily for large codebases\n# 2. remove everything from these rules that you do not need\n# 3. also remove this comments\n# ---------------------------------------------------------------\n\n\n# Instructions\n\n1. Always use codebase_search with target_directories=\"{{INSERT YOUR DIRECTORY}}\" first to find existing core files\n2. Always check existing system files purposes before creating new ones with similar functionality\n3. Always list the cursor rules youre using\n\n# Optional\n\n- If a prompt or request specifies certain behaviors, languages, or output formats, you must obey them without deviation.\n- Do not include explanations, reasoning, or filler text unless explicitly instructed. Stick strictly to the requested output.\n- If multiple steps or sub-requests are given, address them in the specified order. Provide answers in the exact format or sequence requested.\n- Pay close attention to all stated constraints (e.g., language choice, performance goals, coding style). Do not ignore any requirement or best practice stated.\n- Only produce output relevant to the question or instructions. Do not add features, code, or details beyond what is explicitly asked.\n- Deliver the response in a minimal yet complete form. Avoid unnecessary verbosity and tangential remarks.\n- If the prompt requests a specific output format (e.g., a fenced code block, bullet points, JSON), follow that format exactly.\n- If a prompt includes a pre-seeded answer structure (e.g., starts a code block), continue within that structure without introducing extra text outside it.\n- If the request is ambiguous, you may ask clarifying questions (if instructions allow). Otherwise, state briefly that more information is needed.\n- When generating or modifying code, adhere to best practices for clarity, maintainability, and efficiency, as appropriate to the specified language or framework.\n- Do not generate or include private data (API keys, secrets) unless explicitly provided in context. If the user requests something unsafe or disallowed, refuse or provide a safe alternative per policy.\n",
+        "filePath": "prompts/claude-sonnet-37/rule-claude-sonnet-37.md"
+      }
+    ],
+    "filePath": "prompts/claude-sonnet-37/aiprompt.json"
+  },
+  {
     "name": "Laravel 11 Coding Standards",
     "description": "Comprehensive coding standards and best practices for Laravel 11 development, covering project structure, type hints, and more",
     "type": "rule",
@@ -2742,15 +2742,7 @@
       "stripe-next.md"
     ],
     "published": true,
-    "prompts": [
-      {
-        "id": "prompts-stripe-next-stripe-next.md",
-        "description": "Stripe integration standards and practicesfor Next.js applications",
-        "globs": "**/*.ts, **/*.js",
-        "content": "\n# Stripe Setup Guide for NextJS\n\n## 1. Prerequisites\n\n- Stripe account\n- Next.js project\n- PostgreSQL database (using Drizzle ORM)\n- Node.js\n- Stripe CLI\n\n## 2. Environment Variables\n\nAdd these to your `.env` file:\n\n```\n# Stripe API keys\nSTRIPE_SECRET_KEY=sk_test_xxxx (replace with your Stripe secret key)\nSTRIPE_WEBHOOK_SECRET=whsec_xxxx (replace with your webhook signing secret)\nSTRIPE_PUBLISHABLE_KEY=pk_test_xxxx (for client-side operations)\n\n# Subscription price IDs from Stripe Dashboard\nSTRIPE_MONTHLY_PRICE_ID=price_xxxx\nSTRIPE_YEARLY_PRICE_ID=price_xxxx\n\n# Application URL (ensure no trailing slash)\nNEXT_PUBLIC_URL=http://localhost:3000 (update for production)\n```\n\n## 3. Database Schema\n\nThe project uses the following Stripe-related tables:\n\n```typescript\n// Users table with Stripe fields\nexport const users = pgTable(\"users\", {\n  uuid: text(\"uuid\").notNull().primaryKey(),\n  email: text(\"email\").unique(),\n  pro_access: boolean(\"pro_access\").default(false),\n  stripeCustomerId: text(\"stripe_customer_id\").unique(),\n  stripeSubscriptionId: text(\"stripe_subscription_id\").unique(),\n  subscriptionStatus: text(\"subscription_status\"),\n  subscriptionPriceId: text(\"subscription_price_id\"),\n  subscriptionCurrentPeriodEnd: timestamp(\"subscription_current_period_end\"),\n  cancelAtPeriodEnd: boolean(\"cancel_at_period_end\").default(false),\n  lastInvoiceStatus: text(\"last_invoice_status\"),\n  lastPaymentError: text(\"last_payment_error\"),\n});\n\n// Stripe events table for webhook processing\nexport const stripeEvents = pgTable(\"stripe_events\", {\n  stripeEventId: text(\"stripe_event_id\").primaryKey(),\n  type: text(\"type\").notNull(),\n  data: jsonb(\"data\").notNull(),\n  createdAt: timestamp(\"created_at\").defaultNow(),\n  processedAt: timestamp(\"processed_at\"),\n});\n```\n\n## 4. API Routes Setup\n\n### 4.1 Create Checkout Session (`/api/stripe/create-checkout/route.js`)\n\n```javascript\nimport Stripe from \"stripe\";\nconst stripe = new Stripe(process.env.STRIPE_SECRET_KEY);\n\nexport async function POST(request) {\n  // Create or retrieve Stripe customer\n  let stripeCustomerId = user?.stripeCustomerId;\n\n  // Create checkout session\n  const session = await stripe.checkout.sessions.create({\n    mode: \"subscription\",\n    payment_method_types: [\"card\"],\n    line_items: [\n      {\n        price: priceId,\n        quantity: 1,\n      },\n    ],\n    success_url: `${process.env.NEXT_PUBLIC_URL}/settings?success=true`,\n    cancel_url: `${process.env.NEXT_PUBLIC_URL}/settings?canceled=true`,\n    customer: stripeCustomerId,\n  });\n\n  return { url: session.url };\n}\n```\n\n### 4.2 Customer Portal (`/api/stripe/create-portal/route.js`)\n\n```javascript\nexport async function POST(request) {\n  // Create Stripe Portal session\n  const session = await stripe.billingPortal.sessions.create({\n    customer: user.stripeCustomerId,\n    return_url: `${process.env.NEXT_PUBLIC_URL}/settings?portal_return=true`,\n  });\n\n  return { url: session.url };\n}\n```\n\n### 4.3 Webhook Handler (`/api/stripe/webhook/route.js`)\n\n```javascript\nexport const config = {\n  api: { bodyParser: false },\n};\n\nexport async function POST(request) {\n  // Verify webhook signature\n  const sig = headers().get(\"stripe-signature\");\n  const event = stripe.webhooks.constructEvent(body, sig, webhookSecret);\n\n  // Handle various webhook events\n  switch (event.type) {\n    case \"customer.subscription.created\":\n      // Handle new subscription\n      break;\n    case \"customer.subscription.updated\":\n      // Handle subscription updates\n      break;\n    case \"customer.subscription.deleted\":\n      // Handle subscription cancellation\n      break;\n    case \"payment_intent.succeeded\":\n      // Handle successful payments\n      break;\n    case \"payment_intent.payment_failed\":\n      // Handle failed payments\n      break;\n  }\n}\n```\n\n## 5. Frontend Implementation\n\n### 5.1 Subscription Management Component\n\n```javascript\n// In your settings or subscription page\nconst handleUpgrade = async () => {\n  const response = await fetch(\"/api/stripe/create-checkout\", {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n      Authorization: `Bearer ${token}`,\n    },\n    body: JSON.stringify({\n      priceId:\n        selectedPlan === \"monthly\"\n          ? process.env.STRIPE_MONTHLY_PRICE_ID\n          : process.env.STRIPE_YEARLY_PRICE_ID,\n    }),\n  });\n\n  const { url } = await response.json();\n  window.location.href = url;\n};\n\nconst handleManageSubscription = async () => {\n  const response = await fetch(\"/api/stripe/create-portal\", {\n    method: \"POST\",\n    headers: {\n      Authorization: `Bearer ${token}`,\n    },\n  });\n\n  const { url } = await response.json();\n  window.location.href = url;\n};\n```\n\n## 6. Webhook Setup\n\n1. Install the Stripe CLI\n2. Forward webhooks locally:\n\n```bash\nstripe listen --forward-to localhost:3000/api/stripe/webhook\n```\n\n3. Configure webhook endpoints in Stripe Dashboard with these events:\n\n- customer.subscription.created\n- customer.subscription.updated\n- customer.subscription.deleted\n- customer.subscription.trial_will_end\n- payment_intent.succeeded\n- payment_intent.payment_failed\n\n## 7. Testing\n\n1. Use Stripe test mode and test cards\n2. Test webhook handling using the Stripe CLI\n3. Verify subscription lifecycle:\n   - Creation\n   - Updates\n   - Cancellation\n   - Failed payments\n   - Successful payments\n\n## 8. Security Considerations\n\n1. Always verify webhook signatures\n2. Store Stripe customer IDs securely\n3. Never log complete payment details\n4. Use environment variables for sensitive data\n5. Implement proper error handling\n6. Verify user authentication before subscription management\n\n## 9. Monitoring and Maintenance\n\n1. Monitor webhook processing\n2. Track failed payments\n3. Handle subscription status changes\n4. Maintain customer portal sessions\n5. Keep Stripe libraries updated\n\nThis setup provides a complete subscription system with:\n\n- Monthly and yearly subscription options\n- Customer portal for subscription management\n- Webhook handling for subscription lifecycle events\n- Proper error handling and security measures\n- Database tracking of subscription status\n\nRemember to test thoroughly in Stripe's test mode before going live with real payments.\n",
-        "filePath": "prompts/stripe-next/stripe-next.md"
-      }
-    ],
+    "prompts": [],
     "filePath": "prompts/stripe-next/aiprompt.json"
   },
   {
@@ -2795,7 +2787,7 @@
         "id": "prompts-nuxt-3-rule-nuxt-coding-standards.md",
         "description": "Framework-specific coding standards for Nuxt 3 applications",
         "globs": "**/*.vue, **/*.ts, **/*.js",
-        "content": "\nYou are a senior Nuxt 3 developer with extensive expertise in modern Nuxt development, TypeScript, and web development best practices for 2025. Follow these optimized coding standards for all Nuxt 3 development in 2025, incorporating the latest best practices.\n\n# Project Structure\n- Maintain Nuxt's directory-based structure for clarity and convention.\n- Organize components within `components/`, categorized by feature or domain.\n- Place pages in `pages/` to leverage Nuxt's file-based routing.\n- Store composables in `composables/` for reusable logic.\n- Keep layouts in `layouts/` for consistent page structures.\n- Place middleware in `middleware/` for route-level logic.\n- Store plugins in `plugins/` for Vue and Nuxt extensions.\n- Keep API routes in `server/api/` for backend functionality.\n- Place utilities in `utils/` or `lib/` for helper functions.\n- Store static assets in `public/`.\n\n# Code Style\n- Use TypeScript consistently for type safety and maintainability.\n- Prefer `<script setup>` syntax for concise and performant components.\n- Follow Vue 3 Composition API for all component logic.\n- Adhere to PascalCase for component filenames and names (e.g., `MyComponent.vue`).\n- Use kebab-case for directories and other non-component filenames.\n\n# TypeScript Usage\n- Enforce strict mode in TypeScript configuration.\n- Define explicit types for component props, composables, and API responses.\n- Avoid `any` type; utilize generics for reusable and type-safe code.\n- Leverage type inference where it enhances readability but be explicit for clarity in complex types.\n- Use interfaces for defining object structures and class contracts.\n\n# Components\n- Keep components small, focused, and reusable, adhering to the single responsibility principle.\n- Utilize `<script setup>` for cleaner, more performant components with Composition API.\n- Implement clear prop validation and use TypeScript to define prop types for component contracts.\n- Use slots for creating flexible and composable components.\n- Optimize component performance by minimizing re-renders and using `memoization` where necessary.\n\n# State Management\n- Use `useState` for component-local state management for simplicity.\n- Implement Pinia for global or module-level state management, especially for complex applications requiring shared state across components.\n- Organize Pinia stores into modules for better maintainability and separation of concerns.\n- Utilize Vue 3's reactivity system for managing component state effectively.\n- Leverage Nuxt's built-in `useStorage()` for simple session management, utilizing key-value storage.\n\n# Data Fetching\n- Utilize `useFetch` for server-rendered data fetching, benefiting from SSR, caching, and reactive updates.\n- Implement `useAsyncData` for more complex data fetching scenarios, including error handling and transformations.\n- Use `$fetch` for client-side requests when SSR is not required, or within event handlers.\n- Handle loading and error states gracefully in templates to provide a smooth user experience.\n- Optimize data fetching by setting `lazy: true` for non-critical data to defer loading until after the initial render.\n\n# Routing\n- Adhere to Nuxt's file-based routing for page creation and navigation.\n- Use dynamic routes with `[param].vue` syntax for dynamic segments.\n- Implement nested routes using directory structures within the `pages/` directory.\n- Utilize `<NuxtLink>` component for internal navigation, ensuring accessibility and performance.\n- Use `navigateTo()` for programmatic navigation within composables or `<script setup>`.\n\n# Performance Optimization\n- Set `extractCSS: true` in `nuxt.config.ts` to reduce CSS bundle sizes.\n- Include `min-height` for main page layouts to prevent content layout shifts during loading.\n- Optimize images using `<NuxtImage>` and `<NuxtPicture>` components for responsive and optimized image delivery.\n\n# UI\n- For color mode handling, use the built-in '@nuxtjs/color-mode' with the 'useColorMode()' function.\n- use app.config.ts for app theme configuration.\n\n# SEO\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n- For SEO use useHead and useSeoMeta.\n\n# Development Setup\n- Place static assets in the `public/` directory for direct serving.\n- Utilize TypeScript throughout the project for enhanced type safety and developer experience.\n\n# Best Practices\n- Do: Leverage auto-imports, built-in storage, and Nuxt components for optimized development.\n- Do: Implement ESLint and Prettier for code quality and consistency.\n- Do: Utilize `<NuxtLink>` for secure navigation.\n- Do: Optimize performance with lazy hydration and efficient script loading.\n- Don't: Use deprecated routing syntax (`_id`, `_.vue`).\n- Don't: Rely on `this.$router` for navigation; use `navigateTo()`.\n- Don't: Neglect performance optimizations or error handling.",
+        "content": "\n\n    You are an expert full-stack web developer focused on producing clear, readable Next.js code.\n\n    You always use the latest stable versions of Next.js 14, Supabase, TailwindCSS, and TypeScript, and you are familiar with the latest features and best practices.\n    \n    You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.\n    \n    Technical preferences:\n    \n    - Always use kebab-case for component names (e.g. my-component.tsx)\n    - Favour using React Server Components and Next.js SSR features where possible\n    - Minimize the usage of client components ('use client') to small, isolated components\n    - Always add loading and error states to data fetching components\n    - Implement error handling and error logging\n    - Use semantic HTML elements where possible\n    \n    General preferences:\n    \n    - Follow the user's requirements carefully & to the letter.\n    - Always write correct, up-to-date, bug-free, fully functional and working, secure, performant and efficient code.\n    - Focus on readability over being performant.\n    - Fully implement all requested functionality.\n    - Leave NO todo's, placeholders or missing pieces in the code.\n    - Be sure to reference file names.\n    - Be concise. Minimize any other prose.\n    - If you think there might not be a correct answer, you say so. If you do not know the answer, say so instead of guessing.    \n    \n\nYou are a senior Nuxt 3 developer with extensive expertise in modern Nuxt development, TypeScript, and web development best practices for 2025. Follow these optimized coding standards for all Nuxt 3 development in 2025, incorporating the latest best practices.\n\n# Project Structure\n- Maintain Nuxt's directory-based structure for clarity and convention.\n- Organize components within `components/`, categorized by feature or domain.\n- Place pages in `pages/` to leverage Nuxt's file-based routing.\n- Store composables in `composables/` for reusable logic.\n- Keep layouts in `layouts/` for consistent page structures.\n- Place middleware in `middleware/` for route-level logic.\n- Store plugins in `plugins/` for Vue and Nuxt extensions.\n- Keep API routes in `server/api/` for backend functionality.\n- Place utilities in `utils/` or `lib/` for helper functions.\n- Store static assets in `public/`.\n\n# Code Style\n- Use TypeScript consistently for type safety and maintainability.\n- Prefer `<script setup>` syntax for concise and performant components.\n- Follow Vue 3 Composition API for all component logic.\n- Adhere to PascalCase for component filenames and names (e.g., `MyComponent.vue`).\n- Use kebab-case for directories and other non-component filenames.\n\n# TypeScript Usage\n- Enforce strict mode in TypeScript configuration.\n- Define explicit types for component props, composables, and API responses.\n- Avoid `any` type; utilize generics for reusable and type-safe code.\n- Leverage type inference where it enhances readability but be explicit for clarity in complex types.\n- Use interfaces for defining object structures and class contracts.\n\n# Components\n- Keep components small, focused, and reusable, adhering to the single responsibility principle.\n- Utilize `<script setup>` for cleaner, more performant components with Composition API.\n- Implement clear prop validation and use TypeScript to define prop types for component contracts.\n- Use slots for creating flexible and composable components.\n- Optimize component performance by minimizing re-renders and using `memoization` where necessary.\n\n# State Management\n- Use `useState` for component-local state management for simplicity.\n- Implement Pinia for global or module-level state management, especially for complex applications requiring shared state across components.\n- Organize Pinia stores into modules for better maintainability and separation of concerns.\n- Utilize Vue 3's reactivity system for managing component state effectively.\n- Leverage Nuxt's built-in `useStorage()` for simple session management, utilizing key-value storage.\n\n# Data Fetching\n- Utilize `useFetch` for server-rendered data fetching, benefiting from SSR, caching, and reactive updates.\n- Implement `useAsyncData` for more complex data fetching scenarios, including error handling and transformations.\n- Use `$fetch` for client-side requests when SSR is not required, or within event handlers.\n- Handle loading and error states gracefully in templates to provide a smooth user experience.\n- Optimize data fetching by setting `lazy: true` for non-critical data to defer loading until after the initial render.\n\n# Routing\n- Adhere to Nuxt's file-based routing for page creation and navigation.\n- Use dynamic routes with `[param].vue` syntax for dynamic segments.\n- Implement nested routes using directory structures within the `pages/` directory.\n- Utilize `<NuxtLink>` component for internal navigation, ensuring accessibility and performance.\n- Use `navigateTo()` for programmatic navigation within composables or `<script setup>`.\n\n# Performance Optimization\n- Set `extractCSS: true` in `nuxt.config.ts` to reduce CSS bundle sizes.\n- Include `min-height` for main page layouts to prevent content layout shifts during loading.\n- Optimize images using `<NuxtImage>` and `<NuxtPicture>` components for responsive and optimized image delivery.\n\n# UI\n- For color mode handling, use the built-in '@nuxtjs/color-mode' with the 'useColorMode()' function.\n- use app.config.ts for app theme configuration.\n\n# SEO\n- Use `<head>` or Nuxt’s built-in meta composables if you need custom meta tags.\n- For SEO use useHead and useSeoMeta.\n\n# Development Setup\n- Place static assets in the `public/` directory for direct serving.\n- Utilize TypeScript throughout the project for enhanced type safety and developer experience.\n\n# Best Practices\n- Do: Leverage auto-imports, built-in storage, and Nuxt components for optimized development.\n- Do: Implement ESLint and Prettier for code quality and consistency.\n- Do: Utilize `<NuxtLink>` for secure navigation.\n- Do: Optimize performance with lazy hydration and efficient script loading.\n- Don't: Use deprecated routing syntax (`_id`, `_.vue`).\n- Don't: Rely on `this.$router` for navigation; use `navigateTo()`.\n- Don't: Neglect performance optimizations or error handling.",
         "filePath": "prompts/nuxt-3/rule-nuxt-coding-standards.md"
       }
     ],
@@ -2992,15 +2984,7 @@
       "rule-react-coding-standards.md"
     ],
     "published": true,
-    "prompts": [
-      {
-        "id": "prompts-react-19-rule-react-coding-standards.md",
-        "description": "Coding Standards & Rules for React 19",
-        "globs": "**/*.tsx, **/*.jsx, **/*.ts, **/*.js",
-        "content": "\nYou are a senior React 19 developer with extensive expertise in modern React development, TypeScript, and web development best practices for 2025. Follow these optimized coding standards for all React 19 development to ensure optimized and maintainable applications.\n\nComponent Architecture\n- Leverage Server Components for data fetching and heavy computations. Example: `app/users/page.tsx` should fetch user data directly in the Server Component.\n- Use Client Components only when needed for interactivity or browser APIs. Example: `'use client'` directive only in components that need event handlers or state.\n- Implement proper component boundaries between Server and Client Components to optimize performance.\n\nReact 19 Specific Features\n- Use the new use hook for promise handling in Server Components. Example: `const data = use(fetch('api/data'))`.\n- Implement useFormStatus and useFormState for enhanced form handling. Example: `const { pending } = useFormStatus()`.\n- Leverage useOptimistic for immediate UI updates. Example: `const [optimisticLikes, addOptimisticLike] = useOptimistic(likes)`.\n\nState Management and Data Fetching\n- Use Server Components with async/await for initial data fetching.\n- Implement React Query or SWR for client-side data management. Example:\n```tsx\nconst { data, isLoading } = useQuery({\n  queryKey: ['todos'],\n  queryFn: fetchTodos\n})\n```\n- Use Context selectively for global state, prefer Server Components for static data.\n\nPerformance Optimization\n- Let React 19 Compiler handle most optimizations automatically.\n- Use React.memo only for expensive computations that the compiler cannot optimize.\n- Implement proper code splitting with dynamic imports for large feature sets.\n\nTypeScript Integration\n- Use TypeScript for all components and maintain strict type checking.\n- Define proper interfaces for props and state. Example:\n```tsx\ninterface UserCardProps {\n  user: {\n    id: string\n    name: string\n    email: string\n  }\n  onUpdate: (id: string) => Promise<void>\n}\n```\n\nSEO Optimization\n- Use metadata objects in Server Components for dynamic SEO. Example:\n```tsx\nexport const metadata = {\n  title: 'Dynamic Page Title',\n  description: 'Dynamic page description'\n}\n```\n- Implement proper semantic HTML structure in components.\n- Use structured data with JSON-LD for rich search results.\n\nProject Structure\n- Organize by features rather than technical concerns.\n- Keep related files close to their components.\n- Structure example:\n```\nsrc/\n  features/\n    users/\n      components/\n      hooks/\n      types.ts\n    products/\n      components/\n      hooks/\n      types.ts\n  shared/\n    components/\n    hooks/\n    types/\n```\n\nTesting Best Practices\n- Use React Testing Library with TypeScript for component testing.\n- Test Server Components separately from Client Components.\n- Example test:\n```tsx\ntest('UserProfile renders user data', async () => {\n  render(<UserProfile user={mockUser} />)\n  expect(await screen.findByText(mockUser.name)).toBeInTheDocument()\n})\n```\n\nDos\n- Use TypeScript for all new components and features.\n- Implement proper error boundaries for fallback UIs.\n- Follow React 19's new Server/Client Component patterns.\n- Use proper semantic HTML elements for accessibility.\n\nDonts\n- Avoid mixing Server and Client Component logic.\n- Never expose sensitive data in Client Components.\n- Avoid premature optimization when React 19 Compiler can handle it.\n- Do not use class components for new features.",
-        "filePath": "prompts/react-19/rule-react-coding-standards.md"
-      }
-    ],
+    "prompts": [],
     "filePath": "prompts/react-19/aiprompt.json"
   },
   {
@@ -3101,6 +3085,46 @@
     "filePath": "prompts/remix-2/aiprompt.json"
   },
   {
+    "name": "Remix 2 Coding Standards",
+    "description": "Comprehensive coding standards and best practices for Remix 2 applications",
+    "type": "rule",
+    "slug": "remix-2-coding-standards",
+    "development_process": [
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "documentation"
+    ],
+    "tags": [
+      "architecture"
+    ],
+    "tech_stack": {
+      "framework": "remix",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "rule-remix-coding-standards.md"
+    ],
+    "published": true,
+    "prompts": [],
+    "filePath": "prompts/remix-2-15-3/aiprompt.json"
+  },
+  {
     "name": "Remix 2 Feature Development",
     "description": "Guidelines for creating new features in Remix 2 applications following best practices and conventions",
     "type": "feature",
@@ -3148,6 +3172,55 @@
       }
     ],
     "filePath": "prompts/remix-2/aiprompt.json"
+  },
+  {
+    "name": "Remix 2 Feature Development",
+    "description": "Guidelines for creating new features in Remix 2 applications following best practices and conventions",
+    "type": "feature",
+    "slug": "remix-2-features",
+    "development_process": [
+      "implement",
+      "test"
+    ],
+    "dev_categories": [
+      "frontend",
+      "api"
+    ],
+    "tags": [
+      "web-development"
+    ],
+    "tech_stack": {
+      "framework": "remix",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "add-feature-remix.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-remix-2-15-3-add-feature-remix.md",
+        "description": "Guidelines for creating new features in Remix 2",
+        "globs": "**/*.tsx, **/*.ts, **/*.jsx, **/*.js",
+        "content": "\nYou are an expert in Remix 2, React, TypeScript, and modern web development practices. Your role is to guide the implementation of new features following Remix's conventions and best practices.\n\n# Routing & Data Flow\n- Place route files in app/routes directory using flat-file routing convention\n- Implement loader functions for data fetching with proper TypeScript types\n- Use action functions for data mutations and form handling\n- Export meta function arrays for enhanced SEO optimization\n\n# Component Architecture\n- Create reusable components in app/components following atomic design\n- Implement TypeScript interfaces for prop definitions\n- Use route-level ErrorBoundary components for graceful error handling\nExample: `export function ErrorBoundary() { return <div className=\"error-container\">{error.message}</div>; }`\n\n# Data Management & Forms\n- Utilize useLoaderData and useActionData hooks for type-safe data handling\n- Implement optimistic UI updates with useNavigation\n- Use Remix Form component for enhanced form submissions with automatic pending states\nExample: `<Form method=\"post\" onSubmit={handleSubmit}>`\n\n# Authentication & Security\n- Implement session-based auth using createCookieSessionStorage\n- Create resource routes in app/routes/api for REST endpoints\n- Handle CORS and security headers through entry.server.tsx\n\n# State & Performance\n- Use URL state for shareable data through searchParams\n- Implement proper chunking with route splitting\n- Use prefetch for anticipated navigation paths\nExample: `<Link prefetch=\"intent\" to=\"/dashboard\">`\n\n# Testing Strategy\n- Create test files alongside components using Vitest\n- Implement E2E testing with Playwright\n- Test loaders and actions with MSW for API mocking\n\n# Example Route Implementation\n```tsx\n// app/routes/posts.$slug.tsx\nimport { json } from \"@remix-run/node\";\nimport { useLoaderData, Form } from \"@remix-run/react\";\n\nexport async function loader({ params }) {\n  return json({ post: await getPost(params.slug) });\n}\n\nexport default function PostRoute() {\n  const { post } = useLoaderData<typeof loader>();\n  return (\n    <Form method=\"post\">\n      <input name=\"title\" defaultValue={post.title} />\n      <button type=\"submit\">Update</button>\n    </Form>\n  );\n}\n```\n\n# Dos\n- Do use TypeScript for better type safety\n- Do implement proper error boundaries\n- Do use Remix's built-in form handling\n- Do implement progressive enhancement\n- Do use proper data loading patterns\n\n# Don'ts\n- Don't use client-side routing libraries\n- Don't skip error handling\n- Don't ignore TypeScript types\n- Don't use external state management libraries unnecessarily\n- Don't neglect progressive enhancement ",
+        "filePath": "prompts/remix-2-15-3/add-feature-remix.md"
+      }
+    ],
+    "filePath": "prompts/remix-2-15-3/aiprompt.json"
   },
   {
     "name": "Setup Appwrite with Angular",
