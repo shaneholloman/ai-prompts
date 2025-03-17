@@ -8,6 +8,7 @@
     "dev_categories": ["frontend", "tooling", "code-quality"],
     "tags": ["biome", "linting", "formatting", "eslint", "prettier", "migration"],
     "tech_stack": {
+      "framework": "typescript",
       "tooling": "biome"
     },
     "ai_editor": ["cursor"],

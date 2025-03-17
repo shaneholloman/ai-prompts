@@ -8,7 +8,7 @@
     "dev_categories": ["ai", "tooling"],
     "tags": ["claude", "cursor", "ai-assistant"],
     "tech_stack": {
-      "framework": "cursor",
+      "framework": "claude",
       "ai_model": "claude-3-sonnet"
     },
     "ai_editor": ["cursor"],
