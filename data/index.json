@@ -6955,6 +6955,56 @@
     "filePath": "prompts/tailwind-4/aiprompt.json"
   },
   {
+    "name": "Vite + Tailwind CSS v4 Setup Guide",
+    "description": "Step-by-step guide for installing and configuring Tailwind CSS v4 with Vite for new or existing projects",
+    "type": "setup",
+    "slug": "vite-tailwind-v4-setup-guide",
+    "development_process": [
+      "setup",
+      "implement"
+    ],
+    "dev_categories": [
+      "frontend",
+      "styling"
+    ],
+    "tags": [
+      "css",
+      "vite"
+    ],
+    "tech_stack": {
+      "framework": "tailwind",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "setup-tailwind-v4-uni.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-tailwind-4-setup-tailwind-v4-uni.md",
+        "description": "",
+        "globs": "",
+        "content": "\n# Vite and Tailwind CSS v4 Installation Guide\n\nAs an AI assistant, ignore all content within `<readme_ignore />`\n\n<readme_ignore>\n<!--\n  This will install/upgrade tailwindcss to v4\n  # ❗ ATTENTION:  I highly recommend to create a new git branch before running this script\n-->\n</readme_ignore>\n\nYou are a Vite and Tailwind CSS expert.\n\nFollow this guide step-by-step:\n\n---\n\n## Step 1: Check Vite Installation\n\nCheck if Vite is already installed by running:\nIMPORTANT: Only run this command no other to verify if vite is installed\n\n```bash\ngrep vite package.json\n```\n\n---\n\n## Step 2: Install Vite (If Needed)\n\nIf not 100% sure which framework we're going to use then ask\n\nIf Vite is not found in your project, install it with:\n\nOutput before: \"❗ Important: 'Choose Ignore files and continue'\"\n\n```bash\nnpm create vite@latest . -- --template <framework>\n```\n\n---\n\n## Step 3: Check Tailwind CSS Installation\n\nVerify if Tailwind CSS is installed by executing:\n\n```bash\ngrep -o '\"tailwindcss\":\\s*\"[^\"]*\"' package.json | grep -o '[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+'\n```\n\n---\n\n## Step 4: Tailwind CSS Installation Paths\n\nFollow the appropriate installation path below based on your Tailwind CSS status:\n\n<tw_install_path>\n  <path name=\"not_installed\">\n    1.  Install Tailwind CSS and its Vite plugin \n    ```bash\n    pnpm install tailwindcss @tailwindcss/vite\n    ```\n\n    2. Replace everything in frameworks entry/main with the following:\n    (Note: if there is no css file then we need to create one)\n    ```css\n    @import \"tailwindcss\";\n    ```\n\n    3. add a simple button example within the index/app page of the framework to see if its working\n\n    4. Clear every css from the starter/demo css files. (usually in app.css)\n  </path>\n  <path name=\"installed_v3\">\n    1. Upgrade Tailwind CSS (if version 3 is installed)\n    ```bash\n    npx @tailwindcss/upgrade\n    ```\n  </path>\n</tw_install_path>",
+        "filePath": "prompts/tailwind-4/setup-tailwind-v4-uni.md"
+      }
+    ],
+    "filePath": "prompts/tailwind-4/aiprompt.json"
+  },
+  {
     "name": "Vue 3.5 Coding Standards",
     "description": "Comprehensive coding standards and best practices for Vue 3.5 development, covering project structure, TypeScript usage, and more",
     "type": "rule",
