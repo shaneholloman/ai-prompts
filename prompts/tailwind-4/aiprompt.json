@@ -52,7 +52,7 @@
     "dev_categories": ["frontend", "styling"],
     "tags": ["css", "vite"],
     "tech_stack": {
-      "framework": ["tailwind", "vite"]
+      "framework": ["tailwind"]
     },
     "ai_editor": ["cursor"],
     "author": {
