@@ -2079,7 +2079,7 @@
       "ai-assistant"
     ],
     "tech_stack": {
-      "framework": "cursor",
+      "framework": "claude",
       "service": [],
       "library": []
     },
@@ -4104,6 +4104,61 @@
       }
     ],
     "filePath": "prompts/better-auth-vue/aiprompt.json"
+  },
+  {
+    "name": "Setup Biome and Migrate from ESLint & Prettier",
+    "description": "Step-by-step guide to install Biome, migrate from ESLint and Prettier configurations, and set up proper formatting and linting scripts for JavaScript/TypeScript projects",
+    "type": "rule",
+    "slug": "setup-biome-format-lint-migration",
+    "development_process": [
+      "setup",
+      "migration"
+    ],
+    "dev_categories": [
+      "frontend",
+      "tooling",
+      "code-quality"
+    ],
+    "tags": [
+      "biome",
+      "linting",
+      "formatting",
+      "eslint",
+      "prettier",
+      "migration"
+    ],
+    "tech_stack": {
+      "framework": "typescript",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "reasoning",
+      "chat"
+    ],
+    "version": "1.0",
+    "files": [
+      "setup-biome.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "id": "prompts-biome-setup-biome.md",
+        "description": "Setup biome",
+        "globs": "",
+        "content": "\nAs an AI assistant, ignore all content within `<readme_ignore />`\n\n<readme_ignore>\n<!--\n# INFO:\n# This prompt will install / migrate from eslint/prettier to biomejs  https://biomejs.dev/\n\n# USAGE:\n# call this with \"read @setup-biome and follow setps\" in agent mode\n\n# ❗ ATTENTION:  \n# 1. save your progress with GIT\n# 2. this will delete your eslint/prettier files\n# 3. this setup was tested for typescript/react projects\n\n# Tip: Install the Biome extension and enable `\"editor.formatOnSave\": true` in settings.\n# Now, Biome handles all linting and formatting.\n\n### Breakdown of Each Script\n\n- `biome:check` → Runs formatting, linting, and import sorting without making changes.\n- `biome:fix` → Runs all checks and applies safe fixes.\n- `biome:fix:unsafe` → Runs all checks and applies both safe and unsafe fixes.\n- `biome:format` → Runs only the formatter and applies changes.\n- `biome:lint` → Runs only linting without making changes.\n- `biome:lint:fix` → Runs only linting and applies safe fixes.\n- `biome:precommit` → Runs Biome on staged files only, applying safe fixes (useful for Git pre-commit hooks).\n- `biome:ci` → Runs Biome in CI mode (checks but makes no changes, exits with an error if issues are found).\n\n### Best Practices\n\n- Run `biome:check` in CI/CD pipelines.\n- Use `biome:fix` or `biome:fix:unsafe` when you want to apply auto-fixes.\n- Use `biome:precommit` in Git hooks to enforce formatting before commits.\n-->\n</readme_ignore>\n\nYou are senior software developer. Your goal is to install biome and migrate from eslint/prettier.\n\nFollow this guide step by step:\n\n## 1. Install Biome\n\n```sh\nnpm install --save-dev --save-exact @biomejs/biome\n```\n\n## 1.1 Install Configuration\n\n```sh\nnpx @biomejs/biome init\n```\n\n## 2. Migrate ESLint & Prettier Configurations\n\n```sh\nnpx @biomejs/biome migrate eslint --write\nnpx @biomejs/biome migrate prettier --write\n```\n\n## 3. Remove all ESLint and Prettier dependencies and plugins from package.json.\n\n## 4. Add Biome Scripts to `package.json`\n\n```json\n\"scripts\": {\n  \"biome:check\": \"biome check\", \n  \"biome:fix\": \"biome check --fix\",\n  \"biome:fix:unsafe\": \"biome check --fix --unsafe\",\n  \"biome:format\": \"biome format --write\",\n  \"biome:lint\": \"biome lint\",\n  \"biome:lint:fix\": \"biome lint --fix\",\n  \"biome:precommit\": \"biome check --staged --fix\",\n  \"biome:ci\": \"biome ci\"\n}\n```\n\n## 5. Run Biome for a test\n\n```sh\nnpm run biome:lint\n```\n\n## 6. If not exists create a file `.vscode/settings.json` and add the following settings:\n\n```\n{\n  \"[javascript][javascriptreact][typescript][typescriptreact][json][jsonc]\": {\n    \"editor.defaultFormatter\": \"biomejs.biome\"\n  },\n  \"editor.codeActionsOnSave\": {\n    \"source.fixAll.biome\": \"explicit\",\n    \"source.organizeImports.biome\": \"explicit\"\n  }\n}\n```",
+        "filePath": "prompts/biome/setup-biome.md"
+      }
+    ],
+    "filePath": "prompts/biome/aiprompt.json"
   },
   {
     "name": "Setup Clerk Authentication in SvelteKit",
