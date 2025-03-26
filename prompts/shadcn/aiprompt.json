@@ -18,7 +18,7 @@
     },
     "model": ["reasoning", "chat"],
     "version": "1.0",
-    "files": ["setup-shadcn-ui.md"],
+    "files": ["setup-shadcn-uni.md"],
     "published": true
   }
 ]
