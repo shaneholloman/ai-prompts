@@ -31,10 +31,11 @@ function getPromptContent(dirPath, fileToRead) {
   const id = data.id || relative.replace(/\//g, "-");
 
   return {
+    ...data,
     id,
     description: data.description || "",
     globs: data.globs || "",
-    ...(data.alwaysApply && { alwaysApply: data.alwaysApply }),
+    alwaysApply: data.alwaysApply || false,
     content,
     filePath: relative,
   };
