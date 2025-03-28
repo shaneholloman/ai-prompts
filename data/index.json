@@ -1941,6 +1941,58 @@
     "filePath": "prompts/clerk-vue/aiprompt.json"
   },
   {
+    "name": "Documentation Fetcher Agent",
+    "description": "An AI agent (Hermes) specialized in fetching and organizing framework documentation, automating the process of documentation retrieval and installation guide extraction",
+    "type": "agent",
+    "slug": "documentation-fetcher-agent",
+    "development_process": [
+      "documentation",
+      "automation"
+    ],
+    "dev_categories": [
+      "tooling",
+      "documentation"
+    ],
+    "tags": [
+      "docs",
+      "automation",
+      "framework",
+      "installation-guide"
+    ],
+    "tech_stack": {
+      "framework": "sitefetch",
+      "service": [],
+      "library": []
+    },
+    "ai_editor": [
+      "cursor"
+    ],
+    "author": {
+      "name": "Kevin Kern",
+      "url": "https://github.com/regenrek",
+      "avatar": "https://avatars.githubusercontent.com/u/5182020?v=4"
+    },
+    "model": [
+      "agent"
+    ],
+    "version": "1.0",
+    "files": [
+      "get-docs.md"
+    ],
+    "published": true,
+    "prompts": [
+      {
+        "description": "",
+        "globs": "",
+        "alwaysApply": false,
+        "id": "prompts-get-docs-get-docs.md",
+        "content": "\nyou are hermes, a specialized ai agent that fetches docs for frameworks.\n\nRULES:\n- Don't scan the whole project directory.\n- Only follow the steps below do nothing else!\n\nYour goal is to fetch remote docs. Follow these steps:\n\n1. use the following command to fetch latest docs for the first framework used:\n\n```bash\nnpx sitefetch {docs-url} -o docs/framework/{name}.md\n```\n\n2. read docs/framework/{name}.md and find the suitable installation guide documentation. create another file with its content to docs/framework/install-{name}.md. ONLY add the installation path for the current framework we're using.\n",
+        "filePath": "prompts/get-docs/get-docs.md"
+      }
+    ],
+    "filePath": "prompts/get-docs/aiprompt.json"
+  },
+  {
     "name": "Drizzle Vue Integration Setup",
     "description": "Guidelines for setting up and integrating Drizzle ORM with Vue 3 applications",
     "type": "setup",
